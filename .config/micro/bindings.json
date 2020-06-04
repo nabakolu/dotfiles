@@ -1,0 +1,7 @@
+{
+    "Alt-#": "lua:comment.comment",
+    "Alt-/": "lua:comment.comment",
+    "Alt-Tab": "NextTab",
+    "F5": "lua:wc.wordCount",
+    "Tab": "Autocomplete|IndentSelection|InsertTab"
+}
