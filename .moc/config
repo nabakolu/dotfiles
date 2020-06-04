@@ -1,0 +1,10 @@
+# Set playback toggles.
+Repeat = yes
+Shuffle = no
+AutoNext = yes
+
+MusicDir = /media/LUKAS/Music
+StartInMusicDir = yes
+
+#Theme = transparent-background
+Theme = darkdot_theme
