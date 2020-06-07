@@ -29,7 +29,7 @@
     "literate": true,
     "matchbrace": true,
     "mkparents": true,
-    "mouse": false,
+    "mouse": true,
     "paste": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
@@ -45,7 +45,7 @@
     "scrollmargin": 3,
     "scrollspeed": 2,
     "smartpaste": false,
-    "softwrap": true,
+    "softwrap": false,
     "splitbottom": true,
     "splitright": true,
     "status": true,
