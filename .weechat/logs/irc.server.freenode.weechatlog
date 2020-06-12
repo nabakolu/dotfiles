@@ -1,0 +1,65 @@
+2020-06-12 18:58:43	--	irc: connecting to server chat.freenode.net/6667...
+2020-06-12 18:58:43	--	irc: connected to chat.freenode.net/6667 (2001:5a0:40:50:66:110:9:37)
+2020-06-12 18:58:43	--	egan.freenode.net: *** Looking up your hostname...
+2020-06-12 18:58:43	--	egan.freenode.net: *** Checking Ident
+2020-06-12 18:58:43	--	egan.freenode.net: *** No Ident response
+2020-06-12 18:58:43	--	egan.freenode.net: *** Couldn't look up your hostname
+2020-06-12 18:58:43	--	Welcome to the freenode Internet Relay Chat Network nabakolu
+2020-06-12 18:58:43	--	Your host is egan.freenode.net[2001:5a0:40:50:66:110:9:37/6667], running version ircd-seven-1.1.9
+2020-06-12 18:58:43	--	This server was created Fri May 1 2020 at 22:14:31 UTC
+2020-06-12 18:58:43	--	egan.freenode.net ircd-seven-1.1.9 DOQRSZaghilopsuwz CFILMPQSbcefgijklmnopqrstuvz bkloveqjfI
+2020-06-12 18:58:43	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstuz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode STATUSMSG=@+ CALLERID=g CASEMAPPING=rfc1459 :are supported by this server
+2020-06-12 18:58:43	--	CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 DEAF=D FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: EXTBAN=$,ajrxz CLIENTVER=3.0 CPRIVMSG CNOTICE ETRACE :are supported by this server
+2020-06-12 18:58:43	--	KNOCK SAFELIST ELIST=CTU MONITOR=100 WHOX :are supported by this server
+2020-06-12 18:58:43	--	There are 97 users and 86002 invisible on 30 servers
+2020-06-12 18:58:43	--	36 :IRC Operators online
+2020-06-12 18:58:43	--	1 :unknown connection(s)
+2020-06-12 18:58:43	--	46215 :channels formed
+2020-06-12 18:58:43	--	I have 4625 clients and 1 servers
+2020-06-12 18:58:43	--	4625 4975 :Current local users 4625, max 4975
+2020-06-12 18:58:43	--	86099 90930 :Current global users 86099, max 90930
+2020-06-12 18:58:43	--	Highest connection count: 4976 (4975 clients) (326489 connections received)
+2020-06-12 18:58:43	--	- egan.freenode.net Message of the Day - 
+2020-06-12 18:58:43	--	- Welcome to freenode - supporting the free and open source
+2020-06-12 18:58:43	--	- software communities since 1998.
+2020-06-12 18:58:43	--	-  
+2020-06-12 18:58:43	--	- By connecting to freenode you indicate that you have read and
+2020-06-12 18:58:43	--	- accept our policies and guidelines as set out on https://freenode.net
+2020-06-12 18:58:43	--	-  
+2020-06-12 18:58:43	--	- In the event that you observe behaviour that contravenes our policies,
+2020-06-12 18:58:43	--	- please notify a volunteer staff member via private message, or send us an
+2020-06-12 18:58:43	--	- e-mail to complaints@freenode.net -- we will do our best to address the
+2020-06-12 18:58:43	--	- situation within a reasonable period of time, and we may request further
+2020-06-12 18:58:43	--	- information or, as appropriate, involve other parties such as channel operators 
+2020-06-12 18:58:43	--	- Group Contacts representing an on-topic group.
+2020-06-12 18:58:43	--	-  
+2020-06-12 18:58:43	--	- freenode runs an open proxy scanner.
+2020-06-12 18:58:43	--	-  
+2020-06-12 18:58:43	--	- If you are looking for assistance, you may be able to find a list of 
+2020-06-12 18:58:43	--	- volunteer staff on '/stats p' (shows only on-call staff) or by joining 
+2020-06-12 18:58:43	--	- #freenode and using the '/who freenode/staff/*' command. You may message
+2020-06-12 18:58:43	--	- any of us at any time. Please note that freenode predominantly provides 
+2020-06-12 18:58:43	--	- assistance via private message, and while we have a network channel the 
+2020-06-12 18:58:43	--	- primary venue for support requests is via private message to a member 
+2020-06-12 18:58:43	--	- of the volunteer staff team.
+2020-06-12 18:58:43	--	-  
+2020-06-12 18:58:43	--	- From time to time, volunteer staff may send server-wide notices relating to
+2020-06-12 18:58:43	--	- the project, or the communities that we host. The majority of such notices
+2020-06-12 18:58:43	--	- will be sent as wallops, and you can '/mode <yournick> +w' to ensure that you
+2020-06-12 18:58:43	--	- do not miss them. Important messages relating to the freenode project, including
+2020-06-12 18:58:44	--	- notices of upcoming maintenance and other scheduled downtime will be issued as
+2020-06-12 18:58:44	--	- global notices.
+2020-06-12 18:58:44	--	-  
+2020-06-12 18:58:44	--	- Representing an on-topic project? Don't forget to register, more information
+2020-06-12 18:58:44	--	- can be found on the https://freenode.net website under "Group Registration".
+2020-06-12 18:58:44	--	-  
+2020-06-12 18:58:44	--	- Thank you also to our server sponsors for the sustained support in keeping the
+2020-06-12 18:58:44	--	- network going for close to two decades.
+2020-06-12 18:58:44	--	-  
+2020-06-12 18:58:44	--	- Thank you for using freenode!
+2020-06-12 18:58:44	--	End of /MOTD command.
+2020-06-12 18:58:44	--	User mode [+i] by nabakolu
+2020-06-12 18:58:44	--	NickServ (NickServ@services.): This nickname is registered. Please choose a different nickname, or identify via /msg NickServ identify <password>.
+2020-06-12 18:59:00	--	MSG(NickServ): identify ********************
+2020-06-12 18:59:01	--	NickServ (NickServ@services.): You are now identified for nabakolu.
+2020-06-12 19:01:57	--	irc: disconnected from server
