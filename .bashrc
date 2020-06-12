@@ -14,18 +14,12 @@ alias marvin="ssh nabakols@marvin.informatik.uni-stuttgart.de"
 alias uberspace="ssh nabakolu@westphal.uberspace.de"
 alias ut="sudo ntpdate 0.pool.ntp.org"
 alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
-alias ardu="sudo bash -c 'export _JAVA_AWT_WM_NONREPARENTING=1; arduino; exit'" #run arduino as root
+alias ardu="sudo bash -c 'export _JAVA_AWT_WM_NONREPARENTING=1; arduino; exit'"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
 
 #check if tty
 if [$(tty | grep tty) == ""]
 then
-    #powerline-daemon -q ##already started in autostart_blocking.sh
-   # POWERLINE_BASH_CONTINUATION=1
-   # POWERLINE_BASH_SELECT=1
-   #. /usr/share/powerline/bindings/bash/powerline.sh
-
-	#alias ls='lsd --icon-theme unicode'
 	alias ls='lsd'
 	alias l='ls -1'
 	alias ll='ls -l'
