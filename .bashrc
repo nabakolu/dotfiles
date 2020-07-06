@@ -28,7 +28,6 @@ then
 	alias lla='ls -l -a'
 	#PS1
 	eval "$(starship init bash)"
-	# wal -R -e -q
 else
     alias ranger='ranger --cmd="set use_preview_script!"; clear'
     alias ls='ls --color=auto -F'
