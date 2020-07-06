@@ -12,6 +12,7 @@ alias handymount="sudo curlftpfs -f 192.168.178.42:2211 /media/handy/ -o user=lu
 alias handysdmount="sudo curlftpfs -f 192.168.178.42:2211 /media/handy/ -o user=lukas2,allow_other"
 alias marvin="ssh nabakols@marvin.informatik.uni-stuttgart.de"
 alias uberspace="ssh nabakolu@westphal.uberspace.de"
+alias ubuntu-vm="ssh -p 2222 lukas@127.0.0.1"
 alias ut="sudo ntpdate 0.pool.ntp.org"
 alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
 alias ardu="sudo bash -c 'export _JAVA_AWT_WM_NONREPARENTING=1; arduino; exit'"
