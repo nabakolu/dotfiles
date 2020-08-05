@@ -12,5 +12,6 @@
     "savecursor": true,
     "saveundo": true,
     "smartpaste": false,
+    "softwrap": true,
     "xterm": true
 }
