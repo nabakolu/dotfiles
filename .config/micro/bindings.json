@@ -1,9 +1,10 @@
 {
+    "\u001b[4h": "Paste",
+    "\u001b[P": "Delete",
     "Alt-#": "lua:comment.comment",
     "Alt-/": "lua:comment.comment",
     "Alt-Tab": "NextTab",
     "CtrlUnderscore": "lua:comment.comment",
-    "Tab": "Autocomplete|IndentSelection|InsertTab",
-	"\u001b[P": "Delete",
-	"\u001b[4h": "Paste",
+    "F5": "lua:wc.wordCount",
+    "Tab": "Autocomplete|IndentSelection|InsertTab"
 }

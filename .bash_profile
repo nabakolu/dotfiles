@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export TERM="alacritty"
+export TERM="st"
 export EDITOR="micro"
 
 if [ $(tty) == "/dev/tty1" ]
