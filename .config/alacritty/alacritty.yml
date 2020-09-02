@@ -39,4 +39,4 @@ colors:
 draw_bold_text_with_bright_colors: false
 
 
-dynamic_title: true
+wimdow.dynamic_title: true
