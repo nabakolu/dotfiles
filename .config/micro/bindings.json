@@ -1,6 +1,8 @@
 {
     "\u001b[4h": "Paste",
     "\u001b[P": "Delete",
+    "\u001b[M": "DeleteWordRight",		
+    "\u001b[M": "DeleteWordRight",
     "Alt-#": "lua:comment.comment",
     "Alt-/": "lua:comment.comment",
     "Alt-Tab": "NextTab",
