@@ -1,0 +1,8 @@
+set draw_borders true
+set colorscheme default
+set show_hidden false
+#set colorscheme solarized
+set preview_images true
+set preview_images_method ueberzug
+
+default_linemode devicons
