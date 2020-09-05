@@ -3,8 +3,10 @@ background_opacity: 0.7
 font:
     normal:
         #family: Inconsolata Nerd Font Mono
-        family: RobotoMono Nerd Font 
-    size: 14
+        #family: RobotoMono Nerd Font 
+        #family: Anonymice Nerd Font Mono
+        family: GoMono Nerd Font Mono
+    size: 16
 
 
 # Colors (Blood Moon)
