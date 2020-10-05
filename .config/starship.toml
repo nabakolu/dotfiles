@@ -8,7 +8,7 @@ style_success = "white"
 truncate_to_repo = false
 style = "bold green"
 use_logical_path = false
-prefix = ""
+
 
 [cmd_duration]
 disabled = true
