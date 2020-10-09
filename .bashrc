@@ -8,8 +8,8 @@
 #aliases
 alias alsamixer="alsamixer -g"
 alias nav="source ranger"
-alias handymount="sudo curlftpfs -f 192.168.178.42:2211 /media/handy/ -o user=lukas,allow_other"
-alias handysdmount="sudo curlftpfs -f 192.168.178.42:2211 /media/handy/ -o user=lukas2,allow_other"
+alias handymount="sudo curlftpfs -f 192.168.178.26:2211 /media/handy/ -o user=lukas,allow_other"
+alias handysdmount="sudo curlftpfs -f 192.168.178.26:2211 /media/handy/ -o user=lukas2,allow_other"
 alias marvin="ssh nabakols@marvin.informatik.uni-stuttgart.de"
 alias uberspace="ssh nabakolu@westphal.uberspace.de"
 alias ubuntu-vm="ssh -p 2222 lukas@127.0.0.1"
