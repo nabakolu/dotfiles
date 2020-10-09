@@ -1,10 +1,20 @@
 add_newline = false
 
-[character]
-symbol = "$"
-style_success = "white"
+
+format = """
+$username\
+$directory\
+$git_branch\
+$character
+"""
+
+[character]                            # The name of the module we are configuring is "character"
+character = "$"
+#success_symbol = "[➜ ](bold green)" 
+
 
 [directory]
+truncation_length = 0
 truncate_to_repo = false
 style = "bold green"
 use_logical_path = false
