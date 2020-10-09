@@ -1,13 +1,8 @@
 {
     "allowpaste": false,
-    "autoclose": true,
     "colorscheme": "nabakolu",
-    "comment": true,
-    "diff": true,
     "diffgutter": true,
-    "ftoptions": true,
     "linter": false,
-    "literate": true,
     "mkparents": true,
     "paste": true,
     "pluginchannels": [
@@ -18,6 +13,5 @@
     "saveundo": true,
     "smartpaste": false,
     "softwrap": true,
-    "status": true,
     "xterm": true
 }
