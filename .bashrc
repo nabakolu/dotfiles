@@ -17,7 +17,11 @@ alias ut="sudo ntpdate 0.pool.ntp.org"
 alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
 alias ardu="sudo bash -c 'export _JAVA_AWT_WM_NONREPARENTING=1; arduino; exit'"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
+# PS1
+source ~/.config/git_prompt.sh
+#export PS1="\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
 
+export PS1='\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;171m\]$(__git_ps1 " %s")\[\033[38;5;15m \$ '
 #check if tty
 if [$(tty | grep tty) == ""]
 then
@@ -26,8 +30,6 @@ then
 	alias ll='ls -l'
 	alias la='ls -a'
 	alias lla='ls -l -a'
-	#PS1
-	eval "$(starship init bash)"
 else
     alias ranger='ranger --cmd="set use_preview_script!"; clear'
     alias ls='ls --color=auto -F'
@@ -35,10 +37,7 @@ else
     alias l='ls -1'
     alias la='ls -a'
     alias lla='ls -l -a'
-	# PS1
-	export PS1="\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
 fi
-
 
 #bash completion
 complete -cf sudo
