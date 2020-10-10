@@ -1,0 +1,131 @@
+set icons
+set drawbox true
+
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $PWD\007" > /dev/tty
+}}
+
+# also run at startup
+on-cd
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+cmd open_less ${{
+	less $f
+}}
+
+cmd open_mocp ${{
+	mocp -l $f
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd img ${{
+	clear
+	img $f 0 0 1000 1000
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+map a
+map b
+map c
+map d
+#map e
+map f
+map g
+map h
+map i
+map j
+map k
+map l
+map m
+map n
+map o
+map p
+map q
+map r
+map s
+map t
+map u
+map v
+map w
+map x
+map y
+map z
+map gg
+
+map q quit
+map <enter> open
+
+map rm delete
+map P delete
+map rn rename
+
+map <c-c> copy
+map <c-x> cut
+map <c-v> paste
+
+map v img
+
+map md mkdir
+map mf mkfile
+
+map f find
+map <c-f> find
+
+map S shell-wait
+
+# open specific
+map ol open_less
+map om open_mocp
+
+# Settings
+map . set hidden!
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Movement
+map gc cd ~/.config
+map gm cd /media/LUKAS/Music
+map gb cd /usr/local/bin
+map gg cd /
+map ge cd /etc
+map gM cd /media
