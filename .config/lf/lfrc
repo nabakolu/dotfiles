@@ -22,8 +22,18 @@ cmd open_less ${{
 	less $f
 }}
 
-cmd open_mocp ${{
+cmd open_mocp &{{
 	mocp -l $f
+}}
+
+cmd full_find ${{
+	lf -remote "send $id set findlen 0"
+	lf -remote "send $id find"
+}}
+
+cmd short_find ${{
+	lf -remote "send $id set findlen 1"
+	lf -remote "send $id find"
 }}
 
 cmd mkdir ${{
@@ -40,7 +50,7 @@ cmd mkfile ${{
 
 cmd img ${{
 	clear
-	img $f 0 0 1000 1000
+	img $f 0 0 100 100
 }}
 
 # Archive bindings
@@ -103,8 +113,8 @@ map v img
 map md mkdir
 map mf mkfile
 
-map f find
-map <c-f> find
+map f short_find
+map <c-f> full_find
 
 map S shell-wait
 
