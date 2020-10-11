@@ -26,6 +26,10 @@ cmd open_mocp &{{
 	mocp -l $f
 }}
 
+cmd open_firefox &{{
+	firefox $f
+}}
+
 cmd full_find ${{
 	lf -remote "send $id set findlen 0"
 	lf -remote "send $id find"
@@ -64,10 +68,40 @@ cmd unarchive ${{
   esac
 }}
 
-cmd zip %zip -r "$f" "$f"
-cmd tar %tar cvf "$f.tar" "$f"
-cmd targz %tar cvzf "$f.tar.gz" "$f"
-cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+cmd zip ${{
+	printf "Archive Name: "
+	read ans
+	prefix="$(pwd)/"
+	echo "$fx" | grep -oP "^$prefix\K.*" | zip -r $ans -@
+}}
+
+cmd tar ${{
+	printf "Archive Name: "
+	read ans
+	ans=${ans%".tar"}
+	ans+=".tar"
+	prefix="$(pwd)/"
+	echo "$fx" | grep -oP "^$prefix\K.*" | tar cvf "$ans" -T -
+}}
+
+cmd targz ${{
+	printf "Archive Name: "
+	read ans
+	ans=${ans%".tar.gz"}
+	ans+=".tar.gz"
+	prefix="$(pwd)/"
+	echo "$fx" | grep -oP "^$prefix\K.*" | tar cvzf "$ans" -T -
+}}
+
+cmd tarbz2 ${{
+	printf "Archive Name: "
+	read ans
+	ans=${ans%".tar.bz2"}
+	ans+=".tar.bz2"
+	prefix="$(pwd)/"
+	echo "$fx" | grep -oP "^$prefix\K.*" | tar cjvf "$ans" -T -
+}}
+
 
 map a
 map b
@@ -97,6 +131,7 @@ map y
 map z
 map gg
 
+
 map q quit
 map <enter> open
 
@@ -121,6 +156,7 @@ map S shell-wait
 # open specific
 map ol open_less
 map om open_mocp
+map of open_firefox
 
 # Settings
 map . set hidden!
@@ -129,7 +165,7 @@ map . set hidden!
 map az zip
 map at tar
 map ag targz
-map ab targz
+map ab tarbz2
 map au unarchive
 
 # Movement
