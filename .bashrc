@@ -43,6 +43,6 @@ fi
 complete -cf sudo
 complete -c man
 source /usr/share/bash-completion/completions/git
-
+__git_complete dotfiles _git
 
 
