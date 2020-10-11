@@ -21,7 +21,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOM
 source ~/.config/git_prompt.sh
 #export PS1="\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
 
-export PS1='\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;171m\]$(__git_ps1 " %s")\[\033[38;5;15m \$ '
+export PS1='\[\033[38;5;202m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;171m\]$(__git_ps1 " %s")\[\033[38;5;15m \\$\[$(tput sgr0)\] '
 #check if tty
 if [$(tty | grep tty) == ""]
 then
