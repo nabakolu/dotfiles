@@ -1,5 +1,5 @@
 set icons
-set drawbox true
+#set drawbox
 
 cmd on-cd &{{
     # '&' commands run silently in background (which is what we want here),
@@ -28,6 +28,14 @@ cmd open_mocp &{{
 
 cmd open_firefox &{{
 	firefox $f
+}}
+
+cmd open_sxiv &{{
+	sxiv $f
+}}
+
+cmd open_gimp &{{
+	gimp $f
 }}
 
 cmd full_find ${{
@@ -157,6 +165,8 @@ map S shell-wait
 map ol open_less
 map om open_mocp
 map of open_firefox
+map os open_sxiv
+map og open_gimp
 
 # Settings
 map . set hidden!
@@ -175,3 +185,4 @@ map gb cd /usr/local/bin
 map gg cd /
 map ge cd /etc
 map gM cd /media
+

@@ -46,4 +46,5 @@ else
 fi
 
 
-xsetroot -name "                       $usbicon $volicon$vol% $wifiicon $(date)"
+
+notify-send  " $usbicon $volicon$vol% $wifiicon $(date)"
