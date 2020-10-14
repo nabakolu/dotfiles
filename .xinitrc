@@ -15,4 +15,6 @@ unclutter &
 # start blueman-applet, to automatically connect to bluetooth devices etc.
 blueman-applet &
 # start dwm
+#
+mount -a
 exec /usr/local/bin/dwm
