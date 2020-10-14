@@ -1,5 +1,5 @@
 set icons
-#set drawbox
+set drawbox
 
 cmd on-cd &{{
     # '&' commands run silently in background (which is what we want here),
@@ -36,6 +36,10 @@ cmd open_sxiv &{{
 
 cmd open_gimp &{{
 	gimp $f
+}}
+
+cmd open_pywal &{{
+	wal -i $f
 }}
 
 cmd full_find ${{
@@ -167,6 +171,7 @@ map om open_mocp
 map of open_firefox
 map os open_sxiv
 map og open_gimp
+map ow open_pywal
 
 # Settings
 map . set hidden!
