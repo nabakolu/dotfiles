@@ -51,6 +51,7 @@ cmd open_pywal &{{
 	wal_steam
 	pywalfox update
 	betterlockscreen -u $f
+	notify-send "pywal finished"
 }}
 
 cmd full_find ${{
