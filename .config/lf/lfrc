@@ -202,4 +202,4 @@ map gb cd /usr/local/bin
 map gg cd /
 map ge cd /etc
 map gM cd /media
-
+map gw cd ~/.config/wallpapers
