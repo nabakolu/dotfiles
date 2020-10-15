@@ -44,6 +44,7 @@ cmd open_gimp &{{
 cmd open_pywal &{{
 	wal -i $f
 	pywal-discord
+	wal_steam
 }}
 
 cmd full_find ${{
