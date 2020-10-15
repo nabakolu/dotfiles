@@ -41,6 +41,10 @@ cmd open_gimp &{{
 	gimp $f
 }}
 
+cmd open_mocp ${{
+	mocp -l "$f"
+}}
+
 cmd open_pywal &{{
 	wal -i -t $f
 	pywal-discord
