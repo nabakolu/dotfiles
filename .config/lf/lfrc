@@ -1,6 +1,9 @@
 set icons
 set drawbox
 
+set previewer ~/.config/preview.sh
+
+
 cmd on-cd &{{
     # '&' commands run silently in background (which is what we want here),
     # but are not connected to stdout.
@@ -40,6 +43,7 @@ cmd open_gimp &{{
 
 cmd open_pywal &{{
 	wal -i $f
+	pywal-discord
 }}
 
 cmd full_find ${{
