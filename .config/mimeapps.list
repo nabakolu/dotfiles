@@ -1,3 +1,4 @@
 
 [Default Applications]
 text/x-c=micro.desktop
+inode/directory=lf-st.desktop
