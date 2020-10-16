@@ -21,6 +21,11 @@ cmd open ${{
     esac
 }}
 
+cmd bash ${{
+	/bin/bash
+}}
+
+
 cmd open_less ${{
 	less $f
 }}
@@ -74,6 +79,18 @@ cmd mkfile ${{
   printf "File Name: "
   read ans
   $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
 }}
 
 cmd img ${{
@@ -171,11 +188,12 @@ map v img
 
 map md mkdir
 map mf mkfile
+map cm chmod
 
 map f short_find
 map <c-f> full_find
 
-map S shell-wait
+map S bash
 
 # open specific
 map ol open_less
