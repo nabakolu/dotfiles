@@ -2,3 +2,9 @@
 [Default Applications]
 text/x-c=micro.desktop
 inode/directory=lf-st.desktop
+image/*=sxiv.desktop
+image/png=sxiv.desktop
+image/jpg=sxiv.desktop
+image/jpeg=sxiv.desktop
+image/bmp=sxiv.desktop
+image/webp=sxiv.desktop
