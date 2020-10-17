@@ -50,13 +50,12 @@ cmd open_mocp ${{
 	mocp -l "$f"
 }}
 
-cmd open_pywal &{{
+cmd open_pywal ${{
 	wal -t -i $f
 	pywal-discord
 	wal_steam
 	pywalfox update
 	betterlockscreen -u $f
-	notify-send "pywal finished"
 }}
 
 cmd wget ${{
