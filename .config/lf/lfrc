@@ -3,6 +3,7 @@ set drawbox
 
 set previewer ~/.config/preview.sh
 
+set ratios 2:3
 
 cmd on-cd &{{
     # '&' commands run silently in background (which is what we want here),
@@ -103,6 +104,27 @@ cmd img ${{
 	img $f 0 0 100 100
 }}
 
+cmd link %{{
+    for file in $(lf -remote 'load'); do
+        if [ ! -n "${mode+1}" ]; then
+            mode="$file"
+            continue
+        fi
+        files+=("$file")
+    done
+    if [ "${#files[@]}" -lt 1 ]; then
+        lf -remote "send $id echo no files to link files: ${files}"
+        exit 0
+    fi
+    # symbolically  copy mode is indicating a soft link
+    if [[ "$mode" == copy ]]; then
+        ln -sr $files -t .
+    # while a move mode is indicating a hard link
+    elif [[ "$mode" == move ]]; then
+        ln $files -t .
+    fi
+}}
+
 # Archive bindings
 cmd unarchive ${{
   case "$f" in
@@ -194,6 +216,7 @@ map v img
 map md mkdir
 map mf mkfile
 map cm chmod
+map l  link
 
 map f short_find
 map <c-f> full_find
