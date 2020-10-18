@@ -6,5 +6,7 @@ AutoNext = yes
 MusicDir = /media/LUKAS/Music
 StartInMusicDir = yes
 
-#Theme = transparent-background
-Theme = darkdot_theme
+Theme = transparent-background
+#Theme = darkdot_theme
+
+SoundDriver = PULSEAUDIO:JACK:ALSA:OSS
