@@ -56,7 +56,7 @@ cmd open_pywal &{{
 	pywal-discord
 	wal_steam
 	pywalfox update
-	killal dunst
+	killall dunst
 	~/.config/dunst.sh &
 	betterlockscreen -u $f
 	notify-send "pywal finished"
