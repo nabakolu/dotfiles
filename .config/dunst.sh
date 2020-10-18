@@ -6,8 +6,7 @@ source "${HOME}/.cache/wal/colors.sh"
     -lb "${color0:-#F0F0F0}" \
     -nb "${color0:-#F0F0F0}" \
     -cb "${color0:-#F0F0F0}" \
-    -lf "${color15:=#000000}" \
-    -bf "${color15:=#000000}" \
-    -cf "${color15:=#000000}" \
-    -nf "${color15:=#000000}" &
+    -lf "${color1:=#000000}" \
+    -cf "${color1:=#000000}" \
+    -nf "${color1:=#000000}" &
 disown
