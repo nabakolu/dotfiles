@@ -3,7 +3,8 @@ setxkbmap -layout de -variant basic
 # set standard monitorlayout
 sh ~/.screenlayout/default.sh
 # start desktop notification daemon
-dunst &
+#dunst &
+~/.config/dunst.sh
 # set a wallpaper
 # nitrogen --random ~/.config/wallpapers --set-zoom-fill #this is random
 wal -R # this restores the last one
