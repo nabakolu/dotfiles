@@ -8,3 +8,7 @@ image/jpg=sxiv.desktop
 image/jpeg=sxiv.desktop
 image/bmp=sxiv.desktop
 image/webp=sxiv.desktop
+audio/*=mocp.desktop
+audio/mp3=mocp.desktop
+audio/opus=mocp.desktop
+audio/mpeg=mocp.desktop
