@@ -70,6 +70,11 @@ cmd full_find ${{
 	lf -remote "send $id find"
 }}
 
+cmd fzf_find ${{
+	res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
+	lf -remote "send $id select \"$res\""
+}}
+
 cmd short_find ${{
 	lf -remote "send $id set findlen 1"
 	lf -remote "send $id find"
@@ -219,7 +224,7 @@ map cm chmod
 map l  link
 
 map f short_find
-map <c-f> full_find
+map <c-f> fzf_find
 
 map S bash
 
