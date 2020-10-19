@@ -8,5 +8,7 @@
     "Alt-Tab": "NextTab",
     "CtrlUnderscore": "lua:comment.comment",
     "F5": "lua:wc.wordCount",
-    "Tab": "Autocomplete|IndentSelection|InsertTab"
+    "Tab": "Autocomplete|IndentSelection|InsertTab",
+	"Ctrl-Alt-Up": "ParagraphPrevious",
+	"Ctrl-Alt-Down": "ParagraphNext"
 }
