@@ -3,7 +3,7 @@ Repeat = yes
 Shuffle = no
 AutoNext = yes
 
-MusicDir = /media/LUKAS/Music
+MusicDir = /media/Media/Music
 StartInMusicDir = yes
 
 Theme = transparent-background
