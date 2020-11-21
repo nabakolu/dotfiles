@@ -4,6 +4,8 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+mount ~/.webdav
+
 export TERMINAL="st"
 export EDITOR="micro"
 
