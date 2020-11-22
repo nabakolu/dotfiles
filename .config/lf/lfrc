@@ -179,6 +179,8 @@ cmd tarbz2 ${{
 }}
 
 
+cmd dragon %dragon-drag-and-drop -a -x $fx
+
 map a
 map b
 map c
@@ -238,6 +240,8 @@ map of open_firefox
 map os open_sxiv
 map og open_gimp
 map ow open_pywal
+
+map d dragon
 
 map wg wget
 
