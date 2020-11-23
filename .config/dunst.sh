@@ -1,4 +1,5 @@
 #!/bin/bash
+# run dunst with pywal colours
 
 source "${HOME}/.cache/wal/colors.sh"
 
