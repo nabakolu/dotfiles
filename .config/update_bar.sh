@@ -37,6 +37,12 @@ else
     	volicon="婢"
 fi
 
+if [ "$(pgrep steam)" != "" ]
+	then
+	steam=" "
+else
+	steam=""
+fi
 
 if [ "$(cat /sys/class/net/wlp8s0/operstate)" = "down" ]
 then
@@ -46,4 +52,4 @@ else
 fi
 
 
-xsetroot -name "                       $usbicon $volicon$vol% $wifiicon $(date)"
+xsetroot -name "                     $steam$usbicon $volicon$vol% $wifiicon $(date)"
