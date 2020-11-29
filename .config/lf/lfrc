@@ -216,6 +216,7 @@ map <enter> open
 map rm delete
 map P delete
 map rn rename
+map <f-2> rename
 
 map <c-c> copy
 map <c-x> cut
@@ -257,7 +258,7 @@ map au unarchive
 
 # Movement
 map gc cd ~/.config
-map gm cd /media/LUKAS/Music
+map gm cd /media/Media/Music
 map gb cd /usr/local/bin
 map gg cd /
 map ge cd /etc
