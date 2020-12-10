@@ -1,0 +1,4 @@
+go = ENTER RIGHT l
+go_up = LEFT h
+menu_up = UP k
+menu_down = Down j
