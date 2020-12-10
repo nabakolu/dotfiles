@@ -138,8 +138,10 @@ cmd unarchive ${{
   case "$f" in
       *.zip) unzip "$f" ;;
       *.tar.gz) tar -xzvf "$f" ;;
+      *.tgz) tar -xzvf "$f" ;;
       *.tar.bz2) tar -xjvf "$f" ;;
       *.tar) tar -xvf "$f" ;;
+	  *.rar) unrar x "$f" ;;
       *) echo "Unsupported format" ;;
   esac
 }}
@@ -209,6 +211,10 @@ map y
 map z
 map gg
 
+map h updir
+map j down
+map k up
+map l open
 
 map q quit
 map <enter> open
@@ -227,7 +233,7 @@ map v img
 map md mkdir
 map mf mkfile
 map cm chmod
-map l  link
+map ml link
 
 map f short_find
 map <c-f> fzf_find
