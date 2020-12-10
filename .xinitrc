@@ -22,6 +22,6 @@ unclutter &
 blueman-applet &
 
 # wait for 3 seconds, then start compositor
-(sleep 5;picom) &
+#(sleep 5;picom) &
 
 exec /usr/local/bin/dwm
