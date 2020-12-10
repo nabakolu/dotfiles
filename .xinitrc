@@ -1,6 +1,9 @@
 # set german keyboardlayout
 setxkbmap -layout de -variant basic
 
+# set keyboard rate
+xset r rate 400 60
+
 # set standard monitorlayout
 sh ~/.screenlayout/default.sh
 
