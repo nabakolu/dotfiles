@@ -6,6 +6,8 @@ AutoNext = yes
 MusicDir = /media/Media/Music
 StartInMusicDir = yes
 
+Keymap = keymap
+
 Theme = transparent-background
 #Theme = darkdot_theme
 
