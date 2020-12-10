@@ -7,7 +7,8 @@
 mount ~/.webdav
 
 export TERMINAL="st"
-export EDITOR="micro"
+#export EDITOR="micro"
+export EDITOR="vim"
 
 export LF_ICONS="\
 tw=:\
