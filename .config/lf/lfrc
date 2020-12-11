@@ -53,6 +53,7 @@ cmd open_mocp ${{
 
 cmd open_pywal &{{
 	wal -t -i $f
+	xdotool key "super+r"
 	pywal-discord
 	wal_steam
 	pywalfox update
