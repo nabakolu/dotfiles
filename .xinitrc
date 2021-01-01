@@ -21,7 +21,4 @@ unclutter &
 # start blueman-applet, to automatically connect to bluetooth devices etc.
 blueman-applet &
 
-# wait for 3 seconds, then start compositor
-#(sleep 5;picom) &
-
 exec /usr/local/bin/dwm
