@@ -267,9 +267,10 @@ map au unarchive
 
 # Movement
 map gc cd ~/.config
-map gm cd /media/Media/Music
+map gm cd ~/Music
 map gb cd /usr/local/bin
 map gg cd /
 map ge cd /etc
 map gM cd /media
 map gw cd ~/.config/wallpapers
+map gs cd /ssd
