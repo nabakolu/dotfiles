@@ -12,3 +12,5 @@ audio/*=mocp.desktop
 audio/mp3=mocp.desktop
 audio/opus=mocp.desktop
 audio/mpeg=mocp.desktop
+x-scheme-handler/nxm=vortex-downloads-handler.desktop
+x-scheme-handler/nxm-protocol=vortex-downloads-handler.desktop
