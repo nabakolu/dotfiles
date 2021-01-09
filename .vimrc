@@ -1,16 +1,22 @@
-" Plugins here
-call plug#begin()
-" ale, for linting
-Plug 'dense-analysis/ale'
-call plug#end()
+let plugins=1
+
+if plugins==1
+		" Plugins here
+		call plug#begin()
+		" ale, for linting
+		Plug 'dense-analysis/ale'
+		" coc 
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		call plug#end()
+endif
 
 
 " ----------------
 " General Settings
 " ----------------
 
-"disabled " use system clipboard
-"disabled set clipboard=unnamedplus
+" show pressed keys
+set showcmd
 
 " use mouse
 set mouse=a
@@ -30,20 +36,29 @@ syntax on
 " set tabsize to 4
 set tabstop=4
 
+" set shiftwidth to the same as tabsize
+set shiftwidth=4
+
 " show whitespace
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 
-" ALE error and warnging signs
-let g:ale_sign_error = 'EE'
-let g:ale_sign_warning = '__'
+if plugins==1
+		" ALE error and warnging signs
+		let g:ale_sign_error = 'EE'
+		let g:ale_sign_warning = '__'
 
-" linting is disabled by default
-autocmd BufEnter * ALEDisableBuffer
+		" linting is disabled by default
+		autocmd BufEnter * ALEDisableBuffer
+endif
 
 " -----------
 " Keybindings
 " -----------
 
+" use Y to use system clipboard
+nnoremap Y "+
+
+" Ctrl-J and Ctr-K insert blank lines
 nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
 
@@ -66,14 +81,14 @@ command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 " auto close {
 " ------------
 function! s:CloseBracket()
-	let line = getline('.')
-	if line =~# '^\s*\(struct\|class\|enum\) '
-		return "{\<Enter>};\<Esc>O"
-	elseif searchpair('(', '', ')', 'bmn', '', line('.'))
-		" Probably inside a function call. Close it off.
-		return "{\<Enter>});\<Esc>O"
-	else
-		return "{\<Enter>}\<Esc>O"
-	endif
+		let line = getline('.')
+		if line =~# '^\s*\(struct\|class\|enum\) '
+				return "{\<Enter>};\<Esc>O"
+		elseif searchpair('(', '', ')', 'bmn', '', line('.'))
+				" Probably inside a function call. Close it off.
+				return "{\<Enter>});\<Esc>O"
+		else
+				return "{\<Enter>}\<Esc>O"
+		endif
 endfunction
 inoremap <expr> {<Enter> <SID>CloseBracket()
