@@ -5,8 +5,6 @@ if plugins==1
 		call plug#begin()
 		" ale, for linting
 		Plug 'dense-analysis/ale'
-		" coc 
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		call plug#end()
 endif
 
