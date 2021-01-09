@@ -26,12 +26,12 @@ then
 	alias la='ls -a'
 	alias lla='ls -l -a'
 else
-    alias ranger='ranger --cmd="set use_preview_script!"; clear'
-    alias ls='ls --color=auto -F'
-    alias ll='ls --color=auto -Fl'
-    alias l='ls -1'
-    alias la='ls -a'
-    alias lla='ls -l -a'
+	alias ranger='ranger --cmd="set use_preview_script!"; clear'
+	alias ls='ls --color=auto -F'
+	alias ll='ls --color=auto -Fl'
+	alias l='ls -1'
+	alias la='ls -a'
+	alias lla='ls -l -a'
 fi
 
 #bash completion
