@@ -26,4 +26,15 @@ syntax on
 " show whitespace
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 
-nnoremap <C-K> :ALEToggleBuffer<CR>
+" use Ctrl-K to activate linting
+nnoremap üt :ALEToggleBuffer<CR>
+
+" use ün and üp to find next and previous errors
+nmap <silent> üp <Plug>(ale_previous_wrap)
+nmap <silent> ün <Plug>(ale_next_wrap)
+
+" linting is disabled by default
+autocmd BufEnter * ALEToggleBuffer
+" ALE error and warnging signs
+let g:ale_sign_error = 'EE'
+let g:ale_sign_warning = '__'
