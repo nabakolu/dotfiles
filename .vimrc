@@ -9,8 +9,8 @@ call plug#end()
 " General Settings
 " ----------------
 
-" use system clipboard
-set clipboard=unnamedplus
+"disabled " use system clipboard
+"disabled set clipboard=unnamedplus
 
 " use mouse
 set mouse=a
@@ -40,7 +40,6 @@ let g:ale_sign_warning = '__'
 " linting is disabled by default
 autocmd BufEnter * ALEDisableBuffer
 
-
 " -----------
 " Keybindings
 " -----------
@@ -54,7 +53,6 @@ nnoremap <silent> üt :ALEToggleBuffer<CR>
 " use ün and üp to find next and previous errors
 noremap <silent> üp <Plug>(ale_previous_wrap)
 noremap <silent> ün <Plug>(ale_next_wrap)
-
 
 " --------
 " Commands
