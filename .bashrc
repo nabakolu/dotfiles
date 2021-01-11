@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# enable vi mode
+set -o vi
+
 #aliases
 alias alsamixer="alsamixer -g"
 alias handymount="sudo curlftpfs -f 192.168.178.26:2211 /media/handy/ -o user=lukas,allow_other"
