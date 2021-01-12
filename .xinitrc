@@ -21,4 +21,7 @@ unclutter &
 # start blueman-applet, to automatically connect to bluetooth devices etc.
 blueman-applet &
 
+# start clipmenu daemon
+clipmenud &
+
 exec /usr/local/bin/dwm
