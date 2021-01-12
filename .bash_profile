@@ -7,8 +7,11 @@
 mount ~/.webdav
 
 export TERMINAL="st"
-#export EDITOR="micro"
 export EDITOR="vim"
+
+#clipmenu
+export CM_SELECTIONS="clipboard"
+export CM_MAX_CLIPS=10
 
 export LF_ICONS="\
 tw=:\
