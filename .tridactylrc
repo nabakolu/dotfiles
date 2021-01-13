@@ -21,4 +21,4 @@ set allowautofocus false
 set newtab start.duckduckgo.com
 
 # disable mouse
-autocmd DocLoad .* no_mouse_mode
+#autocmd DocLoad .* no_mouse_mode
