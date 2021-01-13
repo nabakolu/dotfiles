@@ -1,0 +1,24 @@
+# map <S-Escape> to all <Escape> bindings
+bind <S-Escape> composite mode normal; hidecmdline
+bind --mode=ex <S-Escape> ex.hide_and_clear
+bind --mode=input <S-Escape> composite unfocus | mode normal
+bind --mode=visual <S-Escape> composite js document.getSelection().empty(); mode normal: hidecmdline
+
+# map <C-Space> to the same
+bind <C-Space> composite mode normal; hidecmdline
+bind --mode=ex <C-Space> ex.hide_and_clear
+bind --mode=input <C-Space> composite unfocus | mode normal
+bind --mode=visual <C-Space> composite js document.getSelection().empty(); mode normal: hidecmdline
+bind --mode=hint <C-Space> hint.reset
+
+bind J tabnext
+bind K tabprev
+
+bind m hint -W mpvsafe
+
+# general settings
+set allowautofocus false
+set newtab start.duckduckgo.com
+
+# disable mouse
+autocmd DocLoad .* no_mouse_mode
