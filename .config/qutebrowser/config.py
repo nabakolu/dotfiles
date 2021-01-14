@@ -73,6 +73,7 @@ c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={
 c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
+c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
 
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
