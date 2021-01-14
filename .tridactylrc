@@ -3,6 +3,7 @@ bind <S-Escape> composite mode normal; hidecmdline
 bind --mode=ex <S-Escape> ex.hide_and_clear
 bind --mode=input <S-Escape> composite unfocus | mode normal
 bind --mode=visual <S-Escape> composite js document.getSelection().empty(); mode normal: hidecmdline
+bind --mode=hint <S-Escape> hint.reset
 
 # map <C-Space> to the same
 bind <C-Space> composite mode normal; hidecmdline
@@ -19,6 +20,21 @@ bind m hint -W mpvsafe
 # general settings
 set allowautofocus false
 set newtab start.duckduckgo.com
+colourscheme dark
 
-# disable mouse
-#autocmd DocLoad .* no_mouse_mode
+setnull searchurls.amazon
+setnull searchurls.amazon
+setnull searchurls.bing
+setnull searchurls.cnrtl
+setnull searchurls.gentoo_wiki
+setnull searchurls.googlelucky
+setnull searchurls.googleuk
+setnull searchurls.mdn
+setnull searchurls.qwant
+setnull searchurls.scholar
+setnull searchurls.searx
+setnull searchurls.startpage
+setnull searchurls.twitter
+setnull searchurls.yahoo
+
+set searchurls.archwiki https://wiki.archlinux.org/index.php?search=%s
