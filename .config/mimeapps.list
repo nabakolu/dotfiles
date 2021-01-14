@@ -1,4 +1,3 @@
-
 [Default Applications]
 text/x-c=micro.desktop
 inode/directory=lf-st.desktop
@@ -14,3 +13,6 @@ audio/opus=mocp.desktop
 audio/mpeg=mocp.desktop
 x-scheme-handler/nxm=vortex-downloads-handler.desktop
 x-scheme-handler/nxm-protocol=vortex-downloads-handler.desktop
+
+[Added Associations]
+application/pdf=masterpdfeditor4.desktop;
