@@ -76,6 +76,9 @@ c.tabs.position = "left"
 # make tabs 32 pixel wide
 c.tabs.width = 32
 
+# set bookmarks as default page
+c.url.default_page = "qute://bookmarks"
+
 # open search engine url, when no search query is made
 c.url.open_base_url = True
 
@@ -86,6 +89,9 @@ c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
 c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
+
+# set bookmarks as start page
+c.url.start_pages = "qute://bookmarks"
 
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
