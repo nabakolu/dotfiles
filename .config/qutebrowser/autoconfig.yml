@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  colors.webpage.darkmode.enabled:
-    global: false
+  tabs.favicons.scale:
+    global: 1.0
