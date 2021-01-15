@@ -89,6 +89,7 @@ c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
 c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
+c.url.searchengines['opgg'] = 'https://euw.op.gg/champion/{}'
 
 # set bookmarks as start page
 c.url.start_pages = "qute://bookmarks"
