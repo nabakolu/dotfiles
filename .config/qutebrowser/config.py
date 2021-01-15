@@ -25,6 +25,12 @@ config.bind('Bb', 'open -t qute://bookmarks/')
 config.bind('BB', 'open -t qute://bookmarks/')
 config.bind('ba', 'bookmark-add')
 config.bind('bd', 'bookmark-del')
+config.bind('bA', 'set-cmd-text -s :bookmark-add {url}')
+
+# history bindings
+config.bind('bh', 'open qute://history/')
+config.bind('Bh', 'open -t qute://history/')
+config.bind('BH', 'open -t qute://history/')
 
 # spawn mpv with hint links when pressing m
 config.bind('m', 'hint links spawn mpv {hint-url}')
@@ -52,6 +58,9 @@ c.content.pdfjs = True
 # set standard stylesheet to gruvbox
 #c.content.user_stylesheets = '~/.config/qutebrowser/css/gruvbox-all-sites.css'
 
+# disable webgl
+c.content.webgl = False
+
 # set vim in st as default editor
 c.editor.command = ['st','-e','vim', '{}']
 
@@ -67,6 +76,9 @@ c.tabs.position = "left"
 # make tabs 32 pixel wide
 c.tabs.width = 32
 
+# open search engine url, when no search query is made
+c.url.open_base_url = True
+
 # set some searchengines
 c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}'
 c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={}'
@@ -77,6 +89,18 @@ c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={
 
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
+
+
+########################
+# site specififc rules #
+########################
+
+
+with config.pattern('*://www.youtube.com') as p:
+    p.content.javascript.enabled = True
+
+with config.pattern('*://*.uni-stuttgart.de') as p:
+    p.content.javascript.enabled = True
 
 
 

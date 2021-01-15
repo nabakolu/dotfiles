@@ -6,11 +6,5 @@
 
 config_version: 2
 settings:
-  completion.open_categories:
-    global:
-    - searchengines
-    - quickmarks
-    - bookmarks
-    - history
-  input.partial_timeout:
-    global: 20000
+  colors.webpage.darkmode.enabled:
+    global: false
