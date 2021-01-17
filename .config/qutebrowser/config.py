@@ -109,6 +109,9 @@ with config.pattern('*://www.youtube.com') as p:
 with config.pattern('*://*.uni-stuttgart.de') as p:
     p.content.javascript.enabled = True
 
+with config.pattern('*://*.nabakolu.xyz') as p:
+    p.content.javascript.enabled = True
+
 
 
 
