@@ -18,7 +18,7 @@ on-cd
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
-        *) xdg-open "$f" ;;
+        *) nohup xdg-open "$f" 0<&- &>/dev/null &
     esac
 }}
 
@@ -35,12 +35,16 @@ cmd open_mocp &{{
 	mocp -l $f
 }}
 
+cmd open_mpv &{{
+	nohup mpv $f 0<&- &>/dev/null &
+}}
+
 cmd open_firefox &{{
-	firefox $f
+	nohup firefox $f 0<&- &>/dev/null &
 }}
 
 cmd open_sxiv &{{
-	sxiv $f
+	nohup sxiv "$f" 0<&- &>/dev/null &
 }}
 
 cmd open_gimp &{{
@@ -249,12 +253,13 @@ map S bash
 
 # open specific
 map ol open_less
-map om open_mocp
+map oM open_mocp
+map om open_mpv
 map of open_firefox
 map os open_sxiv
 map og open_gimp
 map ow open_pywal
-map oM open_masterpdfeditor4
+map oP open_masterpdfeditor4
 
 map d dragon
 
