@@ -112,11 +112,17 @@ with config.pattern('*://*.uni-stuttgart.de') as p:
 with config.pattern('*://*.nabakolu.xyz') as p:
     p.content.javascript.enabled = True
 
+with config.pattern('*://web.whatsapp.com') as p:
+    p.content.javascript.enabled = True
 
-
+with config.pattern('*://github.com') as p:
+    p.content.javascript.enabled = True
 
 # pywal integration
 config.source('qutewal.py')
 
 # url redirection
 config.source('redirects.py')
+
+# load autoconfig
+config.load_autoconfig(True)

@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  tabs.favicons.scale:
-    global: 1.0
+  content.media.video_capture:
+    https://unistuttgart.webex.com: true
