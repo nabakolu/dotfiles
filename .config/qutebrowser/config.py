@@ -1,3 +1,6 @@
+
+config.load_autoconfig(True)
+
 c.tabs.background = True
 c.downloads.position = 'bottom'
 
@@ -118,11 +121,11 @@ with config.pattern('*://web.whatsapp.com') as p:
 with config.pattern('*://github.com') as p:
     p.content.javascript.enabled = True
 
+
+
 # pywal integration
 config.source('qutewal.py')
 
 # url redirection
 config.source('redirects.py')
 
-# load autoconfig
-config.load_autoconfig(True)
