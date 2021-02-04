@@ -9,6 +9,6 @@ case "$1" in
 	*.gz) tar -ztf "$1";;
 	*.bz2) tar -jtf "$1";;
 	*.tar) tar -tf "$1";;
-	*.pdf) pdftotext "$1" -;;
+	*.pdf) pdfinfo "$1"; echo ""; pdftotext "$1" -;;
 	*) cat "$1";;
 esac
