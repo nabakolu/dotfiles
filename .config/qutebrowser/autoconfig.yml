@@ -7,5 +7,16 @@
 config_version: 2
 settings:
   content.javascript.enabled:
-    '*://*.login.leagueoflegends.com/*': true
-    '*://*.lolesports.com/*': true
+    '*://*.campus.uni-stuttgart.de/*': true
+    '*://*.duckduckgo.com/*': true
+    '*://*.nabakolu.xyz/*': true
+    '*://*.www.uni-stuttgart.de/*': true
+    '*://campus.uni-stuttgart.de/*': true
+    '*://lichess.org/*': true
+    '*://www.youtube.com/*': true
+  content.media.audio_capture:
+    https://unistuttgart.webex.com: true
+  content.media.audio_video_capture:
+    https://unistuttgart.webex.com: true
+  content.media.video_capture:
+    https://unistuttgart.webex.com: true
