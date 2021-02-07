@@ -1,5 +1,5 @@
 
-config.load_autoconfig(True)
+config.load_autoconfig()
 
 c.tabs.background = True
 c.downloads.position = 'bottom'
@@ -58,9 +58,6 @@ c.content.cookies.store = False
 # enable pdf viewing
 c.content.pdfjs = True
 
-# set standard stylesheet to gruvbox
-#c.content.user_stylesheets = '~/.config/qutebrowser/css/gruvbox-all-sites.css'
-
 # disable webgl
 c.content.webgl = False
 
@@ -99,27 +96,6 @@ c.url.start_pages = "qute://bookmarks"
 
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
-
-
-########################
-# site specififc rules #
-########################
-
-
-with config.pattern('*://www.youtube.com') as p:
-    p.content.javascript.enabled = True
-
-with config.pattern('*://*.uni-stuttgart.de') as p:
-    p.content.javascript.enabled = True
-
-with config.pattern('*://*.nabakolu.xyz') as p:
-    p.content.javascript.enabled = True
-
-with config.pattern('*://web.whatsapp.com') as p:
-    p.content.javascript.enabled = True
-
-with config.pattern('*://github.com') as p:
-    p.content.javascript.enabled = True
 
 
 
