@@ -1,3 +1,4 @@
+from qutebrowser.api import interceptor
 
 config.load_autoconfig()
 
@@ -45,6 +46,7 @@ config.bind('m', 'hint links spawn --detach mpv {hint-url}')
 
 # set website dark mode
 config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.darkmode.policy.images", "never")
 
 # disable javascript
 c.content.javascript.enabled = False
@@ -97,7 +99,24 @@ c.url.start_pages = "qute://bookmarks"
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
 
+# set ad blocker to use braves adblock and the hosts file
+c.content.blocking.method = "both"
 
+# add youtube ad block
+def filter_yt(info: interceptor.Request):
+    url = info.request_url
+    if (
+            url.host() == "www.youtube.com"
+            and url.path() == "/get_video_info"
+            and "&adformat=" in url.query()
+    ):
+        info.block()
+
+interceptor.register(filter_yt)
+
+c.content.headers.accept_language = "en-US,en;q=0.5"
+c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
+c.content.canvas_reading = False
 
 # pywal integration
 config.source('qutewal.py')
