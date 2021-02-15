@@ -6,17 +6,35 @@
 
 config_version: 2
 settings:
+  content.blocking.method:
+    global: adblock
+  content.desktop_capture:
+    https://teams.microsoft.com: true
   content.javascript.enabled:
     '*://*.campus.uni-stuttgart.de/*': true
-    '*://*.duckduckgo.com/*': true
     '*://*.nabakolu.xyz/*': true
     '*://*.www.uni-stuttgart.de/*': true
+    '*://accounts.google.com/*': true
     '*://campus.uni-stuttgart.de/*': true
+    '*://euw.op.gg/*': true
+    '*://github.com/*': true
+    '*://ilias3.uni-stuttgart.de/*': true
     '*://lichess.org/*': true
+    '*://lutris.net/*': true
+    '*://mail.google.com/*': true
+    '*://osu.ppy.sh/*': true
+    '*://teams.microsoft.com/*': true
+    '*://www-8.mailo.com/*': true
+    '*://www.mailo.com/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
+    https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.audio_video_capture:
+    https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.video_capture:
+    https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
+  content.notifications:
+    https://euw.op.gg: false
