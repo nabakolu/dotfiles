@@ -224,7 +224,6 @@ map w
 map x
 map y
 map z
-map gg
 
 map h updir
 map j down
@@ -284,7 +283,7 @@ map au unarchive
 map gc cd ~/.config
 map gm cd ~/Music
 map gb cd /usr/local/bin
-map gg cd /
+map g/ cd /
 map ge cd /etc
 map gM cd /media
 map gw cd ~/.config/wallpapers
