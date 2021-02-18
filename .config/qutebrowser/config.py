@@ -10,12 +10,12 @@ c.downloads.position = 'bottom'
 ############
 
 # bind some stylesheets
-config.bind(',ca', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/apprentice-all-sites.css ""')
-config.bind(',cd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/darculized-all-sites.css ""')
-config.bind(',cg', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/gruvbox-all-sites.css ""')
-config.bind(',csd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/solarized-dark-all-sites.css ""')
-config.bind(',csl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/solarized-light-all-sites.css ""')
-config.bind(',cn', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/css/none.css ""')
+config.bind(',ca', 'set content.user_stylesheets "[~/.config/qutebrowser/css/apprentice-all-sites.css, ~/.config/qutebrowser/css/block.css]"')
+config.bind(',cd', 'set content.user_stylesheets "[~/.config/qutebrowser/css/darculized-all-sites.css,  ~/.config/qutebrowser/css/block.css]"')
+config.bind(',cg', 'set content.user_stylesheets "[~/.config/qutebrowser/css/gruvbox-all-sites.css, ~/.config/qutebrowser/css/block.css]"')
+config.bind(',csd', 'set content.user_stylesheets "[~/.config/qutebrowser/css/solarized-dark-all-sites.css, ~/.config/qutebrowser/css/block.css]"')
+config.bind(',csl', 'set content.user_stylesheets "[~/.config/qutebrowser/css/solarized-light-all-sites.css, ~/.config/qutebrowser/css/block.css]"')
+config.bind(',cn', 'set content.user_stylesheets "[~/.config/qutebrowser/css/none.css, ~/.config/qutebrowser/css/block.css]"')
 
 
 config.unbind('m')
@@ -58,7 +58,7 @@ c.content.autoplay = False
 c.content.cookies.store = False
 
 # set custom css
-c.content.user_stylesheets = "~/.config/qutebrowser/css/none.css"
+c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/qutebrowser/css/block.css"]
 
 # enable pdf viewing
 c.content.pdfjs = True
