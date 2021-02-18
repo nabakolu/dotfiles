@@ -39,4 +39,6 @@ settings:
   content.notifications:
     https://euw.op.gg: false
   content.user_stylesheets:
-    global: ~/.config/qutebrowser/css/none.css
+    global:
+    - ~/.config/qutebrowser/css/none.css
+    - ~/.config/qutebrowser/css/block.css
