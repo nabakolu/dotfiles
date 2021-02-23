@@ -1,5 +1,6 @@
 set icons
 set drawbox
+set mouse
 
 set previewer ~/.config/preview.sh
 
@@ -288,3 +289,9 @@ map ge cd /etc
 map gM cd /media
 map gw cd ~/.config/wallpapers
 map gs cd /ssd
+
+# Mouse mappings
+map <m-down> down 
+map <m-up> up
+map <m-1> open
+map <m-2> updir
