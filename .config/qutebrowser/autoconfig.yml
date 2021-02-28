@@ -12,6 +12,7 @@ settings:
     https://teams.microsoft.com: true
   content.javascript.enabled:
     '*://*.campus.uni-stuttgart.de/*': true
+    '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
     '*://*.www.uni-stuttgart.de/*': true
     '*://accounts.google.com/*': true
@@ -20,11 +21,14 @@ settings:
     '*://github.com/*': true
     '*://ilias3.uni-stuttgart.de/*': true
     '*://lichess.org/*': true
+    '*://login.lolesports.com/*': true
+    '*://lolesports.com/*': true
     '*://lutris.net/*': true
     '*://mail.google.com/*': true
     '*://osu.ppy.sh/*': true
     '*://teams.microsoft.com/*': true
     '*://www-8.mailo.com/*': true
+    '*://www.epicgames.com/*': true
     '*://www.mailo.com/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
