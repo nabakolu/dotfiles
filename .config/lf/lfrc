@@ -293,5 +293,5 @@ map gs cd /ssd
 # Mouse mappings
 map <m-down> down 
 map <m-up> up
-map <m-1> open
-map <m-2> updir
+#map <m-1> open
+#map <m-2> updir
