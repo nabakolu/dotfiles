@@ -16,9 +16,12 @@ alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
 alias webdav='mount https://webdav.mailo.com'
 alias diff="diff --color=auto"
+alias se="vim \$(fzf)"
 
 source ~/.config/git_prompt.sh
 export PS1='\[\033[31m\]\u \[\033[32m\]\w\[\033[35m\]$(__git_ps1 " (%s)") \[\033[38;5;15m\]\$ '
+export FZF_DEFAULT_COMMAND='find .'
+
 
 #check if tty
 if [$(tty | grep tty) == ""]
