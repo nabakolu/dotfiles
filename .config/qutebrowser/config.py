@@ -38,6 +38,7 @@ config.bind('BH', 'open -t qute://history/')
 
 # spawn mpv with hint links when pressing m
 config.bind('m', 'hint links spawn --detach mpv {hint-url}')
+config.bind('M', 'spawn --detach mpv {url}')
 
 
 ####################
