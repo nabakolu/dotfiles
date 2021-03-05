@@ -25,6 +25,8 @@ settings:
     '*://lolesports.com/*': true
     '*://lutris.net/*': true
     '*://mail.google.com/*': true
+    '*://mail.uni-stuttgart.de/*': true
+    '*://nitter.unixfox.eu/*': true
     '*://osu.ppy.sh/*': true
     '*://teams.microsoft.com/*': true
     '*://www-8.mailo.com/*': true
