@@ -16,6 +16,7 @@ settings:
     '*://*.nabakolu.xyz/*': true
     '*://*.www.uni-stuttgart.de/*': true
     '*://accounts.google.com/*': true
+    '*://auth.riotgames.com/*': true
     '*://campus.uni-stuttgart.de/*': true
     '*://euw.op.gg/*': true
     '*://github.com/*': true
