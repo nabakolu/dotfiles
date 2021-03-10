@@ -4,6 +4,9 @@ setxkbmap -layout de -variant basic
 # set keyboard rate
 xset r rate 400 60
 
+# set screensaver timeout to 1 hour
+xset s 3600 3600
+
 # set standard monitorlayout
 sh ~/.screenlayout/default.sh
 
