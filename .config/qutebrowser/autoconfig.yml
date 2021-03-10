@@ -49,3 +49,6 @@ settings:
     global:
     - ~/.config/qutebrowser/css/none.css
     - ~/.config/qutebrowser/css/block.css
+  qt.args:
+    global:
+    - lang=en-GB
