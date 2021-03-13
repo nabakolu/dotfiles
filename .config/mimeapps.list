@@ -21,6 +21,7 @@ x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
 application/pdf=mupdf.desktop;
 x-scheme-handler/msteams=teams.desktop
+image/gif=sxiv.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
