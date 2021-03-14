@@ -35,7 +35,7 @@ settings:
     '*://www-8.mailo.com/*': true
     '*://www.deepl.com/*': true
     '*://www.epicgames.com/*': true
-    '*://www.mailo.com/*': true
+    '*://www.mailo.com/*': false
     '*://www.youtube.com/*': true
   content.media.audio_capture:
     https://teams.microsoft.com: true
