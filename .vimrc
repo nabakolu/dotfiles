@@ -18,6 +18,7 @@ set showcmd
 
 " use mouse
 set mouse=a
+set ttymouse=sgr
 
 " show relative line number
 set relativenumber
