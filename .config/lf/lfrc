@@ -67,12 +67,12 @@ cmd open_masterpdfeditor4 &{{
 cmd open_pywal &{{
 	wal -t -i $f
 	xdotool key "super+r"
-	pywal-discord
 	wal_steam
 	pywalfox update
 	killall dunst
 	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
 	betterlockscreen -u $f
+	oomox-materia-cli ~/.cache/wal/colors-oomox -o oomox-pywal -t ~/.themes
 	notify-send "pywal finished"
 }}
 
