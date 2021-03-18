@@ -9,6 +9,8 @@ mount ~/.webdav
 export TERMINAL="st"
 export EDITOR="vim"
 
+export QT_QPA_PLATFORMTHEME=gtk2
+
 #clipmenu
 export CM_SELECTIONS="clipboard"
 export CM_MAX_CLIPS=10
