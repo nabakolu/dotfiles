@@ -64,7 +64,7 @@ cmd open_masterpdfeditor4 &{{
 	nohup masterpdfeditor4 "$f" 0<&- &>/dev/null &
 }}
 
-cmd open_pywal &{{
+cmd open_pywal ${{
 	wal -t -i $f
 	xdotool key "super+r"
 	wal_steam
