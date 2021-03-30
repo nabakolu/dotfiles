@@ -30,12 +30,14 @@ settings:
     '*://mail.uni-stuttgart.de/*': true
     '*://nitter.unixfox.eu/*': true
     '*://osu.ppy.sh/*': true
+    '*://robertsspaceindustries.com/*': true
     '*://skribbl.io/*': true
     '*://teams.microsoft.com/*': true
     '*://www-8.mailo.com/*': true
     '*://www.deepl.com/*': true
     '*://www.epicgames.com/*': true
     '*://www.mailo.com/*': false
+    '*://www.sofort.com/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
     https://teams.microsoft.com: true
@@ -51,7 +53,7 @@ settings:
     https://gotify.nabakolu.xyz: true
   content.user_stylesheets:
     global:
-    - ~/.config/qutebrowser/css/none.css
+    - ~/.config/qutebrowser/css/darculized-all-sites.css
     - ~/.config/qutebrowser/css/block.css
   qt.args:
     global:
