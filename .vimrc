@@ -13,6 +13,9 @@ endif
 " General Settings
 " ----------------
 
+" set colourscheme
+colorscheme desert
+
 " show pressed keys
 set showcmd
 
