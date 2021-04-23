@@ -11,10 +11,20 @@ settings:
   content.desktop_capture:
     https://teams.microsoft.com: true
   content.javascript.enabled:
+    '*://*.app.diagrams.net/*': true
+    '*://*.app.element.io/*': true
     '*://*.campus.uni-stuttgart.de/*': true
+    '*://*.element.nhelmschmidt.de/*': true
+    '*://*.idbroker.webex.com/*': true
+    '*://*.idp.uni-stuttgart.de/*': true
     '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
+    '*://*.steamcommunity.com/*': true
+    '*://*.unistuttgart.webex.com/*': true
+    '*://*.www.fantasynamegenerators.com/*': true
+    '*://*.www.namecheap.com/*': true
     '*://*.www.uni-stuttgart.de/*': true
+    '*://*.www.vb-bia.de/*': true
     '*://accounts.google.com/*': true
     '*://auth.riotgames.com/*': true
     '*://campus.uni-stuttgart.de/*': true
@@ -33,10 +43,12 @@ settings:
     '*://robertsspaceindustries.com/*': true
     '*://skribbl.io/*': true
     '*://teams.microsoft.com/*': true
+    '*://users.nexusmods.com/*': true
     '*://www-8.mailo.com/*': true
     '*://www.deepl.com/*': true
     '*://www.epicgames.com/*': true
     '*://www.mailo.com/*': false
+    '*://www.nexusmods.com/*': true
     '*://www.sofort.com/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
@@ -48,12 +60,12 @@ settings:
   content.media.video_capture:
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
-  content.notifications:
+  content.notifications.enabled:
     https://euw.op.gg: false
     https://gotify.nabakolu.xyz: true
   content.user_stylesheets:
     global:
-    - ~/.config/qutebrowser/css/darculized-all-sites.css
+    - ~/.config/qutebrowser/css/none.css
     - ~/.config/qutebrowser/css/block.css
   qt.args:
     global:
