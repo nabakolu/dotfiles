@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# source only if file exists
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
 # enable vi mode
 set -o vi
 
@@ -42,8 +47,8 @@ fi
 #bash completion
 complete -cf sudo
 complete -c man
-source /usr/share/bash-completion/completions/git
-source /usr/share/bash-completion/completions/arduino
-source /usr/share/bash-completion/completions/ssh
+include /usr/share/bash-completion/completions/ssh
+include /usr/share/bash-completion/completions/git
+include /usr/share/bash-completion/completions/arduino
 __git_complete dotfiles __git_main
 
