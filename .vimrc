@@ -1,4 +1,4 @@
-let plugins=1
+let plugins=0
 
 if plugins==1
 		" Plugins here
