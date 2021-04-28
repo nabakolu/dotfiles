@@ -44,5 +44,6 @@ complete -cf sudo
 complete -c man
 source /usr/share/bash-completion/completions/git
 source /usr/share/bash-completion/completions/arduino
+source /usr/share/bash-completion/completions/ssh
 __git_complete dotfiles __git_main
 
