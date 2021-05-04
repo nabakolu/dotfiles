@@ -23,6 +23,11 @@ set showcmd
 set mouse=a
 set ttymouse=sgr
 
+" make search not case sensitive
+set ignorecase
+" make search case sensitive if there are capital letters in the search text
+set smartcase
+
 " show relative line number
 set relativenumber
 
@@ -50,7 +55,14 @@ if plugins==1
 		let g:ale_sign_warning = '__'
 
 		" linting is disabled by default
-		autocmd BufEnter * ALEDisableBuffer
+		"autocmd BufEnter * ALEDisableBuffer
+		nmap <silent> üp <Plug>(ale_previous_wrap)
+		nmap <silent> ün <Plug>(ale_next_wrap)
+
+		highlight clear SignColumn
+
+		" use Ctrl-K to activate linting
+		nnoremap <silent> üt :ALEToggleBuffer<CR>
 endif
 
 " -----------
@@ -64,12 +76,7 @@ nnoremap Y "+
 nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
 
-" use Ctrl-K to activate linting
-nnoremap <silent> üt :ALEToggleBuffer<CR>
 
-" use ün and üp to find next and previous errors
-noremap <silent> üp <Plug>(ale_previous_wrap)
-noremap <silent> ün <Plug>(ale_next_wrap)
 
 " --------
 " Commands
