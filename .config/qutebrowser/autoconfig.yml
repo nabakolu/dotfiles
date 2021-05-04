@@ -18,6 +18,7 @@ settings:
     '*://*.idbroker.webex.com/*': true
     '*://*.idp.uni-stuttgart.de/*': true
     '*://*.ionpump.de/*': true
+    '*://*.localhost/*': true
     '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
     '*://*.steamcommunity.com/*': true
@@ -42,6 +43,7 @@ settings:
     '*://mail.uni-stuttgart.de/*': true
     '*://nitter.unixfox.eu/*': true
     '*://osu.ppy.sh/*': true
+    '*://paper-io.com/*': true
     '*://robertsspaceindustries.com/*': true
     '*://skribbl.io/*': true
     '*://teams.microsoft.com/*': true
