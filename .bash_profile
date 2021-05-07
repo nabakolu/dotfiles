@@ -8,6 +8,8 @@ mount ~/.webdav
 
 export TERMINAL="st"
 export EDITOR="vim"
+export VISUAL="vim"
+export DE="dwm"
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
