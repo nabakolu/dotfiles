@@ -24,8 +24,10 @@ settings:
     '*://*.steamcommunity.com/*': true
     '*://*.unistuttgart.webex.com/*': true
     '*://*.www.fantasynamegenerators.com/*': true
+    '*://*.www.instant-gaming.com/*': true
     '*://*.www.namecheap.com/*': true
     '*://*.www.uni-stuttgart.de/*': true
+    '*://*.www.upscaler.ai/*': true
     '*://*.www.vb-bia.de/*': true
     '*://accounts.google.com/*': true
     '*://auth.riotgames.com/*': true
@@ -53,6 +55,7 @@ settings:
     '*://www.epicgames.com/*': true
     '*://www.mailo.com/*': false
     '*://www.nexusmods.com/*': true
+    '*://www.protondb.com/*': true
     '*://www.sofort.com/*': true
     '*://www.twitch.tv/*': true
     '*://www.youtube.com/*': true
