@@ -1,6 +1,6 @@
 [Default Applications]
 text/x-c=micro.desktop
-inode/directory=lf-st.desktop
+inode/directory=lf.desktop
 image/*=sxiv.desktop
 image/png=sxiv.desktop
 image/jpg=sxiv.desktop
@@ -22,6 +22,7 @@ x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
 application/pdf=mupdf.desktop;
 x-scheme-handler/msteams=teams.desktop
 image/gif=sxiv.desktop
+text/plain=vim.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
