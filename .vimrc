@@ -34,8 +34,8 @@ set relativenumber
 " move to correct tab when pressing enter
 set autoindent
 
-" disable line wrapping
-set nowrap
+" enable line wrapping
+set wrap
 
 " activate syntax highlighting
 syntax on
