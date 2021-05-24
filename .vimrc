@@ -1,20 +1,27 @@
-let plugins=0
+call plug#begin('~/.vim/plugged')
+	Plug 'scrooloose/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
-if plugins==1
-		" Plugins here
-		call plug#begin()
-		" ale, for linting
-		Plug 'dense-analysis/ale'
-		call plug#end()
-endif
-
-
-" ----------------
 " General Settings
 " ----------------
 
+set nobackup
+set nowritebackup
+set hidden
+
+" make error and warnings be on the same line as line numbers
+set signcolumn=number
+
+" make cursor 5 lines off top/bottom scroll
+set scrolloff=5
+
+" make split line not ugly
+set fillchars+=vert:\ 
+
 " set colourscheme
-colorscheme desert
+colorscheme delek
 
 " show pressed keys
 set showcmd
@@ -49,21 +56,13 @@ set shiftwidth=4
 " show whitespace
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 
-if plugins==1
-		" ALE error and warnging signs
-		let g:ale_sign_error = 'EE'
-		let g:ale_sign_warning = '__'
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
 
-		" linting is disabled by default
-		"autocmd BufEnter * ALEDisableBuffer
-		nmap <silent> üp <Plug>(ale_previous_wrap)
-		nmap <silent> ün <Plug>(ale_next_wrap)
 
-		highlight clear SignColumn
-
-		" use Ctrl-K to activate linting
-		nnoremap <silent> üt :ALEToggleBuffer<CR>
-endif
+" change the default folder/directory glyph/icon
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 
 " -----------
 " Keybindings
@@ -76,7 +75,18 @@ nnoremap Y "+
 nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
 
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Ctrl-F toggle NERDTree
+nmap <C-f> :NERDTreeToggle<CR>
 
 " --------
 " Commands
@@ -85,6 +95,15 @@ nnoremap <C-k> m`"="\n"<CR>P``k
 " sudo save with :W
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 " ------------
 " auto close {
