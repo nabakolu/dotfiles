@@ -6,6 +6,10 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.enabled:
+    global: false
+  content.blocking.enabled:
+    global: true
   content.blocking.method:
     global: adblock
   content.desktop_capture:
@@ -22,6 +26,7 @@ settings:
     '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
     '*://*.steamcommunity.com/*': true
+    '*://*.sync-tube.de/*': true
     '*://*.unistuttgart.webex.com/*': true
     '*://*.www.fantasynamegenerators.com/*': true
     '*://*.www.instant-gaming.com/*': true
@@ -62,9 +67,12 @@ settings:
     '*://www.twitch.tv/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
+    https://discord.com: true
+    https://jitsi.ionpump.de: true
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.audio_video_capture:
+    https://jitsi.ionpump.de: true
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.video_capture:
