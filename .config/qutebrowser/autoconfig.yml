@@ -6,6 +6,36 @@
 
 config_version: 2
 settings:
+  bindings.commands:
+    global:
+      normal:
+        ',ca': set content.user_stylesheets "[~/.config/qutebrowser/css/apprentice-all-sites.css,
+          ~/.config/qutebrowser/css/block.css]"
+        ',cd': set content.user_stylesheets "[~/.config/qutebrowser/css/darculized-all-sites.css,  ~/.config/qutebrowser/css/block.css]"
+        ',cg': set content.user_stylesheets "[~/.config/qutebrowser/css/gruvbox-all-sites.css,
+          ~/.config/qutebrowser/css/block.css]"
+        ',cn': set content.user_stylesheets "[~/.config/qutebrowser/css/none.css,
+          ~/.config/qutebrowser/css/block.css]"
+        ',csd': set content.user_stylesheets "[~/.config/qutebrowser/css/solarized-dark-all-sites.css,
+          ~/.config/qutebrowser/css/block.css]"
+        ',csl': set content.user_stylesheets "[~/.config/qutebrowser/css/solarized-light-all-sites.css,
+          ~/.config/qutebrowser/css/block.css]"
+        <Ctrl+Shift+ü>: back
+        <Ctrl+m>: spawn --detach mpv {url}
+        B: null
+        BB: open -t qute://bookmarks/
+        BH: open -t qute://history/
+        Bb: open -t qute://bookmarks/
+        Bh: open -t qute://history/
+        M: spawn --detach umpv {url}
+        b: null
+        bA: set-cmd-text -s :bookmark-add {url}
+        ba: bookmark-add
+        bb: open qute://bookmarks/
+        bd: bookmark-del
+        bh: open qute://history/
+        m: hint links spawn --detach umpv {hint-url}
+        yf: hint links yank
   colors.webpage.darkmode.enabled:
     global: false
   content.blocking.enabled:
@@ -88,3 +118,5 @@ settings:
   qt.args:
     global:
     - lang=en-GB
+  qt.workarounds.remove_service_workers:
+    global: true

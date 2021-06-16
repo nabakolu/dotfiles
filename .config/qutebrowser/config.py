@@ -42,6 +42,10 @@ config.bind('BH', 'open -t qute://history/')
 config.bind('m', 'hint links spawn --detach umpv {hint-url}')
 config.bind('M', 'spawn --detach umpv {url}')
 
+# spawn mpv with hint links when pressing ctrl m
+config.bind('<Ctrl-m>', 'hint links spawn --detach mpv {hint-url}')
+config.bind('<Ctrl-shift-m>', 'spawn --detach mpv {url}')
+
 config.bind('yf', 'hint links yank')
 
 ####################
