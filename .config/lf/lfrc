@@ -69,7 +69,7 @@ cmd open_masterpdfeditor4 &{{
 }}
 
 cmd open_pywal ${{
-	wal -t -i $f
+	wal -t -i $f --backend wal
 	xdotool key "super+r"
 	wal_steam
 	wal-discord -t
