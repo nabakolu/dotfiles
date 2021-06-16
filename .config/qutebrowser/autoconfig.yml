@@ -6,6 +6,10 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.enabled:
+    global: false
+  content.blocking.enabled:
+    global: true
   content.blocking.method:
     global: adblock
   content.desktop_capture:
@@ -18,17 +22,23 @@ settings:
     '*://*.idbroker.webex.com/*': true
     '*://*.idp.uni-stuttgart.de/*': true
     '*://*.ionpump.de/*': true
+    '*://*.localhost/*': true
     '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
     '*://*.steamcommunity.com/*': true
+    '*://*.sync-tube.de/*': true
     '*://*.unistuttgart.webex.com/*': true
     '*://*.www.fantasynamegenerators.com/*': true
+    '*://*.www.instant-gaming.com/*': true
     '*://*.www.namecheap.com/*': true
+    '*://*.www.netflix.com/*': true
     '*://*.www.uni-stuttgart.de/*': true
+    '*://*.www.upscaler.ai/*': true
     '*://*.www.vb-bia.de/*': true
     '*://accounts.google.com/*': true
     '*://auth.riotgames.com/*': true
     '*://campus.uni-stuttgart.de/*': true
+    '*://cloudpanel.ionos.de/*': true
     '*://euw.op.gg/*': true
     '*://garticphone.com/*': true
     '*://github.com/*': true
@@ -42,6 +52,7 @@ settings:
     '*://mail.uni-stuttgart.de/*': true
     '*://nitter.unixfox.eu/*': true
     '*://osu.ppy.sh/*': true
+    '*://paper-io.com/*': true
     '*://robertsspaceindustries.com/*': true
     '*://skribbl.io/*': true
     '*://teams.microsoft.com/*': true
@@ -51,13 +62,17 @@ settings:
     '*://www.epicgames.com/*': true
     '*://www.mailo.com/*': false
     '*://www.nexusmods.com/*': true
+    '*://www.protondb.com/*': true
     '*://www.sofort.com/*': true
     '*://www.twitch.tv/*': true
     '*://www.youtube.com/*': true
   content.media.audio_capture:
+    https://discord.com: true
+    https://jitsi.ionpump.de: true
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.audio_video_capture:
+    https://jitsi.ionpump.de: true
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.video_capture:

@@ -85,6 +85,9 @@ c.tabs.position = "left"
 # make tabs 32 pixel wide
 c.tabs.width = 32
 
+# no wrapping when changin tabs
+c.tabs.wrap = False
+
 # set bookmarks as default page
 c.url.default_page = "qute://bookmarks"
 

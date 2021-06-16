@@ -143,10 +143,12 @@ separator_color = frame
 startup_notification = false
 
 # dmenu path.
-dmenu = /usr/bin/dmenu -p dunst:
+dmenu = /usr/local/bin/dmenu -p dunst:
 
 # Browser for opening urls in context menu.
-browser = /usr/bin/firefox -new-tab
+browser = /usr/bin/qutebrowser
+
+mouse_middle_click = do_action
 
 # Align icons left/right/off
 icon_position = left
