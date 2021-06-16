@@ -1,0 +1,13 @@
+{
+	"diagnostic.errorSign": "",
+	"diagnostic.warningSign": "",
+	"diagnostic.infoSign": "",
+	"languageserver":{
+		"arduino":{ 
+			"command":"/home/lukas/packages/arduino-language-server/arduino-language-server",
+			"rootPatterns":["*.ino"],
+			"filetypes":["arduino"],
+			"args":["-cli", "/bin/arduino-cli", "-clangd", "/bin/clangd", "-cli-config", "/home/lukas/.arduino15/arduino-cli.yaml"]
+		}
+	}
+}
