@@ -27,4 +27,7 @@ blueman-applet &
 # start clipmenu daemon
 clipmenud &
 
+# start picom
+picom --experimental-backends &
+
 exec /usr/local/bin/dwm
