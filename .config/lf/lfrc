@@ -77,7 +77,7 @@ cmd open_pywal ${{
 	killall dunst
 	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
 	betterlockscreen -u $f
-	oomox-materia-cli ~/.cache/wal/colors-oomox -o oomox-pywal -t ~/.themes
+	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
 	notify-send "pywal finished"
 }}
 
