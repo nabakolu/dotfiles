@@ -48,12 +48,14 @@ config.bind('<Ctrl-shift-m>', 'spawn --detach mpv {url}')
 
 config.bind('yf', 'hint links yank')
 
+config.bind('td', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
+
 ####################
 # general settings #
 ####################
 
 # set website dark mode
-config.set("colors.webpage.darkmode.enabled", True)
+# config.set("colors.webpage.darkmode.enabled", True)
 config.set("colors.webpage.darkmode.policy.images", "never")
 
 # disable javascript
