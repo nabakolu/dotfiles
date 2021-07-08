@@ -17,10 +17,11 @@ cmd on-cd &{{
 on-cd
 
 cmd open ${{
-    case $(file --mime-type "$f" -bL) in
-        text/*|application/json) $EDITOR "$f";;
-        *) nohup xdg-open "$f" 0<&- &>/dev/null &
-    esac
+	case $(file --mime-type "$f" -bL) in
+		text/*|application/json) $EDITOR "$f";;
+		audio/*) mocp "$f";;
+		*) nohup xdg-open "$f" 0<&- &>/dev/null &
+	esac
 }}
 
 cmd bash ${{
