@@ -17,11 +17,19 @@ cmd on-cd &{{
 on-cd
 
 cmd open ${{
-	case $(file --mime-type "$f" -bL) in
-		text/*|application/json) $EDITOR "$f";;
-		audio/*) mocp "$f";;
-		*) nohup xdg-open "$f" 0<&- &>/dev/null &
-	esac
+	filetype=$(file --mime-type "$f" -bL)
+	case $filetype in
+	text/*|application/json) $EDITOR "$f";;
+	audio/*) mocp "$f";;
+	*) if [ "$(xdg-mime query default $filetype)" = "" ]
+	then
+		clear
+		echo "no default"
+		sleep 0.5
+	else
+		nohup xdg-open "$f" 0<&- &>/dev/null &
+	fi;;
+esac
 }}
 
 cmd bash ${{
