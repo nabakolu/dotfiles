@@ -81,7 +81,7 @@ cmd open_pywal ${{
 	wal -t -i $f --backend wal
 	xdotool key "super+r"
 	wal_steam
-	wal-discord -t
+	pywal-discord
 	pywalfox update
 	killall dunst
 	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
