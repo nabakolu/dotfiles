@@ -14,9 +14,6 @@ set hidden
 " make error and warnings be on the same line as line numbers
 set signcolumn=number
 
-" make cursor 5 lines off top/bottom scroll
-set scrolloff=5
-
 " make split line not ugly
 set fillchars+=vert:\ 
 
@@ -68,8 +65,6 @@ let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 " Keybindings
 " -----------
 
-" use Y to use system clipboard
-nnoremap Y "+
 
 " Ctrl-J and Ctr-K insert blank lines
 nnoremap <C-j> m`"="\n"<CR>p``j
