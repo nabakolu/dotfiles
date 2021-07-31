@@ -71,10 +71,10 @@ nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <Space>gd <Plug>(coc-definition)
+nmap <silent> <Space>gy <Plug>(coc-type-definition)
+nmap <silent> <Space>gi <Plug>(coc-implementation)
+nmap <silent> <Space>gr <Plug>(coc-references)
 
 
 " Use K to show documentation in preview window.
