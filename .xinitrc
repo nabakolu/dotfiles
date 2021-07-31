@@ -1,5 +1,5 @@
 # set german keyboardlayout
-setxkbmap -layout de -variant basic
+setxkbmap -layout de -variant nodeadkeys
 
 # set keyboard rate
 xset r rate 400 60
