@@ -33,7 +33,7 @@ set ignorecase
 set smartcase
 
 " show relative line number
-set relativenumber
+set number relativenumber
 
 " move to correct tab when pressing enter
 set autoindent
