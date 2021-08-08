@@ -27,6 +27,9 @@ blueman-applet &
 # start clipmenu daemon
 clipmenud &
 
+# start filemanager dbus daemon
+python /home/.config/filemanager-dbus.py &
+
 # start picom
 picom --experimental-backends &
 
