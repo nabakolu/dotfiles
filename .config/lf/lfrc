@@ -303,7 +303,6 @@ map g/ cd /
 map ge cd /etc
 map gM cd /media
 map gw cd ~/.config/wallpapers
-map gs cd /ssd
 
 # Mouse mappings
 map <m-down> down 
