@@ -90,6 +90,21 @@ cmd open_pywal ${{
 	notify-send "pywal finished"
 }}
 
+cmd open_pywal_light ${{
+	wal -l -t -i $f --backend wal
+	wal_steam
+	pywal-discord
+	pywalfox update
+	killall dunst
+	xdotool key "super+r"
+	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
+	betterlockscreen -u $f
+	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
+	notify-send "pywal finished"
+}}
+
+
+
 cmd wget ${{
 	printf "Download: "
 	read ans
@@ -278,6 +293,7 @@ map of open_firefox
 map os open_sxiv
 map og open_gimp
 map ow open_pywal
+map oW open_pywal_light
 map oP open_masterpdfeditor4
 map oq open_qutebrowser
 
