@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 " General Settings
@@ -18,7 +19,7 @@ set signcolumn=number
 set fillchars+=vert:\ 
 
 " set colourscheme
-colorscheme delek
+colorscheme wal
 
 " show pressed keys
 set showcmd
