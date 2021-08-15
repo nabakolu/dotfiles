@@ -9,5 +9,8 @@ def rewrite(request: qutebrowser.api.interceptor.Request):
     if url == 'twitter.com' or url == 'www.twitter.com':
         request.request_url.setHost('nitter.unixfox.eu')
         request.redirect(request.request_url)
+    if url == 'youtube.com' or url == 'www.youtube.com':
+        request.request_url.setHost('yewtu.be')
+        request.redirect(request.request_url)
 
 qutebrowser.api.interceptor.register(rewrite)
