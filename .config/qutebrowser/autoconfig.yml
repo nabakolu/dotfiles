@@ -55,6 +55,7 @@ settings:
     '*://*.idp.uni-stuttgart.de/*': true
     '*://*.ionpump.de/*': true
     '*://*.localhost/*': true
+    '*://*.login.playvalorant.com/*': true
     '*://*.loldodgegame.com/*': true
     '*://*.mail.ipa.fraunhofer.de/*': true
     '*://*.nabakolu.xyz/*': true
@@ -78,7 +79,9 @@ settings:
     '*://gotify.nabakolu.xyz/*': true
     '*://ilias3.uni-stuttgart.de/*': true
     '*://lichess.org/*': true
+    '*://login.leagueoflegends.com/*': true
     '*://login.lolesports.com/*': true
+    '*://login.riotgames.com/*': true
     '*://loldodgegame.com/*': true
     '*://lolesports.com/*': true
     '*://lutris.net/*': true
