@@ -59,7 +59,7 @@ config.bind('td', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
 config.set("colors.webpage.darkmode.policy.images", "never")
 
 # disable javascript
-c.content.javascript.enabled = False
+#c.content.javascript.enabled = False
 
 # disable autoplay
 c.content.autoplay = False
@@ -106,7 +106,8 @@ c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={
 c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
-c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
+c.url.searchengines['youtube'] = 'https://www.yewtu.be/results?search_query={}'
+#c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['opgg'] = 'https://euw.op.gg/champion/{}'
 
 # set bookmarks as start page
