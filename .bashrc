@@ -10,6 +10,8 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
+echo "hi"
+
 # enable vi mode
 set -o vi
 
