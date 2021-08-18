@@ -1,0 +1,43 @@
+bind index j next-entry
+bind index k previous-entry
+bind index G last-entry
+bind index g noop
+bind index gg first-entry
+bind index h noop
+bind index l display-message
+bind index <right> display-message
+bind index <left> noop
+bind index n toggle-new
+
+bind pager j next-line
+bind pager k previous-line
+bind pager l view-attachments
+bind pager h exit
+bind pager g noop
+bind pager gg top
+bind pager G bottom
+bind pager <right> view-attachments
+bind pager <left> exit
+
+bind attach <return> view-mailcap
+bind attach l view-mailcap
+bind attach h exit
+bind attach <right> view-mailcap
+bind attach <left> exit
+
+
+# sidebar
+bind index,pager \Ck sidebar-prev
+bind index,pager \Cj sidebar-next
+bind index,pager \Co sidebar-open
+bind index,pager \Cp sidebar-prev-new
+bind index,pager \Cn sidebar-next-new
+bind index,pager B sidebar-toggle-visible
+
+
+# Sync mail
+macro index o "<sync-mailbox>;<shell-escape>mbsync -a<enter>"
+
+# change mail accounts
+macro index,pager g1 '<sync-mailbox><enter-command>source ~/.config/mutt/mailo<enter><change-folder>!<enter>'
+macro index,pager g2 '<sync-mailbox><enter-command>source ~/.config/mutt/gmail<enter><change-folder>!<enter>'

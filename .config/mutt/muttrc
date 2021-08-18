@@ -1,0 +1,24 @@
+####################
+# Account Settings #
+####################
+
+# Mailbox
+set mbox_type=Maildir
+set header_cache=~/.hcache
+
+# general
+set sort = 'reverse-date'
+
+# sidebar
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+
+source ~/.config/mutt/keybinds
+source ~/.config/mutt/colors
+
+# start with mailo
+source ~/.config/mutt/mailo
