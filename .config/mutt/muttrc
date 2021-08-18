@@ -18,6 +18,8 @@ set mail_check_stats
 set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
 set wait_key = no
 
+startup-hook 'echo `echo 0 > ~/.config/mutt/newmail`'
+
 source ~/.config/mutt/keybinds
 source ~/.config/mutt/colors
 

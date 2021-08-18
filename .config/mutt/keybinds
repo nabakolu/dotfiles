@@ -36,7 +36,7 @@ bind index,pager B sidebar-toggle-visible
 
 
 # Sync mail
-macro index o "<sync-mailbox>;<shell-escape>mailsync<enter>"
+macro index o "<sync-mailbox>;<shell-escape>mailsync<enter><shell-escape>echo 0 > ~/.config/mutt/newmail<enter>"
 
 # change mail accounts
 macro index,pager g1 '<sync-mailbox><enter-command>source ~/.config/mutt/mailo<enter><change-folder>!<enter>'
