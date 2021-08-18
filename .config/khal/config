@@ -15,6 +15,3 @@ longdatetimeformat = %d/%m/%Y %H:%M
 default_calendar = Personal
 highlight_event_days = true
 
-[keybindings]
-export =
-external_edit = e
