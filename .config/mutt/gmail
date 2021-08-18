@@ -1,0 +1,17 @@
+#########
+# Gmail #
+#########
+
+set folder=$HOME/mail/gmail
+
+set from="lnabakowski@gmail.com"
+set hostname="gmail.com"
+set sendmail="msmtp -a gmail"
+
+set spoolfile= "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+
+unmailboxes *
+mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Starred
+

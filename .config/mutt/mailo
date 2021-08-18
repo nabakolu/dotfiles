@@ -1,0 +1,17 @@
+#########
+# Mailo #
+#########
+
+set folder=$HOME/mail/mailo
+
+set from="lnabakowski@mailo.com"
+set hostname="mail.mailo.com"
+set sendmail="msmtp -a mailo"
+
+set spoolfile= "+INBOX"
+set postponed = "+draftbox"
+set record = "+sent"
+
+unmailboxes *
+mailboxes =INBOX =sent =draftbox =trash =newsletter =social =unsolbox =ecard
+

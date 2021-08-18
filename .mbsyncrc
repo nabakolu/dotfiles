@@ -1,0 +1,58 @@
+#########
+# Mailo #
+#########
+
+IMAPAccount mailo
+	Host mail.mailo.com
+	Port 993
+	User lnabakowski@mailo.com
+	SSLType IMAPS
+	CertificateFile /etc/ssl/certs/ca-certificates.crt
+	PassCmd "secret-tool lookup Title Mailo"
+
+IMAPStore mailo-remote
+	Account mailo
+
+MaildirStore mailo-local
+	Path ~/mail/mailo/
+	Inbox ~/mail/mailo/INBOX
+	SubFolders Verbatim
+
+Channel mailo
+	Far :mailo-remote:
+	Near :mailo-local:
+	Create Both # automatically create missing mailboxes on server and locally
+	Syncstate * # Save the synchronization state files in the relevant directory
+	Patterns * # Include everything
+	ExpireUnread no
+
+
+#########
+# Gmail #
+#########
+
+IMAPAccount gmail
+	Host imap.gmail.com
+	Port 993
+	User lnabakowski@gmail.com
+	SSLType IMAPS
+	CertificateFile /etc/ssl/certs/ca-certificates.crt
+	PassCmd "secret-tool lookup Title Google"
+
+IMAPStore gmail-remote
+	Account gmail
+
+MaildirStore gmail-local
+	Path ~/mail/gmail/
+	Inbox ~/mail/gmail/INBOX
+	SubFolders Verbatim
+
+Channel gmail
+	Far :gmail-remote:
+	Near :gmail-local:
+	Create Both # automatically create missing mailboxes on server and locally
+	Syncstate * # Save the synchronization state files in the relevant directory
+	Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/Drafts"
+	ExpireUnread no
+
+
