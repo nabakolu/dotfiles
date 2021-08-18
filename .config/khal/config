@@ -1,0 +1,20 @@
+[calendars]
+
+[[calendar_local]]
+path = ~/calendars/*
+type = discover
+
+[locale]
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M
+
+[default]
+default_calendar = Personal
+highlight_event_days = true
+
+[keybindings]
+export =
+external_edit = e
