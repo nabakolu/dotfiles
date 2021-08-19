@@ -10,6 +10,7 @@ export TERMINAL="st"
 export EDITOR="vim"
 export VISUAL="vim"
 export DE="dwm"
+export BROWSER="qutebrowser"
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
