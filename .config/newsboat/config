@@ -15,7 +15,7 @@ bind-key i toggle-show-read-feeds
 
 goto-next-feed no
 
-browser "xdg-open" # This will open the browser defined by xdg-settings
+browser "urlopener.sh"
 
 # Below bindings apply vim like keybindings in most places
 
