@@ -101,7 +101,7 @@ c.url.default_page = "qute://bookmarks"
 c.url.open_base_url = True
 
 # set some searchengines
-c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}'
+c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}&kk=-1'
 c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={}'
 c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#de/en/{}'
