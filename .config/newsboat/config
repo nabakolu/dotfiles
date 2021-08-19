@@ -1,0 +1,38 @@
+prepopulate-query-feeds yes
+
+urls-source "ocnews"
+ocnews-url "https://nextcloud.nabakolu.xyz" # Domain of your Nextcloud
+ocnews-login "lukas" # Desired nextcloud user to log in as
+ocnews-passwordeval "secret-tool lookup Title Nextcloud" # Nextcloud password (app password if using 2Fa)
+
+
+auto-reload yes
+
+# -- navigation ----------------------------------------------------------------
+
+goto-next-feed no
+
+browser "xdg-open" # This will open the browser defined by xdg-settings
+
+# Below bindings apply vim like keybindings in most places
+
+bind-key h quit articlelist
+bind-key h quit article
+bind-key h quit tagselection
+bind-key h quit feedlist
+bind-key j down feedlist
+bind-key j down tagselection
+bind-key j next articlelist
+bind-key j down article
+bind-key J next-feed articlelist
+bind-key k up feedlist
+bind-key k prev articlelist
+bind-key k up tagselection
+bind-key K prev-feed articlelist
+bind-key k up article
+bind-key l open articlelist
+bind-key l open feedlist
+bind-key l open tagselection
+
+bind-key G end
+bind-key g home
