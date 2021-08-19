@@ -8,6 +8,9 @@ ocnews-passwordeval "secret-tool lookup Title Nextcloud" # Nextcloud password (a
 
 auto-reload yes
 
+
+bind-key i toggle-show-read-feeds
+
 # -- navigation ----------------------------------------------------------------
 
 goto-next-feed no
