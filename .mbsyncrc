@@ -56,3 +56,42 @@ Channel gmail
 	ExpireUnread no
 
 
+############
+# Uni Mail #
+############
+
+IMAPAccount unimail
+	Host imap.uni-stuttgart.de
+	Port 993
+	User st150565
+	SSLType IMAPS
+	CertificateFile /etc/ssl/certs/ca-certificates.crt
+	PassCmd "secret-tool lookup Title Uni"
+
+IMAPStore unimail-remote
+	Account unimail
+
+MaildirStore unimail-local
+	Path ~/mail/unimail/
+	Inbox ~/mail/unimail/INBOX
+	SubFolders Verbatim
+
+Channel unimail
+	Far :unimail-remote:
+	Near :unimail-local:
+	Create Both # automatically create missing mailboxes on server and locally
+	Syncstate * # Save the synchronization state files in the relevant directory
+	Patterns * # Include everything
+	ExpireUnread no
+
+
+
+
+
+
+
+
+
+
+
+
