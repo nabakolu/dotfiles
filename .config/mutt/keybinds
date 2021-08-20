@@ -7,7 +7,6 @@ bind index h noop
 bind index l display-message
 bind index <right> display-message
 bind index <left> noop
-bind index n toggle-new
 
 bind pager j next-line
 bind pager k previous-line
