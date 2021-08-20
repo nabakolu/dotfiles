@@ -23,7 +23,7 @@ color normal default default
 color indicator brightblack white
 color sidebar_highlight red default
 color sidebar_divider brightblack black
-color sidebar_flagged red black
+#color sidebar_flagged red black
 color sidebar_new green black
 color normal brightyellow default
 color error red default
