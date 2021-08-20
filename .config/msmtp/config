@@ -22,3 +22,11 @@ from lnabakowski@gmail.com
 user lnabakowski
 passwordeval "secret-tool lookup Title Google"
 tls_starttls off
+
+# Unimail
+account unimail
+host smtp.uni-stuttgart.de
+port 587
+from st150565@stud.uni-stuttgart.de
+user st150565
+passwordeval "secret-tool lookup Title Uni"
