@@ -34,6 +34,10 @@ bind index,pager \Cp sidebar-prev-new
 bind index,pager \Cn sidebar-next-new
 bind index,pager B sidebar-toggle-visible
 
+set query_command = "khard email --parsable %s"
+bind editor <Tab> complete-query
+bind editor ^T    complete
+
 
 # Sync mail
 macro index o "<sync-mailbox>;<shell-escape>mailsync<enter><shell-escape>echo 0 > ~/.config/mutt/newmail<enter>"
