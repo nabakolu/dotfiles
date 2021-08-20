@@ -1,0 +1,7 @@
+[Unit]
+Description=Start mailsync script
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=vdirsyncer sync

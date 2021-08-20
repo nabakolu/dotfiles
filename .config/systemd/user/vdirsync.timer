@@ -1,0 +1,9 @@
+[Unit]
+Description=Run vdirsync every 60 mins
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=60min
+
+[Install]
+WantedBy=timers.target
