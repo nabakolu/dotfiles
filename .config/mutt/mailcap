@@ -1,3 +1,4 @@
 text/plain; $EDITOR %s ;
 text/html; mv %s %s.html\; nohup xdg-open %s.html 0<&- &>/dev/null &;
 application/*; nohup xdg-open %s 0<&- &>/dev/null &;
+image/*; nohup xdg-open %s 0<&- &>/dev/null &;
