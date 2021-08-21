@@ -22,6 +22,7 @@ browser "urlopener.sh"
 bind-key h quit articlelist
 bind-key h quit article
 bind-key h quit tagselection
+bind-key h quit urlview
 bind-key j down feedlist
 bind-key j down tagselection
 bind-key j next articlelist
@@ -35,6 +36,8 @@ bind-key k up article
 bind-key l open articlelist
 bind-key l open feedlist
 bind-key l open tagselection
+bind-key l show-urls article
+bind-key l open urlview
 
 bind-key G end
 bind-key g home
