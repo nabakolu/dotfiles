@@ -1,0 +1,17 @@
+###########
+# Unimail #
+###########
+
+set folder=$HOME/mail/unimail
+
+set from="st150565@stud.uni-stuttgart.de"
+set hostname="smtp.uni-stuttgart.de"
+set sendmail="msmtp -a unimail"
+
+set spoolfile= "+INBOX"
+set postponed = "+Entw&APw-rfe"
+set record = "+Gesendete Elemente"
+
+unmailboxes *
+mailboxes =INBOX =Gesendete\ Elemente =Entw&APw-rfe =Gel&APY-schte\ Elemente
+
