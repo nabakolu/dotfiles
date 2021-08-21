@@ -27,12 +27,14 @@ bind-key j down feedlist
 bind-key j down tagselection
 bind-key j next articlelist
 bind-key j down article
+bind-key j down urlview
 bind-key J next-feed articlelist
 bind-key k up feedlist
 bind-key k prev articlelist
 bind-key k up tagselection
 bind-key K prev-feed articlelist
 bind-key k up article
+bind-key k up urlview
 bind-key l open articlelist
 bind-key l open feedlist
 bind-key l open tagselection
