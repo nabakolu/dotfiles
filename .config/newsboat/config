@@ -22,7 +22,6 @@ browser "urlopener.sh"
 bind-key h quit articlelist
 bind-key h quit article
 bind-key h quit tagselection
-bind-key h quit feedlist
 bind-key j down feedlist
 bind-key j down tagselection
 bind-key j next articlelist
