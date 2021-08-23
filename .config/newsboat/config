@@ -6,7 +6,6 @@ ocnews-login "lukas" # Desired nextcloud user to log in as
 ocnews-passwordeval "secret-tool lookup Title Nextcloud" # Nextcloud password (app password if using 2Fa)
 
 
-auto-reload yes
 
 
 bind-key i toggle-show-read-feeds
