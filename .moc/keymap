@@ -2,5 +2,5 @@ go = ENTER RIGHT l
 go_up = LEFT h
 menu_up = UP k
 menu_down = Down j
-seek_forward = L
-seek_backward = H
+seek_forward_fast = L
+seek_backward_fast = H
