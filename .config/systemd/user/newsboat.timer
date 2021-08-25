@@ -1,9 +1,9 @@
 [Unit]
-Description=Run mailsync every 60 mins
+Description=Reload newsboat feeds every 60 mins
 
 [Timer]
 OnBootSec=5min
-OnUnitActiveSec=30min
+OnUnitActiveSec=60min
 
 [Install]
 WantedBy=timers.target
