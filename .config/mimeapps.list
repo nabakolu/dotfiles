@@ -23,6 +23,8 @@ x-scheme-handler/msteams=teams.desktop
 image/gif=sxiv.desktop
 text/plain=vim.desktop
 inode/x-empty=lf.desktop
+x-directory/normal=lf.desktop
+application/octet-stream=mocp.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
