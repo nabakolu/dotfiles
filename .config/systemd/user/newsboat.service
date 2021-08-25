@@ -1,5 +1,5 @@
 [Unit]
-Description=Start mailsync script
+Description=Reload newsboat feeds
 DefaultDependencies=no
 
 [Service]
