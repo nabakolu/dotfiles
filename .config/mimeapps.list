@@ -25,6 +25,7 @@ text/plain=vim.desktop
 inode/x-empty=lf.desktop
 x-directory/normal=lf.desktop
 application/octet-stream=mocp.desktop
+audio/mpegapplication/octet-stream=mocp.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
