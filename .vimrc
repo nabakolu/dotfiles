@@ -62,6 +62,8 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " change the default folder/directory glyph/icon
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 
+let g:NERDTreeQuitOnOpen = 1
+
 " -----------
 " Keybindings
 " -----------
