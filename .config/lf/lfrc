@@ -27,7 +27,7 @@ cmd open ${{
 		echo "no default"
 		sleep 0.5
 	else
-		nohup xdg-open "$f" 0<&- &>/dev/null &
+		nohup xdg-open "$f" > /dev/null 2>&1&
 	fi;;
 esac
 }}
@@ -46,23 +46,23 @@ cmd open_mocp &{{
 }}
 
 cmd open_umpv &{{
-	nohup umpv $f 0<&- &>/dev/null &
+	nohup umpv $f > /dev/null 2>&1&
 }}
 
 cmd open_mpv &{{
-	nohup mpv $f 0<&- &>/dev/null &
+	nohup mpv $f > /dev/null 2>&1&
 }}
 
 cmd open_qutebrowser &{{
-	nohup qutebrowser $f 0<&- &>/dev/null &
+	nohup qutebrowser $f > /dev/null 2>&1&
 }}
 
 cmd open_firefox &{{
-	nohup firefox $f 0<&- &>/dev/null &
+	nohup firefox $f > /dev/null 2>&1&
 }}
 
 cmd open_sxiv &{{
-	nohup sxiv "$f" 0<&- &>/dev/null &
+	nohup sxiv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_gimp &{{
@@ -74,7 +74,7 @@ cmd open_mocp ${{
 }}
 
 cmd open_masterpdfeditor4 &{{
-	nohup masterpdfeditor4 "$f" 0<&- &>/dev/null &
+	nohup masterpdfeditor4 "$f" > /dev/null 2>&1&
 }}
 
 cmd open_pywal ${{
@@ -84,7 +84,7 @@ cmd open_pywal ${{
 	pywal-discord
 	pywalfox update
 	killall dunst
-	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
+	nohup ~/.config/dunst.sh > /dev/null 2>&1&
 	betterlockscreen -u $f
 	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
 	notify-send "pywal finished"
@@ -97,7 +97,7 @@ cmd open_pywal_light ${{
 	pywalfox update
 	killall dunst
 	xdotool key "super+r"
-	nohup ~/.config/dunst.sh 0<&- &>/dev/null &
+	nohup ~/.config/dunst.sh > /dev/null 2>&1&
 	betterlockscreen -u $f
 	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
 	notify-send "pywal finished"
