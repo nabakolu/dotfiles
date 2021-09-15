@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 case "$1" in
 	*.mp3|*.mp4|*.wav|*.opus|*.ogg|*.mkv) 
