@@ -16,10 +16,10 @@ fileext = ".vcf"
 
 [storage contacts_remote]
 type = "carddav"
-url = "https://nextcloud.nabakolu.xyz/remote.php/dav/addressbooks/users/lukas/contacts/"
+url = "https://caldav.nabakolu.xyz/lukas/contacts/"
 username = "lukas"
 #password = "nW4XR-bi29D-wkn52-BW7a7-Mco7Z"
-password.fetch = ["command", "secret-tool", "lookup", "Title", "Nextcloud"]
+password.fetch = ["command", "secret-tool", "lookup", "Title", "Radicale"]
 
 [pair calendar]
 a = "calendar_local"
@@ -34,6 +34,6 @@ fileext = ".ics"
 
 [storage calendar_remote]
 type = "caldav"
-url = "https://nextcloud.nabakolu.xyz/remote.php/dav/calendars/lukas/Personal/"
+url = "https://caldav.nabakolu.xyz/lukas/personal/"
 username = "lukas"
-password.fetch = ["command", "secret-tool", "lookup", "Title", "Nextcloud"]
+password.fetch = ["command", "secret-tool", "lookup", "Title", "Radicale"]
