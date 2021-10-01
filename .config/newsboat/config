@@ -1,9 +1,9 @@
 prepopulate-query-feeds yes
 
-urls-source "ocnews"
-ocnews-url "https://nextcloud.nabakolu.xyz" # Domain of your Nextcloud
-ocnews-login "lukas" # Desired nextcloud user to log in as
-ocnews-passwordeval "secret-tool lookup Title Nextcloud" # Nextcloud password (app password if using 2Fa)
+urls-source "miniflux"
+miniflux-url "https://miniflux.nabakolu.xyz"
+miniflux-login "lukas" # Desired user to log in as
+miniflux-passwordeval "secret-tool lookup Title Miniflux" # Miniflux password
 
 
 
