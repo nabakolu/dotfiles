@@ -36,8 +36,14 @@ settings:
         bh: open qute://history/
         m: hint links spawn --detach umpv {hint-url}
         yf: hint links yank
+  colors.webpage.darkmode.algorithm:
+    global: lightness-cielab
   colors.webpage.darkmode.enabled:
-    global: true
+    global: false
+  colors.webpage.darkmode.threshold.text:
+    global: 256
+  colors.webpage.preferred_color_scheme:
+    global: dark
   content.blocking.enabled:
     global: true
   content.blocking.method:
@@ -113,11 +119,13 @@ settings:
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.media.video_capture:
+    https://jitsi.ionpump.de: true
     https://teams.microsoft.com: true
     https://unistuttgart.webex.com: true
   content.notifications.enabled:
     https://euw.op.gg: false
     https://gotify.nabakolu.xyz: true
+    https://nextcloud.nabakolu.xyz: true
   content.plugins:
     global: true
   content.user_stylesheets:
