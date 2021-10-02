@@ -48,8 +48,10 @@ config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
 
 config.bind('yf', 'hint links yank')
 
-config.bind('td', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
-config.bind('tD', 'spawn bash /home/lukas/.config/qutebrowser/toggle_dark.sh ;; greasemonkey-reload')
+config.unbind('D')
+config.bind('D1', 'set colors.webpage.darkmode.enabled true;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
+config.bind('D2', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
+config.bind('D3', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
 
 ####################
 # general settings #
