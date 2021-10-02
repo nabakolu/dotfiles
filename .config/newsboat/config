@@ -42,3 +42,9 @@ bind-key l open urlview
 
 bind-key G end
 bind-key g home
+
+color listfocus blue white bold
+color listfocus_unread blue white bold
+color title               white  blue   bold
+color info                white  blue   bold
+color hint-key            white  blue   bold
