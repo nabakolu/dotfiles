@@ -54,6 +54,9 @@ set shiftwidth=4
 " show whitespace
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 
+" disable modelines due to ex:
+set nomodeline
+
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
