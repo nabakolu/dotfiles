@@ -1,3 +1,6 @@
+" Plugin Settings
+" ----------------
+
 call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
@@ -5,6 +8,35 @@ call plug#begin('~/.vim/plugged')
 	Plug 'dylanaraps/wal.vim'
 	Plug 'danilamihailov/beacon.nvim'
 call plug#end()
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+" change the default folder/directory glyph/icon
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+
+let g:NERDTreeQuitOnOpen = 1
+
+" Ctrl-F toggle NERDTree
+nmap <C-f> :NERDTreeToggle<CR>
+
+" GoTo code navigation.
+nmap <silent> <Space>gd <Plug>(coc-definition)
+nmap <silent> <Space>gy <Plug>(coc-type-definition)
+nmap <silent> <Space>gi <Plug>(coc-implementation)
+nmap <silent> <Space>gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" enable beacon on any jump more than one line
+let g:beacon_minimal_jump = 2
+" enable beacon on search
+nmap n n:Beacon<cr>
+nmap N N:Beacon<cr>
+
+
 
 " General Settings
 " ----------------
@@ -58,16 +90,6 @@ set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 " disable modelines due to ex:
 set nomodeline
 
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-
-
-" change the default folder/directory glyph/icon
-let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-
-let g:NERDTreeQuitOnOpen = 1
-
 " -----------
 " Keybindings
 " -----------
@@ -76,25 +98,6 @@ let g:NERDTreeQuitOnOpen = 1
 " Ctrl-J and Ctr-K insert blank lines
 nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
-
-" GoTo code navigation.
-nmap <silent> <Space>gd <Plug>(coc-definition)
-nmap <silent> <Space>gy <Plug>(coc-type-definition)
-nmap <silent> <Space>gi <Plug>(coc-implementation)
-nmap <silent> <Space>gr <Plug>(coc-references)
-
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Ctrl-F toggle NERDTree
-nmap <C-f> :NERDTreeToggle<CR>
-
-" enable beacon on any jump more than one line
-let g:beacon_minimal_jump = 2
-" enable beacon on search
-nmap n n:Beacon<cr>
-nmap N N:Beacon<cr>
 
 " --------
 " Commands
