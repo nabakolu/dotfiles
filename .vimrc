@@ -32,6 +32,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " enable beacon on any jump more than one line
 let g:beacon_minimal_jump = 2
+" disable animation
+let g:beacon_shrink = 0
+" make width to 5
+let g:beacon_size = 5
 " enable beacon on search
 nmap n n:Beacon<cr>
 nmap N N:Beacon<cr>
