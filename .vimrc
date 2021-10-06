@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'dylanaraps/wal.vim'
+	Plug 'danilamihailov/beacon.nvim'
 call plug#end()
 
 " General Settings
@@ -88,6 +89,12 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 " Ctrl-F toggle NERDTree
 nmap <C-f> :NERDTreeToggle<CR>
+
+" enable beacon on any jump more than one line
+let g:beacon_minimal_jump = 2
+" enable beacon on search
+nmap n n:Beacon<cr>
+nmap N N:Beacon<cr>
 
 " --------
 " Commands
