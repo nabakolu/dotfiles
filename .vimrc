@@ -49,6 +49,10 @@ set nobackup
 set nowritebackup
 set hidden
 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+
 " make error and warnings be on the same line as line numbers
 set signcolumn=number
 
