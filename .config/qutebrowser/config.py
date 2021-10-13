@@ -98,7 +98,7 @@ c.tabs.width = 32
 c.tabs.wrap = False
 
 # set bookmarks as default page
-c.url.default_page = "qute://bookmarks"
+c.url.default_page = "about:blank"
 
 # open search engine url, when no search query is made
 c.url.open_base_url = True
@@ -116,7 +116,7 @@ c.url.searchengines['youtube'] = 'https://www.yewtu.be/results?search_query={}'
 c.url.searchengines['opgg'] = 'https://euw.op.gg/champion/{}'
 
 # set bookmarks as start page
-c.url.start_pages = "qute://bookmarks"
+c.url.start_pages = "about:blank"
 
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
