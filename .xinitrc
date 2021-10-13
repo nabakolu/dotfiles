@@ -33,4 +33,7 @@ python /home/.config/filemanager-dbus.py &
 # start picom
 picom --experimental-backends &
 
+# start noisetorch
+noisetorch -i
+
 exec /usr/local/bin/dwm
