@@ -39,7 +39,7 @@ settings:
   colors.webpage.darkmode.algorithm:
     global: lightness-cielab
   colors.webpage.darkmode.enabled:
-    global: true
+    global: false
   colors.webpage.darkmode.threshold.text:
     global: 256
   colors.webpage.preferred_color_scheme:
