@@ -1,11 +1,12 @@
 prepopulate-query-feeds yes
 
-urls-source "miniflux"
-miniflux-url "https://miniflux.nabakolu.xyz"
-miniflux-login "lukas" # Desired user to log in as
-miniflux-passwordeval "secret-tool lookup Title Miniflux" # Miniflux password
+urls-source "freshrss"
+freshrss-url "https://freshrss.nabakolu.xyz/api/greader.php"
+freshrss-login "lukas"
+freshrss-passwordeval "secret-tool lookup Title FreshRSS" #fresh RSS password
 
-
+freshrss-flag-star "s"
+freshrss-min-items 100
 
 
 bind-key i toggle-show-read-feeds
