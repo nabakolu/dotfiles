@@ -20,7 +20,7 @@ host smtp.gmail.com
 port 465
 from lnabakowski@gmail.com
 user lnabakowski
-passwordeval "secret-tool lookup Title Google"
+passwordeval "secret-tool lookup Title Gmail"
 tls_starttls off
 
 # Unimail
