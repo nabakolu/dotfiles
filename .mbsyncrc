@@ -37,7 +37,7 @@ IMAPAccount gmail
 	User lnabakowski@gmail.com
 	SSLType IMAPS
 	CertificateFile /etc/ssl/certs/ca-certificates.crt
-	PassCmd "secret-tool lookup Title Google"
+	PassCmd "secret-tool lookup Title Gmail"
 
 IMAPStore gmail-remote
 	Account gmail
