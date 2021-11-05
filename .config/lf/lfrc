@@ -36,6 +36,23 @@ cmd bash ${{
 	/bin/bash
 }}
 
+cmd bulk ${{
+	set -f
+	echo $fx | sed 's/ \//\n\//g' | tee ~/.cache/bulkold > ~/.cache/bulknew
+	$EDITOR ~/.cache/bulknew
+	n=1
+	cat ~/.cache/bulknew |
+		while read -r line; do
+			sed -i "$n s|$| $line|g" ~/.cache/bulkold
+			n=$(($n + 1))
+		done
+
+	sed -i "s/^/mv -vi \"/g" ~/.cache/bulkold
+	sed -i "s/ \//\" \"\//g" ~/.cache/bulkold
+	sed -i "s/$/\"/g" ~/.cache/bulkold
+	sh ~/.cache/bulkold
+}}
+
 
 cmd open_less ${{
 	less $f
@@ -267,6 +284,7 @@ map rm delete
 map P delete
 map rn rename
 map <f-2> rename
+map rb bulk
 
 map <c-c> copy
 map <c-x> cut
