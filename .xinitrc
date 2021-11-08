@@ -31,7 +31,7 @@ clipmenud &
 python /home/.config/filemanager-dbus.py &
 
 # start picom
-picom --experimental-backends &
+sleep 1 && picom --experimental-backends &
 
 # start noisetorch
 noisetorch -i
