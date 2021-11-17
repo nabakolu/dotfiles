@@ -98,6 +98,9 @@ set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 " disable modelines due to ex:
 set nomodeline
 
+" make splits appear on the right
+set splitright
+
 " -----------
 " Keybindings
 " -----------
