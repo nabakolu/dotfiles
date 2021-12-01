@@ -111,7 +111,7 @@ c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
 c.url.searchengines['deepld'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#en/de/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
-c.url.searchengines['youtube'] = 'https://invidio.xamh.de/search?q={}'
+c.url.searchengines['youtube'] = 'https://yewtu.be/search?q={}'
 #c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['opgg'] = 'https://euw.op.gg/champion/{}'
 
@@ -138,7 +138,7 @@ def filter_yt(info: interceptor.Request):
 
 interceptor.register(filter_yt)
 
-c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0"
+#c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0"
 #c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393"
 c.content.headers.accept_language = "en-US,en;q=0.5"
 c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
