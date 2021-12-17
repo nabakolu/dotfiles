@@ -96,28 +96,14 @@ cmd open_masterpdfeditor4 &{{
 
 cmd open_pywal ${{
 	wal -t -i $f --backend wal
-	xdotool key "super+r"
-	wal_steam
-	pywal-discord
-	pywalfox update
-	killall dunst
-	nohup ~/.config/dunst.sh > /dev/null 2>&1&
 	betterlockscreen -u $f
-	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
-	notify-send "pywal finished"
+	theme
 }}
 
 cmd open_pywal_light ${{
 	wal -l -t -i $f --backend wal
-	wal_steam
-	pywal-discord
-	pywalfox update
-	killall dunst
-	xdotool key "super+r"
-	nohup ~/.config/dunst.sh > /dev/null 2>&1&
 	betterlockscreen -u $f
-	oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -o oomox-xresources-reverse -t ~/.themes
-	notify-send "pywal finished"
+	theme
 }}
 
 
