@@ -53,6 +53,8 @@ config.bind('D1', 'set colors.webpage.darkmode.enabled true;; spawn sh /home/luk
 config.bind('D2', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
 config.bind('D3', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
 
+config.bind('gd', 'download-open')
+
 ####################
 # general settings #
 ####################
@@ -82,6 +84,9 @@ c.content.webgl = False
 # set vim in st as default editor
 c.editor.command = ['st','-e','vim', '{}']
 
+# set lf to be the program in which downloads can be opened
+c.downloads.open_dispatcher = "st -e /usr/local/bin/lf {}"
+
 # make hint chars upper case
 c.hints.uppercase = True
 
@@ -102,6 +107,7 @@ c.url.default_page = "about:blank"
 
 # open search engine url, when no search query is made
 c.url.open_base_url = True
+
 
 # set some searchengines
 c.url.searchengines['DEFAULT'] = 'https://duckduckgo.com/?q={}&kk=-1'
