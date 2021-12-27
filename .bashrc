@@ -24,7 +24,8 @@ alias diff="diff --color=auto"
 alias se="vim \$(fzf)"
 
 source ~/.config/git_prompt.sh
-export PS1='\[\033[31m\]\u \[\033[32m\]\w\[\033[35m\]$(__git_ps1 " (%s)") \[\033[38;5;15m\]\$ '
+export PS1='\[\033[32m\]\w\[\033[35m\]$(__git_ps1 " (%s)") \[\033[31m\]$ \[\033[38;5;15m\]'
+
 export FZF_DEFAULT_COMMAND='find .'
 
 #check if tty
