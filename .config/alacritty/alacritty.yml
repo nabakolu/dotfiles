@@ -2,8 +2,7 @@ background_opacity: 0.9
 
 font:
     normal:
-        #family: Inconsolata Nerd Font Mono
-        family: RobotoMono Nerd Font
+      family: nabakolu
     size: 12
 
 
