@@ -5,6 +5,11 @@ path = ~/calendars/*
 type = discover
 color = light green
 
+[[birthdays]]
+path = ~/contacts/contacts
+type = birthdays
+color = light red
+
 [locale]
 timeformat = %H:%M
 dateformat = %d/%m/%Y
