@@ -20,4 +20,8 @@ longdatetimeformat = %d/%m/%Y %H:%M
 [default]
 default_calendar = personal
 highlight_event_days = true
+timedelta = 1d
 
+[view]
+frame = width
+dynamic_days = false
