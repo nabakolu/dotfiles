@@ -3,12 +3,12 @@
 [[calendar_local]]
 path = ~/calendars/*
 type = discover
-color = light green
+color = dark green
 
 [[birthdays]]
 path = ~/contacts/contacts
 type = birthdays
-color = light red
+color = white
 
 [locale]
 timeformat = %H:%M
