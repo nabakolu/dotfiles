@@ -41,11 +41,7 @@ else
 fi
 
 #bash completion
-complete -cf sudo
-complete -c man
-include /usr/share/bash-completion/completions/ssh
 include /usr/share/bash-completion/completions/git
-include /usr/share/bash-completion/completions/arduino
 [[ -f /usr/share/blesh/ble.sh ]] && source /usr/share/blesh/ble.sh
 __git_complete dotfiles __git_main
 
