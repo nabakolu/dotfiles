@@ -14,12 +14,8 @@ include () {
 set -o vi
 
 #aliases
-alias alsamixer="alsamixer -g"
-alias handymount="sudo curlftpfs -f 192.168.178.26:2211 /media/handy/ -o user=lukas,allow_other"
-alias handysdmount="sudo curlftpfs -f 192.168.178.26:2211 /media/handy/ -o user=lukas2,allow_other"
 alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
-alias webdav='mount https://webdav.mailo.com'
 alias diff="diff --color=auto"
 alias se="vim \$(fzf)"
 
@@ -37,7 +33,6 @@ then
 	alias la='ls -a'
 	alias lla='ls -l -a'
 else
-	alias ranger='ranger --cmd="set use_preview_script!"; clear'
 	alias ls='ls --color=auto -F'
 	alias ll='ls --color=auto -Fl'
 	alias l='ls -1'
@@ -46,10 +41,7 @@ else
 fi
 
 #bash completion
-complete -cf sudo
-complete -c man
-include /usr/share/bash-completion/completions/ssh
 include /usr/share/bash-completion/completions/git
-include /usr/share/bash-completion/completions/arduino
+[[ -f /usr/share/blesh/ble.sh ]] && source /usr/share/blesh/ble.sh
 __git_complete dotfiles __git_main
 
