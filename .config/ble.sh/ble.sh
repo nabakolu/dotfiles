@@ -867,7 +867,7 @@ function ble/base/print-usage-for-no-argument-command {
   return 0
 }
 function ble-reload { source "$_ble_base/ble.sh"; }
-_ble_base_repository='/home/lukas/Downloads/ble.sh'
+_ble_base_repository='/home/lukas/.config/ble.sh/src/ble.sh'
 _ble_base_branch=master
 function ble-update/.check-install-directory-ownership {
   if [[ ! -O $_ble_base ]]; then
