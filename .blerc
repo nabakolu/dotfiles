@@ -1,3 +1,4 @@
 bleopt info_display=bottom
 bleopt keymap_vi_mode_string_nmap:=$'\e[1m-- NORMAL --\e[m'
 bleopt complete_menu_style=dense-nowrap
+bleopt filename_ls_colors="$LS_COLORS"
