@@ -8,3 +8,9 @@ bleopt exec_errexit_mark=
 VISUAL='vim -X'
 ble-bind -m vi_imap -f 'C-x C-v' 'edit-and-execute-command'
 ble-bind -m vi_nmap -f 'C-x C-v' 'vi-command/edit-and-execute-command'
+
+ble-bind -m 'menu_complete' -f 'C-n' 'menu/forward cyclic'
+ble-bind -m 'menu_complete' -f 'C-p' 'menu/backward cyclic
+'
+ble-bind -m 'vi_imap' -f 'C-n' 'vi_imap/complete'
+ble-bind -m 'vi_imap' -f 'C-p' 'vi_imap/complete'
