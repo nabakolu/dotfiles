@@ -14,3 +14,4 @@ TAB: menu-complete
 Control-n: menu-complete
 Control-p: menu-complete-backward
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
