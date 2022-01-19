@@ -7,3 +7,7 @@ set colored-stats On
 set visible-stats On
 set mark-symlinked-directories On
 set colored-completion-prefix On
+TAB: menu-complete
+"\e[Z": menu-complete-backward
+Control-n: menu-complete
+Control-p: menu-complete-backward

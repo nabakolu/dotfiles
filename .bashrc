@@ -42,6 +42,5 @@ fi
 
 #bash completion
 include /usr/share/bash-completion/completions/git
-[[ -f ~/.config/ble.sh/ble.sh ]] && source ~/.config/ble.sh/ble.sh
 __git_complete dotfiles __git_main
 
