@@ -1,0 +1,17 @@
+############
+# nabakolu #
+############
+
+set folder=$HOME/mail/nabakolu
+
+set from="lukas@nabakolu.xyz"
+set hostname="mail.nabakolu.xyz"
+set sendmail="msmtp -a nabakolu"
+
+set spoolfile= "+INBOX"
+set postponed = "+draftbox"
+set record = "+Sent"
+
+unmailboxes *
+mailboxes =INBOX =Sent =Drafts =Junk
+
