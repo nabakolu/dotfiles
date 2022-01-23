@@ -30,3 +30,13 @@ port 587
 from st150565@stud.uni-stuttgart.de
 user st150565
 passwordeval "secret-tool lookup Title Uni"
+
+# nabakolu.xyz
+account nabakolu
+host mail.nabakolu.xyz
+port 587
+from lukas@nabakolu.xyz
+user lukas
+passwordeval "secret-tool lookup Title lukas"
+
+
