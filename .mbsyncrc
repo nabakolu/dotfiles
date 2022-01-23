@@ -85,6 +85,35 @@ Channel unimail
 	ExpireUnread no
 
 
+################
+# nabakolu.xyz #
+################
+
+IMAPAccount nabakolu
+	Host mail.nabakolu.xyz
+	Port 993
+	User lukas
+	SSLType IMAPS
+	CertificateFile /etc/ssl/certs/ca-certificates.crt
+	PassCmd "secret-tool lookup Title lukas"
+
+IMAPStore nabakolu-remote
+	Account nabakolu
+
+MaildirStore nabakolu-local
+	Path ~/mail/nabakolu/
+	Inbox ~/mail/nabakolu/INBOX
+	SubFolders Verbatim
+
+Channel nabakolu
+	Far :nabakolu-remote:
+	Near :nabakolu-local:
+	Create Both # automatically create missing mailboxes on server and locally
+	Syncstate * # Save the synchronization state files in the relevant directory
+	Patterns * # Include everything
+	ExpireUnread no
+
+
 
 
 
