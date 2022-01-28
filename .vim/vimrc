@@ -110,6 +110,9 @@ set splitright
 nnoremap <C-j> m`"="\n"<CR>p``j
 nnoremap <C-k> m`"="\n"<CR>P``k
 
+" make ´ jump to tag
+nnoremap ´ = `
+
 " --------
 " Commands
 " --------
