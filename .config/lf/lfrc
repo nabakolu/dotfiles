@@ -106,7 +106,9 @@ cmd open_pywal_light ${{
 	theme
 }}
 
-
+cmd set_wallpaper ${{
+	feh --bg-scale $f
+}
 
 cmd wget ${{
 	printf "Download: "
@@ -300,6 +302,8 @@ map ow open_pywal
 map oW open_pywal_light
 map oP open_masterpdfeditor4
 map oq open_qutebrowser
+
+map sw set_wallpaper
 
 map d dragon
 
