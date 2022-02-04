@@ -108,6 +108,7 @@ cmd open_pywal_light ${{
 
 cmd set_wallpaper ${{
 	feh --bg-scale $f
+	betterlockscreen -u $f
 }
 
 cmd wget ${{
