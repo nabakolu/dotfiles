@@ -12,6 +12,9 @@ sh ~/.screenlayout/default.sh
 
 # restore pywal settings
 wal -R
+
+# restore wallpaper
+sh ~/.fehbg
  
 ~/.config/dunst.sh
 
