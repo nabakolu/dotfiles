@@ -56,7 +56,7 @@ config.bind('D3', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lu
 config.bind('gd', 'download-open')
 
 config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
-config.bind('<space>p', 'hint preview')
+config.bind('<space>j', 'hint preview')
 config.bind('<space>w', 'jseval (function () { '+
 '  var i, elements = document.querySelectorAll("body *");'+
 ''+
