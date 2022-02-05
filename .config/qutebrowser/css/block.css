@@ -1,3 +1,3 @@
-.u-bottomFixer, .js-consent-banner, .premium-banner, .ad-container, .promotedlink, .bottommenu.bottommenu-advertise, .happening-now, .email-collection-banner, p.bottommenu, .nub,  .sidebox.create, .redesign-beta-optin, p.debuginfo, .usertext.grayed, .giftgold, #eu-cookie-policy {
+.promotedlink, .ad-container, .premium-banner-outer, .u-bottomFixer, .js-consent-banner, .premium-banner, .ad-container, .promotedlink, .bottommenu.bottommenu-advertise, .happening-now, .email-collection-banner, p.bottommenu, .nub,  .sidebox.create, .redesign-beta-optin, p.debuginfo, .usertext.grayed, .giftgold, #eu-cookie-policy {
 display:none!important;
 }
