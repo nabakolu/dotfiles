@@ -57,6 +57,16 @@ config.bind('gd', 'download-open')
 
 config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
 config.bind('<space>p', 'hint preview')
+config.bind('<space>w', 'jseval (function () { '+
+'  var i, elements = document.querySelectorAll("body *");'+
+''+
+'  for (i = 0; i < elements.length; i++) {'+
+'    var pos = getComputedStyle(elements[i]).position;'+
+'    if (pos === "fixed" || pos == "sticky") {'+
+'      elements[i].parentNode.removeChild(elements[i]);'+
+'    }'+
+'  }'+
+'})();');
 
 ####################
 # general settings #
