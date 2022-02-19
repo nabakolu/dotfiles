@@ -54,6 +54,7 @@ config.bind('D2', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lu
 config.bind('D3', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
 
 config.bind('gd', 'download-open')
+config.bind('gi', 'hint inputs')
 
 config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
 config.bind('<space>j', 'hint preview')
