@@ -54,6 +54,7 @@ config.bind('D2', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lu
 config.bind('D3', 'set colors.webpage.darkmode.enabled false;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
 
 config.bind('gd', 'download-open')
+config.bind('gi', 'hint inputs')
 
 config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
 config.bind('<space>j', 'hint preview')
@@ -134,7 +135,7 @@ c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#en/de/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
 c.url.searchengines['youtube'] = 'https://yewtu.be/search?q={}'
 #c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
-c.url.searchengines['opgg'] = 'https://euw.op.gg/champion/{}'
+c.url.searchengines['opgg'] = 'https://euw.op.gg/champions/{}'
 
 # set bookmarks as start page
 c.url.start_pages = "about:blank"
