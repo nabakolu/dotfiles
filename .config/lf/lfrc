@@ -16,6 +16,14 @@ cmd on-cd &{{
 # also run at startup
 on-cd
 
+cmd wget ${{
+	printf "Download: "
+	read ans
+	wget $ans
+}}
+
+
+
 cmd open ${{
 	filetype=$(file --mime-type "$f" -bL)
 	case $filetype in
@@ -110,12 +118,6 @@ cmd set_wallpaper ${{
 	feh --bg-scale $f
 	betterlockscreen -u $f
 }
-
-cmd wget ${{
-	printf "Download: "
-	read ans
-	wget $ans
-}}
 
 cmd full_find ${{
 	lf -remote "send $id set findlen 0"
