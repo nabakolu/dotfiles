@@ -69,6 +69,10 @@ config.bind('<space>w', 'jseval (function () { '+
 '  }'+
 '})();');
 
+
+config.bind('<space>q', 'spawn --userscript qr.sh {url}')
+config.bind('<space>t', 'spawn --userscript translate')
+
 ####################
 # general settings #
 ####################
