@@ -1,4 +1,4 @@
-#!/bin/sh
+!/bin/sh
 
 # Generates zathura configuration file
 
@@ -21,7 +21,6 @@ font = RobotoMono Nerd Font
 # If markup is not allowed, those tags will be stripped out of the
 # message.
 markup = yes
-plain_text = no
 
 # The format of the message.  Possible variables are:
 #   %a  appname
@@ -65,21 +64,8 @@ ignore_newline = no
 stack_duplicates = yes
 hide_duplicates_count = yes
 
-
-# The geometry of the window:
-#   [{width}]x{height}[+/-{x}+/-{y}]
-# The geometry of the message window.
-# The height is measured in number of notifications everything else
-# in pixels.  If the width is omitted but the height is given
-# ("-geometry x2"), the message window expands over the whole screen
-# (dmenu-like).  If width is 0, the window expands to the longest
-# message displayed.  A positive x is measured from the left, a
-# negative from the right side of the screen.  Y is measured from
-# the top and down respectevly.
-# The width can be negative.  In this case the actual width is the
-# screen width minus the width defined in within the geometry option.
-#geometry = "250x50-40+40"
-geometry = "300x50-0+18"
+width = 300
+offset = 0x18
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
