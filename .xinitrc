@@ -16,7 +16,7 @@ wal -R
 # restore wallpaper
 sh ~/.fehbg
  
-~/.config/dunst.sh
+dunst &
 
 # start custom user daemon, for e.g. status bar
 sh /home/lukas/.config/daemon.sh &
