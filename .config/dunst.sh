@@ -65,7 +65,7 @@ stack_duplicates = yes
 hide_duplicates_count = yes
 
 width = 300
-offset = 0x18
+offset = 0x20
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
