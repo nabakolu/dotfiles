@@ -196,7 +196,13 @@ hi FTColor ctermbg=NONE ctermfg=1 cterm=reverse
 hi FTArrowColor ctermbg=NONE ctermfg=1
 hi PosColor ctermbg=NONE ctermfg=2 cterm=reverse
 hi PosArrowColor ctermbg=1 ctermfg=2
-
+" TabLine colors
+hi TabLineColor ctermbg=NONE ctermfg=4 cterm=reverse
+hi TabLineSelColor cterm=NONE ctermfg=3 cterm=reverse
+hi TabLineSelArrowColor ctermbg=4 ctermfg=3
+hi TabLineSelLastArrowColor ctermbg=NONE ctermfg=3
+hi TabLineLastArrowColor ctermbg=NONE ctermfg=4
+hi TabLineBehindSelArrowColor ctermbg=3 ctermfg=4
 
 
 " }}}
