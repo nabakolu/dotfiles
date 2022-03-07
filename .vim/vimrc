@@ -100,14 +100,14 @@ endfunction
 " -----------------
 
 let g:currentmode={
-       \ 'n'  : 'NORMAL ',
-       \ 'v'  : 'VISUAL ',
-       \ 'V'  : 'V-Line ',
-       \ "\<C-V>" : 'V-BLOCK ',
-       \ 'i'  : 'INSERT ',
-       \ 'R'  : 'R ',
-       \ 'Rv' : 'V·REPLACE ',
-       \ 'c'  : 'COMMAND ',
+       \ 'n'  : 'NORMAL',
+       \ 'v'  : 'VISUAL',
+       \ 'V'  : 'V-Line',
+       \ "\<C-V>" : 'V-BLOCK',
+       \ 'i'  : 'INSERT',
+       \ 'R'  : 'R',
+       \ 'Rv' : 'V·REPLACE',
+       \ 'c'  : 'COMMAND',
        \}
 
 
@@ -115,8 +115,10 @@ set laststatus=2
 set statusline=
 set statusline+=%#ModeColor#%{toupper(g:currentmode[mode()])}
 set statusline+=%#ModeArrowColor#
-set statusline+=%#PathColor#%f\ 
+set statusline+=%#PathColor#\ %{getcwd()}/
 set statusline+=%#PathArrowColor#
+set statusline+=%#FileColor#%f\ 
+set statusline+=%#FileArrowColor#
 set statusline+=%{&modified?'\ +\ ':''}
 set statusline+=%{&readonly?'\ \ ':''}
 set statusline+=%=
