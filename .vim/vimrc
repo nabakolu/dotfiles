@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'dylanaraps/wal.vim'
+	"Plug 'dylanaraps/wal.vim'
 	Plug 'danilamihailov/beacon.nvim'
 call plug#end()
 
@@ -43,8 +43,40 @@ nmap N N:Beacon<cr>
 
 
 
+" Statusline
+" -----------------
+
+let g:currentmode={
+       \ 'n'  : 'NORMAL ',
+       \ 'v'  : 'VISUAL ',
+       \ 'V'  : 'V-Line ',
+       \ "\<C-V>" : 'V-BLOCK ',
+       \ 'i'  : 'INSERT ',
+       \ 'R'  : 'R ',
+       \ 'Rv' : 'V·REPLACE ',
+       \ 'c'  : 'COMMAND ',
+       \}
+
+
+set laststatus=2
+set statusline=
+set statusline+=%#ModeColor#%{toupper(g:currentmode[mode()])}
+set statusline+=%#ModeArrowColor#
+set statusline+=%#PathColor#%f\ 
+set statusline+=%#PathArrowColor#
+set statusline+=%{&modified?'\ +\ ':''}
+set statusline+=%{&readonly?'\ \ ':''}
+set statusline+=%=
+set statusline+=%#FTArrowColor#
+set statusline+=%#FTColor#ft:\ %{&filetype!=#''?&filetype:'none'}
+set statusline+=%#PosArrowColor#
+set statusline+=%#PosColor#%2p%%\ %l:%-2v " Virtual column number
+
+
 " General Settings
 " ----------------
+
+colorscheme nabakolu
 
 set nobackup
 set nowritebackup
@@ -60,11 +92,12 @@ set signcolumn=number
 " make split line not ugly
 set fillchars+=vert:\ 
 
-" set colourscheme
-colorscheme wal
 
 " show pressed keys
 set showcmd
+
+" dont show mode, as it is shown in the statusline
+set noshowmode
 
 " use mouse
 set mouse=a
