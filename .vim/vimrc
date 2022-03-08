@@ -125,7 +125,7 @@ set statusline+=%=
 set statusline+=%#FTArrowColor#
 set statusline+=%#FTColor#ft:\ %{&filetype!=#''?&filetype:'none'}
 set statusline+=%#PosArrowColor#
-set statusline+=%#PosColor#%2p%%\ %l:%-2v " Virtual column number
+set statusline+=%#PosColor#%2p%%%l:%-2v " Virtual column number
 
 
 " General Settings
