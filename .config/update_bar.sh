@@ -6,7 +6,7 @@ pulse=true
 if [ "$(lsblk | grep -E '(sdc|sdd)')" != "" ]
 #if [ "$(lsblk | grep -E '(sda|sdc|sdd)')" != "" ] # depending on amount if internal drives, adjust the amount of sdb/sdc/sdd/...
 then
-    usbicon="禍"
+    usbicon=" 禍"
 fi
 
 
@@ -55,10 +55,4 @@ else
     wifiicon="直"
 fi
 
-if [ "$(cat ~/.config/mutt/newmail)" = "1" ]
-then
-	mailicon=""
-fi
-
-
-xsetroot -name " $mailicon$usbicon $volicon$vol% $wifiicon $(date)"
+xsetroot -name " $usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T')"
