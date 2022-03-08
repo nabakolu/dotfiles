@@ -18,7 +18,7 @@ if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\)$ ]] ;
 then
 	export PS1='\[\033[38;5;2m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;1m\]\H\[$(tput sgr0)\] \[\033[32m\]\w \[\033[31m\]$ \[\033[38;5;15m\]'
 else
-	source ~/.config/git_prompt.sh && export PS1='\033[32;7m \w\033[27m$(__git_ps1 "\033[45;32m")$(__git_ps1 "\033[0;30;45m%s\033[7m")\033[0m ' || export PS1='\033[32;7m \w\033[27m\033[0m '
+	source ~/.config/git_prompt.sh && export PS1='\[\033[48;5;2m\] \w\[$(tput sgr0)\]\[\033[38;5;2m\]$(__git_ps1 "\[\033[38;5;2m\]\[\033[48;5;1m\]")$(__git_ps1 "\[$(tput sgr0)\]\[\033[48;5;1m\]%s\[$(tput sgr0)\]\[\033[38;5;1m\]")\[$(tput sgr0)\]' || export PS1='\[\033[48;5;2m\] \w\[$(tput sgr0)\]\[\033[38;5;2m\]\[$(tput sgr0)\]'
 	[ -z $(tty | grep tty) ] || export PS1='\[\033[32m\]\w \[\033[31m\]$ \[\033[38;5;15m\]'
 fi
 
