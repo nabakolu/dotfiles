@@ -55,4 +55,4 @@ else
     wifiicon="直"
 fi
 
-xsetroot -name "   $usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T') "
+xsetroot -name "                $usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T') "
