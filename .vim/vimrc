@@ -100,13 +100,13 @@ endfunction
 " -----------------
 
 let g:currentmode={
-       \ 'n'  : 'NORMAL',
-       \ 'v'  : 'VISUAL',
-       \ 'V'  : 'V-Line',
-       \ "\<C-V>" : 'V-BLOCK',
-       \ 'i'  : 'INSERT',
-       \ 'R'  : 'R',
-       \ 'Rv' : 'V·REPLACE',
+       \ 'n'  : 'NORMAL ',
+       \ 'v'  : 'VISUAL' ,
+       \ 'V'  : 'V-Line ',
+       \ "\<C-V>" : 'V-BLOCK ',
+       \ 'i'  : 'INSERT ',
+       \ 'r'  : 'REPLACE',
+       \ 'Rv' : 'V-REPL ',
        \ 'c'  : 'COMMAND',
        \}
 
