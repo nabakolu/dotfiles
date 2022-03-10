@@ -28,7 +28,7 @@ export FZF_DEFAULT_COMMAND='find .'
 alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
 alias diff="diff --color=auto"
-alias se="vim \$(fzf)"
+alias se="nvim \$(fzf)"
 
 [[ $(type -P lsd) ]] && [ -z $(tty | grep tty) ] && alias ls='lsd' || alias ls='ls --color=auto -F'
 alias ll='ls -l'

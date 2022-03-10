@@ -99,8 +99,8 @@ c.content.pdfjs = True
 # disable webgl
 c.content.webgl = False
 
-# set vim in st as default editor
-c.editor.command = ['st','-e','vim', '{}']
+# set nvim in st as default editor
+c.editor.command = ['st','-e','nvim', '{}']
 
 # set lf to be the program in which downloads can be opened
 c.downloads.open_dispatcher = "st -e /usr/local/bin/lf {}"
