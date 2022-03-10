@@ -101,8 +101,8 @@ let g:currentmode={
        \ 'r'  : 'REPLACE',
        \ 'Rv' : 'V-REPL ',
        \ 'c'  : 'COMMAND',
-       \ 't'  : 'TERMINAL',
-       \ '!'  : 'EXTERNAL',
+       \ 't'  : 'TERM   ',
+       \ '!'  : 'EXTERN ',
        \}
 
 
