@@ -83,7 +83,6 @@ hi Character ctermbg=NONE ctermfg=1
 hi Conditional ctermbg=NONE ctermfg=5
 hi Define ctermbg=NONE ctermfg=5
 hi Delimiter ctermbg=NONE ctermfg=5
-hi Float ctermbg=NONE ctermfg=5
 hi Include ctermbg=NONE ctermfg=4
 hi Keyword ctermbg=NONE ctermfg=5
 hi Label ctermbg=NONE ctermfg=3
@@ -207,6 +206,9 @@ hi TabLineLastArrowColor ctermbg=NONE ctermfg=4
 hi TabLineBehindSelArrowColor ctermbg=3 ctermfg=4
 
 hi Whitespace ctermbg=NONE ctermfg=8
+
+hi Floaterm ctermbg=NONE
+hi FloatermBorder ctermbg=NONE ctermfg=4 cterm=reverse
 " }}}
 
 " Plugin options {{{
