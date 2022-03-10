@@ -14,6 +14,8 @@ nmap <silent> <Space>gr <Plug>(coc-references)
 nmap <silent> <Space>ac <Plug>(coc-codeaction)
 nnoremap <silent> <Space>d :call CocActionAsync('doHover')<cr>
 
+" Start easymotion with Space Space
+map <Space><Space> <Plug>(easymotion-prefix)
 
 " Tabline
 " -----------------
