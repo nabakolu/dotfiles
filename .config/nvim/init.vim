@@ -4,14 +4,23 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'},
 	Plug 'easymotion/vim-easymotion',
+	Plug 'ptzz/lf.vim'
+	Plug 'voldikss/vim-floaterm'
 call plug#end()
+
+let g:floaterm_keymap_toggle = '<C-q>'
+
+let g:lf_map_keys = 0
+map <Space>ff :Lf<CR>
+map <Space>ft :LfNewTab<CR>
+map <Space>fv :vnew \| :Lf<CR>
+let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 
 " GoTo code navigation.
 nmap <silent> <Space>gd <Plug>(coc-definition)
 nmap <silent> <Space>gy <Plug>(coc-type-definition)
 nmap <silent> <Space>gi <Plug>(coc-implementation)
 nmap <silent> <Space>gr <Plug>(coc-references)
-nmap <silent> <Space>ac <Plug>(coc-codeaction)
 nnoremap <silent> <Space>d :call CocActionAsync('doHover')<cr>
 
 " Start easymotion with Space Space
@@ -167,6 +176,7 @@ set splitright
 " Keybindings
 " -----------
 
+nmap <Space>v :vnew<CR>
 
 " Ctrl-J and Ctr-K insert blank lines
 nnoremap <C-j> m`"="\n"<CR>p``j
