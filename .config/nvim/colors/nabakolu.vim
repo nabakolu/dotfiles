@@ -189,9 +189,9 @@ hi ALEWarning ctermbg=NONE ctermfg=3
 
 " StatusLine colors
 hi ModeColor ctermbg=NONE ctermfg=1 cterm=reverse
-hi ModeArrowColor ctermbg=2 ctermfg=1
-hi PathColor ctermbg=NONE ctermfg=2 cterm=reverse
-hi PathArrowColor ctermbg=3 ctermfg=2
+hi ModeArrowColor ctermbg=4 ctermfg=1
+hi PathColor ctermbg=NONE ctermfg=4 cterm=reverse
+hi PathArrowColor ctermbg=3 ctermfg=4
 hi FileColor ctermbg=NONE ctermfg=3 cterm=reverse
 hi FileArrowColor ctermbg=NONE ctermfg=3
 hi FTColor ctermbg=NONE ctermfg=1 cterm=reverse
