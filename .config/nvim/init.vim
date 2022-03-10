@@ -68,12 +68,6 @@ function MyTabLabel(n)
 	endif
 endfunction
 
-
-
-
-" Statusline
-" -----------------
-
 let g:currentmode={
        \ 'n'  : 'NORMAL ',
        \ 'v'  : 'VISUAL' ,
@@ -83,12 +77,14 @@ let g:currentmode={
        \ 'r'  : 'REPLACE',
        \ 'Rv' : 'V-REPL ',
        \ 'c'  : 'COMMAND',
+       \ 't'  : 'TERMINAL',
+       \ '!'  : 'EXTERNAL',
        \}
 
 
 set laststatus=2
 set statusline=
-set statusline+=%#ModeColor#%{toupper(g:currentmode[mode()])}
+set statusline+=%#ModeColor#%{toupper(get(g:currentmode,mode(),'????????'))}
 set statusline+=%#ModeArrowColor#
 set statusline+=%#PathColor#\ %{getcwd()}/
 set statusline+=%#PathArrowColor#
@@ -101,6 +97,8 @@ set statusline+=%#FTArrowColor#
 set statusline+=%#FTColor#ft:\ %{&filetype!=#''?&filetype:'none'}
 set statusline+=%#PosArrowColor#
 set statusline+=%#PosColor#%2p%%%l:%-2v " Virtual column number
+
+
 
 
 " General Settings
