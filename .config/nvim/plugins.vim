@@ -1,7 +1,7 @@
 " Plugin Settings
 " ----------------
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'},
 	Plug 'easymotion/vim-easymotion',
 	Plug 'ptzz/lf.vim'
