@@ -206,7 +206,7 @@ hi TabLineSelLastArrowColor ctermbg=NONE ctermfg=3
 hi TabLineLastArrowColor ctermbg=NONE ctermfg=4
 hi TabLineBehindSelArrowColor ctermbg=3 ctermfg=4
 
-
+hi Whitespace ctermbg=NONE ctermfg=8
 " }}}
 
 " Plugin options {{{
