@@ -2,25 +2,9 @@
 " ----------------
 
 call plug#begin('~/.vim/plugged')
-	Plug 'scrooloose/nerdtree'
-	Plug 'ryanoasis/vim-devicons'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'},
 	Plug 'easymotion/vim-easymotion',
 call plug#end()
-
-map <Space><Space> <Plug>(easymotion-prefix)
-
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-
-" change the default folder/directory glyph/icon
-let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-
-let g:NERDTreeQuitOnOpen = 1
-
-" Ctrl-F toggle NERDTree
-nmap <C-f> :NERDTreeToggle<CR>
 
 " GoTo code navigation.
 nmap <silent> <Space>gd <Plug>(coc-definition)
