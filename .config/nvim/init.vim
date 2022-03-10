@@ -5,9 +5,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	"Plug 'dylanaraps/wal.vim'
-	"Plug 'danilamihailov/beacon.nvim'
 call plug#end()
+
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -28,19 +27,6 @@ nmap <silent> <Space>gi <Plug>(coc-implementation)
 nmap <silent> <Space>gr <Plug>(coc-references)
 nmap <silent> <Space>ac <Plug>(coc-codeaction)
 nnoremap <silent> <Space>d :call CocActionAsync('doHover')<cr>
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-"" enable beacon on any jump more than one line
-"let g:beacon_minimal_jump = 2
-"" disable animation
-"let g:beacon_shrink = 0
-"" make width to 5
-"let g:beacon_size = 5
-"" enable beacon on search
-"nmap n n:Beacon<cr>
-"nmap N N:Beacon<cr>
 
 
 " Tabline
