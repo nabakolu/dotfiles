@@ -4,9 +4,11 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neoclide/coc.nvim', {'branch': 'release'},
+	Plug 'easymotion/vim-easymotion',
 call plug#end()
 
+map <Space><Space> <Plug>(easymotion-prefix)
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
