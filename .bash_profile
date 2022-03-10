@@ -5,8 +5,8 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export TERMINAL="st"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export DE="dwm"
 export BROWSER="qutebrowser"
 
