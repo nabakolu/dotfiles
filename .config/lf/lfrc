@@ -27,7 +27,7 @@ cmd wget ${{
 cmd open ${{
 	filetype=$(file --mime-type "$f" -bL)
 	case $filetype in
-	text/*|application/json) $EDITOR "$f";;
+	text/*|application/json|inode/x-empty) $EDITOR "$f";;
 	audio/*) mocp "$f";;
 	*) if [ "$(xdg-mime query default $filetype)" = "" ]
 	then
@@ -143,7 +143,7 @@ cmd mkdir ${{
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  $EDITOR $ans
+  touch $ans
 }}
 
 cmd chmod ${{
