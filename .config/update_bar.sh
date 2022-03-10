@@ -47,6 +47,12 @@ else
     	volicon="婢"
 fi
 
+case $(xset q | grep LED | tail -c 2) in
+	"0") lock="";;
+	"1") lock=" וּ";;
+	"2") lock=" ";;
+	"3") lock=" וּ  ";;
+esac
 
 if [ "$(cat /sys/class/net/wlp8s0/operstate)" = "down" ]
 then
@@ -55,4 +61,4 @@ else
     wifiicon="直"
 fi
 
-xsetroot -name "                $usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T') "
+xsetroot -name "              $lock $usbicon $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T') "
