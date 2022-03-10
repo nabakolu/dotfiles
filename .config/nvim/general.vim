@@ -19,11 +19,15 @@ set autoindent
 " make splits appear on the right
 set splitright
 
+" make splits appear on the bottom
+set splitbelow
+
 " -----------
 " Keybindings
 " -----------
 
 nmap <Space>v :vnew<CR>
+nmap <Space>s :new<CR>
 nmap <Space>t :tabnew<CR>
 
 " Ctrl-J and Ctr-K insert blank lines
