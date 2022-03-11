@@ -93,17 +93,17 @@ endfunction
 " statusline
 
 let g:currentmode={
-       \ 'n'  : 'NORMAL ',
-       \ 'v'  : 'VISUAL' ,
-       \ 'V'  : 'V-Line ',
-       \ "\<C-V>" : 'V-BLOCK ',
-       \ 'i'  : 'INSERT ',
-       \ 'r'  : 'REPLACE',
-       \ 'Rv' : 'V-REPL ',
-       \ 'c'  : 'COMMAND',
-       \ 't'  : 'TERM   ',
-       \ '!'  : 'EXTERN ',
-       \}
+			\ 'n'  : 'NORMAL ',
+			\ 'v'  : 'VISUAL' ,
+			\ 'V'  : 'V-Line ',
+			\ "\<C-V>" : 'V-BLOCK ',
+			\ 'i'  : 'INSERT ',
+			\ 'r'  : 'REPLACE',
+			\ 'Rv' : 'V-REPL ',
+			\ 'c'  : 'COMMAND',
+			\ 't'  : 'TERM   ',
+			\ '!'  : 'EXTERN ',
+			\}
 
 
 set laststatus=2
