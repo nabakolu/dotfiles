@@ -5,3 +5,4 @@ source ~/.config/nvim/lf.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/floaterm.vim
 source ~/.config/nvim/easymotion.vim
+source ~/.config/nvim/treesitter.lua
