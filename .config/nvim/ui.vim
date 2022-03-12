@@ -7,10 +7,6 @@ autocmd VimEnter * silent !echo -ne "\e[2 q"
 " make error and warnings be on the same line as line numbers
 set signcolumn=number
 
-" make split line not ugly
-set fillchars+=vert:\ 
-
-
 " show pressed keys
 set showcmd
 
