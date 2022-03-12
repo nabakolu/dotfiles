@@ -86,6 +86,10 @@ cmd open_firefox &{{
 	nohup firefox $f > /dev/null 2>&1&
 }}
 
+cmd open_editor_dir ${{
+	$EDITOR .
+}}
+
 cmd open_sxiv &{{
 	nohup sxiv "$f" > /dev/null 2>&1&
 }}
@@ -305,6 +309,7 @@ map ow open_pywal
 map oW open_pywal_light
 map oP open_masterpdfeditor4
 map oq open_qutebrowser
+map v  open_editor_dir
 
 map sw set_wallpaper
 
