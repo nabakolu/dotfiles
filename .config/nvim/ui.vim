@@ -1,8 +1,6 @@
 colorscheme nabakolu
 
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-autocmd VimEnter * silent !echo -ne "\e[2 q"
+set guicursor=n-v-c-sm:block,i-ci-ve:hor50-blinkwait0-blinkoff25-blinkon25,r-cr-o:block-blinkwait0-blinkoff25-blinkon25
 
 " make error and warnings be on the same line as line numbers
 set signcolumn=number
