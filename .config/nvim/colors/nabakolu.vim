@@ -208,7 +208,7 @@ hi TabLineBehindSelArrowColor ctermbg=3 ctermfg=4
 hi Whitespace ctermbg=NONE ctermfg=8
 
 hi Floaterm ctermbg=NONE
-hi FloatermBorder ctermbg=NONE ctermfg=4 cterm=reverse
+hi FloatermBorder ctermbg=NONE ctermfg=4
 " }}}
 
 " Plugin options {{{
