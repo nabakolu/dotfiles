@@ -39,4 +39,7 @@ sleep 1 && picom --experimental-backends &
 # start noisetorch
 noisetorch -i
 
+# start xss-lock to lock screen on power events
+xss-lock -- betterlockscreen -l &
+
 exec /usr/local/bin/dwm
