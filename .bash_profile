@@ -17,6 +17,7 @@ export CM_SELECTIONS="clipboard"
 export CM_MAX_CLIPS=10
 
 export BAT_STYLE="numbers"
+export BAT_THEME="ansi"
 
 export LF_ICONS="\
 tw=:\
