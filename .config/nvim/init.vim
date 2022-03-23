@@ -6,3 +6,4 @@ source ~/.config/nvim/coc.vim
 source ~/.config/nvim/floaterm.vim
 source ~/.config/nvim/easymotion.vim
 source ~/.config/nvim/treesitter.lua
+source ~/.config/nvim/colorizer.vim
