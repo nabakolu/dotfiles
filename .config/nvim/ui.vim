@@ -1,4 +1,5 @@
-colorscheme nabakolu
+colorscheme xresources
+set termguicolors
 
 set guicursor=n-v-c-sm:block,i-ci-ve:hor50-blinkwait0-blinkoff25-blinkon25,r-cr-o:block-blinkwait0-blinkoff25-blinkon25
 
