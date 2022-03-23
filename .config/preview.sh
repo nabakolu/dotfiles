@@ -10,5 +10,5 @@ case "$1" in
 	*.bz2) tar -jtf "$1";;
 	*.tar) tar -tf "$1";;
 	*.pdf) pdfinfo "$1"; echo ""; pdftotext "$1" -;;
-	*) cat "$1";;
+	*) bat --color always "$1" || cat "$1";;
 esac

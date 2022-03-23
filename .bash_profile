@@ -16,6 +16,8 @@ export QT_QPA_PLATFORMTHEME=gtk2
 export CM_SELECTIONS="clipboard"
 export CM_MAX_CLIPS=10
 
+export BAT_STYLE="numbers"
+
 export LF_ICONS="\
 tw=:\
 st=:\

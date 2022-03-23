@@ -62,8 +62,8 @@ cmd bulk ${{
 }}
 
 
-cmd open_less ${{
-	less $f
+cmd open_pager ${{
+	bat $f || less $f
 }}
 
 cmd open_mocp &{{
@@ -298,7 +298,7 @@ map <c-f> fzf_find
 map S bash
 
 # open specific
-map ol open_less
+map ol open_pager
 map oM open_mocp
 map om open_mpv
 map Om open_umpv
