@@ -220,7 +220,7 @@ function xresources.load_syntax()
       LineNr = {fg=xresources.grey1};
       ModeMsg = {fg=xresources.fg,bg=xresources.none,style='bold'};
       MatchParen = {fg=xresources.red,bg=xresources.none};
-      Normal = {fg = xresources.fg,bg=xresources.bg};
+      Normal = {fg = xresources.fg,bg=xresources.none};
       NormalFloat = {fg=xresources.fg,bg=xresources.grey};
       NonText = {fg=xresources.grey};
       Pmenu = {fg=xresources.fg,bg=xresources.grey};
