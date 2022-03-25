@@ -5,6 +5,9 @@ set nobackup
 set nowritebackup
 set hidden
 
+set undodir=$HOME/.cache/nvim/undodir
+set undofile
+
 " use mouse
 set mouse=a
 
