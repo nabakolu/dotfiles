@@ -18,6 +18,8 @@ set smartcase
 
 " move to correct tab when pressing enter
 set autoindent
+set copyindent
+set preserveindent
 
 " make splits appear on the right
 set splitright
