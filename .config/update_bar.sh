@@ -49,9 +49,9 @@ fi
 
 case $(xset q | grep LED | tail -c 2) in
 	"0") lock="";;
-	"1") lock=" וּ";;
-	"2") lock=" ";;
-	"3") lock=" וּ  ";;
+	"1") lock=" וּ ";;
+	"2") lock="  ";;
+	"3") lock=" וּ   ";;
 esac
 
 if [ "$(cat /sys/class/net/wlp8s0/operstate)" = "down" ]
@@ -61,4 +61,7 @@ else
     wifiicon="直"
 fi
 
-xsetroot -name "              $lock $usbicon $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T') "
+
+/bin/ls /sys/class/power_supply/BAT0 > /dev/null && battery="$(cat /sys/class/power_supply/BAT0/capacity)" && batteryicon=" "
+
+xsetroot -name "          $lock$batteryicon$battery$usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T')"
