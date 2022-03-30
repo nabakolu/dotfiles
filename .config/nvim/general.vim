@@ -11,6 +11,13 @@ set undofile
 " use mouse
 set mouse=a
 
+" make nvim fold by syntax
+set foldmethod=syntax
+" start with every fold open
+set nofoldenable
+" show first line of every fold
+set foldtext=getline(v:foldstart)
+
 " make search not case sensitive
 set ignorecase
 " make search case sensitive if there are capital letters in the search text

@@ -213,7 +213,7 @@ function xresources.load_syntax()
       EndOfBuffer = {fg=xresources.bg,bg=xresources.none};
       ErrorMsg = {fg=xresources.red,bg=xresources.none,style='bold'};
       FoldColumn = {fg=xresources.fg,bg=xresources.bg};
-      Folded = {fg=xresources.grey,bg=xresources.grey};
+      Folded = {fg=xresources.fg,bg=xresources.grey};
       iCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       IncSearch = {fg=xresources.grey,bg=xresources.yellow,style=xresources.none};
       lCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
