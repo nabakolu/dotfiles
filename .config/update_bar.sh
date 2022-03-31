@@ -64,4 +64,4 @@ fi
 
 /bin/ls /sys/class/power_supply/BAT0 > /dev/null && battery="$(cat /sys/class/power_supply/BAT0/capacity)" && batteryicon=" "
 
-xsetroot -name "          $lock$batteryicon$battery$usbicon  $volicon$vol%  $wifiicon  $(date +'%a')  $(date +'%d %b %Y')  $(date +'%T')"
+xsetroot -name "          $lock$batteryicon$battery$usbicon  $volicon$vol%  $wifiicon   $(date +'%a %d %b %Y')   $(date +'%T')"
