@@ -53,8 +53,8 @@ local xresources = {
    light_purple = get_xresources_color('color13');
    light_cyan = get_xresources_color('color14');
    light_white = get_xresources_color('color15');
-   grey = vim.o.background == 'light' and get_darker_color('background', 0xf0f10) or get_lighter_color('background', 0xf0f10);
-   grey1 = vim.o.background == 'light' and get_darker_color('background', 0x363940) or get_lighter_color('background', 0x363940);
+   -- grey = vim.o.background == 'light' and get_darker_color('background', 0xf0f10) or get_lighter_color('background', 0xf0f10);
+   -- grey1 = vim.o.background == 'light' and get_darker_color('background', 0x363940) or get_lighter_color('background', 0x363940);
    none = 'NONE';
 }
 
@@ -99,7 +99,7 @@ function xresources.load_syntax()
       -- Syntax group
       -- ===================
       Boolean = {fg=xresources.yellow};
-      Comment = {fg=xresources.grey1};
+      Comment = {fg=xresources.light_black};
       Constant = {fg=xresources.cyan};
       Character = {fg=xresources.green};
       Conditional = {fg=xresources.purple};
@@ -127,7 +127,7 @@ function xresources.load_syntax()
       SpecialChar = {fg=xresources.yellow};
       Structure = {fg=xresources.yellow};
       String = {fg=xresources.green};
-      SpecialComment = {fg=xresources.grey1};
+      SpecialComment = {fg=xresources.light_black};
       Typedef = {fg=xresources.yellow};
       Tag = {};
       Type = {fg=xresources.yellow};
@@ -189,66 +189,66 @@ function xresources.load_syntax()
       -- ===================
       -- Highlight Group
       -- ===================
-      BufferInactive= { fg=xresources.fg,bg=xresources.grey };
-      BufferInactiveTarge = { fg=xresources.fg, bg=xresources.grey };
-      BufferInactiveSign = { fg=xresources.blue, bg=xresources.grey };
+      BufferInactive= { fg=xresources.fg,bg=xresources.light_black };
+      BufferInactiveTarge = { fg=xresources.fg, bg=xresources.light_black };
+      BufferInactiveSign = { fg=xresources.blue, bg=xresources.light_black };
       BufferCurrent = { fg=xresources.yellow, bg=xresources.bg, style ='bold'};
       BufferCurrentSign = { fg=xresources.blue, bg=xresources.bg };
       BufferTabPageFill = { fg=xresources.blue, bg=xresources.bg };
       BufferCurrentMod = { fg=xresources.blue, bg=xresources.bg };
-      BufferInactiveMod = { fg=xresources.blue, bg=xresources.grey };
-      ColorColumn = {fg=xresources.none,bg=xresources.grey};
-      Conceal = {fg=xresources.grey,bg=xresources.none};
+      BufferInactiveMod = { fg=xresources.blue, bg=xresources.light_black };
+      ColorColumn = {fg=xresources.none,bg=xresources.light_black};
+      Conceal = {fg=xresources.light_black,bg=xresources.none};
       CursorLineNr = {fg=xresources.blue};
       CursorIM = {fg=xresources.none,bg=xresources.none,style='reverse'};
-      CursorColumn = {fg=xresources.none,bg=xresources.grey};
-      CursorLine = {fg=xresources.none,bg=xresources.grey};
+      CursorColumn = {fg=xresources.none,bg=xresources.light_black};
+      CursorLine = {fg=xresources.none,bg=xresources.light_black};
       Cursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       DiffAdd = {fg=xresources.bg,bg=xresources.green};
       DiffChange = {fg=xresources.bg,bg=xresources.yellow};
       DiffDelete = {fg=xresources.bg,bg=xresources.red};
       DiffText = {fg=xresources.bg,bg=xresources.fg};
-      Directory = {fg=xresources.grey,bg=xresources.none};
+      Directory = {fg=xresources.light_black,bg=xresources.none};
       debugBreakpoint = {fg=xresources.bg,bg=xresources.red};
       EndOfBuffer = {fg=xresources.bg,bg=xresources.none};
       ErrorMsg = {fg=xresources.red,bg=xresources.none,style='bold'};
       FoldColumn = {fg=xresources.fg,bg=xresources.bg};
-      Folded = {fg=xresources.fg,bg=xresources.grey};
+      Folded = {fg=xresources.fg,bg=xresources.light_black};
       iCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
-      IncSearch = {fg=xresources.grey,bg=xresources.yellow,style=xresources.none};
+      IncSearch = {fg=xresources.light_black,bg=xresources.yellow,style=xresources.none};
       lCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
-      LineNr = {fg=xresources.grey1};
+      LineNr = {fg=xresources.light_black};
       ModeMsg = {fg=xresources.fg,bg=xresources.none,style='bold'};
       MatchParen = {fg=xresources.red,bg=xresources.none};
       Normal = {fg = xresources.fg,bg=xresources.none};
-      NormalFloat = {fg=xresources.fg,bg=xresources.grey};
-      NonText = {fg=xresources.grey};
-      Pmenu = {fg=xresources.fg,bg=xresources.grey};
-      PmenuSel = {fg=xresources.grey,bg=xresources.blue};
-      PmenuSelBold = {fg=xresources.grey,g=xresources.blue};
-      PmenuSbar = {fg=xresources.none,bg=xresources.grey};
+      NormalFloat = {fg=xresources.fg,bg=xresources.light_black};
+      NonText = {fg=xresources.light_black};
+      Pmenu = {fg=xresources.fg,bg=xresources.light_black};
+      PmenuSel = {fg=xresources.light_black,bg=xresources.blue};
+      PmenuSelBold = {fg=xresources.light_black,g=xresources.blue};
+      PmenuSbar = {fg=xresources.none,bg=xresources.light_black};
       PmenuThumb = {fg=xresources.purple,bg=xresources.green};
       Question = {fg=xresources.yellow};
       QuickFixLine = {fg=xresources.purple,style='bold'};
-      StatusLine = {fg=xresources.grey,bg=xresources.grey,style=xresources.none};
-      StatusLineNC = {fg=xresources.grey,bg=xresources.grey,style=xresources.none};
+      StatusLine = {fg=xresources.light_black,bg=xresources.light_black,style=xresources.none};
+      StatusLineNC = {fg=xresources.light_black,bg=xresources.light_black,style=xresources.none};
       SpellBad = {fg=xresources.red,bg=xresources.none,style='undercurl'};
       SpellCap = {fg=xresources.blue,bg=xresources.none,style='undercurl'};
       SpellLocal = {fg=xresources.cyan,bg=xresources.none,style='undercurl'};
       SpellRare = {fg=xresources.purple,bg=xresources.none,style = 'undercurl'};
       SignColumn = {fg=xresources.fg,bg=xresources.bg};
       Search = {fg=xresources.bg,bg=xresources.yellow};
-      SpecialKey = {fg=xresources.grey};
+      SpecialKey = {fg=xresources.light_black};
       TabLineSel = {bg=xresources.bg};
       Title = {fg=xresources.green,style='bold'};
       Terminal = {fg = xresources.fg,bg=xresources.bg};
       TabLineFill = {style=xresources.none};
-      VertSplit = {fg=xresources.grey,bg=xresources.grey};
+      VertSplit = {fg=xresources.light_black,bg=xresources.light_black};
       vCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       WarningMsg = {fg=xresources.yellow,bg=xresources.none,style='bold'};
-      Whitespace = {fg=xresources.grey};
+      Whitespace = {fg=xresources.light_black};
       WildMenu = {fg=xresources.fg,bg=xresources.green};
-      Visual = {fg=xresources.none,bg=xresources.grey};
+      Visual = {fg=xresources.none,bg=xresources.light_black};
       VisualNOS = {fg=xresources.bg,bg=xresources.fg};
    }
    return syntax
@@ -358,7 +358,7 @@ function xresources.load_plugin_syntax()
       -- ============
       -- Vim
       -- ============
-      vimCommentTitle = {fg=xresources.grey};
+      vimCommentTitle = {fg=xresources.light_black};
       vimLet = {fg=xresources.yellow};
       vimVar = {fg=xresources.cyan};
       vimFunction = {fg=xresources.purple};
@@ -385,29 +385,29 @@ function xresources.load_plugin_syntax()
       diffOldFile = {fg = xresources.yellow};
       diffNewFile = {fg = xresources.yellow};
       diffFile    = {fg = xresources.cyan};
-      diffLine    = {fg = xresources.grey};
+      diffLine    = {fg = xresources.light_black};
       diffIndexLine = {fg = xresources.purple};
       -- ========
       -- Commit
       -- ========
       gitcommitSummary = {fg = xresources.red};
-      gitcommitUntracked = {fg = xresources.grey};
-      gitcommitDiscarded = {fg = xresources.grey};
-      gitcommitSelected = { fg=xresources.grey};
-      gitcommitUnmerged = { fg=xresources.grey};
-      gitcommitOnBranch = { fg=xresources.grey};
-      gitcommitArrow  = {fg = xresources.grey};
+      gitcommitUntracked = {fg = xresources.light_black};
+      gitcommitDiscarded = {fg = xresources.light_black};
+      gitcommitSelected = { fg=xresources.light_black};
+      gitcommitUnmerged = { fg=xresources.light_black};
+      gitcommitOnBranch = { fg=xresources.light_black};
+      gitcommitArrow  = {fg = xresources.light_black};
       gitcommitFile  = {fg = xresources.green};
       --- ===========================================
       -- vista.vim
       -- =============================================
-      Vistacyan = {fg=xresources.grey};
+      Vistacyan = {fg=xresources.light_black};
       VistaChildrenNr = {fg=xresources.yellow};
       VistaKind = {fg=xresources.purple};
       VistaScope = {fg=xresources.red};
       VistaScopeKind = {fg=xresources.blue};
       VistaTag = {fg=xresources.purple,style='bold'};
-      VistaPrefix = {fg=xresources.grey};
+      VistaPrefix = {fg=xresources.light_black};
       VistaColon = {fg=xresources.purple};
       VistaIcon = {fg=xresources.yellow};
       VistaLineNr = {fg=xresources.fg};
@@ -427,7 +427,7 @@ function xresources.load_plugin_syntax()
       DashboardShortCut = {fg=xresources.purple};
       DashboardHeader = {fg=xresources.yellow};
       DashboardCenter = {fg=xresources.blue};
-      DashboardFooter = {fg=xresources.grey};
+      DashboardFooter = {fg=xresources.light_black};
       -- =========================
       -- Neovim LSP
       -- =========================
@@ -450,8 +450,8 @@ function xresources.load_plugin_syntax()
       -- ===============
       -- vim-cursorword
       -- ===============
-      CursorWord0 = {bg=xresources.grey};
-      CursorWord1 = {bg=xresources.grey};
+      CursorWord0 = {bg=xresources.light_black};
+      CursorWord1 = {bg=xresources.light_black};
       -- ==================
       -- Nvim Tree
       -- ==================
