@@ -238,7 +238,7 @@ cmd tarbz2 ${{
 }}
 
 
-cmd dragon %dragon-drag-and-drop -a -x "$fx"
+cmd dragon %dragon-drop -a -x "$fx"
 
 map a
 map b
