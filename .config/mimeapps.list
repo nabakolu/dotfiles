@@ -1,5 +1,5 @@
 [Default Applications]
-inode/directory=lf.desktop
+inode/directory=lf-st.desktop
 image/*=sxiv.desktop
 image/png=sxiv.desktop
 image/jpg=sxiv.desktop
@@ -17,13 +17,13 @@ text/html=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/*=lf.desktop
+x-scheme-handler/*=lf-st.desktop
 application/pdf=mupdf.desktop;
 x-scheme-handler/msteams=teams-insiders.desktop
 image/gif=sxiv.desktop
 text/plain=vim.desktop
-inode/x-empty=lf.desktop
-x-directory/normal=lf.desktop
+inode/x-empty=lf-st.desktop
+x-directory/normal=lf-st.desktop
 application/octet-stream=mocp.desktop
 audio/mpegapplication/octet-stream=mocp.desktop
 
