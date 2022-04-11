@@ -10,7 +10,7 @@ else
 fi
 if [ "$(pamixer --list-sinks | grep bluez)" != "" ]
 then
-	volicon=""
+	volicon=""
 fi
 if [ "$(pamixer --get-mute)" = "true" ]
 	then
