@@ -6,23 +6,11 @@ set previewer ~/.config/preview.sh
 
 set ratios 2:3
 
-cmd on-cd &{{
-    # '&' commands run silently in background (which is what we want here),
-    # but are not connected to stdout.
-    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
-    printf "\033]0; $PWD\007" > /dev/tty
-}}
-
-# also run at startup
-on-cd
-
 cmd wget ${{
 	printf "Download: "
 	read ans
 	wget $ans
 }}
-
-
 
 cmd open ${{
 	filetype=$(file --mime-type "$f" -bL)
