@@ -7,8 +7,7 @@
 cat <<CONF
 
 [global]
-font = RobotoMono Nerd Font
-#font = Inconsolata Nerd Font
+font = ComicMono Nerd Font
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
