@@ -2,7 +2,8 @@ window.opacity: 0.9
 
 font:
     normal:
-      family: nabakolu
+      #family: nabakolu
+      family : ComicMono Nerd Font
     size: 12
 
 

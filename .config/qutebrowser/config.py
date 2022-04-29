@@ -128,7 +128,6 @@ c.url.open_base_url = True
 
 
 # set some searchengines
-c.url.searchengines['DEFAULT'] = 'https://duckduckgo.com/?q={}&kk=-1'
 c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}&kk=-1'
 c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={}'
 c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
@@ -140,6 +139,8 @@ c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
 c.url.searchengines['youtube'] = 'https://yewtu.be/search?q={}'
 #c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['opgg'] = 'https://euw.op.gg/champions/{}'
+c.url.searchengines['searx'] = 'https://searx.nabakolu.xyz/search?q={}'
+c.url.searchengines['DEFAULT'] = c.url.searchengines['searx']
 
 # set bookmarks as start page
 c.url.start_pages = "about:blank"
