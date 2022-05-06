@@ -6,6 +6,7 @@ set previewer ~/.config/preview.sh
 
 set ratios 2:3
 
+
 cmd wget ${{
 	printf "Download: "
 	read ans
@@ -333,3 +334,6 @@ map <m-1> open
 map <m-2> updir
 
 map cc clear
+
+
+redraw
