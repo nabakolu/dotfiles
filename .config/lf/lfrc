@@ -337,3 +337,5 @@ map cc clear
 
 
 redraw
+set hidden!
+set hidden!
