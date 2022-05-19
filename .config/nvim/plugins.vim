@@ -8,4 +8,5 @@ call plug#begin('~/.local/plugged')
 	Plug 'voldikss/vim-floaterm'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'},
 	Plug 'https://github.com/chrisbra/Colorizer',
+	Plug 'vimwiki/vimwiki',
 call plug#end()
