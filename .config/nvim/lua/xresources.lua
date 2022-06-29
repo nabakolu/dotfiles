@@ -495,6 +495,8 @@ function xresources.load_plugin_syntax()
       
       Floaterm = {bg=xresources.none};
       FloatermBorder = {bg=xresources.none,fg=xresources.blue};
+
+      Winseparator = {bg=xresources.none};
    }
    return plugin_syntax
 end
