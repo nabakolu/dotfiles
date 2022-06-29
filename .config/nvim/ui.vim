@@ -101,7 +101,7 @@ let g:currentmode={
 			\}
 
 
-set laststatus=2
+set laststatus=3
 set statusline=
 set statusline+=%#ModeColor#%{toupper(get(g:currentmode,mode(),'????????'))}
 set statusline+=%#ModeArrowColor#
