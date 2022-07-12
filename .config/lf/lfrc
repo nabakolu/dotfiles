@@ -188,6 +188,7 @@ cmd unarchive ${{
       *.tar) tar -xvf "$f" ;;
       *.tar.xz) tar -xvf "$f" ;;
 	  *.rar) unrar x "$f" ;;
+	  *.gz) gunzip "$f" ;;
       *) echo "Unsupported format" ;;
   esac
 }}
@@ -197,6 +198,10 @@ cmd zip ${{
 	read ans
 	prefix="$(pwd)/"
 	echo "$fx" | grep -oP "^$prefix\K.*" | zip -r $ans -@
+}}
+
+cmd gzip ${{
+	gzip "$fx"
 }}
 
 cmd tar ${{
@@ -315,6 +320,7 @@ map at tar
 map ag targz
 map ab tarbz2
 map au unarchive
+map aG gzip
 
 # Movement
 map gc cd ~/.config
