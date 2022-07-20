@@ -49,6 +49,11 @@ nnoremap <C-k> m`"="\n"<CR>P``k
 " make ´ jump to tag
 noremap ´ `
 
+
+" make h open help in new tab
+cnoremap h tab :h
+
+
 " --------
 " Commands
 " --------
