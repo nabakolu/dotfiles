@@ -5,6 +5,8 @@ set nobackup
 set nowritebackup
 set hidden
 
+set ut=500
+
 set undodir=$HOME/.cache/nvim/undodir
 set undofile
 
