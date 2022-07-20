@@ -51,7 +51,7 @@ noremap ´ `
 
 
 " make h open help in new tab
-cnoremap h tab :h
+cnoremap hh tab :h
 
 
 " --------
