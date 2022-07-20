@@ -8,3 +8,4 @@ source ~/.config/nvim/vim/easymotion.vim
 source ~/.config/nvim/lua/treesitter.lua
 source ~/.config/nvim/vim/colorizer.vim
 source ~/.config/nvim/vim/vimwiki.vim
+source ~/.config/nvim/vim/filetypes.vim
