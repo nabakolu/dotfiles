@@ -201,7 +201,7 @@ function xresources.load_syntax()
       Conceal = {fg=xresources.light_black,bg=xresources.none};
       CursorLineNr = {fg=xresources.blue};
       CursorIM = {fg=xresources.none,bg=xresources.none,style='reverse'};
-      CursorColumn = {fg=xresources.none,bg=xresources.light_black};
+      CursorColumn = {style='reverse'};
       CursorLine = {fg=xresources.none,bg=xresources.light_black};
       Cursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       DiffAdd = {fg=xresources.bg,bg=xresources.green};
@@ -221,13 +221,13 @@ function xresources.load_syntax()
       ModeMsg = {fg=xresources.fg,bg=xresources.none,style='bold'};
       MatchParen = {fg=xresources.red,bg=xresources.none};
       Normal = {fg = xresources.fg,bg=xresources.none};
-      NormalFloat = {fg=xresources.fg,bg=xresources.light_black};
+      NormalFloat = {fg=xresources.fg,bg=xresources.bg};
       NonText = {fg=xresources.light_black};
-      Pmenu = {fg=xresources.fg,bg=xresources.light_black};
-      PmenuSel = {fg=xresources.light_black,bg=xresources.blue};
-      PmenuSelBold = {fg=xresources.light_black,g=xresources.blue};
-      PmenuSbar = {fg=xresources.none,bg=xresources.light_black};
-      PmenuThumb = {fg=xresources.purple,bg=xresources.green};
+      Pmenu = {fg=xresources.fg,bg=xresources.bg};
+      PmenuSel = {fg=xresources.bg,bg=xresources.fg};
+      PmenuSelBold = {fg=xresources.fg,g=xresources.bg};
+      PmenuSbar = {fg=xresources.bg,bg=xresources.fg};
+      PmenuThumb = {fg=xresources.fg,bg=xresources.bg};
       Question = {fg=xresources.yellow};
       QuickFixLine = {fg=xresources.purple,style='bold'};
       StatusLine = {fg=xresources.light_black,bg=xresources.light_black,style=xresources.none};
@@ -247,7 +247,7 @@ function xresources.load_syntax()
       vCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       WarningMsg = {fg=xresources.yellow,bg=xresources.none,style='bold'};
       Whitespace = {fg=xresources.light_black};
-      WildMenu = {fg=xresources.fg,bg=xresources.green};
+      -- WildMenu = {fg=xresources.fg,bg=xresources.green};
       Visual = {fg=xresources.none,bg=xresources.light_black};
       VisualNOS = {fg=xresources.bg,bg=xresources.fg};
    }
@@ -497,6 +497,7 @@ function xresources.load_plugin_syntax()
       FloatermBorder = {bg=xresources.none,fg=xresources.blue};
 
       Winseparator = {bg=xresources.none};
+
    }
    return plugin_syntax
 end
