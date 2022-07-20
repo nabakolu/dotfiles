@@ -237,7 +237,7 @@ function xresources.load_syntax()
       SpellLocal = {fg=xresources.cyan,bg=xresources.none,style='undercurl'};
       SpellRare = {fg=xresources.purple,bg=xresources.none,style = 'undercurl'};
       SignColumn = {fg=xresources.fg,bg=xresources.bg};
-      Search = {fg=xresources.bg,bg=xresources.yellow};
+      Search = {style='reverse,bold'};
       SpecialKey = {fg=xresources.light_black};
       TabLineSel = {bg=xresources.bg};
       Title = {fg=xresources.green,style='bold'};
