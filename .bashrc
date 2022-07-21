@@ -35,7 +35,7 @@ alias ll='ls -l'
 alias l='ls -1'
 alias la='ls -a'
 alias lla='ls -l -a'
-alias bc="BC_ENV_ARGS=<(echo "scale=10") \bc"
+alias bc='BC_ENV_ARGS=<(echo "scale=10") \bc'
 
 #dotfiles completion
 include /usr/share/bash-completion/completions/git && __git_complete dotfiles __git_main
