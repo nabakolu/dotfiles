@@ -1,12 +1,29 @@
 {
 	"clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd",
+	"languageserver": {
+		"bash": {
+			"command": "bash-language-server",
+			"args": [
+				"start"
+			],
+			"filetypes": [
+				"sh"
+			],
+			"ignoredRootPaths": [
+				"~"
+			]
+		}
+	},
+	"cSpellExt.enableDictionaries": ["german"],
+	"cSpell.language": "en,de",
+
 	"diagnostic.virtualTextCurrentLineOnly": false,
 	"diagnostic.virtualText": true,
 	"diagnostic.errorSign": " ",
-	"diagnostic.warningSign": "" ,
+	"diagnostic.warningSign": "",
 	"diagnostic.infoSign": " ",
 	"diagnostic.hintSign": " ",
-	"diagnostic.messageLevel": "null",
+	"diagnostic.messageLevel": "hint",
 	"diagnostic.virtualTextPrefix": "◉ ",
 	"diagnostic.enableMessage": "always",
 	"hover.floatConfig": {
@@ -20,5 +37,42 @@
 	},
 	"signature.floatConfig": {
 		"border": true
-	},
+  },
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "en",
+    "german",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vim",
+    "yaml",
+    "yml"
+  ]
 }
