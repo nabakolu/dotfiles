@@ -10,6 +10,8 @@ include () {
     [[ -f "$1" ]] && source "$1"
 }
 
+[ "$TERM" = "alacritty" ] && wal -R >> /dev/null
+
 # enable vi mode
 set -o vi
 
