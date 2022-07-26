@@ -172,6 +172,14 @@ c.content.headers.accept_language = "en-US,en;q=0.5"
 c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
 #c.content.canvas_reading = False
 
+c.fonts.default_family = "nabakolu"
+c.fonts.web.family.cursive = "nabakolu"
+c.fonts.web.family.fantasy = "nabakolu"
+c.fonts.web.family.fixed = "nabakolu"
+c.fonts.web.family.sans_serif = "nabakolu"
+c.fonts.web.family.serif = "nabakolu"
+c.fonts.web.family.standard = "nabakolu"
+
 # pywal integration
 config.source('qutewal.py')
 
