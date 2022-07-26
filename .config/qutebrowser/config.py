@@ -12,7 +12,8 @@ c.qt.args = ["lang=en-GB"] # temporary fix
 ############
 
 # bind some stylesheets
-
+config.bind('cm', 'config-list-add content.user_stylesheets "~/.config/qutebrowser/css/monospace.css"')
+config.bind('Cm', 'config-list-remove content.user_stylesheets "~/.config/qutebrowser/css/monospace.css"')
 
 config.unbind('m')
 config.unbind('M')
@@ -167,12 +168,6 @@ c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,applicati
 #c.content.canvas_reading = False
 
 c.fonts.default_family = "nabakolu"
-c.fonts.web.family.cursive = "nabakolu"
-c.fonts.web.family.fantasy = "nabakolu"
-c.fonts.web.family.fixed = "nabakolu"
-c.fonts.web.family.sans_serif = "nabakolu"
-c.fonts.web.family.serif = "nabakolu"
-c.fonts.web.family.standard = "nabakolu"
 
 # pywal integration
 config.source('qutewal.py')
