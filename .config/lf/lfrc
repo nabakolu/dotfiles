@@ -336,6 +336,7 @@ map gM cd /media
 map gw cd ~/.config/wallpapers
 map gd cd ~/Downloads
 map gs cd ~/screenshots
+map gl cd ~/.local
 
 # Mouse mappings
 map <m-down> down 
