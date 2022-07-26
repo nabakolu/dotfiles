@@ -107,7 +107,7 @@ c.editor.command = ['st','-e','nvim', '{}']
 c.downloads.open_dispatcher = "st -e /usr/local/bin/lf {}"
 
 # make hint chars upper case
-c.hints.uppercase = True
+c.hints.uppercase = False
 
 # set input timeout to 20s
 c.input.partial_timeout = 20000
