@@ -19,6 +19,7 @@ set foldmethod=syntax
 set nofoldenable
 " show first line of every fold
 set foldtext=getline(v:foldstart)
+set foldlevel=999
 
 " make search not case sensitive
 set ignorecase
