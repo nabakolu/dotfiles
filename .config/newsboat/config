@@ -63,8 +63,17 @@ bind-key RIGHT open urlview
 bind-key G end
 bind-key g home
 
-color listfocus blue white bold
-color listfocus_unread blue white bold
-color title               white  blue   bold
-color info                white  blue   bold
-color hint-key            white  blue   bold
+color listfocus black white bold
+color listfocus_unread black white bold
+color listnormal red black
+color listnormal_unread red black bold
+color title               green  black   bold
+color info                green  black   bold
+color hint-key            green  black   bold
+
+# highlights
+highlight article "^(Feed|Link):.*$" green default bold
+highlight article "^(Title|Date|Author):.*$" color39 default bold
+highlight article "https?://[^ ]+" green default underline
+highlight article "\\[[0-9]+\\]" blue default bold
+highlight article "\\[image\\ [0-9]+\\]" blue default bold
