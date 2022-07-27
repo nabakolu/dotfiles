@@ -8,7 +8,6 @@ StartInMusicDir = yes
 
 Keymap = keymap
 
-Theme = transparent-background
-#Theme = darkdot_theme
+Theme = nabakolu
 
 SoundDriver = PULSEAUDIO:JACK:ALSA:OSS
