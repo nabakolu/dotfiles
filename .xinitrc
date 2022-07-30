@@ -24,6 +24,9 @@ unclutter &
 # start blueman-applet, to automatically connect to bluetooth devices etc.
 blueman-applet &
 
+# start discover-overlay
+discover-overlay &
+
 # start clipmenu daemon
 clipmenud &
 
