@@ -32,9 +32,12 @@ theme.taglist_fg_focus    = xrdb.color0
 theme.taglist_bg_focus    = xrdb.color1
 theme.taglist_fg_occupied    = xrdb.color1
 theme.taglist_fg_empty    = xrdb.color1
+theme.taglist_spacing = 3
 
 theme.tasklist_bg_focus = xrdb.color2
 theme.tasklist_bg_normal = xrdb.color8
+theme.tasklist_disable_icon = false
+theme.tasklist_plain_task_name=true
 
 theme.useless_gap   = dpi(3)
 theme.border_width  = dpi(1)
@@ -65,9 +68,6 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
     taglist_square_size, theme.taglist_fg_empty
 )
 
-
-theme.tasklist_disable_icon = false
-theme.taglist_spacing = 3
 
 return theme
 
