@@ -146,18 +146,8 @@ awful.screen.connect_for_each_screen(function(s)
             shape        = gears.shape.rounded_bar,
         },
         layout          = {
-            spacing        = 10,
-            spacing_widget = {
-                {
-                    forced_width = 5,
-                    shape        = gears.shape.circle,
-                    widget       = wibox.widget.separator
-                },
-                valign = "center",
-                halign = "center",
-                widget = wibox.container.place,
-            },
-            layout         = wibox.layout.flex.horizontal
+            spacing = 2,
+            layout  = wibox.layout.flex.horizontal
         },
         -- Notice that there is *NO* wibox.wibox prefix, it is a template,
         -- not a widget instance.
@@ -187,11 +177,54 @@ awful.screen.connect_for_each_screen(function(s)
         },
     }
 
+    -- textclock
+    s.myclock = wibox.widget {
+        {
+            wibox.widget.textclock(),
+            left   = 10,
+            top    = 0,
+            bottom = 0,
+            right  = 10,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.bg_textclock,
+        fg         = beautiful.fg_textclock,
+        shape      = gears.shape.rounded_rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
+    -- systray
+    s.mysystray = wibox.widget {
+        {
+            wibox.widget.systray(),
+            left   = 10,
+            top    = 0,
+            bottom = 0,
+            right  = 10,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.bg_systray,
+        shape      = gears.shape.rounded_rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
+    s.myspacing = wibox.widget {
+        {
+            forced_width = 10,
+            widget       = wibox.widget.separator
+        },
+        valign = "center",
+        halign = "center",
+        widget = wibox.container.place,
+    }
+
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 16 })
+    s.mywibar = awful.wibar({ position = "top", screen = s, height = 16 })
 
     -- Add widgets to the wibox
-    s.mywibox:setup {
+    s.mywibar:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
@@ -200,8 +233,10 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
-            wibox.widget.textclock(),
+            spacing = 4,
+            s.myspacing,
+            s.mysystray,
+            s.myclock,
         },
     }
 end)
