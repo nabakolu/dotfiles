@@ -74,5 +74,6 @@
     "vim",
     "yaml",
     "yml"
-  ]
+  ],
+  "Lua.telemetry.enable": false
 }
