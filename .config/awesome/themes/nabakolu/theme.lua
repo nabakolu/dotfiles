@@ -41,6 +41,11 @@ theme.tasklist_bg_normal = xrdb.color8
 theme.tasklist_disable_icon = false
 theme.tasklist_plain_task_name=true
 
+theme.bg_systray = xrdb.color6
+
+theme.bg_textclock = xrdb.color5
+theme.fg_textclock = xrdb.color0
+
 theme.useless_gap   = dpi(3)
 theme.border_width  = dpi(1)
 theme.border_normal = xrdb.color0
