@@ -472,7 +472,7 @@ root.keys(globalkeys)
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
-    { rule = { except = { instance = "League of Legends (TM) Client" },},
+    { rule = {}, except = { class = "league of legends.exe" },
         properties = { border_width = beautiful.border_width,
             border_color = beautiful.border_normal,
             focus = awful.client.focus.filter,
@@ -480,10 +480,11 @@ awful.rules.rules = {
             keys = clientkeys,
             buttons = clientbuttons,
             screen = awful.screen.preferred,
-            placement = awful.placement.no_overlap + awful.placement.no_offscreen,
+            placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.centered,
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
+    { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
 
     { rule_any = { class = { "FLOATING" } },
