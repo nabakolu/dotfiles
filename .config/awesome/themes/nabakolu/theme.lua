@@ -32,6 +32,8 @@ theme.taglist_fg_focus    = xrdb.color0
 theme.taglist_bg_focus    = xrdb.color1
 theme.taglist_fg_occupied    = xrdb.color1
 theme.taglist_fg_empty    = xrdb.color1
+theme.taglist_fg_urgent  = xrdb.color0
+theme.taglist_bg_urgent  = xrdb.color2
 theme.taglist_spacing = 3
 
 theme.tasklist_bg_focus = xrdb.color2
