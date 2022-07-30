@@ -15,11 +15,8 @@ wal -R
 
 # restore wallpaper
 sh ~/.fehbg
- 
-dunst &
 
-# start custom user daemon, for e.g. status bar
-sh /home/lukas/.config/daemon.sh &
+dunst &
 
 # start unclutter, to remove mouse, when unused
 unclutter &
@@ -42,4 +39,4 @@ noisetorch -i
 # start xss-lock to lock screen on power events
 xss-lock -- betterlockscreen -l &
 
-exec /usr/local/bin/dwm
+exec /usr/bin/awesome
