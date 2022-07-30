@@ -210,6 +210,23 @@ awful.screen.connect_for_each_screen(function(s)
         widget     = wibox.container.background,
     }
 
+    local audio_widget = require("widgets.awesome-pulseaudio-widget")
+    s.myaudio_widget =  wibox.widget {
+        {
+            audio_widget(),
+            left   = 10,
+            top    = 0,
+            bottom = 0,
+            right  = 10,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.bg_audio,
+        fg         = beautiful.fg_audio,
+        shape      = gears.shape.rounded_rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
     s.myspacing = wibox.widget {
         {
             forced_width = 10,
@@ -236,6 +253,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             spacing = 4,
             s.myspacing,
+            s.myaudio_widget,
             s.mysystray,
             s.myclock,
         },

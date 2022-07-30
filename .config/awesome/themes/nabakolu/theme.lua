@@ -43,6 +43,10 @@ theme.tasklist_plain_task_name=true
 
 theme.bg_systray = xrdb.color6
 
+
+theme.bg_audio = xrdb.color3
+theme.fg_audio = xrdb.color0
+
 theme.bg_textclock = xrdb.color5
 theme.fg_textclock = xrdb.color0
 
@@ -51,6 +55,7 @@ theme.border_width  = dpi(1)
 theme.border_normal = xrdb.color0
 theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
+
 
 -- There are other variable sets
 -- overriding the default one when
