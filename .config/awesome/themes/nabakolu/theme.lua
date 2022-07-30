@@ -16,18 +16,18 @@ local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
 theme.font          = "nabakolu 11"
-theme.taglist_font = "nabakolu 13"
-theme.bg_normal     = xrdb.background
+
+theme.bg_normal     = xrdb.color0
 theme.bg_focus      = xrdb.color12
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color8
-theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = xrdb.foreground
 theme.fg_focus      = theme.bg_normal
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
+theme.taglist_font = "nabakolu 13"
 theme.taglist_fg_focus    = xrdb.color0
 theme.taglist_bg_focus    = xrdb.color1
 theme.taglist_fg_occupied    = xrdb.color1
@@ -62,6 +62,8 @@ theme.border_marked = xrdb.color10
 -- mouse_finder_[color|timeout|animate_timeout|radius|factor]
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
+
+theme.notification_icon_size = 32
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
