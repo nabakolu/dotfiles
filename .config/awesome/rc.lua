@@ -257,6 +257,8 @@ globalkeys = gears.table.join(
         { description = "reload awesome", group = "awesome" }),
     awful.key({ modkey, "Shift" }, "e", awesome.quit,
         { description = "quit awesome", group = "awesome" }),
+    awful.key({ modkey, }, "Delete", function() naughty.destroy_all_notifications() end,
+        { description = "close all notifications", group = "awesome" }),
 
 
     -- client
@@ -386,12 +388,6 @@ globalkeys = gears.table.join(
         { description = "lock screen", group = "misc" }),
     awful.key({ modkey, "Shift" }, "d", function() awful.spawn("dmenu_run") end,
         { description = "run prompt", group = "misc" }),
-    awful.key({ modkey, "Shift" }, "Insert", function() awful.spawn("dunstctl context") end,
-        { description = "get notification context", group = "misc" }),
-    awful.key({ modkey, "Shift" }, "Delete", function() awful.spawn("dunstctl close-all") end,
-        { description = "close all notifications", group = "misc" }),
-    awful.key({ modkey, }, "Delete", function() awful.spawn("dunstctl close") end,
-        { description = "close notification", group = "misc" }),
     awful.key({ modkey, }, "#", function() awful.spawn("toggle_p.sh") end,
         { description = "toggle picom", group = "misc" })
 )
@@ -574,3 +570,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- set wallpaper
 awful.spawn.with_shell("~/.fehbg")
+
