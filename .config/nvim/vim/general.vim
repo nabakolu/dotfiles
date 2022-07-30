@@ -26,6 +26,8 @@ set ignorecase
 " make search case sensitive if there are capital letters in the search text
 set smartcase
 
+set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+
 " move to correct tab when pressing enter
 set autoindent
 set copyindent
