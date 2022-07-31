@@ -51,6 +51,8 @@ theme.fg_audio = xrdb.color0
 theme.bg_textclock = xrdb.color5
 theme.fg_textclock = xrdb.color0
 
+theme.bg_bar = xrdb.color0
+
 theme.useless_gap   = dpi(3)
 theme.border_width  = dpi(1)
 theme.border_normal = xrdb.color0
