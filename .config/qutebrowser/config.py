@@ -33,13 +33,14 @@ config.bind('bh', 'open qute://history/')
 config.bind('Bh', 'open -t qute://history/')
 config.bind('BH', 'open -t qute://history/')
 
-# spawn umpv with hint links when pressing m
-config.bind('m', 'hint links spawn --detach mpv {hint-url}')
-config.bind('M', 'spawn --detach mpv {url}')
+# Open link in preferred application
+config.bind('m', 'hint links spawn --detach urlopener.sh {hint-url}')
+config.bind('M', 'spawn --detach urlopener.sh {url}')
 
-# spawn mpv with hint links when pressing ctrl m
+# spawn umpv with hint links when pressing ctrl m
 config.bind('<Ctrl-m>', 'hint links spawn --detach umpv {hint-url}')
 config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
+
 
 config.bind('yf', 'hint links yank')
 
