@@ -24,7 +24,7 @@ local function update_volume()
     pamixer --get-volume
     ]]
     local handle = io.popen(scriptVolume)
-    volume = handle:read("*a")
+    volume = string.gsub(handle:read("*a"),"\n","%%")
     handle:close()
 end
 
@@ -81,5 +81,6 @@ awesome.connect_signal('update-pulse-icon', function()
     pulse.markup = icon..volume
 end)
 
-pulse:buttons(gears.table.join( awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end)))
+pulse:buttons(gears.table.join(
+                           awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end)))
 return pulse
