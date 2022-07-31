@@ -79,9 +79,11 @@ theme.border_marked = xrdb.color10
 theme.notification_icon_size = 32
 naughty.config.presets.critical.fg = xrdb.color0
 naughty.config.presets.critical.bg = xrdb.color1
+naughty.config.presets.critical.border_color = xrdb.color0
 theme.notification_shape = gears.shape.rounded_rect
 theme.notification_max_width = 400
 theme.notification_max_height = 200
+naughty.config.defaults.border_width = 3
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
