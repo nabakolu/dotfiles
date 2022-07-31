@@ -193,6 +193,7 @@ awful.screen.connect_for_each_screen(function(s)
             right  = 10,
             widget = wibox.container.margin,
         },
+
         bg         = beautiful.bg_textclock,
         fg         = beautiful.fg_textclock,
         shape      = gears.shape.rounded_rect,
@@ -233,6 +234,23 @@ awful.screen.connect_for_each_screen(function(s)
         widget     = wibox.container.background,
     }
 
+    local wifi = require("widgets.wifi")
+    s.mywifi = wibox.widget {
+        {
+            wifi,
+            left   = 3,
+            top    = 0,
+            bottom = 0,
+            right  = 5,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.bg_wifi,
+        fg         = beautiful.fg_wifi,
+        shape      = gears.shape.rounded_rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
     s.myspacing = wibox.widget {
         {
             forced_width = 10,
@@ -259,6 +277,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             spacing = 4,
             s.myspacing,
+            s.mywifi,
             s.myaudio_widget,
             s.mysystray,
             s.myclock,
