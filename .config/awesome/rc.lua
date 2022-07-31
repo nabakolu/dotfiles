@@ -130,10 +130,24 @@ awful.screen.connect_for_each_screen(function(s)
         awful.button({}, 4, function() awful.layout.inc(1) end),
         awful.button({}, 5, function() awful.layout.inc(-1) end)))
     -- Create a taglist widget
-    s.mytaglist = awful.widget.taglist {
-        screen  = s,
-        filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+    s.mytaglist = wibox.widget {
+        {
+            awful.widget.taglist {
+                screen  = s,
+                filter  = awful.widget.taglist.filter.all,
+                buttons = taglist_buttons
+            }
+            ,
+            left   = 10,
+            top    = 0,
+            bottom = 0,
+            right  = 10,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.taglist_bg,
+        shape      = gears.shape.rounded_rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
     }
 
     -- Create a tasklist widget
@@ -211,7 +225,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     local audio_widget = require("widgets.awesome-pulseaudio-widget")
-    s.myaudio_widget =  wibox.widget {
+    s.myaudio_widget = wibox.widget {
         {
             audio_widget(),
             left   = 10,
@@ -230,7 +244,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.myspacing = wibox.widget {
         {
             forced_width = 10,
-            widget       = wibox.widget{ widget = wibox.widget.textbox }
+            widget       = wibox.widget { widget = wibox.widget.textbox }
         },
         valign = "center",
         halign = "center",
@@ -590,4 +604,3 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- set wallpaper
 awful.spawn.with_shell("~/.fehbg")
-
