@@ -16,8 +16,6 @@ wal -R
 # restore wallpaper
 sh ~/.fehbg
 
-dunst &
-
 # start unclutter, to remove mouse, when unused
 unclutter &
 
