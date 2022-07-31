@@ -217,10 +217,10 @@ awful.screen.connect_for_each_screen(function(s)
         widget     = wibox.container.background,
     }
 
-    local audio_widget = require("widgets.awesome-pulseaudio-widget")
+    local pulse = require("widgets.pulse")
     s.myaudio_widget = wibox.widget {
         {
-            audio_widget(),
+            pulse,
             left   = 10,
             top    = 0,
             bottom = 0,
@@ -407,11 +407,11 @@ globalkeys = gears.table.join(
         { description = "previous track", group = "audio" }),
 
     -- volume
-    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pamixer -i 1") end,
+    awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pamixer -i 1"); awesome.emit_signal('update-pulse-volume') end,
         { description = "raise volume", group = "volume" }),
-    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pamixer -d 1") end,
+    awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pamixer -d 1") ; awesome.emit_signal('update-pulse-volume')end,
         { description = "lower volume", group = "volume" }),
-    awful.key({}, "XF86AudioMute", function() awful.spawn("pamixer -t") end,
+    awful.key({}, "XF86AudioMute", function() awful.spawn("pamixer -t"); awesome.emit_signal('update-pulse-icon')end,
         { description = "toggle mute", group = "volume" }),
 
 
@@ -608,6 +608,8 @@ client.connect_signal("manage", function(c)
         awful.placement.no_offscreen(c)
     end
 end)
+
+
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
