@@ -10,6 +10,8 @@ local dpi = xresources.apply_dpi
 local xrdb = xresources.get_current_theme()
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
+local naughty = require("naughty")
+local gears = require("gears")
 
 -- inherit default theme
 local theme = dofile(themes_path.."default/theme.lua")
@@ -75,6 +77,13 @@ theme.border_marked = xrdb.color10
 --theme.taglist_bg_focus = "#ff0000"
 
 theme.notification_icon_size = 32
+naughty.config.presets.critical.fg = xrdb.color0
+naughty.config.presets.critical.bg = xrdb.color1
+naughty.config.presets.critical.border_color = xrdb.color0
+theme.notification_shape = gears.shape.rounded_rect
+theme.notification_max_width = 400
+theme.notification_max_height = 200
+naughty.config.defaults.border_width = 3
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
