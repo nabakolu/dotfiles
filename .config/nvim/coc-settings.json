@@ -32,6 +32,7 @@
 	"suggest.floatConfig": {
 		"border": true
 	},
+	"suggest.noselect": true,
 	"diagnostic.floatConfig": {
 		"border": true
 	},
