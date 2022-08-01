@@ -9,5 +9,4 @@ call plug#begin('~/.local/plugged')
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'},
 	Plug 'https://github.com/chrisbra/Colorizer',
 	Plug 'vimwiki/vimwiki',
-	Plug 'romainl/vim-cool',
 call plug#end()
