@@ -159,6 +159,10 @@ if os.path.isfile(colors_absolute):
     # Type: QssColor
     c.colors.messages.warning.bg = red
 
+    # Foreground color of a warning message.
+    # Type: QssColor
+    c.colors.messages.warning.fg = background
+
     # Border color of a warning message.
     # Type: QssColor
     c.colors.messages.warning.border = red
@@ -189,7 +193,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the statusbar in caret mode.
     # Type: QssColor
-    c.colors.statusbar.caret.fg = cursor
+    c.colors.statusbar.caret.fg = background
 
     # Background color of the statusbar in caret mode with a selection.
     # Type: QssColor
@@ -197,7 +201,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the statusbar in caret mode with a selection.
     # Type: QssColor
-    c.colors.statusbar.caret.selection.fg = foreground
+    c.colors.statusbar.caret.selection.fg = background
 
     # Background color of the statusbar in command mode.
     # Type: QssColor
@@ -237,7 +241,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the statusbar in passthrough mode.
     # Type: QssColor
-    c.colors.statusbar.passthrough.fg = foreground
+    c.colors.statusbar.passthrough.fg = background
 
     # Background color of the statusbar in private browsing mode.
     # Type: QssColor
@@ -332,7 +336,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of selected odd tabs.
     # Type: QtColor
-    c.colors.tabs.selected.odd.fg = foreground
+    c.colors.tabs.selected.odd.fg = background
 
     # Background color for webpages if unset (or empty to use the theme's
     # color)
