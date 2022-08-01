@@ -498,6 +498,11 @@ function xresources.load_plugin_syntax()
 
       Winseparator = {bg=xresources.none};
 
+      -- ==================
+      -- coc menu
+      -- ==================
+      CocSearch = {bg=xresources.black, fg=xresources.white};
+      CocMenuSel = {bg=xresources.green, fg=xresources.black};
    }
    return plugin_syntax
 end
