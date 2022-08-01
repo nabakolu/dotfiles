@@ -360,7 +360,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lf") end,
         { description = "lf", group = "applications" }),
 
-    awful.key({ modkey, }, "f", function() awful.spawn("qutebrowser") end,
+    awful.key({ modkey, }, "f", function() awful.spawn.with_shell("qutebrowser --qt-arg stylesheet ~/.config/qutebrowser/qss/fix-tooltips.qss") end,
         { description = "qutebrowser", group = "applications" }),
 
     awful.key({ modkey, "Control" }, "p", function()
