@@ -283,6 +283,9 @@ map <c-c> copy
 map <c-x> cut
 map <c-v> paste
 
+map n search-next
+map N search-prev
+
 map v img
 
 map md mkdir
