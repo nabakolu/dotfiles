@@ -617,6 +617,14 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 
+client.connect_signal("property::fullscreen", function(c)
+    if c.fullscreen then
+        c.shape = gears.shape.rect
+    else
+    c.shape = gears.shape.rounded_rect
+    end
+end)
+
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
