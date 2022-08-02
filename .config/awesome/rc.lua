@@ -435,6 +435,12 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
+    awful.key({ modkey, "Shift"}, "f",
+        function (c)
+            c.fullscreen = not c.fullscreen
+            c:raise()
+        end,
+        {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift" }, "q", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, }, "space", awful.client.floating.toggle,
@@ -525,7 +531,6 @@ awful.rules.rules = {
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
-    { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
 
     { rule_any = { class = { "FLOATING" } },
