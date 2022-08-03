@@ -54,12 +54,14 @@ local function update_battery()
     battery.markup = icon..percent.."%"
 end
 
-gears.timer {
-    timeout = 60,
-    autostart = true,
-    call_now = true,
-    callback = function() update_battery() end
-}
+if battery_check_available() then
+    gears.timer {
+        timeout = 60,
+        autostart = true,
+        call_now = true,
+        callback = function() update_battery() end
+    }
+end
 
 
 return battery
