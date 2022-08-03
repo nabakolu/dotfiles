@@ -56,6 +56,9 @@ theme.fg_textclock = xrdb.color0
 theme.bg_wifi = xrdb.color4
 theme.fg_wifi = xrdb.color0
 
+theme.bg_battery = xrdb.color7
+theme.fg_battery = xrdb.color0
+
 theme.bg_bar = xrdb.color0
 
 theme.useless_gap   = dpi(3)

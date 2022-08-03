@@ -249,6 +249,25 @@ awful.screen.connect_for_each_screen(function(s)
         widget     = wibox.container.background,
     }
 
+
+    local battery = require("widgets.battery")
+    if battery_check_available() then
+        s.mybattery = wibox.widget {
+            {
+                battery,
+                left   = 3,
+                top    = 0,
+                bottom = 0,
+                right  = 5,
+                widget = wibox.container.margin,
+            },
+            bg         = beautiful.bg_battery,
+            fg         = beautiful.fg_battery,
+            shape      = gears.shape.rounded_rect,
+            shape_clip = true,
+            widget     = wibox.container.background,
+        }
+    end
     s.myspacing = wibox.widget {
         {
             forced_width = 10,
@@ -277,6 +296,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.myspacing,
             s.mywifi,
             s.myaudio_widget,
+            s.mybattery,
             s.mysystray,
             s.myclock,
         },
@@ -532,10 +552,6 @@ awful.rules.rules = {
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
-<<<<<<< HEAD
-    { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
-=======
->>>>>>> 9f059b83b93660fb40f9e6c3405fb72def465457
 
     { rule_any = { class = { "FLOATING" } },
         properties = {
@@ -621,8 +637,6 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 
-<<<<<<< HEAD
-=======
 client.connect_signal("property::fullscreen", function(c)
     if c.fullscreen then
         c.shape = gears.shape.rect
@@ -631,7 +645,6 @@ client.connect_signal("property::fullscreen", function(c)
     end
 end)
 
->>>>>>> 9f059b83b93660fb40f9e6c3405fb72def465457
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
