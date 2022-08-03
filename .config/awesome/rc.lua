@@ -435,6 +435,12 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
+    awful.key({ modkey, "Shift"}, "f",
+        function (c)
+            c.fullscreen = not c.fullscreen
+            c:raise()
+        end,
+        {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift" }, "q", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, }, "space", awful.client.floating.toggle,
@@ -526,7 +532,10 @@ awful.rules.rules = {
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
+<<<<<<< HEAD
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
+=======
+>>>>>>> 9f059b83b93660fb40f9e6c3405fb72def465457
 
     { rule_any = { class = { "FLOATING" } },
         properties = {
@@ -612,6 +621,17 @@ client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect
 end)
 
+<<<<<<< HEAD
+=======
+client.connect_signal("property::fullscreen", function(c)
+    if c.fullscreen then
+        c.shape = gears.shape.rect
+    else
+    c.shape = gears.shape.rounded_rect
+    end
+end)
+
+>>>>>>> 9f059b83b93660fb40f9e6c3405fb72def465457
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
