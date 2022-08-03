@@ -12,14 +12,23 @@ function battery_check_available()
 end
 
 local function update_battery()
-    local scriptBattery = [[
+    local scriptPercent = [[
     cat /sys/class/power_supply/BAT0/capacity
     ]]
-    local handle = io.popen(scriptBattery)
+    local scriptStatus = [[
+    cat /sys/class/power_supply/BAT0/status
+    ]]
+    local handle = io.popen(scriptPercent)
     local percent = string.gsub(handle:read("*a"),"\n","")
+    handle:close()
+    handle = io.popen(scriptStatus)
+    local status = string.gsub(handle:read("*a"),"\n","")
+    handle:close()
     percent = tonumber(percent)
     local icon
-    if percent == 100 then
+    if status == "Charging" then
+        icon = ""
+    elseif percent == 100 then
         icon = ""
     elseif percent > 90 then
         icon = ""
@@ -43,7 +52,6 @@ local function update_battery()
         icon = ""
     end
     battery.markup = icon..percent.."%"
-    handle:close()
 end
 
 gears.timer {
