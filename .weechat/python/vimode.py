@@ -2114,6 +2114,14 @@ def set_mode(arg):
         cur = weechat.buffer_get_integer(buf, "input_pos")
         set_cur(buf, input_line, cur - 1, False)
     weechat.bar_item_update("mode_indicator")
+    if mode == "NORMAL":
+        weechat.command("", "/print -stderr -escape \e[2 q")
+    elif mode == "INSERT":
+        weechat.command("", "/print -stderr -escape \e[3 q")
+    elif mode == "COMMAND":
+        weechat.command("", "/print -stderr -escape \e[3 q")
+    elif mode == "SEARCH":
+        weechat.command("", "/print -stderr -escape \e[2 q")
 
 def cb_check_cmd_mode(data, remaining_calls):
     """Exit command mode if user erases the leading ':' character."""
