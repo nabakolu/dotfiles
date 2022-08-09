@@ -91,7 +91,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color for downloads with errors.
     # Type: QtColor
-    c.colors.downloads.error.fg = foreground
+    c.colors.downloads.error.fg = background
 
     # Color gradient stop for download backgrounds.
     # Type: QtColor
@@ -141,7 +141,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of an error message.
     # Type: QssColor
-    c.colors.messages.error.fg = foreground
+    c.colors.messages.error.fg = background
 
     # Background color of an info message.
     # Type: QssColor
@@ -153,7 +153,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color an info message.
     # Type: QssColor
-    c.colors.messages.info.fg = foreground
+    c.colors.messages.info.fg = background
 
     # Background color of a warning message.
     # Type: QssColor
@@ -166,10 +166,6 @@ if os.path.isfile(colors_absolute):
     # Border color of a warning message.
     # Type: QssColor
     c.colors.messages.warning.border = red
-
-    # Foreground color a warning message.
-    # Type: QssColor
-    c.colors.messages.warning.fg = foreground
 
     # Background color for prompts.
     # Type: QssColor
