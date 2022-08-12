@@ -35,6 +35,6 @@ toggle_p.sh
 noisetorch -i
 
 # start xss-lock to lock screen on power events
-xss-lock -- betterlockscreen -l &
+xss-lock -- lock &
 
 exec /usr/bin/awesome

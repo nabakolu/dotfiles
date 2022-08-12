@@ -101,19 +101,16 @@ cmd open_masterpdfeditor4 &{{
 
 cmd open_pywal ${{
 	wal -t -i $f --backend wal
-	betterlockscreen -u $f
 	theme
 }}
 
 cmd open_pywal_light ${{
 	wal -l -t -i $f --backend wal
-	betterlockscreen -u $f
 	theme
 }}
 
 cmd set_wallpaper ${{
 	feh --bg-scale $f
-	betterlockscreen -u $f
 }
 
 cmd full_find ${{
