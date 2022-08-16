@@ -55,16 +55,16 @@ function MyTabLine()
 		let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
 		if i == tabpagenr('$') - 1
 			if i == tabpagenr() - 1
-				let s .= '%#TabLineSelLastArrowColor#'
+				let s .= '%#TabLineSelLastArrowColor# '
 			else
-				let s .= '%#TabLineLastArrowColor#'
+				let s .= '%#TabLineLastArrowColor# '
 			endif
 		elseif i == tabpagenr() - 1
-			let s .= '%#TabLineSelArrowColor#'
+			let s .= '%#TabLineSelArrowColor# '
 		elseif i == tabpagenr() - 2
-			let s .= '%#TabLineBehindSelArrowColor#'
+			let s .= '%#TabLineBehindSelArrowColor# '
 		else
-			let s .= ''
+			let s .= '|'
 		endif
 	endfor
 
@@ -104,18 +104,20 @@ let g:currentmode={
 set laststatus=3
 set statusline=
 set statusline+=%#ModeColor#%{toupper(get(g:currentmode,mode(),'????????'))}
-set statusline+=%#ModeArrowColor#
-set statusline+=%#PathColor#\ %{getcwd()}/
-set statusline+=%#PathArrowColor#
-set statusline+=%#FileColor#%f\ 
-set statusline+=%#FileArrowColor#
-set statusline+=%{&modified?'\ +\ ':''}
-set statusline+=%{&readonly?'\ \ ':''}
+set statusline+=%#Normal#
+set statusline+=%{'\ '}
+set statusline+=%#PathColor#\ \ %{getcwd()}/
+set statusline+=%#Normal#
+set statusline+=%{'\ '}
+set statusline+=%#FileColor#%f
+set statusline+=%#Normal#
+set statusline+=%{&modified?'\ +\':''}
+set statusline+=%{&readonly?'\ \':''}
 set statusline+=%=
-set statusline+=%#FTArrowColor#
 set statusline+=%#FTColor#ft:\ %{&filetype!=#''?&filetype:'none'}
-set statusline+=%#PosArrowColor#
-set statusline+=%#PosColor#%2p%%%l:%-2v " Virtual column number
+set statusline+=%#Normal#
+set statusline+=%{'\ '}
+set statusline+=%#PosColor#%2p%%\|%l:%-2v " Virtual column number
 
 
 
