@@ -135,7 +135,7 @@ awful.screen.connect_for_each_screen(function(s)
             widget = wibox.container.margin,
         },
         bg         = beautiful.taglist_bg,
-        shape      = gears.shape.rounded_rect,
+        shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -147,7 +147,7 @@ awful.screen.connect_for_each_screen(function(s)
         buttons         = tasklist_buttons,
         style           = {
             border_width = 1,
-            shape        = gears.shape.rounded_bar,
+            shape        = gears.shape.bar,
         },
         layout          = {
             spacing = 2,
@@ -194,7 +194,7 @@ awful.screen.connect_for_each_screen(function(s)
 
         bg         = beautiful.bg_textclock,
         fg         = beautiful.fg_textclock,
-        shape      = gears.shape.rounded_rect,
+        shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -210,7 +210,7 @@ awful.screen.connect_for_each_screen(function(s)
             widget = wibox.container.margin,
         },
         bg         = beautiful.bg_systray,
-        shape      = gears.shape.rounded_rect,
+        shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -227,7 +227,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         bg         = beautiful.bg_audio,
         fg         = beautiful.fg_audio,
-        shape      = gears.shape.rounded_rect,
+        shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -244,7 +244,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         bg         = beautiful.bg_wifi,
         fg         = beautiful.fg_wifi,
-        shape      = gears.shape.rounded_rect,
+        shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -263,7 +263,7 @@ awful.screen.connect_for_each_screen(function(s)
             },
             bg         = beautiful.bg_battery,
             fg         = beautiful.fg_battery,
-            shape      = gears.shape.rounded_rect,
+            shape      = gears.shape.rect,
             shape_clip = true,
             widget     = wibox.container.background,
         }
@@ -633,17 +633,17 @@ client.connect_signal("manage", function(c)
 end)
 
 
-client.connect_signal("manage", function (c)
-    c.shape = gears.shape.rounded_rect
-end)
-
-client.connect_signal("property::fullscreen", function(c)
-    if c.fullscreen then
-        c.shape = gears.shape.rect
-    else
-    c.shape = gears.shape.rounded_rect
-    end
-end)
+-- client.connect_signal("manage", function (c)
+--     c.shape = gears.shape.rect
+-- end)
+-- 
+-- client.connect_signal("property::fullscreen", function(c)
+--     if c.fullscreen then
+--         c.shape = gears.shape.rect
+--     else
+--     c.shape = gears.shape.rect
+--     end
+-- end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
