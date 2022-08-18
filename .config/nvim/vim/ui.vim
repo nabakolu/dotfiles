@@ -110,9 +110,10 @@ set statusline+=%#PathColor#\ \ %{getcwd()}/
 set statusline+=%#Normal#
 set statusline+=%{'\ '}
 set statusline+=%#FileColor#%f
+set statusline+=%#Normal#\ 
+set statusline+=%#ModeColor#%{&modified?'\[+\]':''}
+set statusline+=%#ModeColor#%{&readonly?'\[\]':''}
 set statusline+=%#Normal#
-set statusline+=%{&modified?'\ +\':''}
-set statusline+=%{&readonly?'\ \':''}
 set statusline+=%=
 set statusline+=%#FTColor#ft:\ %{&filetype!=#''?&filetype:'none'}
 set statusline+=%#Normal#
