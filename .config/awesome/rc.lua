@@ -347,6 +347,18 @@ globalkeys = gears.table.join(
         end,
         { description = "focus previous by index", group = "client" }
     ),
+    awful.key({ modkey, }, "y",
+        function()
+            awful.client.focus.byidx(1)
+        end,
+        { description = "focus next by index", group = "client" }
+    ),
+    awful.key({ modkey, }, "x",
+        function()
+            awful.client.focus.byidx(-1)
+        end,
+        { description = "focus previous by index", group = "client" }
+    ),
     awful.key({ modkey, }, "Down", function() awful.client.swap.byidx(1) end,
         { description = "swap with next client by index", group = "client" }),
     awful.key({ modkey, }, "Up", function() awful.client.swap.byidx(-1) end,
