@@ -19,8 +19,8 @@ sh ~/.fehbg
 # start unclutter, to remove mouse, when unused
 unclutter &
 
-# start blueman-applet, to automatically connect to bluetooth devices etc.
-blueman-applet &
+# start blueberry systray
+blueberry-tray
 
 # start clipmenu daemon
 clipmenud &
