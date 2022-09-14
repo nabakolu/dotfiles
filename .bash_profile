@@ -12,6 +12,8 @@ export BROWSER="qutebrowser"
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 #clipmenu
 export CM_SELECTIONS="clipboard"
 export CM_MAX_CLIPS=10
