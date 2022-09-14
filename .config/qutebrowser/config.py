@@ -118,7 +118,7 @@ c.tabs.position = "left"
 c.tabs.width = 32
 
 # no wrapping when changin tabs
-c.tabs.wrap = False
+c.tabs.wrap = True
 
 # set bookmarks as default page
 c.url.default_page = "about:blank"
