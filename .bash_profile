@@ -10,6 +10,8 @@ export VISUAL="nvim"
 export DE="dwm"
 export BROWSER="qutebrowser"
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 export QT_QPA_PLATFORMTHEME=gtk2
 
 #clipmenu
