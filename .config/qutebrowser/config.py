@@ -68,6 +68,7 @@ config.bind('<space>w', 'jseval (function () { '+
 
 config.bind('<space>q', 'spawn --userscript qr.sh {url}')
 config.bind('<space>t', 'spawn --userscript translate')
+config.bind('<space>r', 'spawn --userscript readability')
 
 config.bind('<Ctrl-n>', 'completion-item-focus next', mode='command')
 config.bind('<Ctrl-p>', 'completion-item-focus prev', mode='command')
