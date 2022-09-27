@@ -95,7 +95,7 @@ c.content.cookies.store = False
 c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/qutebrowser/css/block.css", "~/.config/qutebrowser/css/monospace.css"]
 
 # enable pdf viewing
-c.content.pdfjs = True
+c.content.pdfjs = False
 
 # disable webgl
 c.content.webgl = False
