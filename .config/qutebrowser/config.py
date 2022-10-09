@@ -37,6 +37,8 @@ config.bind('BH', 'open -t qute://history/')
 config.bind('m', 'hint links spawn --detach urlopener.sh {hint-url}')
 config.bind('M', 'spawn --detach urlopener.sh {url}')
 
+config.bind('<Space>m', 'hint links spawn --detach yt-download.sh {hint-url}')
+
 # spawn umpv with hint links when pressing ctrl m
 config.bind('<Ctrl-m>', 'hint links spawn --detach umpv {hint-url}')
 config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
