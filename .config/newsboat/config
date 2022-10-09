@@ -60,6 +60,8 @@ bind-key RIGHT show-urls article
 bind-key l open urlview
 bind-key RIGHT open urlview
 
+macro d set browser "setsid -f yt-download.sh %u >/dev/null 2>&1" ; open-in-browser ; set browser "urlopener.sh %u"
+
 bind-key G end
 bind-key g home
 
