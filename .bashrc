@@ -27,7 +27,7 @@ fi
 export FZF_DEFAULT_COMMAND='find .'
 
 #aliases
-alias ytaudio="youtube-dl -x -f bestaudio/bestdl"
+alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
 alias diff="diff --color=auto"
 alias se="nvim \$(fzf)"
