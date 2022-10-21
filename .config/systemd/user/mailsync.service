@@ -4,4 +4,4 @@ DefaultDependencies=no
 
 [Service]
 Type=oneshot
-ExecStart=mailsync
+ExecStart=%h/.config/mutt/mailsync

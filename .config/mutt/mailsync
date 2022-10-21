@@ -1,0 +1,38 @@
+#!/bin/bash
+
+GMAIL0=$(find ~/mail/gmail/INBOX/new -type f | wc -l)
+MAILO0=$(find ~/mail/mailo/INBOX/new -type f | wc -l)
+UNIMAIL0=$(find ~/mail/unimail/INBOX/new -type f | wc -l)
+NABAKOLU0=$(find ~/mail/nabakolu/INBOX/new -type f | wc -l)
+
+mbsync -a --quiet
+
+GMAIL1=$(find ~/mail/gmail/INBOX/new -type f | wc -l)
+MAILO1=$(find ~/mail/mailo/INBOX/new -type f | wc -l)
+UNIMAIL1=$(find ~/mail/unimail/INBOX/new -type f | wc -l)
+NABAKOLU1=$(find ~/mail/nabakolu/INBOX/new -type f | wc -l)
+
+GMAIL2=$(($GMAIL1 - $GMAIL0))
+MAILO2=$(($MAILO1 - $MAILO0))
+UNIMAIL2=$(($UNIMAIL1 - $UNIMAIL0))
+NABAKOLU2=$(($NABAKOLU1 - $NABAKOLU0))
+
+if (( $MAILO2 > 0))
+then
+	notify-send "$MAILO2 new Mailo mail(s)"
+fi
+
+if (( $GMAIL2 > 0))
+then
+	notify-send "$GMAIL2 new Gmail mail(s)"
+fi
+
+if (( $UNIMAIL2 > 0))
+then
+	notify-send "$UNIMAIL2 new Unimail mail(s)"
+fi
+
+if (( $NABAKOLU2 > 0))
+then
+	notify-send "$NABAKOLU2 new nabakolu mail(s)"
+fi
