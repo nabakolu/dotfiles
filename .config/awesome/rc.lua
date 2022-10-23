@@ -564,7 +564,7 @@ awful.rules.rules = {
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
     { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
-    { rule_any = { class = { "Hamsket" } }, properties = { tag = root.tags()[2] } },
+    { rule_any = { class = { "Ferdium" } }, properties = { tag = root.tags()[2] } },
 
     { rule_any = { class = { "FLOATING" } },
         properties = {
