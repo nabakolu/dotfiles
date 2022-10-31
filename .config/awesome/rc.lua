@@ -184,7 +184,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- textclock
     s.myclock = wibox.widget {
         {
-            wibox.widget.textclock(' %a %b %d  %H:%M'),
+            wibox.widget.textclock(' %a %d %b  %H:%M'),
             left   = 10,
             top    = 0,
             bottom = 0,
