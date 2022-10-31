@@ -39,6 +39,14 @@
 	"signature.floatConfig": {
 		"border": true
   },
-  "cSpell.enabledLanguageIds": [ ],
-  "Lua.telemetry.enable": false
+  "Lua.telemetry.enable": false,
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "git-commit",
+    "latex",
+    "markdown",
+    "plaintext",
+    "restructuredtext",
+    "text"
+  ]
 }
