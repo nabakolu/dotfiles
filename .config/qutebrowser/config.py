@@ -1,4 +1,7 @@
 from qutebrowser.api import interceptor
+import os
+os.system("bisc")
+
 
 config.load_autoconfig()
 
