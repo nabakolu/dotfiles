@@ -94,7 +94,7 @@ config.set("colors.webpage.darkmode.threshold.background", 100)
 c.content.autoplay = False
 
 # dont store cookies
-c.content.cookies.store = False
+c.content.cookies.store = True
 
 # set custom css
 c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/qutebrowser/css/block.css", "~/.config/qutebrowser/css/monospace.css"]
