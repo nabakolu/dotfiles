@@ -36,14 +36,19 @@ config.bind('bh', 'open qute://history/')
 config.bind('Bh', 'open -t qute://history/')
 config.bind('BH', 'open -t qute://history/')
 
-# Open link in preferred application
-config.bind('m', 'hint all spawn --detach urlopener.sh {hint-url}')
-config.bind('M', 'spawn --detach urlopener.sh {url}')
 
-config.bind('<Space>m', 'hint all spawn --detach yt-download.sh {hint-url}')
+# download videos
+config.bind('<Space>m', 'hint links spawn --detach yt-download.sh {hint-url}')
+
+# Open link in preferred application
+config.bind('<Space>s', 'hint all spawn --detach urlopener.sh {hint-url}')
+
+# spawn mpv with hint links
+config.bind('m', 'hint links spawn --detach mpv {hint-url}')
+config.bind('M', 'spawn --detach mpv {url}')
 
 # spawn umpv with hint links when pressing ctrl m
-config.bind('<Ctrl-m>', 'hint all spawn --detach umpv {hint-url}')
+config.bind('<Ctrl-m>', 'hint links spawn --detach umpv {hint-url}')
 config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
 
 
