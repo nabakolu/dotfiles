@@ -10,6 +10,8 @@ local icon
 
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(pulse)
+tooltip.mode = "outside"
+tooltip.gaps = 5
 
 pulse:connect_signal("mouse::enter", function()
     local script = [[ pactl get-default-sink ]]
