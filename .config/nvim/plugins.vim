@@ -9,4 +9,5 @@ call plug#begin('~/.local/plugged')
 	Plug 'https://github.com/chrisbra/Colorizer',
 	Plug 'vimwiki/vimwiki',
 	Plug 'romainl/vim-cool',
+	Plug 'editorconfig/editorconfig-vim',
 call plug#end()
