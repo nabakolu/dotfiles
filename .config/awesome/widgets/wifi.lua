@@ -5,16 +5,15 @@ local beautiful = require "beautiful"
 
 -- Wifi
 local wifi = wibox.widget.textbox()
-local tooltip = awful.tooltip {
-    objects        = { wifi },
-    timer_function = function()
-        local script = [[ nmcli con show --active | tail -n +2 ]]
-        awful.spawn.easy_async_with_shell(script, function(stdout)
-            res = tostring(stdout)
-        end)
-        return res
-    end,
-}
+local tooltip = awful.tooltip { }
+tooltip:add_to_object(wifi)
+
+wifi:connect_signal("mouse::enter", function()
+    local script = [[ nmcli con show --active | tail -n +2 ]]
+    awful.spawn.easy_async_with_shell(script, function(stdout)
+        tooltip.text = tostring(stdout)
+    end)
+end)
 
 local function get_wifi()
     local script = [[

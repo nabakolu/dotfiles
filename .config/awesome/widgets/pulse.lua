@@ -8,16 +8,15 @@ local pulse = wibox.widget.textbox()
 local volume
 local icon
 
-local tooltip = awful.tooltip {
-    objects        = { pulse },
-    timer_function = function()
-        local script = [[ pactl get-default-sink ]]
-        awful.spawn.easy_async_with_shell(script, function(stdout)
-            res = tostring(stdout)
-        end)
-        return res
-    end,
-}
+local tooltip = awful.tooltip { }
+tooltip:add_to_object(pulse)
+
+pulse:connect_signal("mouse::enter", function()
+    local script = [[ pactl get-default-sink ]]
+    awful.spawn.easy_async_with_shell(script, function(stdout)
+        tooltip.text = tostring(stdout)
+    end)
+end)
 
 local function update_volume()
     local scriptVolume = [[
@@ -82,5 +81,5 @@ awesome.connect_signal('update-pulse-icon', function()
 end)
 
 pulse:buttons(gears.table.join(
-                           awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end)))
+    awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end)))
 return pulse
