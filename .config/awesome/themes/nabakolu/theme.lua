@@ -12,6 +12,7 @@ local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local naughty = require("naughty")
 local gears = require("gears")
+local rnotification = require("ruled.notification")
 
 -- inherit default theme
 local theme = dofile(themes_path.."default/theme.lua")
@@ -80,18 +81,52 @@ theme.border_marked = xrdb.color10
 --theme.taglist_bg_focus = "#ff0000"
 
 theme.notification_icon_size = 32
-naughty.config.presets.critical.fg = xrdb.color0
-naughty.config.presets.critical.bg = xrdb.color1
-naughty.config.presets.critical.border_color = xrdb.color0
-theme.notification_shape = gears.shape.rounded_rect
+theme.notification_shape = gears.shape.rect
 theme.notification_max_width = 400
 theme.notification_max_height = 200
-naughty.config.defaults.border_width = 3
 
-theme.tooltip_fg = theme.fg_normal
-theme.tooltip_bg = theme.bg_normal
+rnotification.connect_signal('request::rules', function()
+      -- Critical notifs
+      rnotification.append_rule {
+        rule       = { urgency = 'critical' },
+        properties = {
+          bg                  = xrdb.background,
+          fg                  = xrdb.color4,
+          border_color        = xrdb.color4,
+          implicit_timeout    = 0,
+        }
+      }
+
+      -- Normal notifs
+      rnotification.append_rule {
+        rule       = { urgency = 'normal' },
+        properties = {
+          bg                  = xrdb.background,
+          fg                  = xrdb.foreground,
+          border_color        = xrdb.foreground,
+          implicit_timeout    = 10,
+        }
+      }
+
+      -- Low notifs
+      rnotification.append_rule {
+        rule       = { urgency = 'low' },
+        properties = {
+          bg                  = xrdb.background,
+          fg                  = xrdb.foreground,
+          border_color        = xrdb.foreground,
+          implicit_timeout    = 10,
+        }
+      }
+  end
+  )
+
+
+
+theme.tooltip_fg = xrdb.foreground
+theme.tooltip_bg = xrdb.background
 theme.tooltip_border_width = 1
-theme.tooltip_border_color = theme.fg_normal
+theme.tooltip_border_color = xrdb.foreground
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
