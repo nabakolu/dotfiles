@@ -90,6 +90,8 @@ naughty.config.defaults.border_width = 3
 
 theme.tooltip_fg = theme.fg_normal
 theme.tooltip_bg = theme.bg_normal
+theme.tooltip_border_width = 1
+theme.tooltip_border_color = theme.fg_normal
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
