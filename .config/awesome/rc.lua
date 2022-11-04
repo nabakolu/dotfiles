@@ -182,14 +182,16 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- textclock
-    s.myclock = wibox.widget {
+    local datetime = require("widgets.datetime")
+    s.mydatetime_widget = wibox.widget {
         {
-            wibox.widget.textclock(' %a %d %b  %H:%M'),
+            datetime,
             left   = 10,
             top    = 0,
             bottom = 0,
             right  = 10,
             widget = wibox.container.margin,
+
         },
 
         bg         = beautiful.bg_textclock,
@@ -197,6 +199,7 @@ awful.screen.connect_for_each_screen(function(s)
         shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
+
     }
 
     -- systray
@@ -298,7 +301,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.myaudio_widget,
             s.mybattery,
             s.mysystray,
-            s.myclock,
+            s.mydatetime_widget,
         },
     }
 end)
