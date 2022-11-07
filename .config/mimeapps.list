@@ -27,6 +27,7 @@ x-directory/normal=lf-st.desktop
 application/octet-stream=mocp.desktop
 audio/mpegapplication/octet-stream=mocp.desktop
 x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
+x-scheme-handler/mailto=mailto.desktop;
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
