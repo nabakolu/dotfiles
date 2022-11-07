@@ -29,4 +29,4 @@ source ~/.config/mutt/colors
 source ~/.config/mutt/powerline
 
 # start with mailo
-source ~/.config/mutt/mailo
+source ~/.config/mutt/accounts/mailo
