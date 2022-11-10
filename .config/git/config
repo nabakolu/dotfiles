@@ -3,9 +3,14 @@
 [user]
 	name = nabakolu
 	email = lnabakowski@mailo.com
+    signingkey = lnabakowski@mailo.com
 [difftool]
     prompt = true
 [diff]
     tool = nvimdiff
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[commit]
+    gpgsign = true
+[tag]
+    gpgSign = true
