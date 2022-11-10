@@ -1,8 +1,8 @@
 [alias]
-	logb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    logb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [user]
-	name = nabakolu
-	email = lnabakowski@mailo.com
+    name = nabakolu
+    email = lnabakowski@mailo.com
     signingkey = lnabakowski@mailo.com
 [difftool]
     prompt = true
