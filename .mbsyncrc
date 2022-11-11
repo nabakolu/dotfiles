@@ -52,7 +52,7 @@ Channel gmail
 	Near :gmail-local:
 	Create Both # automatically create missing mailboxes on server and locally
 	Syncstate * # Save the synchronization state files in the relevant directory
-	Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/Drafts"
+	Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/Drafts" "[Gmail]/Spam"
 	ExpireUnread no
 
 
