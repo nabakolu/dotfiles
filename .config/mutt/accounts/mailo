@@ -15,3 +15,16 @@ set record = "+sent"
 unmailboxes *
 mailboxes =INBOX =sent =draftbox =trash =newsletter =social =unsolbox =ecard
 
+
+macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+macro index,pager gd "<change-folder>=draftbox<enter>" "go to drafts"
+macro index,pager Md ";<save-message>=draftbox<enter>" "move mail to drafts"
+macro index,pager Cd ";<copy-message>=draftbox<enter>" "copy mail to drafts"
+macro index,pager gj "<change-folder>=unsolbox<enter>" "go to junk"
+macro index,pager Mj ";<save-message>=unsolbox<enter>" "move mail to junk"
+macro index,pager Cj ";<copy-message>=unsolbox<enter>" "copy mail to junk"
+macro index,pager gs "<change-folder>=sent<enter>" "go to sent"
+macro index,pager Ms ";<save-message>=sent<enter>" "move mail to sent"
+macro index,pager Cs ";<copy-message>=sent<enter>" "copy mail to sent"

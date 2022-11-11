@@ -1,3 +1,6 @@
+bind index M noop
+bind index,pager C noop
+
 bind index j next-entry
 bind index k previous-entry
 bind index G last-entry

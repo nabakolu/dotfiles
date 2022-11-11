@@ -13,5 +13,19 @@ set postponed = "+Entw&APw-rfe"
 set record = "+Gesendete Elemente"
 
 unmailboxes *
-mailboxes =INBOX =Gesendete\ Elemente =Entw&APw-rfe =Gel&APY-schte\ Elemente
+mailboxes =INBOX =Gesendete\ Elemente =Entw&APw-rfe =Junk-E-Mail
 
+
+
+macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+macro index,pager gd "<change-folder>=Entw&APw-rfe<enter>" "go to drafts"
+macro index,pager Md ";<save-message>=Entw&APw-rfe<enter>" "move mail to drafts"
+macro index,pager Cd ";<copy-message>=Entw&APw-rfe<enter>" "copy mail to drafts"
+macro index,pager gj "<change-folder>=Junk-E-Mail<enter>" "go to junk"
+macro index,pager Mj ";<save-message>=Junk-E-Mail<enter>" "move mail to junk"
+macro index,pager Cj ";<copy-message>=Junk-E-Mail<enter>" "copy mail to junk"
+macro index,pager gs "<change-folder>=Gesendete<complete><enter>" "go to sent"
+macro index,pager Ms ";<save-message>=Gesendete<complete><enter>" "move mail to sent"
+macro index,pager Cs ";<copy-message>=Gesendete<complete><enter>" "copy mail to sent"

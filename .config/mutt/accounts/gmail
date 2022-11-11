@@ -13,5 +13,19 @@ set postponed = "+[Gmail]/Drafts"
 set record = "+[Gmail]/Sent Mail"
 
 unmailboxes *
-mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Starred
+mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Starred =[Gmail]/Spam
 
+
+
+macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
+macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
+macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "go to drafts"
+macro index,pager Md ";<save-message>=[Gmail]/Drafts<enter>" "move mail to drafts"
+macro index,pager Cd ";<copy-message>=[Gmail]/Drafts<enter>" "copy mail to drafts"
+macro index,pager gj "<change-folder>=[Gmail]/Spam<enter>" "go to junk"
+macro index,pager Mj ";<save-message>=[Gmail]/Spam<enter>" "move mail to junk"
+macro index,pager Cj ";<copy-message>=[Gmail]/Spam<enter>" "copy mail to junk"
+macro index,pager gs "<change-folder>=[Gmail]/Sent<complete><enter>" "go to sent"
+macro index,pager Ms ";<save-message>=[Gmail]/Sent<complete><enter>" "move mail to sent"
+macro index,pager Cs ";<copy-message>=[Gmail]/Sent<complete><enter>" "copy mail to sent"
