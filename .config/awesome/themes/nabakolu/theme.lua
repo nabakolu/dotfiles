@@ -62,9 +62,9 @@ theme.fg_battery = xrdb.color0
 
 theme.bg_bar = xrdb.color0
 
-theme.useless_gap   = 0 -- dpi(3)
-theme.border_width  = dpi(1)
-theme.border_normal = xrdb.color0
+theme.useless_gap   = 3 -- dpi(3)
+theme.border_width  = dpi(2)
+theme.border_normal = xrdb.color8
 theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
 

@@ -135,7 +135,7 @@ awful.screen.connect_for_each_screen(function(s)
             widget = wibox.container.margin,
         },
         bg         = beautiful.taglist_bg,
-        shape      = gears.shape.rect,
+        shape      = gears.shape.rounded_rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -147,7 +147,7 @@ awful.screen.connect_for_each_screen(function(s)
         buttons         = tasklist_buttons,
         style           = {
             border_width = 1,
-            shape        = gears.shape.bar,
+            shape        = gears.shape.rounded_bar,
         },
         layout          = {
             spacing = 2,
@@ -196,7 +196,7 @@ awful.screen.connect_for_each_screen(function(s)
 
         bg         = beautiful.bg_textclock,
         fg         = beautiful.fg_textclock,
-        shape      = gears.shape.rect,
+        shape      = gears.shape.rounded_rect,
         shape_clip = true,
         widget     = wibox.container.background,
 
@@ -213,7 +213,7 @@ awful.screen.connect_for_each_screen(function(s)
             widget = wibox.container.margin,
         },
         bg         = beautiful.bg_systray,
-        shape      = gears.shape.rect,
+        shape      = gears.shape.rounded_rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -230,7 +230,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         bg         = beautiful.bg_audio,
         fg         = beautiful.fg_audio,
-        shape      = gears.shape.rect,
+        shape      = gears.shape.rounded_rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -247,7 +247,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         bg         = beautiful.bg_wifi,
         fg         = beautiful.fg_wifi,
-        shape      = gears.shape.rect,
+        shape      = gears.shape.rounded_rect,
         shape_clip = true,
         widget     = wibox.container.background,
     }
@@ -266,7 +266,7 @@ awful.screen.connect_for_each_screen(function(s)
             },
             bg         = beautiful.bg_battery,
             fg         = beautiful.fg_battery,
-            shape      = gears.shape.rect,
+            shape      = gears.shape.rounded_rect,
             shape_clip = true,
             widget     = wibox.container.background,
         }
@@ -282,7 +282,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibar = awful.wibar({ position = "top", screen = s, fg = beautiful.bg_bar, height = 16 })
+    s.mywibar = awful.wibar({ position = "top", screen = s, fg = beautiful.bg_bar.."0", bg = beautiful.bg_bar.."0", height = 16, border_width = 5 })
 
     -- Add widgets to the wibox
     s.mywibar:setup {
@@ -655,11 +655,7 @@ screen.connect_signal("arrange", function (s)
     local only_one = #s.tiled_clients == 1 -- use tiled_clients so that other floating windows don't affect the count
     -- but iterate over clients instead of tiled_clients as tiled_clients doesn't include maximized windows
     for _, c in pairs(s.clients) do
-        if (max or only_one) and not c.floating or c.maximized then
-            c.border_width = 0
-        else
-            c.border_width = beautiful.border_width
-        end
+        c.border_width = beautiful.border_width
     end
 end)
 
@@ -678,6 +674,12 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+client.connect_signal("request::manage", function(c)
+    c.shape = function(cr, w, h)
+        gears.shape.rounded_rect(cr, w, h, 10)
+    end
+end)
 
 -- set wallpaper
 awful.spawn.with_shell("~/.fehbg")
