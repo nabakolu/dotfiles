@@ -324,7 +324,8 @@ globalkeys = gears.table.join(
         { description = "quit awesome", group = "awesome" }),
     awful.key({ modkey, }, "Delete", function() naughty.destroy_all_notifications() end,
         { description = "close all notifications", group = "awesome" }),
-    awful.key({ modkey, }, "b", function() awful.screen.focused().mywibar.visible = not awful.screen.focused().mywibar.visible end),
+    awful.key({ modkey, }, "b", function() awful.screen.focused().mywibar.visible = not awful.screen.focused().mywibar.visible end,
+        { description = "toggle top bar", group = "awesome" }),
 
     -- client
     awful.key({ modkey, }, "Right",
