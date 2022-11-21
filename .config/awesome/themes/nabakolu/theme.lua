@@ -19,6 +19,8 @@ local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
 theme.font          = "nabakolu 11"
+theme.hotkeys_font  = "nabakolu 13"
+theme.hotkeys_description_font  = "nabakolu 13"
 
 theme.bg_normal     = xrdb.color0
 theme.bg_focus      = xrdb.color12
