@@ -19,6 +19,8 @@ local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
 theme.font          = "nabakolu 11"
+theme.hotkeys_font  = "nabakolu 13"
+theme.hotkeys_description_font  = "nabakolu 13"
 
 theme.bg_normal     = xrdb.color0
 theme.bg_focus      = xrdb.color12
@@ -62,9 +64,9 @@ theme.fg_battery = xrdb.color0
 
 theme.bg_bar = xrdb.color0
 
-theme.useless_gap   = 0 -- dpi(3)
-theme.border_width  = dpi(1)
-theme.border_normal = xrdb.color0
+theme.useless_gap   = 3 -- dpi(3)
+theme.border_width  = dpi(2)
+theme.border_normal = xrdb.color8
 theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
 
@@ -81,9 +83,10 @@ theme.border_marked = xrdb.color10
 --theme.taglist_bg_focus = "#ff0000"
 
 theme.notification_icon_size = 32
-theme.notification_shape = gears.shape.rect
+theme.notification_shape = gears.shape.rounded_rect
 theme.notification_max_width = 400
 theme.notification_max_height = 200
+
 
 rnotification.connect_signal('request::rules', function()
       -- Critical notifs
@@ -127,6 +130,7 @@ theme.tooltip_fg = xrdb.foreground
 theme.tooltip_bg = xrdb.background
 theme.tooltip_border_width = 1
 theme.tooltip_border_color = xrdb.foreground
+theme.tooltip_shape = gears.shape.rounded_rect
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
