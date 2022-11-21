@@ -19,8 +19,6 @@ local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
 theme.font          = "nabakolu 11"
-theme.hotkeys_font  = "nabakolu 13"
-theme.hotkeys_description_font  = "nabakolu 13"
 
 theme.bg_normal     = xrdb.color0
 theme.bg_focus      = xrdb.color12
@@ -69,18 +67,6 @@ theme.border_width  = dpi(2)
 theme.border_normal = xrdb.color8
 theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
-
-
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- tasklist_[bg|fg]_[focus|urgent]
--- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- mouse_finder_[color|timeout|animate_timeout|radius|factor]
--- Example:
---theme.taglist_bg_focus = "#ff0000"
 
 theme.notification_icon_size = 32
 theme.notification_shape = gears.shape.rounded_rect
@@ -131,6 +117,11 @@ theme.tooltip_bg = xrdb.background
 theme.tooltip_border_width = 1
 theme.tooltip_border_color = xrdb.foreground
 theme.tooltip_shape = gears.shape.rounded_rect
+
+
+theme.hotkeys_font  = "nabakolu 13"
+theme.hotkeys_description_font  = "nabakolu 10"
+theme.hotkeys_group_margin = 50
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
