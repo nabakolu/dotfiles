@@ -10,6 +10,8 @@ REDIRECT_MAP = {
 	"www.reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
     "twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
 	"www.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+	"mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+	"www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
 
 } # type: typing.Dict[str, typing.Callable[..., typing.Optional[bool]]]
 
