@@ -217,7 +217,9 @@ function xresources.load_syntax()
       iCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       IncSearch = {fg=xresources.light_black,bg=xresources.yellow,style=xresources.none};
       lCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
-      LineNr = {fg=xresources.light_black};
+      LineNr = {fg=xresources.red,style='bold'};
+      LineNrAbove = {fg=xresources.light_black};
+      LineNrBelow = {fg=xresources.light_black};
       ModeMsg = {fg=xresources.fg,bg=xresources.none,style='bold'};
       MatchParen = {fg=xresources.red,bg=xresources.none};
       Normal = {fg = xresources.fg,bg=xresources.none};
