@@ -313,9 +313,10 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
--- awesome
+    -- awesome
     awful.key({ modkey, }, "s", hotkeys_popup.show_help,
         { description = "show help", group = "awesome" }),
     awful.key({ modkey, }, "r", awesome.restart,
@@ -326,6 +327,10 @@ globalkeys = gears.table.join(
         { description = "close all notifications", group = "awesome" }),
     awful.key({ modkey, }, "b", function() awful.screen.focused().mywibar.visible = not awful.screen.focused().mywibar.visible end,
         { description = "toggle top bar", group = "awesome" }),
+    awful.key({ modkey, "Control"}, "k", function () awful.screen.focus_relative(1) end, 
+        {description = "Focus the next screen", group = "screens"}),
+    awful.key({ modkey, "Control"}, "j", function () awful.screen.focus_relative(-1) end, 
+        {description = "Focus the previous screen", group = "screens"}),
 
     -- client
     awful.key({ modkey, }, "Right",
@@ -470,6 +475,7 @@ globalkeys = gears.table.join(
         { description = "toggle picom", group = "misc" })
 )
 
+
 clientkeys = gears.table.join(
     awful.key({ modkey, "Shift"}, "f",
         function (c)
@@ -480,7 +486,17 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "q", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, }, "space", awful.client.floating.toggle,
-        { description = "toggle floating", group = "client" })
+        { description = "toggle floating", group = "client" }),
+
+    awful.key({modkey, "Shift"}, "k",
+        function (c)
+            c:move_to_screen(c.screen.index+1)
+        end, {description = "move to next screen", group = "client"}),
+    awful.key({modkey, "Shift"}, "j",
+        function (c)
+            c:move_to_screen(c.screen.index-1)
+        end, {description = "move to previous screen", group = "client"})
+
 )
 
 -- Bind all key numbers to tags.
