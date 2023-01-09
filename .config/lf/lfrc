@@ -111,6 +111,10 @@ cmd open_pywal_light ${{
 	theme
 }}
 
+cmd open_zaread ${{
+    nohup zaread "$f" > /dev/null 2>&1&
+}}
+
 cmd set_wallpaper ${{
 	feh --bg-scale $f
 	betterlockscreen -u $f
@@ -310,6 +314,7 @@ map ow open_pywal
 map oW open_pywal_light
 map oP open_masterpdfeditor4
 map oq open_qutebrowser
+map oz open_zaread
 map v  open_editor_dir
 
 map sw set_wallpaper
