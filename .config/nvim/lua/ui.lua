@@ -1,41 +1,43 @@
-colorscheme xresources
-set termguicolors
+vim.cmd('colorscheme xresources')
+vim.opt.termguicolors = true
 
-set guicursor=n-v-c-sm:block,i-ci-ve:hor50-blinkwait0-blinkoff25-blinkon25,r-cr-o:block-blinkwait0-blinkoff25-blinkon25
+vim.opt.guicursor = 'n-v-c-sm:block,i-ci-ve:hor50-blinkwait0-blinkoff25-blinkon25,r-cr-o:block-blinkwait0-blinkoff25-blinkon25'
 
-" make error and warnings be on the same line as line numbers
-set signcolumn=number
+-- make error and warnings be on the same line as line numbers
+vim.opt.signcolumn = 'number'
 
-" show pressed keys
-set showcmd
+-- show pressed keys
+vim.opt.showcmd = true
 
-" dont show mode, as it is shown in the statusline
-set noshowmode
+-- dont show mode, as it is shown in the statusline
+vim.opt.showmode = false
 
-" disable modelines due to ex:
-set nomodeline
+-- disable modelines due to ex:
+vim.opt.modeline = false
 
-" enable line wrapping
-set wrap
+-- enable line wrapping
+vim.opt.wrap = true
 
-" activate syntax highlighting
-syntax on
+-- activate syntax highlighting
+vim.cmd('syntax on')
 
-" show relative line number
-set number relativenumber
+-- show relative line number
+vim.opt.relativenumber = true
 
-" set tabsize to 4
-set tabstop=4
+-- vim.opt.tabsize to 4
+vim.opt.tabstop = 4
 
-" set shiftwidth to the same as tabsize
-set shiftwidth=4
+-- vim.opt.shiftwidth to the same as tabsize
+vim.opt.shiftwidth = 4
 
-" show whitespace
-set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
+-- show whitespace
+vim.cmd('set list listchars=nbsp:¬,tab:»·,trail:·,extends:>')
 
 
-" Tabline
-" -----------------
+
+-- Tabline
+vim.cmd [[
+
 set tabline=%!MyTabLine()
 
 function MyTabLine()
@@ -68,7 +70,7 @@ function MyTabLine()
 		endif
 	endfor
 
-	" after the last tab fill with TabLineFill and reset tab page nr
+	" after the last tab fill with TabLineFill and revim.opt.tab page nr
 	let s .= ''
 
 	return s
@@ -100,7 +102,6 @@ let g:currentmode={
 			\ '!'  : 'EXTERN ',
 			\}
 
-
 set laststatus=3
 set statusline=
 set statusline+=%#ModeColor#%{toupper(get(g:currentmode,mode(),'????????'))}
@@ -121,6 +122,7 @@ set statusline+=%{'\ '}
 set statusline+=%#PosColor#%2p%%\|%l:%-2v " Virtual column number
 
 
+]]
 
 
 

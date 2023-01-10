@@ -1,73 +1,70 @@
-" General Settings
-" ----------------
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.hidden = true
 
-set nobackup
-set nowritebackup
-set hidden
+vim.opt.updatetime = 500
 
-set ut=500
 
-set undodir=$HOME/.cache/nvim/undodir
-set undofile
+vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
+vim.opt.undofile = true
 
-" use mouse
-set mouse=a
 
-" make nvim fold by syntax
-set foldmethod=syntax
-" start with every fold open
-set nofoldenable
-" show first line of every fold
-set foldtext=FoldText()
-set foldlevel=999
+-- use mouse
+vim.opt.mouse = "a"
 
-" make search not case sensitive
-set ignorecase
-" make search case sensitive if there are capital letters in the search text
-set smartcase
+-- make nvim fold by syntax
+vim.opt.foldmethod = "syntax"
+-- start with every fold open
+vim.opt.foldenable = false
+-- show first line of every fold
+-- vim.opt.foldtext=FoldText()
+vim.opt.foldlevel = 999
 
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+-- make search not case sensitive
+vim.opt.ignorecase = true
+-- make search case sensitive if there are capital letters in the search text
+vim.opt.smartcase = true
 
-" move to correct tab when pressing enter
-set autoindent
-set copyindent
-set preserveindent
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4 
+vim.opt.softtabstop = 4 
+vim.opt.expandtab = true
 
-" make splits appear on the right
-set splitright
+-- move to correct tab when pressing enter
+vim.opt.autoindent = true
+vim.opt.copyindent = true
+vim.opt.preserveindent = true
 
-" make splits appear on the bottom
-set splitbelow
+-- make splits appear on the right
+vim.opt.splitright = true
+
+-- make splits appear on the bottom
+vim.opt.splitbelow = true
+
+
+vim.keymap.set('n', '<Space>v', ':vnew<CR>')
+vim.keymap.set('n', '<Space>s', ':new<CR>')
+vim.keymap.set('n', '<Space>t', ':tabnew<CR>')
+
+-- Ctrl-J and Ctr-K insert blank lines
+vim.keymap.set('n', '<C-j>', 'o<ESC>')
+vim.keymap.set('n', '<C-k>', 'O<ESC>')
+
+-- make ´ jump to tag
+vim.keymap.set('n', '´', '`')
+
+
+-- make h open help in new tab
+vim.keymap.set('c', 'hh', 'tab :h')
+
+
+vim.cmd [[
 
 " highlight yanked text
 augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=300})
 augroup END
-
-" -----------
-" Keybindings
-" -----------
-
-nmap <Space>v :vnew<CR>
-nmap <Space>s :new<CR>
-nmap <Space>t :tabnew<CR>
-
-" Ctrl-J and Ctr-K insert blank lines
-nnoremap <C-j> m`"="\n"<CR>p``j
-nnoremap <C-k> m`"="\n"<CR>P``k
-
-" make ´ jump to tag
-noremap ´ `
-
-
-" make h open help in new tab
-cnoremap hh tab :h
-
-
-" --------
-" Commands
-" --------
 
 " sudo save with :W
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
@@ -134,3 +131,4 @@ function! FoldText()
 
     return l:text . repeat(' ', l:width - strlen(substitute(l:text, ".", "x", "g"))) . l:info
 endfunction
+]]
