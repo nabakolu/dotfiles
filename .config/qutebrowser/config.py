@@ -64,6 +64,8 @@ config.bind('gi', 'hint inputs')
 
 config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
 config.bind('<space>j', 'hint preview')
+config.set('hints.selectors', {'expand-comment': ['.expand']},pattern='*://*.reddit.com/*')
+config.bind('<space>k', 'hint expand-comment')
 config.bind('<space>w', 'jseval (function () { '+
 '  var i, elements = document.querySelectorAll("body *");'+
 ''+
