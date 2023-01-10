@@ -62,9 +62,9 @@ config.bind('D3', 'set colors.webpage.darkmode.enabled false;; set colors.webpag
 config.bind('gd', 'download-open')
 config.bind('gi', 'hint inputs')
 
-config.set('hints.selectors', {'preview': ['.expando-button']},pattern='*://*.reddit.com/*')
+config.set('hints.selectors', {'preview': ['.expando-button'], **c.hints.selectors},pattern='*://*.reddit.com/*')
 config.bind('<space>j', 'hint preview')
-config.set('hints.selectors', {'expand-comment': ['.expand']},pattern='*://*.reddit.com/*')
+config.set('hints.selectors', {'expand-comment': ['.expand'], **c.hints.selectors},pattern='*://*.reddit.com/*')
 config.bind('<space>k', 'hint expand-comment')
 config.bind('<space>w', 'jseval (function () { '+
 '  var i, elements = document.querySelectorAll("body *");'+
