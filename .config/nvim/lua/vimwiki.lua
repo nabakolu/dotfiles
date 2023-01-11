@@ -1,9 +1,10 @@
-map <Space>ww :VimwikiIndex<CR> :lcd %:p:h<CR>
-map <Space>wv :vnew \| :VimwikiIndex<CR>
-map <Space>ws :new \| :VimwikiIndex<CR>
-map <Space>wt :VimwikiTabIndex<CR>
+vim.keymap.set('n', '<Space>ww', ':VimwikiIndex<CR> :lcd %:p:h<CR>')
+vim.keymap.set('n', '<Space>wv', ':vnew | :VimwikiIndex<CR>')
+vim.keymap.set('n', '<Space>ws', ':new | :VimwikiIndex<CR>')
+vim.keymap.set('n', '<Space>wt', ':VimwikiTabIndex<CR>')
 
 
+vim.cmd [[ 
 let wiki_1 = {}
 let wiki_1.path = '~/vimwiki/'
 let wiki_1.syntax = 'markdown'
@@ -14,3 +15,4 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 let g:vimwiki_global_ext = 1
 let g:vimwiki_markdown_link_ext = 1
 let g:vimwiki_automatic_nested_syntaxes = 1
+]]

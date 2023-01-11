@@ -1,0 +1,7 @@
+require('plugins')
+require('general')
+require('lf')
+require('floaterm')
+require('vimwiki')
+require('coc')
+require('ui')
