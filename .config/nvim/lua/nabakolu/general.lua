@@ -70,28 +70,28 @@ augroup END
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
 " ------------
 " auto close {
 " ------------
 function! s:CloseBracket()
-		let line = getline('.')
-		if line =~# '^\s*\(struct\|class\|enum\) '
-				return "{\<Enter>};\<Esc>O"
-		elseif searchpair('(', '', ')', 'bmn', '', line('.'))
-				" Probably inside a function call. Close it off.
-				return "{\<Enter>});\<Esc>O"
-		else
-				return "{\<Enter>}\<Esc>O"
-		endif
+    let line = getline('.')
+    if line =~# '^\s*\(struct\|class\|enum\) '
+        return "{\<Enter>};\<Esc>O"
+    elseif searchpair('(', '', ')', 'bmn', '', line('.'))
+        " Probably inside a function call. Close it off.
+        return "{\<Enter>});\<Esc>O"
+    else
+        return "{\<Enter>}\<Esc>O"
+    endif
 endfunction
 inoremap <expr> {<Enter> <SID>CloseBracket()
 
@@ -105,15 +105,15 @@ function! FoldText()
     let l:lpadding += l:signs =~ 'id=' ? 2 : 0
 
     if exists("+relativenumber")
-      	if (&number)
-        	let l:lpadding += max([&numberwidth, strlen(line('$'))]) + 1
-      	elseif (&relativenumber)
-        	let l:lpadding += max([&numberwidth, strlen(v:foldstart - line('w0')), strlen(line('w$') - v:foldstart), strlen(v:foldstart)]) + 1
-      	endif
+        if (&number)
+          let l:lpadding += max([&numberwidth, strlen(line('$'))]) + 1
+        elseif (&relativenumber)
+          let l:lpadding += max([&numberwidth, strlen(v:foldstart - line('w0')), strlen(line('w$') - v:foldstart), strlen(v:foldstart)]) + 1
+        endif
     else
-      	if (&number)
-        	let l:lpadding += max([&numberwidth, strlen(line('$'))]) + 1
-      	endif
+        if (&number)
+          let l:lpadding += max([&numberwidth, strlen(line('$'))]) + 1
+        endif
     endif
 
     " expand tabs
