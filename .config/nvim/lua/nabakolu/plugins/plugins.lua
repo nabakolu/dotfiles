@@ -12,3 +12,9 @@ Plug('romainl/vim-cool')
 Plug('editorconfig/editorconfig-vim')
 
 vim.call('plug#end')
+
+require('nabakolu.plugins.config.lf')
+require('nabakolu.plugins.config.floaterm')
+require('nabakolu.plugins.config.vimwiki')
+require('nabakolu.plugins.config.coc')
+require('nabakolu.plugins.config.treesitter')
