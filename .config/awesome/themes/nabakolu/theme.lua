@@ -21,7 +21,7 @@ local theme = dofile(themes_path.."default/theme.lua")
 theme.font          = "nabakolu 11"
 
 theme.bg_normal     = xrdb.color0
-theme.bg_focus      = xrdb.color12
+theme.bg_focus      = xrdb.color7
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color8
 
@@ -31,34 +31,35 @@ theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
 theme.taglist_font = "nabakolu 13"
-theme.taglist_fg_focus    = xrdb.color1
-theme.taglist_bg_focus    = xrdb.color0
-theme.taglist_fg_occupied    = xrdb.color0
-theme.taglist_fg_empty    = xrdb.color0
+theme.taglist_fg_focus    = xrdb.color0
+theme.taglist_bg_focus    = xrdb.color7
+theme.taglist_fg_occupied    = xrdb.color7
+theme.taglist_fg_empty    = xrdb.color7
 theme.taglist_fg_urgent  = xrdb.color0
-theme.taglist_bg_urgent  = xrdb.color2
-theme.taglist_bg = xrdb.color1
+theme.taglist_bg_urgent  = xrdb.color7
+theme.taglist_bg = xrdb.color0
 theme.taglist_spacing = 3
 
-theme.tasklist_bg_focus = xrdb.color2
-theme.tasklist_bg_normal = xrdb.color8
+theme.tasklist_bg_focus = xrdb.color7
+theme.tasklist_fg_focus = xrdb.color0
+theme.tasklist_bg_normal = xrdb.color0
 theme.tasklist_disable_icon = false
 theme.tasklist_plain_task_name=true
 
-theme.bg_systray = xrdb.color6
+theme.bg_systray = xrdb.color0
 
 
-theme.bg_audio = xrdb.color3
-theme.fg_audio = xrdb.color0
+theme.bg_audio = xrdb.color0
+theme.fg_audio = xrdb.color7
 
-theme.bg_textclock = xrdb.color5
-theme.fg_textclock = xrdb.color0
+theme.bg_textclock = xrdb.color0
+theme.fg_textclock = xrdb.color7
 
-theme.bg_wifi = xrdb.color4
-theme.fg_wifi = xrdb.color0
+theme.bg_wifi = xrdb.color0
+theme.fg_wifi = xrdb.color7
 
-theme.bg_battery = xrdb.color7
-theme.fg_battery = xrdb.color0
+theme.bg_battery = xrdb.color0
+theme.fg_battery = xrdb.color7
 
 theme.bg_bar = xrdb.color0
 
