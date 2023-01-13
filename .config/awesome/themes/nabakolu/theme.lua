@@ -70,7 +70,7 @@ theme.border_focus  = theme.bg_focus
 theme.border_marked = xrdb.color10
 
 theme.notification_icon_size = 32
-theme.notification_shape = gears.shape.rounded_rect
+theme.notification_shape = gears.shape.rect
 theme.notification_max_width = 400
 theme.notification_max_height = 200
 
