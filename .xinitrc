@@ -19,9 +19,6 @@ sh ~/.fehbg
 # start unclutter, to remove mouse, when unused
 unclutter &
 
-# start blueberry systray
-blueberry-tray
-
 # start clipmenu daemon
 clipmenud &
 
