@@ -327,6 +327,8 @@ globalkeys = gears.table.join(
         { description = "close all notifications", group = "awesome" }),
     awful.key({ modkey, }, "b", function() awful.screen.focused().mywibar.visible = not awful.screen.focused().mywibar.visible end,
         { description = "toggle top bar", group = "awesome" }),
+    awful.key({ modkey, }, "w", function() awful.spawn("dswitcher") end,
+        { description = "window switcher", group = "awesome" }),
     awful.key({ modkey, "Control"}, "k", function () awful.screen.focus_relative(1) end, 
         {description = "Focus the next screen", group = "screens"}),
     awful.key({ modkey, "Control"}, "j", function () awful.screen.focus_relative(-1) end, 
