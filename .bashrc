@@ -13,8 +13,7 @@ include () {
 # enable vi mode
 set -o vi
 
-
-if [[ $(who am i) =~ \([-a-zA-Z0-9\.]+\)$ ]] ;
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ];
 then
 	export PS1='\[\033[38;5;2m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;1m\]\H\[$(tput sgr0)\] \[\033[32m\]\w \[\033[31m\]$ \[\033[38;5;15m\]'
 else
