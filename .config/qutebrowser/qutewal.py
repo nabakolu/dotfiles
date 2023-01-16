@@ -67,7 +67,7 @@ if os.path.isfile(colors_absolute):
 
     # Foreground color of the selected completion item.
     # Type: QtColor
-    c.colors.completion.item.selected.fg = foreground
+    c.colors.completion.item.selected.fg = background
 
     # Foreground color of the matched text in the completion.
     # Type: QssColor
