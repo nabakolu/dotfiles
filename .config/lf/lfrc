@@ -340,7 +340,7 @@ map gm cd ~/Music
 map gb cd /usr/local/bin
 map g/ cd /
 map ge cd /etc
-map gM cd /run/media
+map gM cd /media
 map gw cd ~/.config/wallpapers
 map gd cd ~/Downloads
 map gs cd ~/screenshots
