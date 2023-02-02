@@ -36,9 +36,13 @@ bind index,pager \Cp sidebar-prev-new
 bind index,pager \Cn sidebar-next-new
 bind index,pager B sidebar-toggle-visible
 
+# khard integration
 set query_command = "khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T    complete
+macro index,pager A \
+  "<pipe-message>khard add-email<return>" \
+  "add the sender email address to khard"
 
 
 # Sync mail
