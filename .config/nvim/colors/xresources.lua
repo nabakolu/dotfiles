@@ -228,8 +228,8 @@ function xresources.load_syntax()
       Pmenu = {fg=xresources.fg,bg=xresources.bg};
       PmenuSel = {fg=xresources.bg,bg=xresources.fg};
       PmenuSelBold = {fg=xresources.fg,g=xresources.bg};
-      PmenuSbar = {fg=xresources.bg,bg=xresources.fg};
-      PmenuThumb = {fg=xresources.fg,bg=xresources.bg};
+      PmenuSbar = {fg=xresources.fg,bg=xresources.bg};
+      PmenuThumb = {fg=xresources.bg,bg=xresources.fg};
       Question = {fg=xresources.yellow};
       QuickFixLine = {fg=xresources.purple,style='bold'};
       StatusLine = {fg=xresources.light_black,bg=xresources.light_black,style=xresources.none};
