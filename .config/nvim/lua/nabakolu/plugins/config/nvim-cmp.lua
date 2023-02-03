@@ -1,4 +1,4 @@
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 
 
@@ -24,25 +24,25 @@ cmp.setup {
             else
                 cmp.complete()
             end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
         ['<C-p>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item(select_opts)
             else
                 fallback()
             end
-        end, {'i', 's'}),
+        end, { 'i', 's' }),
     },
     window = {
         documentation = {
-            border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
+            border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
             scrollbar = '║',
-            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
         },
         completion = {
-            border = {'┌', '─', '┐', '│', '┘', '─', '└', '│'},
+            border = { '┌', '─', '┐', '│', '┘', '─', '└', '│' },
             thin_scrollbar = '║',
-            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None', 
+            winhighlight = 'Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None',
         }
     },
     snippet = {
@@ -52,10 +52,33 @@ cmp.setup {
     },
 }
 
+-- `:` cmdline setup.
+cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+        { name = 'path' }
+    }, {
+        {
+            name = 'cmdline',
+            option = {
+                ignore_cmds = { 'Man', '!' }
+            }
+        }
+    })
+})
+
+-- `/` cmdline setup.
+cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+        { name = 'buffer' }
+    }
+})
+
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- The following example advertise capabilities to `clangd`.
-require'lspconfig'.clangd.setup {
+require 'lspconfig'.clangd.setup {
     capabilities = capabilities,
 }
