@@ -2,6 +2,8 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.local/plugged')
 
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/vim-vsnip')
 Plug('hrsh7th/cmp-vsnip')
