@@ -42,9 +42,11 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 
-vim.keymap.set('n', '<Space>v', ':vnew<CR>')
-vim.keymap.set('n', '<Space>s', ':new<CR>')
-vim.keymap.set('n', '<Space>t', ':tabnew<CR>')
+vim.g.mapleader = " "
+
+vim.keymap.set('n', '<leader>v', ':vnew<CR>')
+vim.keymap.set('n', '<leader>s', ':new<CR>')
+vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
 
 -- Ctrl-J and Ctr-K insert blank lines
 vim.keymap.set('n', '<C-j>', 'o<ESC>')

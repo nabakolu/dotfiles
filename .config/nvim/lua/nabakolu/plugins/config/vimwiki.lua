@@ -1,7 +1,7 @@
-vim.keymap.set('n', '<Space>ww', ':VimwikiIndex<CR> :lcd %:p:h<CR>')
-vim.keymap.set('n', '<Space>wv', ':vnew | :VimwikiIndex<CR>')
-vim.keymap.set('n', '<Space>ws', ':new | :VimwikiIndex<CR>')
-vim.keymap.set('n', '<Space>wt', ':VimwikiTabIndex<CR>')
+vim.keymap.set('n', '<leader>ww', ':VimwikiIndex<CR> :lcd %:p:h<CR>')
+vim.keymap.set('n', '<leader>wv', ':vnew | :VimwikiIndex<CR>')
+vim.keymap.set('n', '<leader>ws', ':new | :VimwikiIndex<CR>')
+vim.keymap.set('n', '<leader>wt', ':VimwikiTabIndex<CR>')
 
 
 vim.cmd [[ 

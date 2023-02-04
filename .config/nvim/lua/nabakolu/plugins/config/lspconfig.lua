@@ -19,35 +19,35 @@ require("mason-lspconfig").setup_handlers {
 }
 
 -- Displays hover information about the symbol under the cursor
-vim.keymap.set('n', '<space>K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+vim.keymap.set('n', '<leader>K', '<cmd>lua vim.lsp.buf.hover()<cr>')
 
 -- Jump to the definition
-vim.keymap.set('n', '<space>gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+vim.keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
 
 -- Jump to declaration
-vim.keymap.set('n', '<space>gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+vim.keymap.set('n', '<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
 
 -- Lists all the implementations for the symbol under the cursor
-vim.keymap.set('n', '<space>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+vim.keymap.set('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
 
 -- Jumps to the definition of the type symbol
-vim.keymap.set('n', '<space>go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+vim.keymap.set('n', '<leader>go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
 -- Lists all the references
-vim.keymap.set('n', '<space>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
 -- Renames all references to the symbol under the cursor
-vim.keymap.set('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<cr>')
+vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>')
 
 -- Selects a code action available at the current cursor position
-vim.keymap.set('n', '<space>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-vim.keymap.set('x', '<space>ac', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+vim.keymap.set('x', '<leader>ac', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
 -- Show diagnostics in a floating window
-vim.keymap.set('n', '<space>gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+vim.keymap.set('n', '<leader>gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
 -- format code
-vim.keymap.set('n', '<space>F', '<cmd>lua vim.lsp.buf.format()<cr>')
+vim.keymap.set('n', '<leader>F', '<cmd>lua vim.lsp.buf.format()<cr>')
 
 
 
