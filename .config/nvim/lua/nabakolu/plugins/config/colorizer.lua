@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<Space>c', ':ColorToggle<CR>')
+vim.keymap.set('n', '<leader>c', ':ColorToggle<CR>')
