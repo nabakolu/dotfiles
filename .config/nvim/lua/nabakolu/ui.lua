@@ -24,6 +24,9 @@ vim.cmd('syntax on')
 -- show relative line number
 vim.opt.relativenumber = true
 
+-- show current line number
+vim.opt.number = true
+
 -- vim.opt.tabsize to 4
 vim.opt.tabstop = 4
 
