@@ -1,4 +1,4 @@
-require("mason").setup()
+require("mason").setup( { ui = { border = "single" } } )
 require("mason-lspconfig").setup()
 
 -- Add additional capabilities supported by nvim-cmp
@@ -66,3 +66,11 @@ vim.lsp.with(
         border = "single"
     }
 )
+
+vim.diagnostic.config{
+  float={border="single"}
+}
+
+require('lspconfig.ui.windows').default_options = {
+  border = "single"
+}
