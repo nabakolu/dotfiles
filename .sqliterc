@@ -1,0 +1,3 @@
+.mode qbox
+.headers on
+.nullvalue NULL
