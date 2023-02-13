@@ -1,9 +1,15 @@
 [calendars]
 
-[[calendar_local]]
-path = ~/calendars/*
-type = discover
-color = dark green
+[[calendar_league]]
+path = ~/calendars/league/
+type = calendar
+color = dark red
+readonly = true
+
+[[calendar_personal]]
+path = ~/calendars/personal
+type = calendar
+color = light green
 
 [[birthdays]]
 path = ~/contacts/contacts
@@ -19,7 +25,7 @@ longdatetimeformat = %d/%m/%Y %H:%M
 unicode_symbols = False
 
 [default]
-default_calendar = personal
+default_calendar = calendar_personal
 highlight_event_days = true
 timedelta = 1d
 
