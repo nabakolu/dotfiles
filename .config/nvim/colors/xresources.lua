@@ -476,6 +476,10 @@ function xresources.load_plugin_syntax()
       TabLineIconSel = {fg=xresources.bg};
       TabLineIcon = {fg=xresources.fg};
 
+      DapBreakpoint = {fg=xresources.red};
+      DapLogPoint = {fg=xresources.blue};
+      DapStopped = {fg=xresources.green};
+
       -- ==================
       -- coc menu
       -- ==================
