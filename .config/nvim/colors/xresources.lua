@@ -481,6 +481,44 @@ function xresources.load_plugin_syntax()
       DapStopped = {fg=xresources.green};
 
       -- ==================
+      -- dap-ui
+      -- ==================
+
+      DapUIBreakpointsCurrentLine = {fg=xresources.green, style='bold'};
+      DapUIBreakpointsDisabledLine = {fg=xresources.light_black};
+      DapUIBreakpointsInfo = {fg=xresources.green};
+      DapUIBreakpointsPath = {fg=xresources.blue};
+      DapUIDecoration = {fg=xresources.blue};
+      DapUIFloatBorder = {fg=xresources.blue};
+      DapUILineNumber = {fg=xresources.blue};
+      DapUIModifiedValue = {fg=xresources.blue, style='bold'};
+      DapUIPlayPause = {fg=xresources.green};
+      DapUIRestart = {fg=xresources.green};
+      DapUIScope = {fg=xresources.blue};
+      DapUISource = {fg=xresources.purple};
+      DapUIStepBack = {fg=xresources.blue};
+      DapUIStepInto = {fg=xresources.blue};
+      DapUIStepOut = {fg=xresources.blue};
+      DapUIStepOver = {fg=xresources.blue};
+      DapUIStop = {fg=xresources.red};
+      DapUIStoppedThread = {fg=xresources.blue};
+      DapUIThread = {fg=xresources.green};
+      DapUIType = {fg=xresources.purple};
+      DapUIUnavailable = {fg=xresources.light_black};
+      DapUIWatchesEmpty = {fg=xresources.red};
+      DapUIWatchesError = {fg=xresources.red};
+      DapUIWatchesValue = {fg=xresources.green};
+      DapUIWinSelect = {fg=xresources.blue, style='bold'};
+      DapUIBreakpointsLine = {fg=xresources.blue};
+      DapUICurrentFrameName = {fg=xresources.green, style='bold'};
+      DapUIEndofBuffer = {fg=xresources.bg,bg=xresources.none};
+      DapUIFloatNormal = {fg=xresources.fg,bg=xresources.bg};
+      DapUIFrameName = {fg = xresources.fg,bg=xresources.none};
+      DapUINormal = {fg = xresources.fg,bg=xresources.none};
+      DapUIValue = {fg = xresources.fg,bg=xresources.none};
+      DapUIVariable = {fg = xresources.fg,bg=xresources.none};
+
+      -- ==================
       -- coc menu
       -- ==================
       CocSearch = {bg=xresources.black, fg=xresources.white};
