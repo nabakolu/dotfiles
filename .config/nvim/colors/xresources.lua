@@ -241,7 +241,8 @@ function xresources.load_syntax()
       SignColumn = {fg=xresources.fg,bg=xresources.bg};
       Search = {style='reverse,bold'};
       SpecialKey = {fg=xresources.light_black};
-      TabLineSel = {bg=xresources.bg};
+      TabLine = {fg=xresources.fg, bg=xresources.bg};
+      TabLineSel = {fg=xresources.bg,bg=xresources.fg};
       Title = {fg=xresources.green,style='bold'};
       Terminal = {fg = xresources.fg,bg=xresources.bg};
       TabLineFill = {style=xresources.none};
@@ -433,22 +434,16 @@ function xresources.load_plugin_syntax()
       -- =========================
       -- Neovim LSP
       -- =========================
-      LspDiagnosticsError = { fg = xresources.red };
-      LspDiagnosticsWarning = { fg = xresources.yellow };
-      LspDiagnosticsInformation = { fg = xresources.green };
-      LspDiagnosticsHint = { fg = xresources.cyan };
-      LspDiagnosticsSignError = {fg=xresources.red};
-      LspDiagnosticsSignWarning = {fg=xresources.yellow};
-      LspDiagnosticsSignInformation = {fg=xresources.blue};
-      LspDiagnosticsSignHint = {fg=xresources.cyan};
-      LspDiagnosticsVirtualTextError = {fg=xresources.red};
-      LspDiagnosticsVirtualTextWarning= {fg=xresources.yellow};
-      LspDiagnosticsVirtualTextInformation = {fg=xresources.green};
-      LspDiagnosticsVirtualTextHint = {fg=xresources.cyan};
-      LspDiagnosticsUnderlineError = {style="undercurl",sp=xresources.red};
-      LspDiagnosticsUnderlineWarning = {style="undercurl",sp=xresources.yellow};
-      LspDiagnosticsUnderlineInformation = {style="undercurl",sp=xresources.green};
-      LspDiagnosticsUnderlineHint = {style="undercurl",sp=xresources.cyan};
+      DiagnosticError = { fg = xresources.red };
+      DiagnosticWarn = { fg = xresources.yellow };
+      DiagnosticInfo = { fg = xresources.green };
+      DiagnosticHint = { fg = xresources.cyan };
+      DiagnosticUnderlineError = {style="undercurl",sp=xresources.red};
+      DiagnosticUnderlineWarn = {style="undercurl",sp=xresources.yellow};
+      DiagnosticUnderlineInfo = {style="undercurl",sp=xresources.green};
+      DiagnosticUnderlineHint = {style="undercurl",sp=xresources.cyan};
+      DiagnosticLualineError = { fg = xresources.red};
+      DiagnosticLualineWarn = { fg = xresources.yellow};
       -- ===============
       -- vim-cursorword
       -- ===============
@@ -470,35 +465,16 @@ function xresources.load_plugin_syntax()
       -- ==================
       TelescopeBorder = {fg=xresources.cyan};
       TelescopePromptBorder = {fg=xresources.blue};
-      -- ==================
-      -- StatusLine nabakolu
-      -- ==================
-      ModeColor = {bg=xresources.none,fg=xresources.red,style="reverse"};
-      ModeArrowColor = {bg=xresources.blue,fg=xresources.red};
-      PathColor = {bg=xresources.none,fg=xresources.blue,style="reverse"};
-      PathArrowColor = {bg=xresources.yellow,fg=xresources.blue};
-      FileColor = {bg=xresources.none,fg=xresources.yellow,style="reverse"};
-      FileArrowColor = {bg=xresources.none,fg=xresources.yellow};
-      FTColor = {bg=xresources.none,fg=xresources.red,style="reverse"};
-      FTArrowColor = {bg=xresources.none,fg=xresources.red};
-      PosColor = {bg=xresources.none,fg=xresources.green,style="reverse"};
-      PosArrowColor = {bg=xresources.red,fg=xresources.green};
-      -- ==================
-      -- TabLine nabakolu
-      -- ==================
-      TabLineColor = {bg=xresources.none,fg=xresources.blue,style="reverse"};
-      TabLineSelColor = {bg=xresources.none,fg=xresources.yellow,style="reverse"};
-      TabLineSelArrowColor = {bg=xresources.blue,fg=xresources.yellow};
-      TabLineSelLastArrowColor = {bg=xresources.none,fg=xresources.yellow};
-      TabLineLastArrowColor = {bg=xresources.none,fg=xresources.blue};
-      TabLineBehindSelArrowColor = {bg=xresources.yellow,fg=xresources.blue};
-      
+
       Whitespace = {bg=xresources.none,fg=xresources.light_black};
-      
+
       Floaterm = {bg=xresources.none};
       FloatermBorder = {bg=xresources.none,fg=xresources.blue};
 
       Winseparator = {bg=xresources.none};
+
+      TabLineIconSel = {fg=xresources.bg};
+      TabLineIcon = {fg=xresources.fg};
 
       -- ==================
       -- coc menu

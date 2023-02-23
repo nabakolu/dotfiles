@@ -2,6 +2,9 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.local/plugged')
 
+Plug('nvim-tree/nvim-web-devicons')
+Plug('seblj/nvim-tabline')
+Plug('nvim-lualine/lualine.nvim')
 Plug('williamboman/mason.nvim')
 Plug('williamboman/mason-lspconfig.nvim')
 Plug('neovim/nvim-lspconfig')
@@ -20,6 +23,7 @@ Plug('vimwiki/vimwiki')
 Plug('romainl/vim-cool')
 Plug('editorconfig/editorconfig-vim')
 
+
 vim.call('plug#end')
 
 require('nabakolu.plugins.config.lf')
@@ -28,3 +32,5 @@ require('nabakolu.plugins.config.vimwiki')
 require('nabakolu.plugins.config.lspconfig')
 require('nabakolu.plugins.config.nvim-cmp')
 require('nabakolu.plugins.config.treesitter')
+require('nabakolu.plugins.config.lualine')
+require('nabakolu.plugins.config.nvim-tabline')
