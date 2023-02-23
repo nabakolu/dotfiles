@@ -39,9 +39,11 @@ vim.keymap.set('n', '<leader>go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
 -- Jumps to next error
 vim.keymap.set('n', '<leader>ge', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR,})<cr>')
+vim.keymap.set('n', '<leader>gE', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR,})<cr>')
 
 -- Jumps to next warning
 vim.keymap.set('n', '<leader>gw', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.WARN,})<cr>')
+vim.keymap.set('n', '<leader>gW', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.WARN,})<cr>')
 
 -- Lists all the references
 vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
