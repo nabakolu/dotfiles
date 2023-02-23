@@ -37,6 +37,12 @@ vim.keymap.set('n', '<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
 -- Jumps to the definition of the type symbol
 vim.keymap.set('n', '<leader>go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
 
+-- Jumps to next error
+vim.keymap.set('n', '<leader>ge', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR,})<cr>')
+
+-- Jumps to next warning
+vim.keymap.set('n', '<leader>gw', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.WARN,})<cr>')
+
 -- Lists all the references
 vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
