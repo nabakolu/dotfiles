@@ -15,7 +15,11 @@ require("mason-lspconfig").setup_handlers {
     ["pylsp"] = function()
         require("lspconfig").pylsp.setup { capabilities = cap,
             settings = { pylsp = { plugins = { jedi_completion = { include_params = true, }, }, }, }, }
-    end
+    end,
+    ["sumneko_lua"] = function()
+        require'lspconfig'.sumneko_lua.setup { settings = { Lua = { diagnostics = { globals = {'vim'}, }, }, },
+        }
+    end,
 }
 
 -- Displays hover information about the symbol under the cursor
@@ -68,18 +72,18 @@ vim.lsp.with(
 )
 
 vim.diagnostic.config{
-  float={border="single"},
-  virtual_text=false,
+    float={border="single"},
+    virtual_text=false,
 }
 
 require('lspconfig.ui.windows').default_options = {
-  border = "single"
+    border = "single"
 }
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 -- You will likely want to reduce updatetime which affects CursorHold
