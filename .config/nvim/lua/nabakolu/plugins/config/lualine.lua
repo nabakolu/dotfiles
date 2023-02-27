@@ -22,18 +22,29 @@ require('lualine').setup {
                 diagnostics_color = {
                     -- Same values as the general color option can be used here.
                     error = 'DiagnosticLualineError', -- Changes diagnostics' error color.
-                    warn  = 'DiagnosticLualineWarn',  -- Changes diagnostics' warn color.
+                    warn  = 'DiagnosticLualineWarn', -- Changes diagnostics' warn color.
                 },
-                symbols = { error = " ", warn = " "},
-                colored = true,           -- Displays diagnostics status in color if set to true.
+                symbols = { error = " ", warn = " " },
+                colored = true, -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
-                always_visible = true,   -- Show diagnostics even if there are none.
+                always_visible = true, -- Show diagnostics even if there are none.
             }
+        },
+        lualine_c = {
+
+            {
+
+                'filename',
+
+                path = 1,
+
+            }
+
         },
         lualine_x = {
             {
                 'filetype',
-                colored = false,   -- Displays filetype icon in color if set to true
+                colored = false, -- Displays filetype icon in color if set to true
                 icon_only = false, -- Display only an icon for filetype
                 icon = { align = 'left' }, -- Display filetype icon on the right hand side
                 -- icon =    {'X', align='right'}
