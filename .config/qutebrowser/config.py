@@ -8,7 +8,7 @@ config.load_autoconfig()
 c.tabs.background = True
 c.downloads.position = 'bottom'
 
-c.qt.args = ["lang=en-GB"] # temporary fix
+c.qt.args = ["ppapi-widevine-path=/usr/lib/chromium/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so", "lang=en-GB"] # temporary fix
 
 ############
 # keybinds #
