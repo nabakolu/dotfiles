@@ -16,8 +16,8 @@ require("mason-lspconfig").setup_handlers {
         require("lspconfig").pylsp.setup { capabilities = cap,
             settings = { pylsp = { plugins = { jedi_completion = { include_params = true, }, }, }, }, }
     end,
-    ["sumneko_lua"] = function()
-        require'lspconfig'.sumneko_lua.setup { settings = { Lua = { diagnostics = { globals = {'vim'}, }, }, },
+    ["lua_ls"] = function()
+        require'lspconfig'.lua_ls.setup { settings = { Lua = { diagnostics = { globals = {'vim'}, }, }, },
         }
     end,
 }
