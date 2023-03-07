@@ -24,6 +24,9 @@ require("mason-lspconfig").setup_handlers {
 
 -- Displays hover information about the symbol under the cursor
 vim.keymap.set('n', '<leader>K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+--
+-- Displays hover information about the symbol under the cursor
+vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<cr>')
 
 -- Jump to the definition
 vim.keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
@@ -93,8 +96,3 @@ for type, icon in pairs(signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
-
--- You will likely want to reduce updatetime which affects CursorHold
--- note: this setting is global and should be set only once
-vim.o.updatetime = 250
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
