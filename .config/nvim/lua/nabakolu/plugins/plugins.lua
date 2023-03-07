@@ -1,41 +1,33 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
+local Plug = vim.fn['plug#']
 
-require("lazy").setup({
-    "nvim-tree/nvim-web-devicons",
-    "seblj/nvim-tabline",
-    "nvim-lualine/lualine.nvim",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "jay-babu/mason-nvim-dap.nvim",
-    "mfussenegger/nvim-dap",
-    "rcarriga/nvim-dap-ui",
-    "neovim/nvim-lspconfig",
-    "hrsh7th/vim-vsnip",
-    "hrsh7th/cmp-vsnip",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/nvim-cmp",
-    "ptzz/lf.vim",
-    "voldikss/vim-floaterm",
-    "nvim-treesitter/nvim-treesitter",
-    "https://github.com/chrisbra/Colorizer",
-    "vimwiki/vimwiki",
-    "romainl/vim-cool",
-    "editorconfig/editorconfig-vim",
-})
+vim.call('plug#begin', '~/.local/plugged')
+
+Plug('nvim-tree/nvim-web-devicons')
+Plug('seblj/nvim-tabline')
+Plug('nvim-lualine/lualine.nvim')
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-lspconfig.nvim')
+Plug('jay-babu/mason-nvim-dap.nvim')
+Plug('mfussenegger/nvim-dap')
+Plug('rcarriga/nvim-dap-ui')
+Plug('neovim/nvim-lspconfig')
+Plug('hrsh7th/vim-vsnip')
+Plug('hrsh7th/cmp-vsnip')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('hrsh7th/cmp-cmdline')
+Plug('hrsh7th/nvim-cmp')
+Plug('ptzz/lf.vim')
+Plug('voldikss/vim-floaterm')
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug('https://github.com/chrisbra/Colorizer')
+Plug('vimwiki/vimwiki')
+Plug('romainl/vim-cool')
+Plug('editorconfig/editorconfig-vim')
+
+
+vim.call('plug#end')
 
 require('nabakolu.plugins.config.lf')
 require('nabakolu.plugins.config.floaterm')
@@ -47,5 +39,3 @@ require('nabakolu.plugins.config.treesitter')
 require('nabakolu.plugins.config.lualine')
 require('nabakolu.plugins.config.nvim-tabline')
 require('nabakolu.plugins.config.colorizer')
-
-
