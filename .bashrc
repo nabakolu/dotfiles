@@ -22,7 +22,7 @@ fi
 
 export FZF_DEFAULT_COMMAND='find .'
 
-export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin:~/.local/bin"
 
 #aliases
 alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
