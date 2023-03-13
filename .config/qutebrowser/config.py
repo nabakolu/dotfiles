@@ -85,6 +85,10 @@ config.bind('<space>r', 'spawn --userscript readability')
 config.bind('<Ctrl-n>', 'completion-item-focus next', mode='command')
 config.bind('<Ctrl-p>', 'completion-item-focus prev', mode='command')
 
+config.bind('<Ctrl-h>', 'fake-key <Backspace>', mode='insert')
+config.bind('<Ctrl-j>', 'fake-key <Enter>', mode='insert')
+
+
 ####################
 # general settings #
 ####################
