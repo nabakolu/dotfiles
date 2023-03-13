@@ -2,6 +2,8 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.local/plugged')
 
+Plug('nvim-lua/plenary.nvim')
+Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('seblj/nvim-tabline')
 Plug('nvim-lualine/lualine.nvim')
@@ -30,6 +32,7 @@ Plug('editorconfig/editorconfig-vim')
 vim.call('plug#end')
 
 require('nabakolu.plugins.config.lf')
+require('nabakolu.plugins.config.telescope')
 require('nabakolu.plugins.config.floaterm')
 require('nabakolu.plugins.config.vimwiki')
 require('nabakolu.plugins.config.lspconfig')
