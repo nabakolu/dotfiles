@@ -52,3 +52,18 @@ url = "https://lol.asherdavidson.net/api/query-leagues?leagues=all-star,lec,msi,
 type = "filesystem"
 path = "~/calendars/league/"
 fileext = ".ics"
+
+[pair feiertage]
+a = "feiertage_remote"
+b = "feiertage_local"
+collections = null
+
+[storage feiertage_remote]
+type = "http"
+# The URL to your iCalendar file.
+url = "https://onlinekalender.info/feiertage/deutschland/baden-wurttemberg.ics"
+
+[storage feiertage_local]
+type = "filesystem"
+path = "~/calendars/feiertage/"
+fileext = ".ics"

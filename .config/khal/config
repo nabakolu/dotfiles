@@ -1,5 +1,11 @@
 [calendars]
 
+[[calendar_feiertage]]
+path = ~/calendars/feiertage/
+type = calendar
+color = dark blue
+readonly = true
+
 [[calendar_league]]
 path = ~/calendars/league/
 type = calendar
