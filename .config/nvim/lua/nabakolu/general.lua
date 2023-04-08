@@ -55,6 +55,9 @@ vim.keymap.set('n', '<C-k>', 'O<ESC>')
 -- make ´ jump to tag
 vim.keymap.set('n', '´', '`')
 
+-- cycle through buffers
+vim.keymap.set('n', '<leader>n', ':bn<CR>')
+vim.keymap.set('n', '<leader>p', ':bp<CR>')
 
 -- make h open help in new tab
 vim.keymap.set('c', 'hh', 'tab :h')
