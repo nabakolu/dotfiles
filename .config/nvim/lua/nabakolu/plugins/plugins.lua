@@ -26,7 +26,6 @@ Plug('nvim-treesitter/nvim-treesitter')
 Plug('https://github.com/chrisbra/Colorizer')
 Plug('vimwiki/vimwiki')
 Plug('romainl/vim-cool')
-Plug('editorconfig/editorconfig-vim')
 
 
 vim.call('plug#end')
