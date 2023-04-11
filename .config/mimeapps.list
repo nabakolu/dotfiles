@@ -29,6 +29,7 @@ x-scheme-handler/mailto=mailto.desktop;
 x-scheme-handler/msteams=teams-insiders.desktop
 x-scheme-handler/nxm-protocol=vortex-downloads-handler.desktop
 x-scheme-handler/nxm=modorganizer2-nxm-handler.desktop
+image/svg+xml=sxiv.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
