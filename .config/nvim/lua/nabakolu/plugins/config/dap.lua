@@ -1,8 +1,15 @@
 require("mason").setup()
 require("mason-nvim-dap").setup({
     automatic_setup = true,
+    handlers = {
+        function(config)
+            -- all sources with no handler get passed here
+
+            -- Keep original functionality
+            require('mason-nvim-dap').default_setup(config)
+        end,
+    },
 })
-require 'mason-nvim-dap'.setup_handlers {}
 
 require("dapui").setup()
 
@@ -20,5 +27,5 @@ vim.fn.sign_define('DapStopped', { text='', texthl='DapStopped'})
 
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
+    dapui.open()
 end
