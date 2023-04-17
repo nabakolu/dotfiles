@@ -1,7 +1,7 @@
 #!/bin/bash
 
-case "$1" in
-	*.webm|*.mp3|*.mp4|*.wav|*.opus|*.ogg|*.mkv) 
+case "$(echo "$1" | tr '[:upper:]' '[:lower:]')" in
+	*.mov|*.webm|*.mp3|*.mp4|*.wav|*.opus|*.ogg|*.mkv) 
 		str=$(mediainfo "$1")
 		echo "${str//                          /}";;
 	*.png|*.jpg|*.jpeg) chafa "$1";;
