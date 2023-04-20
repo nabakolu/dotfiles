@@ -29,6 +29,8 @@ export PERL_LOCAL_LIB_ROOT="/home/lukas/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOC
 export PERL_MB_OPT="--install_base \"/home/lukas/.perl5\""; export PERL_MB_OPT;
 export PERL_MM_OPT="INSTALL_BASE=/home/lukas/.perl5"; export PERL_MM_OPT;
 
+export PYTHONSTARTUP=~/.config/pythonrc
+
 #aliases
 alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
