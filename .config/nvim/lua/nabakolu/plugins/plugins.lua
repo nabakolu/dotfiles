@@ -26,6 +26,7 @@ Plug('nvim-treesitter/nvim-treesitter')
 Plug('https://github.com/chrisbra/Colorizer')
 Plug('vimwiki/vimwiki')
 Plug('romainl/vim-cool')
+Plug('lewis6991/gitsigns.nvim')
 
 
 vim.call('plug#end')
@@ -41,3 +42,4 @@ require('nabakolu.plugins.config.treesitter')
 require('nabakolu.plugins.config.lualine')
 require('nabakolu.plugins.config.nvim-tabline')
 require('nabakolu.plugins.config.colorizer')
+require('nabakolu.plugins.config.gitsigns')
