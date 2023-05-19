@@ -30,8 +30,8 @@ require('telescope').setup{
 }
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>jj', builtin.find_files, {})
-vim.keymap.set('n', '<leader>jg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>jb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>jh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>jr', builtin.lsp_references, {})
+vim.keymap.set('n', '<leader>jj', builtin.find_files, {}, {desc="telescope find file"})
+vim.keymap.set('n', '<leader>jg', builtin.live_grep, {}, {desc="telescope live grep"})
+vim.keymap.set('n', '<leader>jb', builtin.buffers, {}, {desc="telescope buffers"})
+vim.keymap.set('n', '<leader>jh', builtin.help_tags, {}, {desc="telescope help tags"})
+vim.keymap.set('n', '<leader>jr', builtin.lsp_references, {}, {desc="telescope lsp references"})

@@ -13,10 +13,10 @@ require("mason-nvim-dap").setup({
 
 require("dapui").setup()
 
-vim.keymap.set('n', '<leader>dc', function() require('dap').continue() end)
-vim.keymap.set('n', '<leader>db', function() require('dap').toggle_breakpoint() end)
-vim.keymap.set('n', '<leader>dt', function() require("dap").terminate() end)
-vim.keymap.set('n', '<leader>du', function() require("dapui").toggle() end)
+vim.keymap.set('n', '<leader>dc', function() require('dap').continue() end, {desc="start/continue debug adapter"})
+vim.keymap.set('n', '<leader>db', function() require('dap').toggle_breakpoint() end, {desc="toggle dap breakpoint"})
+vim.keymap.set('n', '<leader>dt', function() require("dap").terminate() end, {desc="terminate debug adapter"})
+vim.keymap.set('n', '<leader>du', function() require("dapui").toggle() end, {desc="toggle dap ui"})
 
 vim.fn.sign_define('DapBreakpoint', { text='', texthl='DapBreakpoint'})
 vim.fn.sign_define('DapBreakpointCondition', { text='ﳁ', texthl='DapBreakpoint'})

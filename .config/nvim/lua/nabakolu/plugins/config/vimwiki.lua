@@ -1,7 +1,7 @@
-vim.keymap.set('n', '<leader>ww', ':VimwikiIndex<CR> :lcd %:p:h<CR>')
-vim.keymap.set('n', '<leader>wv', ':vnew | :VimwikiIndex<CR>')
-vim.keymap.set('n', '<leader>ws', ':new | :VimwikiIndex<CR>')
-vim.keymap.set('n', '<leader>wt', ':VimwikiTabIndex<CR>')
+vim.keymap.set('n', '<leader>ww', ':VimwikiIndex<CR> :lcd %:p:h<CR>', {desc="open vimwiki"})
+vim.keymap.set('n', '<leader>wv', ':vnew | :VimwikiIndex<CR>', {desc="open vimwiki in vsplit"})
+vim.keymap.set('n', '<leader>ws', ':new | :VimwikiIndex<CR>', {desc="open vimwiki in split"})
+vim.keymap.set('n', '<leader>wt', ':VimwikiTabIndex<CR>', {desc="open vimwiki in tab"})
 
 
 vim.cmd [[ 

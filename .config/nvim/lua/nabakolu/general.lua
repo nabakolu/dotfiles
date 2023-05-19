@@ -44,20 +44,21 @@ vim.opt.splitbelow = true
 
 vim.g.mapleader = " "
 
-vim.keymap.set('n', '<leader>v', ':vnew<CR>')
-vim.keymap.set('n', '<leader>s', ':new<CR>')
-vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
+vim.keymap.set('n', '<leader>v', ':vnew<CR>', {desc="open new vsplit"})
+vim.keymap.set('n', '<leader>s', ':new<CR>', {desc="open new split"})
+vim.keymap.set('n', '<leader>t', ':tabnew<CR>', {desc="open new tab"})
 
 -- Ctrl-J and Ctr-K insert blank lines
-vim.keymap.set('n', '<C-j>', 'o<ESC>')
-vim.keymap.set('n', '<C-k>', 'O<ESC>')
+vim.keymap.set('n', '<C-j>', 'o<ESC>', {desc="insert blank line above"})
+vim.keymap.set('n', '<C-k>', 'O<ESC>', {desc="insert blank line below"})
+
 
 -- make ´ jump to tag
 vim.keymap.set('n', '´', '`')
 
 -- cycle through buffers
-vim.keymap.set('n', '<leader>n', ':bn<CR>')
-vim.keymap.set('n', '<leader>p', ':bp<CR>')
+vim.keymap.set('n', '<leader>n', ':bn<CR>', {desc="next buffer"})
+vim.keymap.set('n', '<leader>p', ':bp<CR>', {desc="previous buffer"})
 
 -- make h open help in new tab
 vim.keymap.set('c', 'hh', 'tab :h')
