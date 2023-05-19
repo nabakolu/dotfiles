@@ -58,9 +58,6 @@ vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>')
 vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 vim.keymap.set('x', '<leader>ac', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
--- Show diagnostics in a floating window
-vim.keymap.set('n', '<leader>gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
-
 -- format code
 vim.keymap.set('n', '<leader>F', '<cmd>lua vim.lsp.buf.format()<cr>')
 
