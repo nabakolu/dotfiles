@@ -14,6 +14,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local vertical = require("layouts.vertical")
+local horizontal = require("layouts.horizontal")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 -- require("awful.hotkeys_popup.keys")
@@ -386,6 +388,10 @@ globalkeys = gears.table.join(
         { description = "tiling layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "t", function() awful.layout.set(awful.layout.suit.fair) end,
         { description = "fair layout", group = "layout" }),
+    awful.key({ modkey, "Shift" }, "v", function() awful.layout.set(vertical) end,
+        { description = "vertical layout", group = "layout" }),
+    awful.key({ modkey, "Shift" }, "h", function() awful.layout.set(horizontal) end,
+        { description = "horizontal layout", group = "layout" }),
 
 
     -- spawn
