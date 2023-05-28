@@ -632,6 +632,10 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
+client.connect_signal("property::minimized", function(c)
+    c.minimized = false
+end)
+
 
 hotkeys_popup.widget.labels = {
     XF86AudioMute = "婢",
