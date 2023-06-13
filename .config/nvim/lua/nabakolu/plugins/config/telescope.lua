@@ -11,6 +11,7 @@ require('telescope').setup {
             },
             n = {
                 ["d"] = "delete_buffer",
+                ["<C-j>"] = "select_default"
             }
         }
     },
