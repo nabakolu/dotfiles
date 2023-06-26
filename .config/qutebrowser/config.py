@@ -108,7 +108,7 @@ c.content.autoplay = False
 c.content.cookies.store = True
 
 # set custom css
-c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/qutebrowser/css/block.css", "~/.config/qutebrowser/css/monospace.css"]
+c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/qutebrowser/css/block.css", "~/.config/qutebrowser/css/monospace.css", "~/.config/qutebrowser/css/dark-button.css"]
 
 # enable pdf viewing
 c.content.pdfjs = False
