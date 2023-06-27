@@ -55,9 +55,9 @@ config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
 config.bind('yf', 'hint all yank')
 
 config.unbind('D')
-config.bind('D1', 'set colors.webpage.darkmode.enabled true;; set colors.webpage.preferred_color_scheme dark;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
-config.bind('D2', 'set colors.webpage.darkmode.enabled false;; set colors.webpage.preferred_color_scheme light;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
-config.bind('D3', 'set colors.webpage.darkmode.enabled false;; set colors.webpage.preferred_color_scheme dark;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
+config.bind('D1', 'set colors.webpage.darkmode.enabled true;; set colors.webpage.preferred_color_scheme dark;; spawn sh /home/lukas/.config/qutebrowser/enable-dark-buttons.sh;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
+config.bind('D2', 'set colors.webpage.darkmode.enabled false;; set colors.webpage.preferred_color_scheme light;; spawn sh /home/lukas/.config/qutebrowser/disable-dark-buttons.sh;; spawn sh /home/lukas/.config/qutebrowser/disable_dark.sh;; restart')
+config.bind('D3', 'set colors.webpage.darkmode.enabled false;; set colors.webpage.preferred_color_scheme dark;; spawn sh /home/lukas/.config/qutebrowser/disable-dark-buttons.sh;; spawn sh /home/lukas/.config/qutebrowser/enable_dark.sh;; restart')
 
 config.bind('gd', 'download-open')
 config.bind('gi', 'hint inputs')
