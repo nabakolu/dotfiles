@@ -95,7 +95,7 @@ config.bind('<Ctrl-j>', 'fake-key <Enter>', mode='insert')
 
 # set website dark mode
 # config.set("colors.webpage.darkmode.enabled", True)
-config.set("colors.webpage.darkmode.policy.images", "smart")
+config.set("colors.webpage.darkmode.policy.images", "never")
 config.set("colors.webpage.darkmode.threshold.background", 100)
 
 # disable javascript
