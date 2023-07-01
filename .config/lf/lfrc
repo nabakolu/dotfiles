@@ -64,11 +64,11 @@ cmd open_mocp &{{
 }}
 
 cmd open_umpv &{{
-	nohup umpv $f > /dev/null 2>&1&
+	nohup umpv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_mpv &{{
-	nohup mpv $f > /dev/null 2>&1&
+	nohup mpv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_qutebrowser &{{
