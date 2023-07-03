@@ -19,7 +19,7 @@ vim.opt.modeline = false
 vim.opt.wrap = true
 
 -- activate syntax highlighting
-vim.cmd('syntax on')
+vim.opt.syntax = 'on'
 
 -- show relative line number
 vim.opt.relativenumber = true
