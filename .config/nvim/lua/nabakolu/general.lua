@@ -57,8 +57,10 @@ vim.keymap.set('n', '<C-k>', 'O<ESC>', {desc="insert blank line below"})
 vim.keymap.set('n', '´', '`')
 
 -- cycle through buffers
-vim.keymap.set('n', '<leader>n', ':bn<CR>', {desc="next buffer"})
-vim.keymap.set('n', '<leader>p', ':bp<CR>', {desc="previous buffer"})
+vim.keymap.set('n', '<leader>bn', ':bn<CR>', {desc="next buffer"})
+vim.keymap.set('n', '<leader>bp', ':bp<CR>', {desc="previous buffer"})
+
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', {desc="delete buffer"})
 
 -- make h open help in new tab
 vim.keymap.set('c', 'hh', 'tab :h')
