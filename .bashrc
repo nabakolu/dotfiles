@@ -31,6 +31,8 @@ export PERL_MM_OPT="INSTALL_BASE=/home/lukas/.perl5"; export PERL_MM_OPT;
 
 export PYTHONSTARTUP=~/.config/pythonrc
 
+export PAGER=nvimpager
+
 #aliases
 alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
