@@ -287,9 +287,9 @@ map rn rename
 map <f-2> rename
 map rb bulk
 
-map <c-c> copy
-map <c-x> cut
-map <c-v> paste
+map y copy
+map d cut
+map p paste
 
 map n search-next
 map N search-prev
@@ -324,7 +324,7 @@ map v  open_editor_dir
 
 map sw set_wallpaper
 
-map d dragon
+map D dragon
 
 map wg wget
 
