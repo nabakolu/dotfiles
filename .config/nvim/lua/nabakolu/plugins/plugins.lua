@@ -65,6 +65,8 @@ require('packer').startup(function(use)
 
     use { 'folke/which-key.nvim', config = "require('nabakolu.plugins.config.which-key')" }
 
+    use { 'echasnovski/mini.comment', branch = 'stable', config = "require('nabakolu.plugins.config.mini-comment')" }
+
     if packer_bootstrap then
         require('packer').sync()
     end
