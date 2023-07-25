@@ -155,10 +155,10 @@ c.url.searchengines['deepl'] = 'https://www.deepl.com/translator#en/de/{}'
 c.url.searchengines['wiki'] = 'https://en.wikipedia.org/wiki/{}'
 c.url.searchengines['wikid'] = 'https://de.wikipedia.org/wiki/{}'
 c.url.searchengines['youtube'] = 'https://yewtu.be/search?q={}'
+c.url.searchengines['qwant'] = 'https://www.qwant.com/?theme=-1&hc=0&hti=0&vt=1&b=0&s=0&l=en&locale=de_DE&home=daily&si=0&c=blue&ch=none&eco_suggest=1&q={}'
 #c.url.searchengines['youtube'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['opgg'] = 'https://euw.op.gg/champions/{}'
-c.url.searchengines['searx'] = 'https://searx.nabakolu.xyz/search?q={}'
-c.url.searchengines['DEFAULT'] = c.url.searchengines['searx']
+c.url.searchengines['DEFAULT'] = c.url.searchengines['qwant']
 
 # set bookmarks as start page
 c.url.start_pages = "about:blank"
