@@ -1,4 +1,5 @@
 text/plain; $EDITOR %s ;
 text/html; mv %s %s.html\; nohup xdg-open %s.html > /dev/null 2>&1&;
+application/ics; khal import %s ;
 application/*; nohup xdg-open %s > /dev/null 2>&1&;
 image/*; nohup xdg-open %s > /dev/null 2>&1&;
