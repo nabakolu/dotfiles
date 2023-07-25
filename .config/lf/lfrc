@@ -358,6 +358,7 @@ map <m-1> open
 map <m-2> updir
 
 map cc clear
+map u unselect
 
 
 redraw
