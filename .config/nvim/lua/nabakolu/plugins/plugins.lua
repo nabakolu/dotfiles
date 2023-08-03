@@ -63,7 +63,8 @@ require('packer').startup(function(use)
     use { 'jbyuki/nabla.nvim', requires = { 'nvim-treesitter/nvim-treesitter' }, config =
     "require('nabakolu.plugins.config.nabla')" }
 
-    use { 'folke/which-key.nvim', config = "require('nabakolu.plugins.config.which-key')" }
+    --use { 'folke/which-key.nvim', config = "require('nabakolu.plugins.config.which-key')" }
+    use { 'echasnovski/mini.clue', config = "require('nabakolu.plugins.config.mini-clue')" }
 
     use { 'echasnovski/mini.comment', branch = 'stable', config = "require('nabakolu.plugins.config.mini-comment')" }
 
