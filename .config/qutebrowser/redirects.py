@@ -4,14 +4,15 @@ from urllib.parse import urljoin
 from qutebrowser.api import interceptor, message
 from PyQt5.QtCore import QUrl
 
+
+
 # Any return value other than a literal 'False' means we redirected
 REDIRECT_MAP = {
-	"reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
-	"www.reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
-    "twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-	"www.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-	"mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-	"www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+    # "www.reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
+    # "twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+    # "www.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+    # "mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+    # "www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
 
 } # type: typing.Dict[str, typing.Callable[..., typing.Optional[bool]]]
 
