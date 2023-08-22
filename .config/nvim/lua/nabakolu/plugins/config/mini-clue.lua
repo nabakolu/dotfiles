@@ -31,6 +31,9 @@ miniclue.setup({
     { mode = 'n', keys = 'z' },
     { mode = 'x', keys = 'z' },
   },
+  window = {
+    delay = 0,
+  },
 
   clues = {
     -- Enhance this by adding descriptions for <Leader> mapping groups
