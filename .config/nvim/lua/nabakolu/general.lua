@@ -13,12 +13,28 @@ vim.opt.undofile = true
 vim.opt.mouse = "a"
 
 -- make nvim fold by syntax
-vim.opt.foldmethod = "syntax"
--- start with every fold open
-vim.opt.foldenable = false
+vim.opt.foldmethod = "manual"
+-- start with every fold closed
+vim.opt.foldenable = true
 -- show first line of every fold
 -- vim.opt.foldtext=FoldText()
 vim.opt.foldlevel = 999
+-- Persistent Folds
+local save_fold = vim.api.nvim_create_augroup("Persistent Folds", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = "*",
+  callback = function()
+    vim.cmd.mkview()
+  end,
+  group = save_fold,
+})
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*",
+  callback = function()
+    vim.cmd.loadview({ mods = { emsg_silent = true } })
+  end,
+  group = save_fold,
+})
 
 -- make search not case sensitive
 vim.opt.ignorecase = true
