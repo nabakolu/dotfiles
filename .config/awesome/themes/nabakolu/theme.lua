@@ -18,7 +18,7 @@ local rnotification = require("ruled.notification")
 local theme = dofile(themes_path.."default/theme.lua")
 -- load vector assets' generators for this theme
 
-theme.font          = "nabakolu 11"
+theme.font          = "Roboto Mono Nerd Font 11"
 
 theme.bg_normal     = xrdb.color0
 theme.bg_focus      = xrdb.color7
@@ -30,7 +30,7 @@ theme.fg_focus      = theme.bg_normal
 theme.fg_urgent     = theme.bg_normal
 theme.fg_minimize   = theme.bg_normal
 
-theme.taglist_font = "nabakolu 13"
+theme.taglist_font = "Roboto Mono Nerd Font 13"
 theme.taglist_fg_focus    = xrdb.color0
 theme.taglist_bg_focus    = xrdb.color7
 theme.taglist_fg_occupied    = xrdb.color7
@@ -120,8 +120,8 @@ theme.tooltip_border_color = xrdb.foreground
 theme.tooltip_shape = gears.shape.rounded_rect
 
 
-theme.hotkeys_font  = "nabakolu 13"
-theme.hotkeys_description_font  = "nabakolu 10"
+theme.hotkeys_font  = "Roboto Mono Nerd Font 13"
+theme.hotkeys_description_font  = "Roboto Mono Nerd Font 10"
 theme.hotkeys_group_margin = 50
 
 -- Generate taglist squares:
