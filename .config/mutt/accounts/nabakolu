@@ -9,7 +9,7 @@ set hostname="mail.nabakolu.xyz"
 set sendmail="msmtp -a nabakolu"
 
 set spoolfile= "+INBOX"
-set postponed = "+draftbox"
+set postponed = "+Drafts"
 set record = "+Sent"
 
 unmailboxes *
