@@ -440,7 +440,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "n", function() awful.spawn(terminal .. " -e newsboat") end,
         { description = "newsboat", group = "applications" }),
 
-    awful.key({ modkey, }, "d", function() awful.spawn("j4-dmenu-desktop -c --no-generic") end,
+    awful.key({ modkey, }, "d", function() awful.spawn("j4-dmenu-desktop --case-insensitive --no-generic") end,
         { description = "app launcher", group = "applications" }),
 
     -- audio
