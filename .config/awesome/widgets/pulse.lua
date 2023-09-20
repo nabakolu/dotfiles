@@ -10,7 +10,7 @@ local icon
 
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(pulse)
-tooltip.mode = "outside"
+tooltip.mode = "inside"
 tooltip.gaps = 5
 
 pulse:connect_signal("mouse::enter", function()

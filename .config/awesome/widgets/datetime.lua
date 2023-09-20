@@ -7,7 +7,7 @@ local beautiful = require "beautiful"
 local datetime = wibox.widget.textclock(' %a %d %b  %H:%M')
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(datetime)
-tooltip.mode = "outside"
+tooltip.mode = "inside"
 tooltip.gaps = 5
 datetime:connect_signal("mouse::enter", function()
     local script = [[ khal list | ( ! grep ^ ) && echo "No Events Today" ]]

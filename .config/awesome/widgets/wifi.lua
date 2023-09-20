@@ -7,7 +7,7 @@ local beautiful = require "beautiful"
 local wifi = wibox.widget.textbox()
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(wifi)
-tooltip.mode = "outside"
+tooltip.mode = "inside"
 tooltip.gaps = 5
 
 wifi:connect_signal("mouse::enter", function()
