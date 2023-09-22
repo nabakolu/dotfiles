@@ -1,8 +1,10 @@
 set icons
 set drawbox
 set mouse
+set promptfmt "   \033[1;34m%d\033[0;1m%f"
 
 set previewer ~/.config/preview.sh
+set cursorpreviewfmt "\033[7m"
 
 set ratios 2:3
 
@@ -243,6 +245,11 @@ cmd tarbz2 ${{
 	echo "$fx" | grep -oP "^$prefix\K.*" | tar cjvf "$ans" -T -
 }}
 
+cmd follow_link %{{
+  lf -remote "send ${id} select '$(readlink $f)'"
+}}
+
+cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
 cmd dragon %dragon-drop -a -x "$fx"
 
@@ -282,10 +289,13 @@ map q quit
 map <enter> open
 
 map rm delete
-map P delete
-map rn rename
-map <f-2> rename
-map rb bulk
+map i rename
+map I :rename; cmd-home
+map A :rename; cmd-end
+map C :rename; cmd-end; cmd-delete-home
+map br bulk
+
+map Y yank-path
 
 map y copy
 map d cut
@@ -350,6 +360,7 @@ map gw cd ~/.config/wallpapers
 map gd cd ~/Downloads
 map gs cd ~/screenshots
 map gl cd ~/.local
+map gL follow_link
 
 # Mouse mappings
 map <m-down> down 
