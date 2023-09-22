@@ -67,11 +67,11 @@ bind-key g home
 
 color listfocus black white bold
 color listfocus_unread black white bold
-color listnormal red black
-color listnormal_unread red black bold
-color title               green  black   bold
-color info                green  black   bold
-color hint-key            green  black   bold
+color listnormal red default
+color listnormal_unread red default bold
+color title               green  default   bold
+color info                green  default   bold
+color hint-key            green  default   bold
 
 # highlights
 highlight article "^(Feed|Link):.*$" green default bold
