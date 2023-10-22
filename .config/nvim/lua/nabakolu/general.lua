@@ -20,21 +20,21 @@ vim.opt.foldenable = true
 -- vim.opt.foldtext=FoldText()
 vim.opt.foldlevel = 999
 -- Persistent Folds
-local save_fold = vim.api.nvim_create_augroup("Persistent Folds", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = "*",
-  callback = function()
-    vim.cmd.mkview()
-  end,
-  group = save_fold,
-})
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = "*",
-  callback = function()
-    vim.cmd.loadview({ mods = { emsg_silent = true } })
-  end,
-  group = save_fold,
-})
+-- local save_fold = vim.api.nvim_create_augroup("Persistent Folds", { clear = true })
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd.mkview()
+--   end,
+--   group = save_fold,
+-- })
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd.loadview({ mods = { emsg_silent = true } })
+--   end,
+--   group = save_fold,
+-- })
 
 -- make search not case sensitive
 vim.opt.ignorecase = true
