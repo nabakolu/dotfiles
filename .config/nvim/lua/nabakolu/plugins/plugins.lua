@@ -35,6 +35,8 @@ require('packer').startup(function(use)
 
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
+    use({ "stevearc/conform.nvim", config = "require('nabakolu.plugins.config.conform')" })
+
     use { 'hrsh7th/nvim-cmp', requires = { { 'hrsh7th/cmp-vsnip', requires = { 'hrsh7th/vim-vsnip' } },
         'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline' }, config =
     "require('nabakolu.plugins.config.nvim-cmp')" }

@@ -58,9 +58,6 @@ vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', {desc="re
 vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', {desc="code action"})
 vim.keymap.set('x', '<leader>ac', '<cmd>lua vim.lsp.buf.range_code_action()<cr>', {desc="code action in range"})
 
--- format code
-vim.keymap.set('n', '<leader>F', '<cmd>lua vim.lsp.buf.format()<cr>', {desc="autoformat"})
-
 
 
 vim.lsp.handlers["textDocument/hover"] =
