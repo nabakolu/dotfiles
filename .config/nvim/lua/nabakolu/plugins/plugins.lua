@@ -27,10 +27,6 @@ require('packer').startup(function(use)
     use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' }, config =
     "require('nabakolu.plugins.config.lualine')" }
 
-    use { 'jay-babu/mason-null-ls.nvim', requires = { 'williamboman/mason.nvim', 'jose-elias-alvarez/null-ls.nvim',
-        'nvim-lua/plenary.nvim' }, config =
-    "require('nabakolu.plugins.config.mason-null-ls')" }
-
     use { 'williamboman/mason-lspconfig.nvim', requires = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' }, config =
     "require('nabakolu.plugins.config.lspconfig')" }
 
