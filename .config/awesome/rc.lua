@@ -461,6 +461,11 @@ globalkeys = gears.table.join(
     awful.key({}, "XF86AudioMute", function() awful.spawn("pamixer -t"); awesome.emit_signal('update-pulse-icon')end,
         { description = "toggle mute", group = "volume" }),
 
+    -- brightness
+    awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("brightnessctl set 1%-") end,
+        { description = "lower brightness", group = "brightness" }),
+    awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set +1%") end,
+        { description = "increase brightness", group = "brightness" }),
 
     -- misc
     awful.key({ modkey, }, "u", function() awful.spawn("dmenuunicode") end,
