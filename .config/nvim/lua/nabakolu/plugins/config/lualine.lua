@@ -1,12 +1,13 @@
 require('lualine').setup {
     options = {
-        component_separators = '|',
+        component_separators = '',
         section_separators = '',
         globalstatus = true,
         theme = 'pywal',
     },
     sections = {
         lualine_b = {
+            { 'b:gitsigns_head', icon = '' },
             {
                 'diagnostics',
 
@@ -22,12 +23,12 @@ require('lualine').setup {
                 diagnostics_color = {
                     -- Same values as the general color option can be used here.
                     error = 'DiagnosticLualineError', -- Changes diagnostics' error color.
-                    warn  = 'DiagnosticLualineWarn', -- Changes diagnostics' warn color.
+                    warn  = 'DiagnosticLualineWarn',  -- Changes diagnostics' warn color.
                 },
                 symbols = { error = " ", warn = " " },
-                colored = true, -- Displays diagnostics status in color if set to true.
+                colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
-                always_visible = true, -- Show diagnostics even if there are none.
+                always_visible = true,    -- Show diagnostics even if there are none.
             }
         },
         lualine_c = {
@@ -44,8 +45,8 @@ require('lualine').setup {
         lualine_x = {
             {
                 'filetype',
-                colored = false, -- Displays filetype icon in color if set to true
-                icon_only = false, -- Display only an icon for filetype
+                colored = false,           -- Displays filetype icon in color if set to true
+                icon_only = false,         -- Display only an icon for filetype
                 icon = { align = 'left' }, -- Display filetype icon on the right hand side
                 -- icon =    {'X', align='right'}
                 -- Icon string ^ in table is ignored in filetype component
