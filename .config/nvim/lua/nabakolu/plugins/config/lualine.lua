@@ -29,6 +29,9 @@ require('lualine').setup {
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
                 always_visible = true,    -- Show diagnostics even if there are none.
+                cond = function ()
+                    return vim.b.show_lsp_lualine == 1
+                end
             }
         },
         lualine_c = {
@@ -60,3 +63,9 @@ require('lualine').setup {
         },
     }
 }
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function()
+        vim.b.show_lsp_lualine = 1
+    end,
+})
