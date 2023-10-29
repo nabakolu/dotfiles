@@ -22,7 +22,8 @@ fi
 
 export FZF_DEFAULT_COMMAND='find .'
 
-export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin:~/.local/bin"
+command -v go && export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+export PATH="$PATH:~/.local/bin"
 export PATH="/home/lukas/.perl5/bin${PATH:+:${PATH}}"; export PATH;
 export PERL5LIB="/home/lukas/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 export PERL_LOCAL_LIB_ROOT="/home/lukas/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
