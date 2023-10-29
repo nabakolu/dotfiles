@@ -26,6 +26,8 @@ export BAT_THEME="ansi"
 export GOPATH="/home/lukas/.go"
 export GOMODCACHE="/home/lukas/.go/pkg/mod"
 
+export FZF_DEFAULT_OPTS="--bind=ctrl-j:accept"
+
 export LF_ICONS="\
 tw=:\
 st=:\
