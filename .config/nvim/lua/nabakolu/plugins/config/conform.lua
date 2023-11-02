@@ -7,6 +7,8 @@ require("conform").setup({
         vue = { "prettier" },
         markdown = { "prettier" },
         python = { "isort", "black" },
+        bibtex = { "bibtex-tidy" },
+        tex = { "latexindent" },
     }
 
 })
