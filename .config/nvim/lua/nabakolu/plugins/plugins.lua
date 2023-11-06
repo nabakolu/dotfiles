@@ -1,72 +1,62 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
-        install_path })
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd [[packadd packer.nvim]]
+local plugins = {
 
-vim.cmd([[
-augroup packer_auto_sync
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-augroup end
-]])
+    { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function() require('nabakolu.plugins.config.telescope') end },
 
+    { 'seblj/nvim-tabline', dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function() require('nabakolu.plugins.config.nvim-tabline') end },
 
-require('packer').startup(function(use)
-    use { 'wbthomason/packer.nvim' }
+    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function() require('nabakolu.plugins.config.lualine') end },
 
-    use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' }, config =
-    "require('nabakolu.plugins.config.telescope')" }
+    { 'williamboman/mason-lspconfig.nvim', dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
+        config = function() require('nabakolu.plugins.config.lspconfig') end },
 
-    use { 'seblj/nvim-tabline', requires = { 'nvim-tree/nvim-web-devicons' }, config =
-    "require('nabakolu.plugins.config.nvim-tabline')" }
+    { 'jay-babu/mason-nvim-dap.nvim', dependencies = { 'williamboman/mason.nvim', 'mfussenegger/nvim-dap' },
+        config = function() require('nabakolu.plugins.config.dap') end },
 
-    use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' }, config =
-    "require('nabakolu.plugins.config.lualine')" }
+    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 
-    use { 'williamboman/mason-lspconfig.nvim', requires = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' }, config =
-    "require('nabakolu.plugins.config.lspconfig')" }
+    { "stevearc/conform.nvim", config = function() require('nabakolu.plugins.config.conform') end },
 
-    use { 'jay-babu/mason-nvim-dap.nvim', requires = { 'williamboman/mason.nvim', 'mfussenegger/nvim-dap' }, config =
-    "require('nabakolu.plugins.config.dap')" }
+    { 'hrsh7th/nvim-cmp',
+        dependencies = { { 'hrsh7th/cmp-vsnip', dependencies = { 'hrsh7th/vim-vsnip' } }, 'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline' },
+        config = function() require('nabakolu.plugins.config.nvim-cmp') end },
 
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    { "lmburns/lf.nvim", dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },
+        config = function() require('nabakolu.plugins.config.lf') end },
 
-    use({ "stevearc/conform.nvim", config = "require('nabakolu.plugins.config.conform')" })
+    { "akinsho/toggleterm.nvim", config = function() require('nabakolu.plugins.config.toggleterm') end },
 
-    use { 'hrsh7th/nvim-cmp', requires = { { 'hrsh7th/cmp-vsnip', requires = { 'hrsh7th/vim-vsnip' } },
-        'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline' }, config =
-    "require('nabakolu.plugins.config.nvim-cmp')" }
+    { 'nvim-treesitter/nvim-treesitter', config = function() require('nabakolu.plugins.config.treesitter') end },
 
-    use { "lmburns/lf.nvim", requires = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" }, config =
-    "require('nabakolu.plugins.config.lf')" }
+    { 'https://github.com/chrisbra/Colorizer', config = function() require('nabakolu.plugins.config.colorizer') end },
 
-    use { "akinsho/toggleterm.nvim", config = "require('nabakolu.plugins.config.toggleterm')" }
+    { 'vimwiki/vimwiki', config = function() require('nabakolu.plugins.config.vimwiki') end }, { 'romainl/vim-cool' },
 
-    use { 'nvim-treesitter/nvim-treesitter', config = "require('nabakolu.plugins.config.treesitter')" }
+    { 'lewis6991/gitsigns.nvim', config = function() require('nabakolu.plugins.config.gitsigns') end },
 
-    use { 'https://github.com/chrisbra/Colorizer',
-        config = "require('nabakolu.plugins.config.colorizer')"
-    }
+    { 'jbyuki/nabla.nvim', dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        config = function() require('nabakolu.plugins.config.nabla') end },
 
-    use { 'vimwiki/vimwiki', config = "require('nabakolu.plugins.config.vimwiki')" }
+    { 'echasnovski/mini.clue', config = function() require('nabakolu.plugins.config.mini-clue') end },
 
-    use { 'romainl/vim-cool' }
+    { 'echasnovski/mini.comment', branch = 'stable',
+        config = function() require('nabakolu.plugins.config.mini-comment') end }
+}
 
-    use { 'lewis6991/gitsigns.nvim', config = "require('nabakolu.plugins.config.gitsigns')" }
-
-    use { 'jbyuki/nabla.nvim', requires = { 'nvim-treesitter/nvim-treesitter' }, config =
-    "require('nabakolu.plugins.config.nabla')" }
-
-    --use { 'folke/which-key.nvim', config = "require('nabakolu.plugins.config.which-key')" }
-    use { 'echasnovski/mini.clue', config = "require('nabakolu.plugins.config.mini-clue')" }
-
-    use { 'echasnovski/mini.comment', branch = 'stable', config = "require('nabakolu.plugins.config.mini-comment')" }
-
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-end)
+require("lazy").setup(plugins)
