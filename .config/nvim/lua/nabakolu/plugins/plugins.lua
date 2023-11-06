@@ -13,50 +13,85 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
-    { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' },
-        config = function() require('nabakolu.plugins.config.telescope') end },
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function() require('nabakolu.plugins.config.telescope') end
+    },
 
-    { 'seblj/nvim-tabline', dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function() require('nabakolu.plugins.config.nvim-tabline') end },
+    {
+        'seblj/nvim-tabline',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function() require('nabakolu.plugins.config.nvim-tabline') end
+    },
 
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function() require('nabakolu.plugins.config.lualine') end },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function() require('nabakolu.plugins.config.lualine') end
+    },
 
-    { 'williamboman/mason-lspconfig.nvim', dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
-        config = function() require('nabakolu.plugins.config.lspconfig') end },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
+        config = function() require('nabakolu.plugins.config.lspconfig') end
+    },
 
-    { 'jay-babu/mason-nvim-dap.nvim', dependencies = { 'williamboman/mason.nvim', 'mfussenegger/nvim-dap' },
-        config = function() require('nabakolu.plugins.config.dap') end },
+    {
+        'jay-babu/mason-nvim-dap.nvim',
+        dependencies = { 'williamboman/mason.nvim', 'mfussenegger/nvim-dap' },
+        config = function() require('nabakolu.plugins.config.dap') end
+    },
 
-    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
-
+    { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap" } },
     { "stevearc/conform.nvim", config = function() require('nabakolu.plugins.config.conform') end },
 
-    { 'hrsh7th/nvim-cmp',
+    {
+        'hrsh7th/nvim-cmp',
         dependencies = { { 'hrsh7th/cmp-vsnip', dependencies = { 'hrsh7th/vim-vsnip' } }, 'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline' },
-        config = function() require('nabakolu.plugins.config.nvim-cmp') end },
+        config = function() require('nabakolu.plugins.config.nvim-cmp') end
+    },
 
-    { "lmburns/lf.nvim", dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },
-        config = function() require('nabakolu.plugins.config.lf') end },
-
-    { "akinsho/toggleterm.nvim", config = function() require('nabakolu.plugins.config.toggleterm') end },
-
-    { 'nvim-treesitter/nvim-treesitter', config = function() require('nabakolu.plugins.config.treesitter') end },
-
+    {
+        "lmburns/lf.nvim",
+        dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },
+        config = function() require('nabakolu.plugins.config.lf') end
+    },
+    { "akinsho/toggleterm.nvim",               config = function() require('nabakolu.plugins.config.toggleterm') end },
+    { 'nvim-treesitter/nvim-treesitter',       config = function() require('nabakolu.plugins.config.treesitter') end },
     { 'https://github.com/chrisbra/Colorizer', config = function() require('nabakolu.plugins.config.colorizer') end },
 
-    { 'vimwiki/vimwiki', config = function() require('nabakolu.plugins.config.vimwiki') end }, { 'romainl/vim-cool' },
+    {
+        'vimwiki/vimwiki',
+        config = function() require('nabakolu.plugins.config.vimwiki') end,
+        init = function()
+            vim.cmd [[
+                let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': 'md'}]
+                let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+                let g:vimwiki_global_ext = 0
+                let g:vimwiki_markdown_link_ext = 1
+                let g:vimwiki_automatic_nested_syntaxes = 1
+            ]]
+        end
+    },
 
+    { 'romainl/vim-cool' },
     { 'lewis6991/gitsigns.nvim', config = function() require('nabakolu.plugins.config.gitsigns') end },
 
-    { 'jbyuki/nabla.nvim', dependencies = { 'nvim-treesitter/nvim-treesitter' },
-        config = function() require('nabakolu.plugins.config.nabla') end },
+    {
+        'jbyuki/nabla.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        config = function() require('nabakolu.plugins.config.nabla') end
+    },
 
     { 'echasnovski/mini.clue', config = function() require('nabakolu.plugins.config.mini-clue') end },
 
-    { 'echasnovski/mini.comment', branch = 'stable',
-        config = function() require('nabakolu.plugins.config.mini-comment') end }
+    {
+        'echasnovski/mini.comment',
+        branch = 'stable',
+        config = function() require('nabakolu.plugins.config.mini-comment') end
+    }
 }
 
 require("lazy").setup(plugins)
