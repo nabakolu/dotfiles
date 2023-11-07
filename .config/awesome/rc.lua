@@ -512,6 +512,44 @@ clientkeys = gears.table.join(
 
 )
 
+discordkeys = gears.table.join(
+    awful.key({ "Control" }, "j",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "j")
+            root.fake_input("key_press"  , "Return")
+            root.fake_input("key_release", "Return")
+        end
+    )
+)
+
+keepassxckeys = gears.table.join(
+    awful.key({ "Control" }, "j",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "j")
+            root.fake_input("key_press"  , "Return")
+            root.fake_input("key_release", "Return")
+        end
+    ),
+    awful.key({ "Control" }, "n",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "n")
+            root.fake_input("key_press"  , "Down")
+            root.fake_input("key_release", "Down")
+        end
+    ),
+    awful.key({ "Control" }, "p",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "p")
+            root.fake_input("key_press"  , "Down")
+            root.fake_input("key_release", "Down")
+        end
+    )
+)
+
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
@@ -596,8 +634,9 @@ awful.rules.rules = {
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
-    { rule_any = { class = { "discord" } }, properties = { tag = root.tags()[2] } },
+    { rule_any = { class = { "discord" } }, properties = { keys = gears.table.join(clientkeys, discordkeys),  tag = root.tags()[2] } },
     { rule_any = { class = { "whatsdesk" } }, properties = { tag = root.tags()[2] } },
+    { rule_any = { name = { "Auto-Type - KeePassXC" } }, properties = { keys = gears.table.join(clientkeys, keepassxckeys) } },
 
     { rule_any = { class = { "FLOATING" } },
         properties = {
