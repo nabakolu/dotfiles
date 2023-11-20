@@ -403,10 +403,10 @@ globalkeys = gears.table.join(
         { description = "terminal", group = "applications" }),
 
     awful.key({ modkey, "Control" }, "BackSpace", function()
-        awful.spawn(floating_terminal .. " -e lf")
+        awful.spawn(floating_terminal .. " -e lfrun")
     end,
         { description = "floating lf", group = "applications" }),
-    awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lf") end,
+    awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lfrun") end,
         { description = "lf", group = "applications" }),
 
     awful.key({ modkey, }, "f", function() awful.spawn.with_shell("qutebrowser --qt-arg stylesheet ~/.config/qutebrowser/qss/fix-tooltips.qss") end,

@@ -3,7 +3,8 @@ set drawbox
 set mouse
 set promptfmt "   \033[1;34m%d\033[0;1m%f"
 
-set previewer ~/.config/preview.sh
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
 set cursorpreviewfmt "\033[7m"
 
 set ratios 2:3
