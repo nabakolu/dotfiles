@@ -50,6 +50,11 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 			ffmpegthumbnailer -i "$1" -o "${CACHE}.jpg" -s 0 -q 5
 		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
 		;;
+    *.otf|*.ttf)
+		[ ! -f "${CACHE}.jpg" ] && \
+			fontpreview -i "$1" -o "${CACHE}.jpg"
+		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
+		;;
 	*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
 		image "$1" "$2" "$3" "$4" "$5"
 		;;
