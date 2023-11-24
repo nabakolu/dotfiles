@@ -519,8 +519,10 @@ discordkeys = gears.table.join(
         function (c)
             -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
             root.fake_input("key_release", "j")
+            root.fake_input("key_release", "Control_L")
             root.fake_input("key_press"  , "Return")
             root.fake_input("key_release", "Return")
+            root.fake_input("key_press"  , "Control_L")
         end
     ),
     awful.key({ "Control" }, "d",
