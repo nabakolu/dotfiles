@@ -20,6 +20,10 @@ require("mason-lspconfig").setup_handlers {
         require'lspconfig'.lua_ls.setup { settings = { Lua = { diagnostics = { globals = {'vim'}, }, }, },
         }
     end,
+    ["ltex"] = function()
+        require'lspconfig'.ltex.setup { settings = { ltex = { language = "auto" } } ,
+        }
+    end,
 }
 
 -- Displays hover information about the symbol under the cursor
