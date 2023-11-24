@@ -388,6 +388,8 @@ globalkeys = gears.table.join(
         { description = "tiling layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "t", function() awful.layout.set(awful.layout.suit.fair) end,
         { description = "fair layout", group = "layout" }),
+    awful.key({ modkey, "Shift", "Control" }, "t", function() awful.layout.set(awful.layout.suit.tile.bottom) end,
+        { description = "horizontal tiling layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "v", function() awful.layout.set(vertical) end,
         { description = "vertical layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "h", function() awful.layout.set(horizontal) end,
@@ -519,6 +521,26 @@ discordkeys = gears.table.join(
             root.fake_input("key_release", "j")
             root.fake_input("key_press"  , "Return")
             root.fake_input("key_release", "Return")
+        end
+    ),
+    awful.key({ "Control" }, "d",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "d")
+            root.fake_input("key_release", "Control_L")
+            root.fake_input("key_press"  , "Next")
+            root.fake_input("key_release", "Next")
+            root.fake_input("key_press"  , "Control_L")
+        end
+    ),
+    awful.key({ "Control" }, "u",
+        function (c)
+            -- awful.spawn.with_shell("sleep 0.1; xdotool key --clearmodifiers F")
+            root.fake_input("key_release", "u")
+            root.fake_input("key_release", "Control_L")
+            root.fake_input("key_press"  , "Prior")
+            root.fake_input("key_release", "Prior")
+            root.fake_input("key_press"  , "Control_L")
         end
     )
 )
