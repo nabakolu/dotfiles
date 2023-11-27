@@ -1,6 +1,7 @@
 set icons
 set drawbox
 set mouse
+set info "size:time"
 
 set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
