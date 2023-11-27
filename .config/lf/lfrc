@@ -1,13 +1,20 @@
 set icons
 set drawbox
 set mouse
-set promptfmt "   \033[1;34m%d\033[0;1m%f"
 
 set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 set cursorpreviewfmt "\033[7m"
 
 set ratios 2:3
+
+cmd on-cd &{{
+    # display git repository status in your prompt
+    source /usr/share/git/completion/git-prompt.sh
+    git=$(__git_ps1  " %s ") || true
+    fmt="   \033[1;34m%d\033[0;1m%f\033[33;1m$git\033[0m"
+    lf -remote "send $id set promptfmt \"$fmt\""
+}}
 
 cmd redraw_hack &{{
 	sleep 0.1
@@ -373,6 +380,7 @@ map cc clear
 map u unselect
 
 
+on-cd
 redraw
 set hidden!
 set hidden!
