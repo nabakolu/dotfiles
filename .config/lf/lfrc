@@ -153,13 +153,13 @@ cmd short_find ${{
 cmd mkdir ${{
   printf "Directory Name: "
   read ans
-  mkdir $ans
+  mkdir "$ans"
 }}
 
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  touch $ans
+  touch "$ans"
 }}
 
 cmd chmod ${{
@@ -258,7 +258,13 @@ cmd follow_link %{{
   lf -remote "send ${id} select '$(readlink $f)'"
 }}
 
-cmd trash %trash-put $fx
+cmd trash ${{
+    IFS=$'\n'
+    for file in $(echo $fx | sed 's/ \//\n\//g')
+    do
+        trash "$file"
+    done
+}}
 
 cmd trash-restore ${{
     trash-restore
