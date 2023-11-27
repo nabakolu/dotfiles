@@ -257,6 +257,16 @@ cmd follow_link %{{
   lf -remote "send ${id} select '$(readlink $f)'"
 }}
 
+cmd trash %trash-put $fx
+
+cmd trash-restore ${{
+    trash-restore
+}}
+
+cmd trash-restore-global ${{
+    trash-restore /
+}}
+
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
 cmd dragon %dragon-drop -a -x "$fx"
@@ -296,7 +306,10 @@ map l open
 map q quit
 map <enter> open
 
-map rm delete
+map rm trash
+map tr trash-restore
+map tR trash-restore-global
+map TR trash-restore-global
 map i rename
 map I :rename; cmd-home
 map A :rename; cmd-end
