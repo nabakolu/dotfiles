@@ -44,6 +44,23 @@ cmd open ${{
 esac
 }}
 
+
+cmd devour ${{
+	filetype=$(file --mime-type "$f" -bL)
+	case $filetype in
+	application/javascript|text/*|application/json|inode/x-empty) $EDITOR "$f";;
+	audio/*) mocp "$f";;
+	*) if [ "$(xdg-mime query default $filetype)" = "" ]
+	then
+		clear
+		echo "no default"
+		sleep 0.5
+	else
+		devour xdg-open "$f"
+	fi;;
+esac
+}}
+
 cmd bash ${{
 	/bin/bash
 }}
@@ -359,6 +376,7 @@ map oq open_qutebrowser
 map oz open_zathura
 map oZ open_zaread
 map v  open_editor_dir
+map oo devour
 
 map sw set_wallpaper
 
