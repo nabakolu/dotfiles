@@ -502,6 +502,15 @@ clientkeys = gears.table.join(
         { description = "close", group = "client" }),
     awful.key({ modkey, }, "space", awful.client.floating.toggle,
         { description = "toggle floating", group = "client" }),
+    awful.key({ modkey, "Control" }, "space", function(c) c.ontop = not c.ontop end,
+        { description = "toggle always on top", group = "client" }),
+    awful.key({ modkey, "Shift"}, "r",
+        function (c)
+            c.maximized_vertical   = false
+            c.maximized_horizontal = false
+            c.maximized = false
+        end,
+        {description = "toggle weird", group = "client"}),
 
     awful.key({modkey, "Shift"}, "k",
         function (c)
@@ -721,12 +730,15 @@ awful.rules.rules = {
             buttons = clientbuttons,
             screen = awful.screen.preferred,
             placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.centered,
+            maximized_vertical   = false,
+            maximized_horizontal = false
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
     { rule_any = { class = { "discord" } }, properties = { keys = gears.table.join(clientkeys, discordkeys),  tag = root.tags()[2] } },
     { rule_any = { class = { "whatsdesk" } }, properties = { keys = gears.table.join(clientkeys, whatsdeskkeys),  tag = root.tags()[2] } },
     { rule_any = { name = { "Auto-Type - KeePassXC" } }, properties = { keys = gears.table.join(clientkeys, keepassxckeys) } },
+
 
     { rule_any = { class = { "FLOATING" } },
         properties = {
