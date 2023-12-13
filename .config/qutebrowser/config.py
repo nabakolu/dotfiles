@@ -148,6 +148,7 @@ c.url.open_base_url = True
 c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}&kk=-1'
 c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={}'
 c.url.searchengines['google'] = 'https://www.google.de/search?q={}'
+c.url.searchengines['scholar'] = 'https://scholar.google.com/scholar?q={}'
 c.url.searchengines['deepld'] = 'https://www.deepl.com/translator#de/en/{}'
 c.url.searchengines['deepldf'] = 'https://www.deepl.com/translator#de/fr/{}'
 c.url.searchengines['deeplfd'] = 'https://www.deepl.com/translator#fr/de/{}'
