@@ -10,12 +10,14 @@ tooltip.mode = "inside"
 tooltip.gaps = 5
 
 weather:connect_signal("mouse::enter", function()
-    local script = [[ test -f ~/.config/location && curl wttr.in/$(cat ~/.config/location)?0qT || echo "please set a location" ]]
+    local script = [[
+	if [ -f ~/.config/location ]; then     curl wttr.in/$(cat ~/.config/location)?0qT || echo "connection failed"; else     echo "please set a location"; fi
+	]]
     awful.spawn.easy_async_with_shell(script, function(stdout)
         tooltip.text = tostring(stdout)
     end)
     local script2 = [[
-	test -f ~/.config/location && curl wttr.in/$(cat ~/.config/location)?format="%t+%c" | xargs || echo "no location"
+	if [ -f ~/.config/location ]; then     curl wttr.in/$(cat ~/.config/location)?format="+%t+%c" || echo "failed"; else     echo "no location"; fi
 	]]
 
     awful.spawn.easy_async_with_shell(script2, function(stdout)
@@ -33,7 +35,7 @@ end)
 
 local function get_weather()
     local script = [[
-	test -f ~/.config/location && curl wttr.in/$(cat ~/.config/location)?format="%t+%c" | xargs || echo "no location"
+	if [ -f ~/.config/location ]; then     curl wttr.in/$(cat ~/.config/location)?format="+%t+%c" || echo "failed"; else     echo "no location"; fi
 	]]
 
     awful.spawn.easy_async_with_shell(script, function(stdout)
