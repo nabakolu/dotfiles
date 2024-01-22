@@ -8,7 +8,7 @@ daemon:
 directories:
   data: /home/lukas/.arduino15
   downloads: /home/lukas/.arduino15/staging
-  user: /home/lukas/Arduino
+  user: /home/lukas/.Arduino
 library:
   enable_unsafe_install: true
 logging:
