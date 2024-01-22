@@ -1,5 +1,6 @@
 local gears = require('gears')
 local awful = require('awful')
+local naughty = require('naughty')
 local hotkeys_popup = require("awful.hotkeys_popup")
 local vertical = require('layouts.vertical')
 local horizontal = require('layouts.horizontal')
