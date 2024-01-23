@@ -21,7 +21,7 @@ local theme = dofile(themes_path.."default/theme.lua")
 theme.font          = "Roboto Mono Nerd Font 11"
 
 theme.bg_normal     = xrdb.color0
-theme.bg_focus      = xrdb.color7
+theme.bg_focus      = xrdb.color1
 theme.bg_urgent     = xrdb.color9
 theme.bg_minimize   = xrdb.color8
 
@@ -32,7 +32,7 @@ theme.fg_minimize   = theme.bg_normal
 
 theme.taglist_font = "Roboto Mono Nerd Font 13"
 theme.taglist_fg_focus    = xrdb.color0
-theme.taglist_bg_focus    = xrdb.color7
+theme.taglist_bg_focus    = xrdb.color1
 theme.taglist_fg_occupied    = xrdb.color7
 theme.taglist_fg_empty    = xrdb.color7
 theme.taglist_fg_urgent  = xrdb.color0
@@ -40,7 +40,7 @@ theme.taglist_bg_urgent  = xrdb.color7
 theme.taglist_bg = xrdb.color0
 theme.taglist_spacing = 3
 
-theme.tasklist_bg_focus = xrdb.color7
+theme.tasklist_bg_focus = xrdb.color1
 theme.tasklist_fg_focus = xrdb.color0
 theme.tasklist_bg_normal = xrdb.color0
 theme.tasklist_disable_icon = false
