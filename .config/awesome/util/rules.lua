@@ -20,7 +20,8 @@ awful.rules.rules = {
             screen = awful.screen.preferred,
             placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.centered,
             maximized_vertical   = false,
-            maximized_horizontal = false
+            maximized_horizontal = false,
+            titlebars_enabled = true
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },

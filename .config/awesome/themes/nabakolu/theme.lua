@@ -41,8 +41,8 @@ theme.taglist_fg_occupied      = theme.taglist_fg
 theme.taglist_bg_occupied      = theme.taglist_bg
 theme.taglist_fg_empty         = theme.taglist_fg
 theme.taglist_bg_empty         = theme.taglist_bg
-theme.taglist_fg_volatile         = theme.taglist_fg
-theme.taglist_bg_volatile         = theme.taglist_bg
+theme.taglist_fg_volatile      = theme.taglist_fg
+theme.taglist_bg_volatile      = theme.taglist_bg
 theme.taglist_spacing          = 3
 
 theme.tasklist_bg_focus        = xrdb.color1
@@ -70,8 +70,8 @@ theme.bg_bar                  = xrdb.color0
 
 theme.useless_gap             = 3 -- dpi(3)
 theme.border_width            = dpi(2)
-theme.border_normal           = xrdb.color8
-theme.border_focus            = theme.bg_focus
+theme.border_normal           = xrdb.color0
+theme.border_focus            = theme.border_normal
 theme.border_marked           = xrdb.color10
 
 theme.notification_icon_size  = 32
@@ -124,6 +124,29 @@ theme.tooltip_border_width = 1
 theme.tooltip_border_color = xrdb.foreground
 theme.tooltip_shape = gears.shape.rectangle
 
+--- titlebars ---
+theme.titlebar_close_button_normal = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color8)
+theme.titlebar_close_button_normal_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color1)
+theme.titlebar_close_button_normal_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color1)
+theme.titlebar_close_button_focus = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color1)
+theme.titlebar_close_button_focus_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color1)
+theme.titlebar_close_button_focus_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color1)
+theme.titlebar_floating_button_normal_inactive = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color8)
+theme.titlebar_floating_button_normal_active = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color8)
+theme.titlebar_floating_button_normal_inactive_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color2)
+theme.titlebar_floating_button_normal_active_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color4)
+theme.titlebar_floating_button_normal_inactive_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color2)
+theme.titlebar_floating_button_normal_active_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color4)
+theme.titlebar_floating_button_focus_inactive = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color2)
+theme.titlebar_floating_button_focus_active = gears.surface.load_from_shape(10, 10, gears.shape.circle, xrdb.color4)
+theme.titlebar_floating_button_focus_inactive_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color2)
+theme.titlebar_floating_button_focus_active_hover = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color4)
+theme.titlebar_floating_button_focus_inactive_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color2)
+theme.titlebar_floating_button_focus_active_press = gears.surface.load_from_shape(20, 10, gears.shape.rounded_bar, xrdb.color4)
+
+theme.titlebar_size = 13
+theme.titlebar_font = "Roboto Mono Nerd Font 9"
+theme.titlebar_fg_focus = xrdb.color1
 
 theme.hotkeys_font             = "Roboto Mono Nerd Font 13"
 theme.hotkeys_description_font = "Roboto Mono Nerd Font 10"

@@ -43,6 +43,7 @@ awful.layout.layouts = {
 
 require('themeing.main')
 require('themeing.topbar')
+require('themeing.titlebar')
 require('control.globalkeys')
 require('util.rules')
 require('util.signals')
