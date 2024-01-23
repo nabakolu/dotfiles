@@ -16,7 +16,7 @@ tooltip.gaps = 5
 pulse:connect_signal("mouse::enter", function()
     local script = [[ pactl get-default-sink ]]
     awful.spawn.easy_async_with_shell(script, function(stdout)
-        tooltip.text = tostring(stdout)
+        tooltip.text = tostring(stdout:gsub("\n[^\n]*$", ""))
     end)
 end)
 

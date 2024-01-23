@@ -13,7 +13,7 @@ tooltip.gaps = 5
 wifi:connect_signal("mouse::enter", function()
     local script = [[ nmcli con show --active | tail -n +2 ]]
     awful.spawn.easy_async_with_shell(script, function(stdout)
-        tooltip.text = tostring(stdout)
+        tooltip.text = tostring(stdout:gsub("\n[^\n]*$", ""))
     end)
 end)
 

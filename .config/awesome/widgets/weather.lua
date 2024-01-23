@@ -14,14 +14,14 @@ weather:connect_signal("mouse::enter", function()
 	if [ -f ~/.config/location ]; then     curl wttr.in/$(cat ~/.config/location)?0qT || echo "connection failed"; else     echo "please set a location"; fi
 	]]
     awful.spawn.easy_async_with_shell(script, function(stdout)
-        tooltip.text = tostring(stdout)
+        tooltip.text = tostring(stdout:gsub("\n[^\n]*$", ""))
     end)
     local script2 = [[
 	if [ -f ~/.config/location ]; then     curl wttr.in/$(cat ~/.config/location)?format="+%t+%c" || echo "failed"; else     echo "no location"; fi
 	]]
 
     awful.spawn.easy_async_with_shell(script2, function(stdout)
-        weather.markup = tostring(stdout)
+        weather.markup = tostring(stdout:gsub("%s+$", ""))
     end)
 end)
 
@@ -39,7 +39,7 @@ local function get_weather()
 	]]
 
     awful.spawn.easy_async_with_shell(script, function(stdout)
-        weather.markup = tostring(stdout)
+        weather.markup = tostring(stdout:gsub("%s+$", ""))
     end)
 end
 
