@@ -109,7 +109,10 @@ if os.path.isfile(colors_absolute):
     # Background color for hints. Note that you can use a `rgba(...)` value
     # for transparency.
     # Type: QssColor
-    c.colors.hints.bg = yellow
+    c.colors.hints.bg = cyan
+
+    # Border for hints.
+    c.hints.border = '0px solid #000000'
 
     # Font color for hints.
     # Type: QssColor
@@ -117,7 +120,7 @@ if os.path.isfile(colors_absolute):
 
     # Font color for the matched part of hints.
     # Type: QssColor
-    c.colors.hints.match.fg = blue
+    c.colors.hints.match.fg = gray
 
     # Background color of the keyhint widget.
     # Type: QssColor
@@ -129,7 +132,7 @@ if os.path.isfile(colors_absolute):
 
     # Highlight color for keys to complete the current keychain.
     # Type: QssColor
-    c.colors.keyhint.suffix.fg = yellow
+    c.colors.keyhint.suffix.fg = cyan
 
     # Background color of an error message.
     # Type: QssColor
