@@ -30,16 +30,16 @@ local tasklist_buttons = gears.table.join(
     awful.button({}, 2, function(c)
         c:kill()
     end),
-    awful.button({}, 3, function (c)
+    awful.button({}, 3, function(c)
         c.minimized = not c.minimized
     end)
 )
 
 
 awful.screen.connect_for_each_screen(function(s)
-
     -- Each screen has its own tag table.
-    awful.tag({ "  ", "  ", "  ", "  ", "  " }, s, awful.layout.layouts[1])
+    awful.tag({ "  ", "  ", "  ", "  ", "  " }, s, { awful.layout.layouts[1], awful.layout.suit.max,
+        awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1] })
 
     -- Create a taglist widget
     s.mytaglist = wibox.widget {
@@ -220,7 +220,16 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibar = awful.wibar({ position = "top", screen = s, visible = true, fg = beautiful.bg_bar.."0", bg = beautiful.bg_bar.."0", height = 16, margins = 5 })
+    s.mywibar = awful.wibar({
+        position = "top",
+        screen = s,
+        visible = true,
+        fg = beautiful.bg_bar .. "0",
+        bg = beautiful
+            .bg_bar .. "0",
+        height = 16,
+        margins = 5
+    })
 
     -- Add widgets to the wibox
     s.mywibar:setup {
@@ -231,7 +240,7 @@ awful.screen.connect_for_each_screen(function(s)
             s.myspacing,
         },
         s.mytasklist, -- Middle widget
-        { -- Right widgets
+        {             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             spacing = 4,
             s.myspacing,
@@ -243,6 +252,4 @@ awful.screen.connect_for_each_screen(function(s)
             s.mydatetime_widget,
         },
     }
-
-
 end)
