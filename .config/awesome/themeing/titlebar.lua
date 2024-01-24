@@ -54,6 +54,7 @@ client.connect_signal("request::titlebars", function(c)
         },
         { -- Right
             { awful.titlebar.widget.floatingbutton(c), widget = wibox.container.margin, margins = { right = dpi(2) } },
+            { awful.titlebar.widget.minimizebutton(c), widget = wibox.container.margin, margins = { right = dpi(2) } },
             { awful.titlebar.widget.closebutton(c),    widget = wibox.container.margin, margins = { right = dpi(2) } },
             layout = wibox.layout.align.horizontal()
         },

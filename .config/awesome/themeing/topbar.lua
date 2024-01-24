@@ -29,6 +29,9 @@ local tasklist_buttons = gears.table.join(
     end),
     awful.button({}, 2, function(c)
         c:kill()
+    end),
+    awful.button({}, 3, function (c)
+        c.minimized = not c.minimized
     end)
 )
 
@@ -240,4 +243,6 @@ awful.screen.connect_for_each_screen(function(s)
             s.mydatetime_widget,
         },
     }
+
+
 end)
