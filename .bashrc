@@ -41,6 +41,8 @@ alias diff="diff --color=auto"
 alias se="nvim \$(fzf)"
 alias lf=lfrun
 
+alias xclip="xclip -selection clipboard"
+
 [[ $(type -P lsd) ]] && [ -z $(tty | grep tty) ] && alias ls='lsd' || alias ls='ls --color=auto -F'
 alias ll='ls -l'
 alias l='ls -1'
