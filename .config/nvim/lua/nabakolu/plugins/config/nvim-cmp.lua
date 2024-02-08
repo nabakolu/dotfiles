@@ -6,8 +6,8 @@ local cmp = require('cmp')
 cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
-        { name = 'buffer' },
-        { name = 'path', option = { trailing_slash = true } },
+        { name = 'buffer',  option = { keyword_pattern = [[\k\+]] } },
+        { name = 'path',    option = { trailing_slash = true } },
     },
     mapping = {
         ['<C-y>'] = cmp.mapping.confirm {
@@ -50,6 +50,9 @@ cmp.setup {
             vim.fn['vsnip#anonymous'](args.body)
         end
     },
+    completion = {
+        keyword_pattern = [[\k+]],
+    }
 }
 
 -- `:` cmdline setup.
