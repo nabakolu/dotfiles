@@ -8,3 +8,6 @@ seek_forward_fast = L
 seek_backward_fast = H
 plist_move_down = U
 save_playlist = V
+menu_page_down = ^d
+plist_add_stream =
+menu_page_up = ^u
