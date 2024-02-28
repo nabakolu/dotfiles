@@ -49,7 +49,7 @@ vim.opt.expandtab = true
 -- move to correct tab when pressing enter
 vim.opt.autoindent = true
 vim.opt.copyindent = true
-vim.opt.preserveindent = true
+vim.opt.preserveindent = false
 
 -- make splits appear on the right
 vim.opt.splitright = true
