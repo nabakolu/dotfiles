@@ -329,6 +329,7 @@ map l open
 
 map q quit
 map <enter> open
+map <c-j> open
 
 map rm trash
 map tr trash-restore
