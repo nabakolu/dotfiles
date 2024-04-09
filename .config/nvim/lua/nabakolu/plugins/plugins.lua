@@ -43,7 +43,7 @@ local plugins = {
         config = function() require('nabakolu.plugins.config.dap') end
     },
 
-    { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap" } },
+    { "rcarriga/nvim-dap-ui",  dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
     { "stevearc/conform.nvim", config = function() require('nabakolu.plugins.config.conform') end },
 
     {
