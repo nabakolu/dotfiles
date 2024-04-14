@@ -1,4 +1,3 @@
-#!/bin/sh
-if [ -n "$FIFO_UEBERZUG" ]; then
-	printf '{"action": "remove", "identifier": "PREVIEW"}\n' > "$FIFO_UEBERZUG"
-fi
+#!/bin/bash
+
+kitty +kitten icat --clear --stdin no --silent --transfer-mode file < /dev/null > /dev/tty

@@ -25,8 +25,8 @@ do
     end)
 end
 
-terminal = "st"
-floating_terminal = "st -c FLOATING"
+terminal = "kitty"
+floating_terminal = "kitty --class FLOATING"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 

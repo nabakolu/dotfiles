@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export TERMINAL="st"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export DE="dwm"
