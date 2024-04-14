@@ -150,6 +150,9 @@ cmd open_zaread ${{
 cmd set_wallpaper ${{
 	feh --bg-scale $f
 	betterlockscreen -u $f
+	killall swaybg
+	echo "$f" > ~/.config/river/bg
+	nohup swaybg -i "$f" > /dev/null 2>&1&
 }
 
 cmd full_find ${{
