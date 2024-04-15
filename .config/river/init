@@ -104,5 +104,8 @@ rivertile -view-padding 6 -outer-padding 6 &
 riverctl float-filter-add app-id FLOATING
 
 riverctl keyboard-layout -variant nodeadkeys -options lv3:caps_switch de
+
+source ~/.cache/wal/colors.sh
+
 nohup swaybg -i $(cat ~/.config/river/bg) > /dev/null 2>&1&
 wal -R
