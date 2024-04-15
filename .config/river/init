@@ -16,6 +16,9 @@ TERMINAL=kitty
 riverctl map normal Super Return spawn $TERMINAL
 riverctl map normal Super+Control Return spawn "$TERMINAL --class FLOATING"
 riverctl map normal Super f spawn qutebrowser
+riverctl map normal Super d spawn "j4-dmenu-desktop -d tofi --no-generic -t $TERMINAL -i"
+riverctl map normal Super Backspace spawn "$TERMINAL -e lf"
+riverctl map normal Super+Control Backspace spawn "$TERMINAL --class FLOATING -e lf"
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
