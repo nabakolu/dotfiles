@@ -25,9 +25,9 @@ local function get_wifi()
     awful.spawn.easy_async_with_shell(script, function(stdout)
         local status = tostring(stdout)
         if not status:match("disconnected") then
-            wifi.markup = " 直 "
+            wifi.markup = " 󰖩 "
         else
-            wifi.markup = " 睊 "
+            wifi.markup = " 󰖪 "
         end
     end)
 end

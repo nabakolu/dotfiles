@@ -4,7 +4,7 @@ local wibox = require "wibox"
 local beautiful = require "beautiful"
 
 -- datetime
-local datetime = wibox.widget.textclock(' %a %d %b  %H:%M')
+local datetime = wibox.widget.textclock('󰃶 %a %d %b  %H:%M')
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(datetime)
 tooltip.mode = "inside"

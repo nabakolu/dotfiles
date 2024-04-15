@@ -27,29 +27,29 @@ local function update_battery()
     percent = tonumber(percent)
     local icon
     if status == "Charging" then
-        icon = ""
+        icon = "󰂄"
     elseif percent == 100 then
-        icon = ""
+        icon = "󰁹"
     elseif percent > 90 then
-        icon = ""
+        icon = "󰂂"
     elseif percent > 80 then
-        icon = ""
+        icon = "󰂁"
     elseif percent > 70 then
-        icon = ""
+        icon = "󰂀"
     elseif percent > 60 then
-        icon = ""
+        icon = "󰁿"
     elseif percent > 50 then
-        icon = ""
+        icon = "󰁾"
     elseif percent > 40 then
-        icon = ""
+        icon = "󰁽"
     elseif percent > 30 then
-        icon = ""
+        icon = "󰁼"
     elseif percent > 20 then
-        icon = ""
+        icon = "󰁻"
     elseif percent > 10 then
-        icon = ""
+        icon = "󰁺"
     else
-        icon = ""
+        icon = "󰂃"
     end
     battery.markup = icon..percent.."%"
 end
