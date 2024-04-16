@@ -79,3 +79,7 @@ highlight article "^(Title|Date|Author):.*$" color39 default bold
 highlight article "https?://[^ ]+" green default underline
 highlight article "\\[[0-9]+\\]" blue default bold
 highlight article "\\[image\\ [0-9]+\\]" blue default bold
+
+
+pager "nvimpager -p -- -c 'luafile ~/.config/newsboat/nvimpager/init.lua' %f"
+html-renderer "pandoc -f html -t markdown_github-raw_html | glow -s ~/.config/newsboat/glow.json"
