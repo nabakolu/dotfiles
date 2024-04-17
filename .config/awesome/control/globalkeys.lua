@@ -4,6 +4,7 @@ local naughty = require('naughty')
 local hotkeys_popup = require("awful.hotkeys_popup")
 local vertical = require('layouts.vertical')
 local horizontal = require('layouts.horizontal')
+local deck = require('layouts.deck')
 
 
 globalkeys = gears.table.join(
@@ -83,6 +84,8 @@ globalkeys = gears.table.join(
         { description = "vertical layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "h", function() awful.layout.set(horizontal) end,
         { description = "horizontal layout", group = "layout" }),
+    awful.key({ modkey, "Shift" }, "i", function() awful.layout.set(deck.layout.right) end,
+        { description = "deck layout", group = "layout" }),
 
 
     -- spawn
