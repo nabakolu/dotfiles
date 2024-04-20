@@ -1,2 +1,2 @@
 #!/bin/sh
-sed -i "s/$(echo -ne '\u200b')//g" $1
+sed "s/$(echo -ne '\u200b')//g"

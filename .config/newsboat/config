@@ -83,5 +83,5 @@ highlight article "\\[[0-9]+\\]" blue default bold
 highlight article "\\[image\\ [0-9]+\\]" blue default bold
 
 
-pager "~/.config/newsboat/remove.sh %f; nvimpager -p -- -c 'luafile ~/.config/newsboat/nvimpager/init.lua' %f"
-html-renderer "pandoc -f html -t markdown_github-raw_html | glow -s ~/.config/newsboat/glow.json"
+pager "nvimpager -p -- -c 'luafile ~/.config/newsboat/nvimpager/init.lua' -c 'set nowrap' %f"
+html-renderer "pandoc --lua-filter ~/.config/newsboat/filter.lua -f html -t plain | ~/.config/newsboat/remove.sh"
