@@ -19,6 +19,8 @@ browser "urlopener.sh"
 
 # Below bindings apply vim like keybindings in most places
 
+bind-key h quit tagselection
+bind-key LEFT quit tagselection
 bind-key h quit articlelist
 bind-key LEFT quit articlelist
 bind-key h quit article
@@ -59,6 +61,7 @@ bind-key l show-urls article
 bind-key RIGHT show-urls article
 bind-key l open urlview
 bind-key RIGHT open urlview
+
 bind-key o open-in-browser-and-mark-read articlelist
 bind-key u show-urls articlelist
 
