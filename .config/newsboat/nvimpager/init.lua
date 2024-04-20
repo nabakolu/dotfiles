@@ -5,6 +5,8 @@ vim.keymap.set('n', 'h', ':quit<CR>')
 vim.cmd("syntax off")
 vim.cmd("let b:did_ftplugin = 1")
 
+vim.keymap.set('n', 'o', ":silent w !urlopener.sh $(grep Link: | awk '{print $2}')<CR>")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
