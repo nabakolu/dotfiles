@@ -5,6 +5,8 @@ os.system("bisc")
 
 config.load_autoconfig()
 
+c.qt.force_platformtheme = 'gtk3'
+
 c.tabs.background = True
 c.downloads.position = 'bottom'
 
