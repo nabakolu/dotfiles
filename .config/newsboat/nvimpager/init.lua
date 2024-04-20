@@ -1,7 +1,6 @@
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
-vim.cmd('colorscheme xresources')
 vim.keymap.set('n', 'h', ':quit<CR>')
 vim.cmd("syntax off")
 vim.cmd("let b:did_ftplugin = 1")
