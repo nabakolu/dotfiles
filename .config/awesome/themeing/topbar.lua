@@ -168,22 +168,22 @@ awful.screen.connect_for_each_screen(function(s)
         widget     = wibox.container.background,
     }
 
-    local weather = require("widgets.weather")
-    s.myweather = wibox.widget {
-        {
-            weather,
-            left   = 3,
-            top    = 0,
-            bottom = 0,
-            right  = 5,
-            widget = wibox.container.margin,
-        },
-        bg         = beautiful.bg_wifi,
-        fg         = beautiful.fg_wifi,
-        shape      = gears.shape.rect,
-        shape_clip = true,
-        widget     = wibox.container.background,
-    }
+    -- local weather = require("widgets.weather")
+    -- s.myweather = wibox.widget {
+    --     {
+    --         weather,
+    --         left   = 3,
+    --         top    = 0,
+    --         bottom = 0,
+    --         right  = 5,
+    --         widget = wibox.container.margin,
+    --     },
+    --     bg         = beautiful.bg_wifi,
+    --     fg         = beautiful.fg_wifi,
+    --     shape      = gears.shape.rect,
+    --     shape_clip = true,
+    --     widget     = wibox.container.background,
+    -- }
 
     local battery = require("widgets.battery")
     if battery_check_available() then
