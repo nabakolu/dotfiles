@@ -44,7 +44,7 @@ local plugins = {
                     clear_in_insert_mode = false,
                     download_remote_images = true,
                     only_render_image_at_cursor = false,
-                    filetypes = { "man" }, -- markdown extensions (ie. quarto) can go here
+                    filetypes = { "" }, -- markdown extensions (ie. quarto) can go here
                 }
             },
             max_width = nil,
