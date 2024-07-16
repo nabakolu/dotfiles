@@ -70,7 +70,6 @@ ex=:\
 *.bash_profile=:\
 *.bashrc=:\
 *.bash=:\
-*.bak=:\
 *.bat=:\
 *.bin=:\
 *.bio=󰐑:\
