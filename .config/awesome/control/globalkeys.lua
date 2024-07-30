@@ -7,6 +7,30 @@ local horizontal = require('layouts.horizontal')
 local deck = require('layouts.deck')
 
 
+-- Custom function to move to the next tag without cycling
+local function view_next_non_cycling()
+    local s = awful.screen.focused()
+    local tags = s.tags
+    local current_tag = s.selected_tag
+    local current_index = current_tag.index
+
+    if current_index < #tags then
+        tags[current_index + 1]:view_only()
+    end
+end
+
+-- Custom function to move to the previous tag without cycling
+local function view_prev_non_cycling()
+    local s = awful.screen.focused()
+    local tags = s.tags
+    local current_tag = s.selected_tag
+    local current_index = current_tag.index
+
+    if current_index > 1 then
+        tags[current_index - 1]:view_only()
+    end
+end
+
 globalkeys = gears.table.join(
     -- awesome
     awful.key({ modkey, }, "s", hotkeys_popup.show_help,
@@ -25,6 +49,10 @@ globalkeys = gears.table.join(
         {description = "Focus the next screen", group = "screens"}),
     awful.key({ modkey, "Control"}, "j", function () awful.screen.focus_relative(-1) end, 
         {description = "Focus the previous screen", group = "screens"}),
+    awful.key({ modkey, "Control" }, "Right", view_next_non_cycling,
+              {description = "view next tag", group = "tag"}),
+    awful.key({ modkey, "Control" }, "Left", view_prev_non_cycling,
+              {description = "view previous tag", group = "tag"}),
 
     -- client
     awful.key({ modkey, }, "Right",
