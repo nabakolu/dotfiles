@@ -328,6 +328,7 @@ map k up
 map l open
 
 map q quit
+map Q selection-quit
 map <enter> open
 map <c-j> open
 
