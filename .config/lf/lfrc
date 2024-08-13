@@ -345,7 +345,7 @@ map Y yank-path
 
 map y copy
 map d cut
-map p paste
+map p : paste; clear
 
 map n search-next
 map N search-prev
