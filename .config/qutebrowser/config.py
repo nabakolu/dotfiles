@@ -168,6 +168,24 @@ c.url.start_pages = "about:blank"
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
 
+# Configure the filepicker
+filepicker = [
+    "kitty",
+    "--class",
+    "FLOATING",
+    "--title",
+    "File-Picker",
+    "-e",
+    "lf",
+    "-command",
+    "set nohidden",
+    "-selection-path={}",
+]
+c.fileselect.handler = "external"
+c.fileselect.folder.command = filepicker
+c.fileselect.multiple_files.command = filepicker
+c.fileselect.single_file.command = filepicker
+
 # set ad blocker to use braves adblock and the hosts file
 c.content.blocking.method = "both"
 # set ad block lists
