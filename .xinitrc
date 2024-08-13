@@ -25,9 +25,6 @@ clipmenud &
 # start picom
 toggle_p.sh
 
-# start noisetorch
-noisetorch -i
-
 # start xss-lock to lock screen on power events
 xss-lock -- betterlockscreen -l &
 
