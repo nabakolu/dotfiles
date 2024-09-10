@@ -52,8 +52,8 @@
     /* background colors */
     --bg-0: var(--background); /* main background color. */
     --bg-1: var(--background); /* background color for secondary elements like code blocks, embeds, etc. */
-    --bg-2: var(--foreground); /* color of neutral buttons. */
-    --bg-3: var(--foreground); /* color of neutral buttons hovered */
+    --bg-2: var(--color1); /* color of neutral buttons. */
+    --bg-3: var(--color1); /* color of neutral buttons hovered */
 
     /* state modifiers */
     --hover: color-mix(in oklch, var(--txt-3), transparent 80%); /* color of hovered elements. */
