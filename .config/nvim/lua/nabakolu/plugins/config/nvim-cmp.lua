@@ -30,6 +30,8 @@ cmp.setup {
                 cmp.complete()
             end
         end, { 'i', 's' }),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),
     },
     window = {
         documentation = {
