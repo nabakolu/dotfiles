@@ -19,8 +19,6 @@ cmp.setup {
 
             if cmp.visible() then
                 cmp.select_next_item(select_opts)
-            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-                fallback()
             else
                 cmp.complete()
             end
@@ -29,7 +27,7 @@ cmp.setup {
             if cmp.visible() then
                 cmp.select_prev_item(select_opts)
             else
-                fallback()
+                cmp.complete()
             end
         end, { 'i', 's' }),
     },
