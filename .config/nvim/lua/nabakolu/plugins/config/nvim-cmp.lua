@@ -50,9 +50,6 @@ cmp.setup {
             vim.fn['vsnip#anonymous'](args.body)
         end
     },
-    completion = {
-        keyword_pattern = [[\k+]],
-    }
 }
 
 -- `:` cmdline setup.
