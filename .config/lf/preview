@@ -3,32 +3,25 @@ CACHE="$HOME/.cache/lf/thumbnail.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' \
 	-- "$(readlink -f "$1")" | sha256sum | awk '{print $1}'))"
 
 image() {
-	if [ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ]; then
-		printf '{"action": "add", "identifier": "PREVIEW", "x": "%s", "y":"%s", "width": "%s", "height": "%s", "scaler": "contain", "path": "%s"}\n' \
-			"$4" "$5" "$(($2-1))" "$(($3-1))" "$1" > "$FIFO_UEBERZUG"
-		exit 1
-	else
-		chafa "$1" -s "$4x"
-	fi
+    kitty +kitten icat --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
+    exit 1
 }
 
 batorcat() {
-	file="$1"
 	shift
 	if command -v bat > /dev/null 2>&1; then
-		bat --color=always --style=plain --pager=never "$file" "$@"
+		bat --color=always --style=plain --pager=never "$1" "$@"
 	else
-		cat "$file"
+		cat "$1"
 	fi
 }
 
 glowormdcat() {
-	file="$1"
 	shift
 	if command -v glow > /dev/null 2>&1; then
-		glow "$file"
+		glow "$1"
 	else
-		mdcat "$file"
+		mdcat "$1"
 	fi
 }
 
@@ -55,18 +48,13 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
 			fontpreview -i "$1" -o "${CACHE}.jpg"
 		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
 		;;
-	*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
+	*.svg|*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
 		image "$1" "$2" "$3" "$4" "$5"
-		;;
-	*.svg)
-		[ ! -f "${CACHE}.jpg" ] && convert "$1" "${CACHE}.jpg"
-		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
 		;;
 	*.zip) zipinfo -2 -h "$1";;
 	*.gz) tar -ztf "$1";;
 	*.bz2) tar -jtf "$1";;
 	*.tar) tar -tf "$1";;
-	*.pdf) pdfinfo "$1"; echo ""; pdftotext "$1" -;;
 	*.mp3|*.wav|*.opus|*.ogg) 
 		str=$(mediainfo "$1")
 		echo "${str//                          /}";;

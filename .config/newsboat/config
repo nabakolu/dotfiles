@@ -19,6 +19,8 @@ browser "urlopener.sh"
 
 # Below bindings apply vim like keybindings in most places
 
+bind-key h quit tagselection
+bind-key LEFT quit tagselection
 bind-key h quit articlelist
 bind-key LEFT quit articlelist
 bind-key h quit article
@@ -60,7 +62,10 @@ bind-key RIGHT show-urls article
 bind-key l open urlview
 bind-key RIGHT open urlview
 
-macro d set browser "setsid -f yt-download.sh %u >/dev/null 2>&1" ; open-in-browser ; set browser "urlopener.sh %u"
+bind-key o open-in-browser-and-mark-read articlelist
+bind-key u show-urls articlelist
+
+macro d set browser "setsid -f yt-download.sh %u >/dev/null 2>&1" ; open-in-browser-and-mark-read ; set browser "urlopener.sh %u"
 
 bind-key G end
 bind-key g home
@@ -79,3 +84,7 @@ highlight article "^(Title|Date|Author):.*$" color39 default bold
 highlight article "https?://[^ ]+" green default underline
 highlight article "\\[[0-9]+\\]" blue default bold
 highlight article "\\[image\\ [0-9]+\\]" blue default bold
+
+
+pager "nvimpager -p -- -c 'luafile ~/.config/newsboat/nvimpager/init.lua' -c 'set nowrap' %f"
+html-renderer "pandoc --lua-filter ~/.config/newsboat/filter.lua -f html -t plain | ~/.config/newsboat/remove.sh"

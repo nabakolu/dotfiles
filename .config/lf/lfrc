@@ -328,7 +328,9 @@ map k up
 map l open
 
 map q quit
+map Q selection-quit
 map <enter> open
+map <c-j> open
 
 map rm trash
 map tr trash-restore
@@ -344,7 +346,7 @@ map Y yank-path
 
 map y copy
 map d cut
-map p paste
+map p : paste; clear
 
 map n search-next
 map N search-prev

@@ -25,7 +25,7 @@ require('lualine').setup {
                     error = 'DiagnosticLualineError', -- Changes diagnostics' error color.
                     warn  = 'DiagnosticLualineWarn',  -- Changes diagnostics' warn color.
                 },
-                symbols = { error = " ", warn = " " },
+                symbols = { error = "󰅚 ", warn = " " },
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
                 always_visible = true,    -- Show diagnostics even if there are none.

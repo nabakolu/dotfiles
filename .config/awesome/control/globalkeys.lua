@@ -4,7 +4,32 @@ local naughty = require('naughty')
 local hotkeys_popup = require("awful.hotkeys_popup")
 local vertical = require('layouts.vertical')
 local horizontal = require('layouts.horizontal')
+local deck = require('layouts.deck')
 
+
+-- Custom function to move to the next tag without cycling
+local function view_next_non_cycling()
+    local s = awful.screen.focused()
+    local tags = s.tags
+    local current_tag = s.selected_tag
+    local current_index = current_tag.index
+
+    if current_index < #tags then
+        tags[current_index + 1]:view_only()
+    end
+end
+
+-- Custom function to move to the previous tag without cycling
+local function view_prev_non_cycling()
+    local s = awful.screen.focused()
+    local tags = s.tags
+    local current_tag = s.selected_tag
+    local current_index = current_tag.index
+
+    if current_index > 1 then
+        tags[current_index - 1]:view_only()
+    end
+end
 
 globalkeys = gears.table.join(
     -- awesome
@@ -24,6 +49,10 @@ globalkeys = gears.table.join(
         {description = "Focus the next screen", group = "screens"}),
     awful.key({ modkey, "Control"}, "j", function () awful.screen.focus_relative(-1) end, 
         {description = "Focus the previous screen", group = "screens"}),
+    awful.key({ modkey, "Control" }, "Right", view_next_non_cycling,
+              {description = "view next tag", group = "tag"}),
+    awful.key({ modkey, "Control" }, "Left", view_prev_non_cycling,
+              {description = "view previous tag", group = "tag"}),
 
     -- client
     awful.key({ modkey, }, "Right",
@@ -83,6 +112,8 @@ globalkeys = gears.table.join(
         { description = "vertical layout", group = "layout" }),
     awful.key({ modkey, "Shift" }, "h", function() awful.layout.set(horizontal) end,
         { description = "horizontal layout", group = "layout" }),
+    awful.key({ modkey, "Shift" }, "i", function() awful.layout.set(deck.layout.right) end,
+        { description = "deck layout", group = "layout" }),
 
 
     -- spawn
@@ -94,10 +125,10 @@ globalkeys = gears.table.join(
         { description = "terminal", group = "applications" }),
 
     awful.key({ modkey, "Control" }, "BackSpace", function()
-        awful.spawn(floating_terminal .. " -e lfrun")
+        awful.spawn(floating_terminal .. " -e lf")
     end,
         { description = "floating lf", group = "applications" }),
-    awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lfrun") end,
+    awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lf") end,
         { description = "lf", group = "applications" }),
 
     awful.key({ modkey, }, "f", function() awful.spawn.with_shell("qutebrowser --qt-arg stylesheet ~/.config/qutebrowser/qss/fix-tooltips.qss") end,

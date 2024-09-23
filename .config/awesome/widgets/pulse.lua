@@ -44,15 +44,15 @@ local function update_icon()
     local handle = io.popen(scriptMute)
     if handle:read("*a"):find("false",1,true) then
         if bt then
-            icon = ""
+            icon = "󰂰"
         else
-            icon = "墳"
+            icon = "󰕾"
         end
     else
         if bt then
-            icon = ""
+            icon = "󰂲"
         else
-            icon = "婢"
+            icon = "󰖁"
         end
     end
     handle:close()

@@ -6,8 +6,8 @@ local cmp = require('cmp')
 cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
-        { name = 'buffer' },
-        { name = 'path', option = { trailing_slash = true } },
+        { name = 'buffer',  option = { keyword_pattern = [[\k\+]] } },
+        { name = 'path',    option = { trailing_slash = true } },
     },
     mapping = {
         ['<C-y>'] = cmp.mapping.confirm {
@@ -19,8 +19,6 @@ cmp.setup {
 
             if cmp.visible() then
                 cmp.select_next_item(select_opts)
-            elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-                fallback()
             else
                 cmp.complete()
             end
@@ -29,9 +27,11 @@ cmp.setup {
             if cmp.visible() then
                 cmp.select_prev_item(select_opts)
             else
-                fallback()
+                cmp.complete()
             end
         end, { 'i', 's' }),
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),
     },
     window = {
         documentation = {

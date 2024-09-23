@@ -1,3 +1,6 @@
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.hidden = true
@@ -49,7 +52,7 @@ vim.opt.expandtab = true
 -- move to correct tab when pressing enter
 vim.opt.autoindent = true
 vim.opt.copyindent = true
-vim.opt.preserveindent = true
+vim.opt.preserveindent = false
 
 -- make splits appear on the right
 vim.opt.splitright = true

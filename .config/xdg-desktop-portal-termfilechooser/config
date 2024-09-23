@@ -1,0 +1,3 @@
+[filechooser]
+cmd=/home/lukas/.config/xdg-desktop-portal-termfilechooser/lf-wrapper.sh
+default_dir=/home/lukas

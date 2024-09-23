@@ -25,8 +25,8 @@ do
     end)
 end
 
-terminal = "st"
-floating_terminal = "st -c FLOATING"
+terminal = "kitty"
+floating_terminal = "kitty --class FLOATING"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -40,6 +40,15 @@ awful.layout.layouts = {
     awful.layout.suit.floating,
 }
 
+
+awful.screen.connect_for_each_screen(function(s)
+
+    awful.tag.add(" 󰎦 ", { screen = s, layout=awful.layout.layouts[1],master_width_factor = 0.6,selected = true})
+    awful.tag.add(" 󰎩 ", { screen = s, layout=awful.layout.layouts[2],master_width_factor = 0.6})
+    awful.tag.add(" 󰎬 ", { screen = s, layout=awful.layout.layouts[1],master_width_factor = 0.6})
+    awful.tag.add(" 󰎮 ", { screen = s, layout=awful.layout.layouts[1],master_width_factor = 0.6})
+    awful.tag.add(" 󰎰 ", { screen = s, layout=awful.layout.layouts[1],master_width_factor = 0.6})
+end)
 
 require('themeing.main')
 require('themeing.topbar')

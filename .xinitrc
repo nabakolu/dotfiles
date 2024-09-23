@@ -22,16 +22,13 @@ unclutter &
 # start clipmenu daemon
 clipmenud &
 
-# start filemanager dbus daemon
-python /home/.config/filemanager-dbus.py &
-
 # start picom
 toggle_p.sh
 
-# start noisetorch
-noisetorch -i
-
 # start xss-lock to lock screen on power events
 xss-lock -- betterlockscreen -l &
+
+export GTK_USE_PORTAL=1
+/usr/lib/xdg-desktop-portal-termfilechooser -r &
 
 exec /usr/bin/awesome

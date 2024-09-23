@@ -39,7 +39,8 @@ alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
 alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
 alias diff="diff --color=auto"
 alias se="nvim \$(fzf)"
-alias lf=lfrun
+
+alias xclip="xclip -selection clipboard"
 
 [[ $(type -P lsd) ]] && [ -z $(tty | grep tty) ] && alias ls='lsd' || alias ls='ls --color=auto -F'
 alias ll='ls -l'
@@ -49,5 +50,5 @@ alias lla='ls -l -a'
 alias bc='BC_ENV_ARGS=<(echo "scale=10") \bc'
 
 #dotfiles completion
-include /usr/share/bash-completion/completions/git && __git_complete dotfiles __git_main
+include /usr/local/share/bash-completion/completions/git && __git_complete dotfiles __git_main
 

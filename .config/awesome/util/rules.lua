@@ -35,7 +35,9 @@ awful.rules.rules = {
             focus     = awful.client.focus.filter,
             screen    = mouse.screen.preferred,
             placement = awful.placement.centered,
-            floating  = true
+            floating  = true,
+            width     = 1000,
+            height    = 600,
         }
     },
 }

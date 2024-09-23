@@ -4,7 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export TERMINAL="st"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export DE="dwm"
@@ -18,7 +18,8 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 #clipmenu
 export CM_SELECTIONS="clipboard"
-export CM_MAX_CLIPS=10
+export CM_MAX_CLIPS=20
+export CM_OWN_CLIPBOARD=1
 
 export BAT_STYLE="numbers"
 export BAT_THEME="ansi"
@@ -70,7 +71,6 @@ ex=:\
 *.bash_profile=:\
 *.bashrc=:\
 *.bash=:\
-*.bak=:\
 *.bat=:\
 *.bin=:\
 *.bio=󰐑:\
