@@ -86,6 +86,8 @@ config.bind('<Ctrl-p>', 'completion-item-focus prev', mode='command')
 
 config.bind('<Ctrl-h>', 'fake-key <Backspace>', mode='insert')
 config.bind('<Ctrl-j>', 'fake-key <Enter>', mode='insert')
+config.bind('<Ctrl-n>', 'fake-key <Down>', mode='insert')
+config.bind('<Ctrl-p>', 'fake-key <Up>', mode='insert')
 
 
 ####################
