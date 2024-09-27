@@ -23,7 +23,7 @@ Channel mailo
 	Near :mailo-local:
 	Create Both # automatically create missing mailboxes on server and locally
 	Syncstate * # Save the synchronization state files in the relevant directory
-	Patterns * # Include everything
+	Patterns "INBOX" * # Include everything
 	ExpireUnread no
 
 
@@ -112,15 +112,3 @@ Channel nabakolu
 	Syncstate * # Save the synchronization state files in the relevant directory
 	Patterns * # Include everything
 	ExpireUnread no
-
-
-
-
-
-
-
-
-
-
-
-
