@@ -291,6 +291,10 @@ cmd trash-restore-global ${{
     trash-restore /
 }}
 
+cmd khal-import ${{
+    khal import $fx
+}}
+
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
 cmd dragon %dragon-drop -a -x "$fx"
@@ -378,6 +382,7 @@ map oq open_qutebrowser
 map oz open_zathura
 map oZ open_zaread
 map v  open_editor_dir
+map ok khal-import
 map oo devour
 
 map sw set_wallpaper
