@@ -84,8 +84,15 @@ vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', {desc="delete buffer"})
 -- make h open help in new tab
 vim.keymap.set('c', 'hh', 'tab :h')
 
-vim.api.nvim_create_autocmd( { "FocusGained","BufEnter","CursorHold","CursorHoldI" }, { pattern = { "*" }, command = "if mode() != 'c' | checktime | endif" })
-
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = { "*" },
+  callback = function()
+    local current_mode = vim.api.nvim_get_mode().mode
+    if vim.fn.filereadable(vim.fn.expand("%:p")) == 1 and current_mode ~= 'i' then
+      vim.cmd("checktime")
+    end
+  end,
+})
 
 vim.cmd [[
 
