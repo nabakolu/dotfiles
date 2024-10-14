@@ -9,6 +9,7 @@ require("conform").setup({
         python = { "isort", "black" },
         bibtex = { "bibtex-tidy" },
         tex = { "latexindent" },
+        sh = { "shfmt" },
     }
 
 })
