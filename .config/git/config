@@ -16,4 +16,4 @@
 [tag]
     gpgSign = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
