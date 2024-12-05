@@ -224,7 +224,12 @@ awful.screen.connect_for_each_screen(function(s)
             s.mytaglist,
             s.myspacing,
         },
-        s.mytasklist, -- Middle widget
+        { -- Middle widgets
+            layout = wibox.layout.flex.horizontal,
+            s.myspacing,
+            s.mytasklist,
+            s.myspacing,
+        },
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             spacing = 4,
