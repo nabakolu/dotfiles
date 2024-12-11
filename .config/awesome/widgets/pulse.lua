@@ -83,5 +83,7 @@ awesome.connect_signal('update-pulse-icon', function()
 end)
 
 pulse:buttons(gears.table.join(
-    awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end)))
+    awful.button({ }, 1, function () awful.spawn("pamixer -t"); update_icon(); pulse.markup = icon..volume end),
+    awful.button({ }, 3, function () awful.spawn(terminal .. " -e pulsemixer"); update_icon(); pulse.markup = icon..volume end)
+    ))
 return pulse
