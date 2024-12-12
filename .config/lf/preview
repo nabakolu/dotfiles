@@ -1,6 +1,6 @@
 #!/bin/sh
 CACHE="$HOME/.cache/lf/thumbnail.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' \
-	-- "$(readlink -f "$1")" | sha256sum | awk '{print $1}'))"
+    -- "$(readlink -f "$1")" | sha256sum | awk '{print $1}'))"
 
 image() {
     kitty +kitten icat --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
@@ -8,56 +8,56 @@ image() {
 }
 
 batorcat() {
-	shift
-	if command -v bat > /dev/null 2>&1; then
-		bat --color=always --style=plain --pager=never "$1" "$@"
-	else
-		cat "$1"
-	fi
+    shift
+    if command -v bat > /dev/null 2>&1; then
+        bat --color=always --style=plain --pager=never "$1" "$@"
+    else
+        cat "$1"
+    fi
 }
 
 glowormdcat() {
-	shift
-	if command -v glow > /dev/null 2>&1; then
-		glow "$1"
-	else
-		mdcat "$1"
-	fi
+    shift
+    if command -v glow > /dev/null 2>&1; then
+        glow "$1"
+    else
+        mdcat "$1"
+    fi
 }
 
 case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
-	*.pdf)
-		[ ! -f "${CACHE}.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$CACHE"
-		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
-		;;
-	*.epub)
-		[ ! -f "$CACHE" ] && epub-thumbnailer "$1" "$CACHE" 1024
-		image "$CACHE" "$2" "$3" "$4" "$5"
-		;;
-	*.cbz|*.cbr|*.cbt)
-		[ ! -f "$CACHE" ] && comicthumb "$1" "$CACHE" 1024
-		image "$CACHE" "$2" "$3" "$4" "$5"
-		;;
-	*.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
-		[ ! -f "${CACHE}.jpg" ] && \
-			ffmpegthumbnailer -i "$1" -o "${CACHE}.jpg" -s 0 -q 5
-		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
-		;;
+    *.pdf)
+        [ ! -f "${CACHE}.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$CACHE"
+        image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
+        ;;
+    *.epub)
+        [ ! -f "$CACHE" ] && epub-thumbnailer "$1" "$CACHE" 1024
+        image "$CACHE" "$2" "$3" "$4" "$5"
+        ;;
+    *.cbz|*.cbr|*.cbt)
+        [ ! -f "$CACHE" ] && comicthumb "$1" "$CACHE" 1024
+        image "$CACHE" "$2" "$3" "$4" "$5"
+        ;;
+    *.avi|*.mp4|*.wmv|*.dat|*.3gp|*.ogv|*.mkv|*.mpg|*.mpeg|*.vob|*.fl[icv]|*.m2v|*.mov|*.webm|*.ts|*.mts|*.m4v|*.r[am]|*.qt|*.divx)
+        [ ! -f "${CACHE}.jpg" ] && \
+            ffmpegthumbnailer -i "$1" -o "${CACHE}.jpg" -s 0 -q 5
+        image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
+        ;;
     *.otf|*.ttf)
-		[ ! -f "${CACHE}.jpg" ] && \
-			fontpreview -i "$1" -o "${CACHE}.jpg"
-		image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
-		;;
-	*.svg|*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
-		image "$1" "$2" "$3" "$4" "$5"
-		;;
-	*.zip) zipinfo -2 -h "$1";;
-	*.gz) tar -ztf "$1";;
-	*.bz2) tar -jtf "$1";;
-	*.tar) tar -tf "$1";;
-	*.mp3|*.wav|*.opus|*.ogg) 
-		str=$(mediainfo "$1")
-		echo "${str//                          /}";;
-	*) bat --color always "$1" || cat "$1";;
+        [ ! -f "${CACHE}.jpg" ] && \
+            fontpreview -i "$1" -o "${CACHE}.jpg"
+        image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
+        ;;
+    *.svg|*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
+        image "$1" "$2" "$3" "$4" "$5"
+        ;;
+    *.zip) zipinfo -2 -h "$1";;
+    *.gz) tar -ztf "$1";;
+    *.bz2) tar -jtf "$1";;
+    *.tar) tar -tf "$1";;
+    *.mp3|*.wav|*.opus|*.ogg) 
+        str=$(mediainfo "$1")
+        echo "${str//                          /}";;
+    *) bat --color always "$1" || cat "$1";;
 esac
 exit 0

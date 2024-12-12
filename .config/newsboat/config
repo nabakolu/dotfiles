@@ -87,4 +87,4 @@ highlight article "\\[image\\ [0-9]+\\]" blue default bold
 
 
 pager "nvimpager -p -- -c 'luafile ~/.config/newsboat/nvimpager/init.lua' -c 'set nowrap' %f"
-html-renderer "pandoc --lua-filter ~/.config/newsboat/filter.lua -f html -t plain | ~/.config/newsboat/remove.sh"
+html-renderer "pandoc --lua-filter ~/.config/newsboat/filter.lua -f html -t plain"

@@ -1,6 +1,7 @@
 [alias]
     logb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     list-files = ls-tree --full-tree -r --name-only HEAD
+    logs = log --show-signature
 [user]
     name = nabakolu
     email = lnabakowski@mailo.com
@@ -16,4 +17,4 @@
 [tag]
     gpgSign = true
 [init]
-	defaultBranch = main
+    defaultBranch = main

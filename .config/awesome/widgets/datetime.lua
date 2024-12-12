@@ -17,4 +17,9 @@ datetime:connect_signal("mouse::enter", function()
 end)
 
 
+datetime:buttons(gears.table.join(
+    awful.button({ }, 1, function () awful.spawn(terminal .. " -e ikhal"); end),
+    awful.button({ }, 3, function () awful.spawn(terminal .. " -e ikhal"); end)
+    ))
+
 return datetime

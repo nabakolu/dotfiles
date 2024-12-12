@@ -39,4 +39,9 @@ gears.timer {
     callback = function() get_wifi() end
 }
 
+wifi:buttons(gears.table.join(
+    awful.button({ }, 1, function () awful.spawn("networkmanager_dmenu"); end),
+    awful.button({ }, 3, function () awful.spawn("networkmanager_dmenu"); end)
+    ))
+
 return wifi

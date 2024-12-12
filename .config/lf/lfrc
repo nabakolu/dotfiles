@@ -18,125 +18,125 @@ cmd on-cd &{{
 }}
 
 cmd redraw_hack &{{
-	sleep 0.1
-	xdotool key "control+r"
+    sleep 0.1
+    xdotool key "control+r"
 }}
 
 cmd wget ${{
-	printf "Download: "
-	read ans
-	wget $ans
+    printf "Download: "
+    read ans
+    wget $ans
 }}
 
 cmd open ${{
-	filetype=$(file --mime-type "$f" -bL)
-	case $filetype in
-	application/javascript|text/*|application/json|inode/x-empty) $EDITOR "$f";;
-	audio/*) mocp "$f";;
-	*) if [ "$(xdg-mime query default $filetype)" = "" ]
-	then
-		clear
-		echo "no default"
-		sleep 0.5
-	else
-		nohup xdg-open "$f" > /dev/null 2>&1&
-	fi;;
+    filetype=$(file --mime-type "$f" -bL)
+    case $filetype in
+    application/javascript|text/*|application/json|inode/x-empty) $EDITOR "$f";;
+    audio/*) mocp "$f";;
+    *) if [ "$(xdg-mime query default $filetype)" = "" ]
+    then
+        clear
+        echo "no default"
+        sleep 0.5
+    else
+        nohup xdg-open "$f" > /dev/null 2>&1&
+    fi;;
 esac
 }}
 
 
 cmd devour ${{
-	filetype=$(file --mime-type "$f" -bL)
-	case $filetype in
-	application/javascript|text/*|application/json|inode/x-empty) $EDITOR "$f";;
-	audio/*) mocp "$f";;
-	*) if [ "$(xdg-mime query default $filetype)" = "" ]
-	then
-		clear
-		echo "no default"
-		sleep 0.5
-	else
-		devour xdg-open "$f"
-	fi;;
+    filetype=$(file --mime-type "$f" -bL)
+    case $filetype in
+    application/javascript|text/*|application/json|inode/x-empty) $EDITOR "$f";;
+    audio/*) mocp "$f";;
+    *) if [ "$(xdg-mime query default $filetype)" = "" ]
+    then
+        clear
+        echo "no default"
+        sleep 0.5
+    else
+        devour xdg-open "$f"
+    fi;;
 esac
 }}
 
 cmd bash ${{
-	/bin/bash
+    /bin/bash
 }}
 
 cmd bulk ${{
-	set -f
-	echo $fx | sed 's/ \//\n\//g' | tee ~/.cache/bulkold > ~/.cache/bulknew
-	$EDITOR ~/.cache/bulknew
-	n=1
-	cat ~/.cache/bulknew |
-		while read -r line; do
-			sed -i "$n s|$| $line|g" ~/.cache/bulkold
-			n=$(($n + 1))
-		done
+    set -f
+    echo $fx | sed 's/ \//\n\//g' | tee ~/.cache/bulkold > ~/.cache/bulknew
+    $EDITOR ~/.cache/bulknew
+    n=1
+    cat ~/.cache/bulknew |
+        while read -r line; do
+            sed -i "$n s|$| $line|g" ~/.cache/bulkold
+            n=$(($n + 1))
+        done
 
-	sed -i "s/^/mv -vi \"/g" ~/.cache/bulkold
-	sed -i "s/ \//\" \"\//g" ~/.cache/bulkold
-	sed -i "s/$/\"/g" ~/.cache/bulkold
-	sh ~/.cache/bulkold
+    sed -i "s/^/mv -vi \"/g" ~/.cache/bulkold
+    sed -i "s/ \//\" \"\//g" ~/.cache/bulkold
+    sed -i "s/$/\"/g" ~/.cache/bulkold
+    sh ~/.cache/bulkold
 }}
 
 
 cmd open_pager ${{
-	bat $f || less $f
+    bat $f || less $f
 }}
 
 cmd open_mocp &{{
-	mocp -l $f
+    mocp -l $f
 }}
 
 cmd open_umpv &{{
-	nohup umpv "$f" > /dev/null 2>&1&
+    nohup umpv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_mpv &{{
-	nohup mpv "$f" > /dev/null 2>&1&
+    nohup mpv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_qutebrowser &{{
-	nohup qutebrowser $f > /dev/null 2>&1&
+    nohup qutebrowser $f > /dev/null 2>&1&
 }}
 
 cmd open_firefox &{{
-	nohup firefox $f > /dev/null 2>&1&
+    nohup firefox $f > /dev/null 2>&1&
 }}
 
 cmd open_editor_dir ${{
-	$EDITOR .
+    $EDITOR .
 }}
 
 cmd open_sxiv &{{
-	nohup sxiv "$f" > /dev/null 2>&1&
+    nohup sxiv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_gimp &{{
-	gimp $f
+    gimp $f
 }}
 
 cmd open_mocp ${{
-	mocp -l "$f"
+    mocp -l "$f"
 }}
 
 cmd open_masterpdfeditor4 &{{
-	nohup masterpdfeditor4 "$f" > /dev/null 2>&1&
+    nohup masterpdfeditor4 "$f" > /dev/null 2>&1&
 }}
 
 cmd open_pywal ${{
-	wal -t -i $f --backend wal
-	betterlockscreen -u $f
-	theme
+    wal -t -i $f --backend wal
+    betterlockscreen -u $f
+    theme
 }}
 
 cmd open_pywal_light ${{
-	wal -l -t -i $f --backend wal
-	betterlockscreen -u $f
-	theme
+    wal -l -t -i $f --backend wal
+    betterlockscreen -u $f
+    theme
 }}
 
 cmd open_zathura ${{
@@ -148,23 +148,23 @@ cmd open_zaread ${{
 }}
 
 cmd set_wallpaper ${{
-	feh --bg-scale $f
-	betterlockscreen -u $f
+    feh --bg-scale $f
+    betterlockscreen -u $f
 }
 
 cmd full_find ${{
-	lf -remote "send $id set findlen 0"
-	lf -remote "send $id find"
+    lf -remote "send $id set findlen 0"
+    lf -remote "send $id find"
 }}
 
 cmd fzf_find ${{
-	res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
-	lf -remote "send $id select \"$res\""
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location')"
+    lf -remote "send $id select \"$res\""
 }}
 
 cmd short_find ${{
-	lf -remote "send $id set findlen 1"
-	lf -remote "send $id find"
+    lf -remote "send $id set findlen 1"
+    lf -remote "send $id find"
 }}
 
 cmd mkdir ${{
@@ -192,8 +192,8 @@ cmd chmod ${{
 }}
 
 cmd img ${{
-	clear
-	img $f 0 0 100 100
+    clear
+    img $f 0 0 100 100
 }}
 
 cmd link %{{
@@ -227,48 +227,48 @@ cmd unarchive ${{
       *.tar.bz2) tar -xjvf "$f" ;;
       *.tar) tar -xvf "$f" ;;
       *.tar.xz) tar -xvf "$f" ;;
-	  *.rar) unrar x "$f" ;;
-	  *.gz) gunzip "$f" ;;
+      *.rar) unrar x "$f" ;;
+      *.gz) gunzip "$f" ;;
       *) echo "Unsupported format" ;;
   esac
 }}
 
 cmd zip ${{
-	printf "Archive Name: "
-	read ans
-	prefix="$(pwd)/"
-	echo "$fx" | grep -oP "^$prefix\K.*" | zip -r $ans -@
+    printf "Archive Name: "
+    read ans
+    prefix="$(pwd)/"
+    echo "$fx" | grep -oP "^$prefix\K.*" | zip -r $ans -@
 }}
 
 cmd gzip ${{
-	gzip "$fx"
+    gzip "$fx"
 }}
 
 cmd tar ${{
-	printf "Archive Name: "
-	read ans
-	ans=${ans%".tar"}
-	ans+=".tar"
-	prefix="$(pwd)/"
-	echo "$fx" | grep -oP "^$prefix\K.*" | tar cvf "$ans" -T -
+    printf "Archive Name: "
+    read ans
+    ans=${ans%".tar"}
+    ans+=".tar"
+    prefix="$(pwd)/"
+    echo "$fx" | grep -oP "^$prefix\K.*" | tar cvf "$ans" -T -
 }}
 
 cmd targz ${{
-	printf "Archive Name: "
-	read ans
-	ans=${ans%".tar.gz"}
-	ans+=".tar.gz"
-	prefix="$(pwd)/"
-	echo "$fx" | grep -oP "^$prefix\K.*" | tar cvzf "$ans" -T -
+    printf "Archive Name: "
+    read ans
+    ans=${ans%".tar.gz"}
+    ans+=".tar.gz"
+    prefix="$(pwd)/"
+    echo "$fx" | grep -oP "^$prefix\K.*" | tar cvzf "$ans" -T -
 }}
 
 cmd tarbz2 ${{
-	printf "Archive Name: "
-	read ans
-	ans=${ans%".tar.bz2"}
-	ans+=".tar.bz2"
-	prefix="$(pwd)/"
-	echo "$fx" | grep -oP "^$prefix\K.*" | tar cjvf "$ans" -T -
+    printf "Archive Name: "
+    read ans
+    ans=${ans%".tar.bz2"}
+    ans+=".tar.bz2"
+    prefix="$(pwd)/"
+    echo "$fx" | grep -oP "^$prefix\K.*" | tar cjvf "$ans" -T -
 }}
 
 cmd follow_link %{{
@@ -289,6 +289,10 @@ cmd trash-restore ${{
 
 cmd trash-restore-global ${{
     trash-restore /
+}}
+
+cmd khal-import ${{
+    khal import $fx
 }}
 
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
@@ -378,6 +382,7 @@ map oq open_qutebrowser
 map oz open_zathura
 map oZ open_zaread
 map v  open_editor_dir
+map ok khal-import
 map oo devour
 
 map sw set_wallpaper

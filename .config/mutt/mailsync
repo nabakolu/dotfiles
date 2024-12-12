@@ -19,20 +19,20 @@ NABAKOLU2=$(($NABAKOLU1 - $NABAKOLU0))
 
 if (( $MAILO2 > 0))
 then
-	notify-send "$MAILO2 new Mailo mail(s)"
+    notify-send "$MAILO2 new Mailo mail(s)"
 fi
 
 if (( $GMAIL2 > 0))
 then
-	notify-send "$GMAIL2 new Gmail mail(s)"
+    notify-send "$GMAIL2 new Gmail mail(s)"
 fi
 
 if (( $UNIMAIL2 > 0))
 then
-	notify-send "$UNIMAIL2 new Unimail mail(s)"
+    notify-send "$UNIMAIL2 new Unimail mail(s)"
 fi
 
 if (( $NABAKOLU2 > 0))
 then
-	notify-send "$NABAKOLU2 new nabakolu mail(s)"
+    notify-send "$NABAKOLU2 new nabakolu mail(s)"
 fi
