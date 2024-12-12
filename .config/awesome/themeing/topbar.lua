@@ -213,6 +213,49 @@ awful.screen.connect_for_each_screen(function(s)
         widget = wibox.container.place,
     }
 
+
+    s.mylayoutbox = wibox.widget {
+        {
+            awful.widget.layoutbox {
+                screen = s,
+                buttons = {
+                    awful.button({ }, 1, function () awful.layout.inc( 1) end),
+                    awful.button({ }, 3, function () awful.layout.inc(-1) end),
+                },
+            },
+            left = 5,
+            right = 5,
+            widget = wibox.container.margin,
+        },
+        bg         = beautiful.taglist_bg,
+        shape      = gears.shape.rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
+    s.myrunner = wibox.widget {
+        {
+            wibox.widget {
+                text = "",
+                widget = wibox.widget.textbox,
+            },
+            left = 9,
+            right = 9,
+            widget = wibox.container.margin,
+            buttons = {
+                awful.button({ }, 1, function () awful.spawn("j4-dmenu-desktop --case-insensitive --no-generic"); end),
+                awful.button({ }, 3, function () awful.spawn("dmenu_run"); end)
+            },
+        },
+        fg         = beautiful.taglist_fg,
+        bg         = beautiful.taglist_bg,
+        shape      = gears.shape.rect,
+        shape_clip = true,
+        widget     = wibox.container.background,
+    }
+
+
+
     -- Create the wibox
     s.mywibar = awful.wibar({ position = "top", screen = s, visible = false, fg = beautiful.bg_bar.."0", bg = beautiful.bg_bar.."0", height = 16, margins = 5 })
 
@@ -223,6 +266,9 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
             s.myspacing,
+            s.mylayoutbox,
+            s.myspacing,
+            s.myrunner,
         },
         { -- Middle widgets
             layout = wibox.layout.flex.horizontal,
