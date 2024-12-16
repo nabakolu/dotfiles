@@ -214,20 +214,20 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
 
+    local layoutbox = require("widgets.layoutbox")
     s.mylayoutbox = wibox.widget {
         {
-            awful.widget.layoutbox {
-                screen = s,
-                buttons = {
-                    awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                    awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                },
+            layoutbox,
+            buttons = {
+                awful.button({ }, 1, function () awful.layout.inc( 1) end),
+                awful.button({ }, 3, function () awful.layout.inc(-1) end),
             },
-            left = 5,
-            right = 5,
+            left = 10,
+            right = 2,
             widget = wibox.container.margin,
         },
-        bg         = beautiful.taglist_bg,
+        bg         = beautiful.bg_layoutbox,
+        fg         = beautiful.fg_layoutbox,
         shape      = gears.shape.rect,
         shape_clip = true,
         widget     = wibox.container.background,
