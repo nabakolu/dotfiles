@@ -2,6 +2,7 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 vim.keymap.set('n', 'h', ':quit<CR>')
+vim.keymap.set('n', '<Left>', ':quit<CR>')
 vim.cmd("syntax off")
 vim.cmd("let b:did_ftplugin = 1")
 
