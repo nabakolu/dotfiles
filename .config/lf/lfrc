@@ -84,7 +84,7 @@ cmd bulk ${{
 
 
 cmd open_pager ${{
-    bat $f || less $f
+    nvimpager -p $f
 }}
 
 cmd open_mocp &{{
