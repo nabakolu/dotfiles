@@ -19,3 +19,5 @@ TAB: menu-complete
 Control-n: menu-complete
 Control-p: menu-complete-backward
 
+set keymap vi-command
+"/": reverse-search-history
