@@ -148,6 +148,9 @@ local plugins = {
             'DBUIAddConnection',
             'DBUIFindBuffer',
         },
+        keys = {
+            { '<leader>D', '<cmd>DBUIToggle<CR>', desc='toggle DBUI'}
+        },
         init = function()
             -- Your DBUI configuration
             vim.g.db_ui_use_nerd_fonts = 1
