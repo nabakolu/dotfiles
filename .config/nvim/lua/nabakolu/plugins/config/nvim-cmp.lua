@@ -52,6 +52,14 @@ cmp.setup {
     },
 }
 
+-- Set up vim-dadbod
+cmp.setup.filetype({ "sql", "psql", "mysql" }, {
+    sources = {
+        { name = "vim-dadbod-completion" },
+        { name = "buffer" },
+    },
+})
+
 -- `:` cmdline setup.
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),

@@ -523,6 +523,13 @@ function xresources.load_plugin_syntax()
       -- ==================
       CocSearch = {bg=xresources.black, fg=xresources.white};
       CocMenuSel = {bg=xresources.green, fg=xresources.black};
+
+      -- ==================
+      -- dadbod ui
+      -- ==================
+      NotificationInfo = { bg=xresources.bg, fg=xresources.fg};
+      NotificationWarning = { bg=xresources.bg, fg=xresources.yellow};
+      NotificationError = { bg=xresources.bg, fg=xresources.red};
    }
    return plugin_syntax
 end
