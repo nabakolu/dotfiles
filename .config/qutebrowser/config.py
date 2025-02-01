@@ -8,6 +8,8 @@ config.load_autoconfig()
 c.qt.force_platformtheme = 'gtk3'
 
 c.tabs.background = True
+c.tabs.new_position.related = 'next'
+c.tabs.new_position.unrelated = 'next'
 c.downloads.position = 'bottom'
 
 c.qt.args = ["ppapi-widevine-path=/usr/lib/chromium/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so", "lang=en-GB"] # temporary fix
