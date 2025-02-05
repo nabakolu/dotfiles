@@ -26,7 +26,7 @@ require("mason-lspconfig").setup_handlers {
     end,
 }
 
-require'lspconfig'.dartls.setup{ capabilitie = cap, settings = { dart = { completeFunctionCalls = true } } }
+require'lspconfig'.dartls.setup{ capabilities = cap, settings = { dart = { completeFunctionCalls = true } } }
 
 -- Displays hover information about the symbol under the cursor
 vim.keymap.set('n', '<leader>K', '<cmd>lua vim.lsp.buf.hover()<cr>', {desc="display lsp hover information"})
