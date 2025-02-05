@@ -82,9 +82,10 @@ vim.lsp.with(
     }
 )
 
-vim.diagnostic.config{
-    float={border="single"},
-    virtual_text=false,
+vim.diagnostic.config {
+    float = { border = "single" },
+    underline = { severity = vim.diagnostic.severity.ERROR },
+    virtual_text = false,
 }
 
 require('lspconfig.ui.windows').default_options = {
