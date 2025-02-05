@@ -38,10 +38,6 @@ local plugins = {
     },
 
     {
-        'nvim-java/nvim-java'
-    },
-
-    {
         'jay-babu/mason-nvim-dap.nvim',
         dependencies = { 'williamboman/mason.nvim', 'mfussenegger/nvim-dap' },
         config = function() require('nabakolu.plugins.config.dap') end
