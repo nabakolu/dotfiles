@@ -32,13 +32,16 @@ local plugins = {
     },
 
     {
-        'williamboman/mason-lspconfig.nvim',
-        dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
-        config = function() require('nabakolu.plugins.config.lspconfig') end
+        'nvim-java/nvim-java',
+        config = function()
+            require('nabakolu.plugins.config.nvim-java')
+        end
     },
 
     {
-        'nvim-java/nvim-java'
+        'williamboman/mason-lspconfig.nvim',
+        dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
+        config = function() require('nabakolu.plugins.config.lspconfig') end
     },
 
     {
