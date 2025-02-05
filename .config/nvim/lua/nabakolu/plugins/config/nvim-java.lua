@@ -1,3 +1,6 @@
+require 'java'.setup()
+
+
 local Path = require("plenary.path")
 local scan = require("plenary.scandir")
 local pickers = require("telescope.pickers")
@@ -19,20 +22,25 @@ local function restart_jdtls()
     end
 end
 
+
 local function find_config_folders()
-    local workspace_root = vim.fn.expand("~/.cache/jdtls/workspace/")
-    local folders = scan.scan_dir(workspace_root, { hidden = true, only_dirs = true, depth = 1 })
+    local workspace_root = vim.fn.expand("~/.cache/nvim/jdtls/workspaces/")
+    local workspace_dirs = scan.scan_dir(workspace_root, { hidden = true, only_dirs = true, depth = 1 })
     local valid_folders = {}
 
-    for _, folder in ipairs(folders) do
-        if not folder:match("jdt.ls%-java%-project$") then -- Exclude unwanted workspace
-            local project_file = folder .. "/.project"
-            if Path:new(project_file):exists() then
-                local file_content = Path:new(project_file):read()
-                local location = file_content:match("<location>(.-)</location>")
+    for _, workspace in ipairs(workspace_dirs) do
+        if not workspace:match("jdt.ls%-java%-project$") then -- Exclude unwanted workspace
+            local config_dirs = scan.scan_dir(workspace, { hidden = true, only_dirs = true, depth = 1 })
 
-                if location then
-                    table.insert(valid_folders, { folder = folder, location = location })
+            for _, config_folder in ipairs(config_dirs) do
+                local project_file = config_folder .. "/.project"
+                if Path:new(project_file):exists() then
+                    local file_content = Path:new(project_file):read()
+                    local location = file_content:match("<location>(.-)</location>")
+
+                    if location then
+                        table.insert(valid_folders, { folder = config_folder, location = location })
+                    end
                 end
             end
         end
