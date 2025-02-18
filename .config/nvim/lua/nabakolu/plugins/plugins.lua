@@ -60,11 +60,7 @@ local plugins = {
         config = function() require('nabakolu.plugins.config.nvim-cmp') end
     },
 
-    {
-        "lmburns/lf.nvim",
-        dependencies = { "nvim-lua/plenary.nvim", "akinsho/toggleterm.nvim" },
-        config = function() require('nabakolu.plugins.config.lf') end
-    },
+    { "rolv-apneseth/tfm.nvim", lazy = false, config = function () require('nabakolu.plugins.config.tfm') end, },
     { "akinsho/toggleterm.nvim",               config = function() require('nabakolu.plugins.config.toggleterm') end },
     { 'nvim-treesitter/nvim-treesitter',       config = function() require('nabakolu.plugins.config.treesitter') end },
     { 'https://github.com/chrisbra/Colorizer', config = function() require('nabakolu.plugins.config.colorizer') end },
