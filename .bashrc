@@ -50,6 +50,6 @@ alias lla='ls -l -a'
 alias bc='BC_ENV_ARGS=<(echo "scale=10") \bc'
 
 #dotfiles completion
-include /usr/local/share/bash-completion/completions/git && __git_complete dotfiles __git_main
+include /usr/share/bash-completion/completions/git && __git_complete dotfiles __git_main
 
 stty -ixon
