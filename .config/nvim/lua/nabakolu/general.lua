@@ -63,6 +63,8 @@ vim.opt.splitbelow = true
 
 vim.g.mapleader = " "
 
+vim.keymap.set('i', '<S-Tab>', '<C-V><Tab>', { noremap = true, silent = true })
+
 vim.keymap.set('n', '<leader>v', ':vnew<CR>', {desc="open new vsplit"})
 vim.keymap.set('n', '<leader>s', ':new<CR>', {desc="open new split"})
 vim.keymap.set('n', '<leader>t', ':tabnew<CR>', {desc="open new tab"})
