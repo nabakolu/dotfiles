@@ -24,7 +24,14 @@ awful.rules.rules = {
         }
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
-    { rule_any = { class = { "discord" } }, properties = { keys = gears.table.join(clientkeys, discordkeys),  tag = root.tags()[2] } },
+    {
+        rule_any = { class = { "discord" } },
+        properties = {
+            keys = gears.table.join(clientkeys, discordkeys), tag = root.tags()[2] },
+            maximized_vertical   = false,
+            maximized_horizontal = false,
+            maximized = false,
+    },
     { rule_any = { class = { "whatsdesk" } }, properties = { keys = gears.table.join(clientkeys, whatsdeskkeys),  tag = root.tags()[2] } },
     { rule_any = { name = { "Auto-Type - KeePassXC" } }, properties = { keys = gears.table.join(clientkeys, keepassxckeys) } },
 
