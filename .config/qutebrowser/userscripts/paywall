@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "open -t https://www.removepaywall.com/search?url=$QUTE_URL" >> "$QUTE_FIFO"

@@ -82,7 +82,7 @@ config.bind('<space>w', 'jseval (function () { '+
 config.bind('<space>q', 'spawn --userscript qr.sh {url}')
 config.bind('<space>t', 'spawn --userscript translate')
 config.bind('<space>r', 'spawn --userscript readability')
-config.bind('<space>a', 'spawn --userscript wayback')
+config.bind('<space>a', 'spawn --userscript paywall')
 
 config.bind('<Ctrl-n>', 'completion-item-focus next', mode='command')
 config.bind('<Ctrl-p>', 'completion-item-focus prev', mode='command')
@@ -121,10 +121,10 @@ c.content.pdfjs = False
 c.content.webgl = False
 
 # set nvim in st as default editor
-c.editor.command = ['st','-e','nvim', '{}']
+c.editor.command = ['kitty','-e','nvim', '{}']
 
 # set lf to be the program in which downloads can be opened
-c.downloads.open_dispatcher = "st -e /usr/local/bin/lf {}"
+c.downloads.open_dispatcher = "kitty -e /usr/local/bin/lf {}"
 
 # make hint chars upper case
 c.hints.uppercase = False
