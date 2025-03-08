@@ -17,11 +17,6 @@ cmd on-cd &{{
     lf -remote "send $id set promptfmt \"$fmt\""
 }}
 
-cmd redraw_hack &{{
-    sleep 0.1
-    xdotool key "control+r"
-}}
-
 cmd wget ${{
     printf "Download: "
     read ans
@@ -426,6 +421,5 @@ map u unselect
 
 
 on-cd
-redraw
 set hidden!
 set hidden!
