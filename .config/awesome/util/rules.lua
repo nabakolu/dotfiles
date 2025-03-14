@@ -25,7 +25,7 @@ awful.rules.rules = {
     },
     { rule_any = { class = { "qutebrowser" } }, properties = { tag = root.tags()[1] } },
     {
-        rule_any = { class = { "discord" } },
+        rule_any = { class = { "discord" }, class = { "vesktop" } },
         properties = {
             keys = gears.table.join(clientkeys, discordkeys), tag = root.tags()[2] },
             maximized_vertical   = false,
