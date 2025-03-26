@@ -21,8 +21,10 @@ require("mason-lspconfig").setup_handlers {
         }
     end,
     ["ltex"] = function()
-        require'lspconfig'.ltex.setup { settings = { ltex = { language = "auto" } } ,
+        require'lspconfig'.ltex.setup { settings = { ltex = { language = "en-US" } } ,
         }
+        -- add custom ltex language choosing
+        require("nabakolu.plugins.config.ltex")
     end,
 }
 
