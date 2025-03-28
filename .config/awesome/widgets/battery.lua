@@ -12,46 +12,46 @@ function battery_check_available()
 end
 
 local function update_battery()
-    local scriptPercent = [[
-    cat /sys/class/power_supply/BAT0/capacity
-    ]]
-    local scriptStatus = [[
-    cat /sys/class/power_supply/BAT0/status
-    ]]
-    local handle = io.popen(scriptPercent)
-    local percent = string.gsub(handle:read("*a"),"\n","")
-    handle:close()
-    handle = io.popen(scriptStatus)
-    local status = string.gsub(handle:read("*a"),"\n","")
-    handle:close()
-    percent = tonumber(percent)
-    local icon
-    if status == "Charging" then
-        icon = "󰂄"
-    elseif percent == 100 then
-        icon = "󰁹"
-    elseif percent > 90 then
-        icon = "󰂂"
-    elseif percent > 80 then
-        icon = "󰂁"
-    elseif percent > 70 then
-        icon = "󰂀"
-    elseif percent > 60 then
-        icon = "󰁿"
-    elseif percent > 50 then
-        icon = "󰁾"
-    elseif percent > 40 then
-        icon = "󰁽"
-    elseif percent > 30 then
-        icon = "󰁼"
-    elseif percent > 20 then
-        icon = "󰁻"
-    elseif percent > 10 then
-        icon = "󰁺"
-    else
-        icon = "󰂃"
+    local percent_file = io.open("/sys/class/power_supply/BAT0/capacity", "r")
+    if percent_file then
+        local percent = tonumber(percent_file:read("l"))
+        percent_file:close()
+
+        local status_file = io.open("/sys/class/power_supply/BAT0/status", "r")
+        if status_file then
+            local status = status_file:read("l")
+            status_file:close()
+
+            local icon
+            if status == "Charging" then
+                icon = "󰂄"
+            elseif percent == 100 then
+                icon = "󰁹"
+            elseif percent > 90 then
+                icon = "󰂂"
+            elseif percent > 80 then
+                icon = "󰂁"
+            elseif percent > 70 then
+                icon = "󰂀"
+            elseif percent > 60 then
+                icon = "󰁿"
+            elseif percent > 50 then
+                icon = "󰁾"
+            elseif percent > 40 then
+                icon = "󰁽"
+            elseif percent > 30 then
+                icon = "󰁼"
+            elseif percent > 20 then
+                icon = "󰁻"
+            elseif percent > 10 then
+                icon = "󰁺"
+            else
+                icon = "󰂃"
+            end
+
+            battery.markup = icon .. percent .. "%"
+        end
     end
-    battery.markup = icon..percent.."%"
 end
 
 if battery_check_available() then
