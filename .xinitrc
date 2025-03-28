@@ -13,9 +13,6 @@ sh ~/.screenlayout/default.sh
 # restore pywal settings
 wal -R
 
-# restore wallpaper
-sh ~/.fehbg
-
 # start unclutter, to remove mouse, when unused
 unclutter &
 
