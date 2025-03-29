@@ -12,6 +12,14 @@
     tool = nvimdiff
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[merge]
+    tool = nvimdiff
+[mergetool]
+    prompt = true
+    keepTemporaries = false
+    keepBackup = false
+[mergetool "nvimdiff"]
+    trustExitCode = false
 [commit]
     gpgsign = true
 [tag]
