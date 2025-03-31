@@ -56,6 +56,10 @@ vim.keymap.set('n', '<leader>gE', '<cmd>lua vim.diagnostic.goto_prev({severity =
 vim.keymap.set('n', '<leader>gw', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.WARN,})<cr>', {desc="go to next warning"})
 vim.keymap.set('n', '<leader>gW', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.WARN,})<cr>', {desc="go to previous warning"})
 
+-- Jumps to next info
+vim.keymap.set('n', '<leader>gq', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.INFO,})<cr>', {desc="go to next info"})
+vim.keymap.set('n', '<leader>gQ', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.INFO,})<cr>', {desc="go to previous info"})
+
 -- Lists all the references
 vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>', {desc="list all references"})
 
