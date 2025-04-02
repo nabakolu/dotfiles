@@ -36,13 +36,13 @@ theme.taglist_fg               = xrdb.color7
 theme.taglist_fg_focus         = xrdb.color0
 theme.taglist_bg_focus         = xrdb.color1
 theme.taglist_fg_urgent        = xrdb.color0
-theme.taglist_bg_urgent        = xrdb.color7
+theme.taglist_bg_urgent        = xrdb.color5
 theme.taglist_fg_occupied      = theme.taglist_fg
 theme.taglist_bg_occupied      = theme.taglist_bg
 theme.taglist_fg_empty         = theme.taglist_fg
 theme.taglist_bg_empty         = theme.taglist_bg
-theme.taglist_fg_volatile         = theme.taglist_fg
-theme.taglist_bg_volatile         = theme.taglist_bg
+theme.taglist_fg_volatile      = theme.taglist_fg
+theme.taglist_bg_volatile      = theme.taglist_bg
 theme.taglist_spacing          = 3
 
 theme.tasklist_bg_focus        = xrdb.color1
