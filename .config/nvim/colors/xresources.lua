@@ -442,8 +442,9 @@ function xresources.load_plugin_syntax()
       DiagnosticUnderlineWarn = {style="undercurl",sp=xresources.yellow};
       DiagnosticUnderlineInfo = {style="undercurl",sp=xresources.green};
       DiagnosticUnderlineHint = {style="undercurl",sp=xresources.cyan};
-      DiagnosticLualineError = { fg = xresources.red};
-      DiagnosticLualineWarn = { fg = xresources.yellow};
+      DiagnosticLualineError = { fg = xresources.red, bg = xresources.bg};
+      DiagnosticLualineWarn = { fg = xresources.yellow, bg = xresources.bg};
+      DiagnosticLualineInfo = { fg = xresources.cyan, bg = xresources.bg};
       -- ===============
       -- vim-cursorword
       -- ===============

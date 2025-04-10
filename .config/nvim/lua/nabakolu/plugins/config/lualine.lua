@@ -18,14 +18,15 @@ require('lualine').setup {
                 sources = { 'nvim_diagnostic' },
 
                 -- Displays diagnostics for the defined severity types
-                sections = { 'error', 'warn' },
+                sections = { 'error', 'warn', 'info' },
 
                 diagnostics_color = {
                     -- Same values as the general color option can be used here.
                     error = 'DiagnosticLualineError', -- Changes diagnostics' error color.
                     warn  = 'DiagnosticLualineWarn',  -- Changes diagnostics' warn color.
+                    info  = 'DiagnosticLualineInfo',  -- Changes diagnostics' hint color.
                 },
-                symbols = { error = "󰅚 ", warn = " " },
+                symbols = { error = "󰅚 ", warn = " ", info = " "},
                 colored = true,           -- Displays diagnostics status in color if set to true.
                 update_in_insert = false, -- Update diagnostics in insert mode.
                 always_visible = true,    -- Show diagnostics even if there are none.
