@@ -1,13 +1,11 @@
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require("beautiful")
 
 
 local layoutbox = wibox.widget.textbox()
 
 local function update_layoutbox()
     local layout = awful.layout.get()
-    local layout_name = layout.name
     local symbol = tostring(layout.name)
 
     if layout.name == "max" then
