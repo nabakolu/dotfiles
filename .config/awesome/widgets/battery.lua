@@ -1,23 +1,28 @@
-local awful = require "awful"
 local gears = require "gears"
 local wibox = require "wibox"
-local beautiful = require "beautiful"
 
 -- Battry
 local battery = wibox.widget.textbox()
 
-function battery_check_available()
-    local f=io.open("/sys/class/power_supply/BAT0/capacity","r")
-    if f~=nil then io.close(f) return true else return false end
+local handle = io.popen("ls /sys/class/power_supply/ | grep BAT | head -1")
+if handle == nil then
+    return false
 end
+local battery_path = handle:read("*a")
+handle:close()
+battery_path = battery_path:gsub("%s+", "")
+if battery_path == "" then
+    return false
+end
+battery_path = "/sys/class/power_supply/" .. battery_path
 
 local function update_battery()
-    local percent_file = io.open("/sys/class/power_supply/BAT0/capacity", "r")
+    local percent_file = io.open(battery_path .. "/capacity", "r")
     if percent_file then
         local percent = tonumber(percent_file:read("l"))
         percent_file:close()
 
-        local status_file = io.open("/sys/class/power_supply/BAT0/status", "r")
+        local status_file = io.open(battery_path .. "/status", "r")
         if status_file then
             local status = status_file:read("l")
             status_file:close()
@@ -54,14 +59,12 @@ local function update_battery()
     end
 end
 
-if battery_check_available() then
-    gears.timer {
-        timeout = 60,
-        autostart = true,
-        call_now = true,
-        callback = function() update_battery() end
-    }
-end
+gears.timer {
+    timeout = 60,
+    autostart = true,
+    call_now = true,
+    callback = function() update_battery() end
+}
 
 
 return battery

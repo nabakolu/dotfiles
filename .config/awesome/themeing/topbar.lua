@@ -186,7 +186,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- }
 
     local battery = require("widgets.battery")
-    if battery_check_available() then
+    if battery ~= false then
         s.mybattery = wibox.widget {
             {
                 battery,
