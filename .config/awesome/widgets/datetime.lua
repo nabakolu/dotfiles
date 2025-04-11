@@ -4,6 +4,7 @@ local wibox = require "wibox"
 
 -- datetime
 local datetime = wibox.widget.textclock('󰃶 %a %d %b  %H:%M')
+datetime.refresh = 15
 local tooltip = awful.tooltip { }
 tooltip:add_to_object(datetime)
 tooltip.mode = "inside"
