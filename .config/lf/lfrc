@@ -79,7 +79,7 @@ cmd bulk ${{
 
 
 cmd open_pager ${{
-    nvimpager -p $f
+    $PAGER $f
 }}
 
 cmd open_mocp &{{
@@ -107,7 +107,7 @@ cmd open_editor_dir ${{
 }}
 
 cmd open_sxiv &{{
-    nohup sxiv "$f" > /dev/null 2>&1&
+    nohup nsxiv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_gimp &{{
