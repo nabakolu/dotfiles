@@ -32,7 +32,7 @@ export PERL_MM_OPT="INSTALL_BASE=/home/lukas/.perl5"; export PERL_MM_OPT;
 
 export PYTHONSTARTUP=~/.config/pythonrc
 
-export PAGER="nvimpager -p"
+export PAGER="less -R"
 
 #aliases
 alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
