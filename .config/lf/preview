@@ -5,8 +5,12 @@ CACHE="$HOME/.cache/lf/thumbnail.$(stat --printf '%n\0%i\0%F\0%s\0%W\0%Y' \
 mkdir -p $CACHE
 
 image() {
-    kitty +kitten icat --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
-    exit 1
+    if [ -n "$TMUX"]; then
+        kitty +kitten icat --silent --stdin no --transfer-mode file --place "${2}x${3}@${4}x${5}" "$1" < /dev/null > /dev/tty
+        exit 1
+    else
+        chafa -f symbols "$1"
+    fi
 }
 
 batorcat() {
