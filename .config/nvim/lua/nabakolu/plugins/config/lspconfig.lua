@@ -70,44 +70,6 @@ vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', {desc="re
 vim.keymap.set('n', '<leader>ac', '<cmd>lua vim.lsp.buf.code_action()<cr>', {desc="code action"})
 vim.keymap.set('x', '<leader>ac', '<cmd>lua vim.lsp.buf.range_code_action()<cr>', {desc="code action in range"})
 
-
-
-vim.lsp.handlers["textDocument/hover"] =
-vim.lsp.with(
-    vim.lsp.handlers.hover,
-    {
-        border = "single"
-    }
-)
-
-vim.lsp.handlers["textDocument/signatureHelp"] =
-vim.lsp.with(
-    vim.lsp.handlers.signature_help,
-    {
-        border = "single"
-    }
-)
-
-vim.diagnostic.config {
-    float = { border = "single" },
-    underline = { severity = vim.diagnostic.severity.ERROR },
-    virtual_text = false,
-    signs = { 
-        text = {
-            [vim.diagnostic.severity.ERROR] = '󰅚 ', 
-            [vim.diagnostic.severity.WARN] = ' ', 
-            [vim.diagnostic.severity.HINT] = '󰌶 ', 
-            [vim.diagnostic.severity.INFO] = ' ', 
-        }
-    }
-}
-
 require('lspconfig.ui.windows').default_options = {
     border = "single"
 }
-
--- local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
--- for type, icon in pairs(signs) do
---     local hl = "DiagnosticSign" .. type
---     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
--- end
