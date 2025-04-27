@@ -24,8 +24,8 @@ export CM_OWN_CLIPBOARD=1
 export BAT_STYLE="numbers"
 export BAT_THEME="ansi"
 
-export GOPATH="~/.go"
-export GOMODCACHE="~/.go/pkg/mod"
+export GOPATH="$HOME/go"
+export GOMODCACHE="$HOME/go/pkg/mod"
 
 export FZF_DEFAULT_OPTS="--bind=ctrl-j:accept"
 
