@@ -12,6 +12,7 @@ image/gif=nsxiv.desktop
 image/jpeg=nsxiv.desktop
 image/jpg=nsxiv.desktop
 image/png=nsxiv.desktop
+image/apng=nsxiv.desktop
 image/webp=nsxiv.desktop
 inode/directory=lf.desktop
 inode/x-empty=lf.desktop
