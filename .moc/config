@@ -3,7 +3,7 @@ Repeat = yes
 Shuffle = no
 AutoNext = yes
 
-MusicDir = /home/lukas/Music
+MusicDir = ~/Music
 StartInMusicDir = yes
 
 Keymap = keymap

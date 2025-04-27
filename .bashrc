@@ -24,11 +24,11 @@ export FZF_DEFAULT_COMMAND='find .'
 
 command -v go >/dev/null && export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 export PATH="$PATH:~/.local/bin"
-export PATH="/home/lukas/.perl5/bin${PATH:+:${PATH}}"; export PATH;
-export PERL5LIB="/home/lukas/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-export PERL_LOCAL_LIB_ROOT="/home/lukas/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-export PERL_MB_OPT="--install_base \"/home/lukas/.perl5\""; export PERL_MB_OPT;
-export PERL_MM_OPT="INSTALL_BASE=/home/lukas/.perl5"; export PERL_MM_OPT;
+export PATH="~/.perl5/bin${PATH:+:${PATH}}"; export PATH;
+export PERL5LIB="~/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+export PERL_LOCAL_LIB_ROOT="~/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+export PERL_MB_OPT="--install_base \"~/.perl5\""; export PERL_MB_OPT;
+export PERL_MM_OPT="INSTALL_BASE=~/.perl5"; export PERL_MM_OPT;
 
 export PYTHONSTARTUP=~/.config/pythonrc
 
