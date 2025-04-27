@@ -12,8 +12,12 @@ c.tabs.new_position.related = 'next'
 c.tabs.new_position.unrelated = 'next'
 c.downloads.position = 'bottom'
 
-c.qt.args = ["ppapi-widevine-path=/usr/lib/chromium/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so", "lang=en-GB"] # temporary fix
-
+home = os.environ["HOME"]
+c.qt.args += [
+    f"stylesheet={home}/.config/qutebrowser/qss/fix-tooltips.qss",
+    "ppapi-widevine-path=/usr/lib/chromium/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so",
+    "lang=en-GB"
+]
 ############
 # keybinds #
 ############
