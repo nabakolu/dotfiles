@@ -28,4 +28,6 @@ xss-lock -- betterlockscreen -l &
 export GTK_USE_PORTAL=1
 /usr/lib/xdg-desktop-portal-termfilechooser -r &
 
+keepassxc --minimized &
+
 exec /usr/bin/awesome
