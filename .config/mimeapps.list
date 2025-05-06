@@ -20,6 +20,7 @@ text/*=nvim.desktop
 text/html=org.qutebrowser.qutebrowser.desktop
 text/plain=nvim.desktop
 video/*=mpv.desktop
+video/webm=mpv.desktop
 x-directory/normal=lf.desktop
 x-scheme-handler/*=lf.desktop
 x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop
