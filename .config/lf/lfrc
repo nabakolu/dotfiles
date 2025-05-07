@@ -86,8 +86,8 @@ cmd open_mocp &{{
     mocp -l $f
 }}
 
-cmd open_umpv &{{
-    nohup umpv "$f" > /dev/null 2>&1&
+cmd open_unique_mpv &{{
+    nohup unique_mpv "$f" > /dev/null 2>&1&
 }}
 
 cmd open_mpv &{{
@@ -366,7 +366,7 @@ map S bash
 map ol open_pager
 map oM open_mocp
 map om open_mpv
-map Om open_umpv
+map ou open_unique_mpv
 map of open_firefox
 map os open_sxiv
 map og open_gimp

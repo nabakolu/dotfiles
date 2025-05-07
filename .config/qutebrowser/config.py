@@ -55,9 +55,9 @@ config.bind('<Space>s', 'hint all spawn --detach urlopener.sh {hint-url}')
 config.bind('m', 'hint links spawn --detach mpv {hint-url}')
 config.bind('M', 'spawn --detach mpv {url}')
 
-# spawn umpv with hint links when pressing ctrl m
-config.bind('<Ctrl-m>', 'hint links spawn --detach umpv {hint-url}')
-config.bind('<Ctrl-shift-m>', 'spawn --detach umpv {url}')
+# spawn unique_mpv with hint links when pressing ctrl m
+config.bind('<Ctrl-m>', 'hint links spawn --detach unique_mpv {hint-url}')
+config.bind('<Ctrl-shift-m>', 'spawn --detach unique_mpv {url}')
 
 
 config.bind('yf', 'hint all yank')
