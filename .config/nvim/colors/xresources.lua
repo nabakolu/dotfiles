@@ -250,8 +250,7 @@ function xresources.load_syntax()
       vCursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       WarningMsg = {fg=xresources.yellow,bg=xresources.none,style='bold'};
       Whitespace = {fg=xresources.light_black};
-      -- WildMenu = {fg=xresources.fg,bg=xresources.green};
-      Visual = {fg=xresources.none,bg=xresources.light_black};
+      Visual = {style='reverse'};
       VisualNOS = {fg=xresources.bg,bg=xresources.fg};
    }
    return syntax
