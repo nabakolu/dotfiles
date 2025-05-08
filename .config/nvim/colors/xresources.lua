@@ -202,7 +202,7 @@ function xresources.load_syntax()
       CursorLineNr = {fg=xresources.blue};
       CursorIM = {fg=xresources.none,bg=xresources.none,style='reverse'};
       CursorColumn = {style='reverse'};
-      CursorLine = {fg=xresources.none,bg=xresources.light_black};
+      CursorLine = {style='underline'};
       Cursor = {fg=xresources.none,bg=xresources.none,style='reverse'};
       DiffAdd = {fg=xresources.bg,bg=xresources.green};
       DiffChange = {fg=xresources.bg,bg=xresources.yellow};
