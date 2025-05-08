@@ -31,12 +31,12 @@ local plugins = {
         config = function() require('nabakolu.plugins.config.lualine') end
     },
 
-    {
-        'nvim-java/nvim-java',
-        config = function()
-            require('nabakolu.plugins.config.nvim-java')
-        end
-    },
+    -- {
+    --     'nvim-java/nvim-java',
+    --     config = function()
+    --         require('nabakolu.plugins.config.nvim-java')
+    --     end
+    -- },
 
     {
         'williamboman/mason-lspconfig.nvim',
