@@ -399,6 +399,7 @@ map aG gzip
 
 # Movement
 map gc cd ~/.config
+map gC cd ~/.cache
 map gm cd ~/Music
 map gb cd /usr/local/bin
 map g/ cd /
