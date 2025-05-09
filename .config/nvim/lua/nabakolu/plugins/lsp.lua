@@ -14,22 +14,6 @@ return {
       capabilities = capabilities,
     })
 
-    -- specific lsp settings
-    vim.lsp.config('lua_ls', {
-      settings = {
-        Lua = { diagnostics = { globals = { 'vim' }, }, }
-      }
-    })
-
-    vim.lsp.config('ltex', {
-      settings = {
-        ltex = { language = "en-US" }
-      },
-      on_attach = function ()
-        require("nabakolu.ltex")
-      end
-    })
-
     -- KEYMAPS
 
     -- Displays hover information about the symbol under the cursor
