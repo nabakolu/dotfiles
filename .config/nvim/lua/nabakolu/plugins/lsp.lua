@@ -58,9 +58,6 @@ return {
     vim.keymap.set('n', '<leader>gQ', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.INFO,})<cr>',
       { desc = "go to previous info" })
 
-    -- Lists all the references
-    vim.keymap.set('n', '<leader>gr', '<cmd>lua vim.lsp.buf.references()<cr>', { desc = "list all references" })
-
     -- Renames all references to the symbol under the cursor
     vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<cr>', { desc = "rename symbol" })
 
