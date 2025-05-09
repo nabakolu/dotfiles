@@ -21,9 +21,12 @@ return {
     },
 
     appearance = {
-      nerd_font_variant = 'mono'
+      nerd_font_variant = 'mono',
+      kind_icons = {
+        Folder = "",
+        File = "",
+      }
     },
-
 
     completion = {
       list = { selection = { preselect = false } },
@@ -34,6 +37,14 @@ return {
 
     sources = {
       default = { 'lsp', 'path', 'buffer' },
+
+      providers = {
+        path = {
+          opts = {
+            show_hidden_files_by_default = true,
+          }
+        },
+      },
     },
 
     fuzzy = { implementation = "lua" }
