@@ -7,6 +7,8 @@ vim.opt.hidden = true
 
 vim.opt.updatetime = 500
 
+vim.opt.timeout = false
+
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/nvim/undodir"
 vim.opt.undofile = true
 
@@ -85,3 +87,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
   end,
 })
+
+-- auto close pairs on end of line
+vim.api.nvim_set_keymap("i", "{<CR>", "{\n}<Esc>O", { noremap = true, expr = false })
+vim.api.nvim_set_keymap("i", "(<CR>", "(\n)<Esc>O", { noremap = true, expr = false })
+vim.api.nvim_set_keymap("i", "[<CR>", "[\n]<Esc>O", { noremap = true, expr = false })
