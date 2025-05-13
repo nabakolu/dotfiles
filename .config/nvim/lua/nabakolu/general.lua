@@ -62,10 +62,10 @@ vim.keymap.set('n', '<C-k>', 'O<ESC>', { desc = "insert blank line below" })
 vim.keymap.set('n', '´', '`')
 
 -- cycle through buffers
-vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = "next buffer" })
-vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = "previous buffer" })
+vim.keymap.set('n', '<leader>n', ':bn<CR>', { desc = "next buffer" })
+vim.keymap.set('n', '<leader>N', ':bp<CR>', { desc = "previous buffer" })
 
-vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = "delete buffer" })
+vim.keymap.set('n', '<leader>X', ':bdelete<CR>', { desc = "delete buffer" })
 
 -- Check for changed file
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
