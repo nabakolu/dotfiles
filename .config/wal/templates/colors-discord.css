@@ -45,7 +45,7 @@ body {{
     --dms-icon-svg-url: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Font_Awesome_5_solid_moon.svg'); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
     --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
-    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+    --dms-icon-color-after: {foreground}; /* icon color when button is hovered/selected */
     --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
@@ -81,7 +81,7 @@ body {{
     --text-1: {foreground}; /* other normally white text */
     --text-2: {foreground}; /* headings and important text */
     --text-3: {foreground}; /* normal text */
-    --text-4: {color8}; /* icon buttons and channels */
+    --text-4: {foreground}; /* icon buttons and channels */
     --text-5: {color8}; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
@@ -97,9 +97,9 @@ body {{
     /* accent colors */
     --accent-1: {color4}; /* links and other accent text */
     --accent-2: {color4}; /* small accent elements */
-    --accent-3: {color4}; /* accent buttons */
-    --accent-4: {color4}; /* accent buttons when hovered */
-    --accent-5: {color5}; /* accent buttons when clicked */
+    --accent-3: {color1}; /* accent buttons */
+    --accent-4: {color1}; /* accent buttons when hovered */
+    --accent-5: {color1}; /* accent buttons when clicked */
     --accent-new: {color1}; /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -117,7 +117,7 @@ body {{
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
     --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
+    --button-border: {foreground}; /* neutral border color of buttons */
 
     /* base colors */
     --red-1: {color1};
