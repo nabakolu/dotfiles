@@ -1,3 +1,4 @@
 [filechooser]
 cmd=~/.config/xdg-desktop-portal-termfilechooser/lf-wrapper.sh
 default_dir=~
+env=TERMCMD="kitty --class 'FLOATING' --title 'File Chooser'"
