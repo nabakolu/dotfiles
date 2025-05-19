@@ -65,7 +65,7 @@ vim.keymap.set('n', '´', '`')
 vim.keymap.set('n', '<leader>n', ':bn<CR>', { desc = "next buffer" })
 vim.keymap.set('n', '<leader>N', ':bp<CR>', { desc = "previous buffer" })
 
-vim.keymap.set('n', '<leader>X', ':bdelete<CR>', { desc = "delete buffer" })
+vim.keymap.set('n', '<leader>x', ':bdelete<CR>', { desc = "delete buffer" })
 
 -- Check for changed file
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
