@@ -178,6 +178,9 @@ c.url.start_pages = "about:blank"
 # make url be the window title (makes keepassxc work)
 c.window.title_format = "{current_url}"
 
+# dont shrink completion window
+c.completion.shrink = False
+
 # Configure the filepicker
 filepicker = [
     "kitty",
