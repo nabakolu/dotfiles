@@ -6,7 +6,7 @@ IMAPAccount mailo
 	Host mail.mailo.com
 	Port 993
 	User lnabakowski@mailo.com
-	SSLType IMAPS
+	TLSType IMAPS
 	CertificateFile /etc/ssl/certs/ca-certificates.crt
 	PassCmd "secret-tool lookup Title Mailo"
 
@@ -35,7 +35,7 @@ IMAPAccount gmail
 	Host imap.gmail.com
 	Port 993
 	User lnabakowski@gmail.com
-	SSLType IMAPS
+	TLSType IMAPS
 	CertificateFile /etc/ssl/certs/ca-certificates.crt
 	PassCmd "secret-tool lookup Title Gmail"
 
@@ -64,7 +64,7 @@ IMAPAccount unimail
 	Host imap.uni-stuttgart.de
 	Port 993
 	User st150565
-	SSLType IMAPS
+	TLSType IMAPS
 	CertificateFile /etc/ssl/certs/ca-certificates.crt
 	PassCmd "secret-tool lookup Title Uni"
 
@@ -93,7 +93,7 @@ IMAPAccount nabakolu
 	Host mail.nabakolu.xyz
 	Port 993
 	User lukas
-	SSLType IMAPS
+	TLSType IMAPS
 	CertificateFile /etc/ssl/certs/ca-certificates.crt
 	PassCmd "secret-tool lookup Title lukas"
 
