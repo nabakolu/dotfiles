@@ -153,6 +153,7 @@ c.url.open_base_url = True
 
 
 # set some searchengines
+c.url.searchengines['maps'] = 'https://www.openstreetmap.org/search?query={}'
 c.url.searchengines['chatgpt'] = 'https://chat.openai.com/?q={}'
 c.url.searchengines['duckduckgo'] = 'https://duckduckgo.com/?q={}&kk=-1'
 c.url.searchengines['archwiki'] = 'https://wiki.archlinux.org/index.php?search={}'
