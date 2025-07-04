@@ -23,7 +23,7 @@ clipmenud &
 toggle_p.sh
 
 # start xss-lock to lock screen on power events
-xss-lock -- betterlockscreen -l &
+xss-lock -- lock &
 
 export GTK_USE_PORTAL=1
 /usr/lib/xdg-desktop-portal-termfilechooser -r &
