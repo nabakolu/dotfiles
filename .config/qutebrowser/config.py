@@ -22,6 +22,9 @@ c.qt.args += [
 # keybinds #
 ############
 
+config.bind('PP', 'open -t -- {clipboard}')
+config.bind('pP', 'open -- {clipboard}')
+
 # bind some stylesheets
 config.bind('cm', 'config-list-add content.user_stylesheets "~/.config/qutebrowser/css/monospace.css"')
 config.bind('Cm', 'config-list-remove content.user_stylesheets "~/.config/qutebrowser/css/monospace.css"')
