@@ -88,6 +88,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+vim.api.nvim_create_autocmd('InsertLeave', { callback = vim.snippet.stop })
+
 -- auto close pairs on end of line
 vim.api.nvim_set_keymap("i", "{<CR>", "{\n}<Esc>O", { noremap = true, expr = false })
 vim.api.nvim_set_keymap("i", "(<CR>", "(\n)<Esc>O", { noremap = true, expr = false })
