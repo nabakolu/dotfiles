@@ -5,10 +5,12 @@ from qutebrowser.api import interceptor, message
 # Any return value other than a literal 'False' means we redirected
 REDIRECT_MAP = {
     # "www.reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
-    # "twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-    # "www.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-    # "mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
-    # "www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.unixfox.eu'),
+    "x.com": operator.methodcaller('setHost', 'nitter.net'),
+    "www.x.com": operator.methodcaller('setHost', 'nitter.net'),
+    "twitter.com": operator.methodcaller('setHost', 'nitter.net'),
+    "www.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
+    "mobile.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
+    "www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
 
 }  # type: typing.Dict[str, typing.Callable[..., typing.Optional[bool]]]
 
