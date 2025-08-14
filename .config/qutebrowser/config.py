@@ -124,8 +124,8 @@ c.content.user_stylesheets = ["~/.config/qutebrowser/css/none.css", "~/.config/q
 # enable pdf viewing
 c.content.pdfjs = False
 
-# disable webgl
-c.content.webgl = False
+# enable webgl
+c.content.webgl = True
 
 # set nvim in st as default editor
 c.editor.command = ['kitty','-e','nvim', '{}']
