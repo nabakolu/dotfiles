@@ -22,6 +22,8 @@ c.qt.args += [
 # keybinds #
 ############
 
+config.bind('tt', 'config-cycle --print content.proxy system socks://localhost:9050/')
+
 config.bind('PP', 'open -t -- {clipboard}')
 config.bind('pP', 'open -- {clipboard}')
 
