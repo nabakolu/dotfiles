@@ -19,10 +19,6 @@ set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
 set wait_key = no
 set mailcap_path = "~/.config/mutt/mailcap"
 
-
-set query_command = "khard email --parsable %s"
-
-
 source ~/.config/mutt/keybinds
 source ~/.config/mutt/colors
 source ~/.config/mutt/powerline

@@ -35,11 +35,12 @@ bind index,pager \Cj sidebar-open
 bind index,pager B sidebar-toggle-visible
 
 # khard integration
-set query_command = "khard email --parsable %s"
+## redirect stderr to hide birthday warnings
+set query_command = "khard email --parsable %s 2>/dev/null"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 macro index,pager A \
-  "<pipe-message>khard add-email<return>" \
+  "<pipe-message>khard add-email 2>/dev/null<return>" \
   "add the sender email address to khard"
 
 
