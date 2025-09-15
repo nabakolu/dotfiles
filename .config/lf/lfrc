@@ -292,7 +292,7 @@ cmd khal-import ${{
 
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
-cmd dragon %dragon-drop -a -x "$fx"
+cmd dragon %dragon-drop -a -x $fx
 
 map a
 map b
