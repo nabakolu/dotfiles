@@ -243,7 +243,7 @@ awful.screen.connect_for_each_screen(function(s)
             right = 9,
             widget = wibox.container.margin,
             buttons = {
-                awful.button({ }, 1, function () awful.spawn("j4-dmenu-desktop --case-insensitive --no-generic"); end),
+                awful.button({ }, 1, function () awful.spawn("j4-dmenu-desktop --case-insensitive --no-generic -t" .. terminal); end),
                 awful.button({ }, 3, function () awful.spawn("dmenu_run"); end)
             },
         },
