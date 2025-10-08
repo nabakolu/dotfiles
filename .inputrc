@@ -18,4 +18,4 @@ TAB: menu-complete
 "\e[Z": menu-complete-backward
 Control-n: menu-complete
 Control-p: menu-complete-backward
-
+Control-y: noop
