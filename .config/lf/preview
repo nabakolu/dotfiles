@@ -58,6 +58,7 @@ case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
         image "$1" "$2" "$3" "$4" "$5"
         ;;
     *.zip) zipinfo -2 -h "$1";;
+    *.rar) unrar l "$1";;
     *.gz) tar -ztf "$1";;
     *.bz2) tar -jtf "$1";;
     *.tar) tar -tf "$1";;
