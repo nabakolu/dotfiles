@@ -435,8 +435,8 @@ function xresources.load_plugin_syntax()
       -- =========================
       DiagnosticError = { fg = xresources.red };
       DiagnosticWarn = { fg = xresources.yellow };
-      DiagnosticInfo = { fg = xresources.green };
-      DiagnosticHint = { fg = xresources.cyan };
+      DiagnosticInfo = { fg = xresources.cyan };
+      DiagnosticHint = { fg = xresources.green };
       DiagnosticUnderlineError = {style="undercurl",sp=xresources.red};
       DiagnosticUnderlineWarn = {style="undercurl",sp=xresources.yellow};
       DiagnosticUnderlineInfo = {style="undercurl",sp=xresources.green};
