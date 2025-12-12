@@ -50,7 +50,7 @@ local function get_net_speed(cb)
       local ds, us = 0, 0
       if last_down ~= 0 then
         ds = (down - last_down) / 1024 / 1024 / dt
-        us = (up - last_up)   / 1024 / 1024 / dt
+        us = (up - last_up) / 1024 / 1024 / dt
       end
 
       last_down, last_up, last_time = down, up, now
@@ -65,18 +65,25 @@ local function connection_icon(cb)
   awful.spawn.easy_async_with_shell(
     [[nmcli -t -f TYPE,STATE connection show --active]],
     function(stdout)
-      -- Default icon
-      local icon = "󰌙"
+      local default_icon = "󰌙"
+      local icons = {}
 
       for line in stdout:gmatch("[^\n]+") do
         local type = line:match("^(%S+):")
-        if type == "ethernet" then icon = "󰌘"
-        elseif type == "wifi"  then icon = "󰖩"
-        elseif type == "vpn"   then icon = ""
+        if type then
+          if type:find("ethernet") then
+            table.insert(icons, "󰌘")
+          elseif type:find("wireless") then
+            table.insert(icons, "󰖩")
+          elseif type:find("vpn") then
+            table.insert(icons, "")
+          end
         end
       end
 
-      cb(icon)
+      local result = #icons > 0 and table.concat(icons, " ") or default_icon
+
+      cb(result)
     end
   )
 end
