@@ -1,0 +1,3 @@
+--cookies-from-browser=firefox
+--js-runtimes node
+--remote-components ejs:github
