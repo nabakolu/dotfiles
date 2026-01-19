@@ -10,9 +10,13 @@ tooltip:add_to_object(datetime)
 tooltip.mode = "inside"
 tooltip.gaps = 5
 datetime:connect_signal("mouse::enter", function()
-    local script = [[ khal --color list -f "{start-time-full}-{end-time-full} {title}"  today $(date +%a) | sed -e 's/\x1b\[0m//' -e 's/\x1b\[0m/<\/b>/' -e 's/\x1b\[1m/<b>/' ]]
+    local script = [[ khal --no-color list -f "{start-time-full}-{end-time-full} {title}" today ]]
     awful.spawn.easy_async_with_shell(script, function(stdout)
-        tooltip.markup = stdout:gsub("\n[^\n]*$", "")
+        local markup = stdout:gsub("\n[^\n]*$", "")
+        if markup == "" then
+          markup = "no events"
+        end
+        tooltip.markup = markup
     end)
 end)
 

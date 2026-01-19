@@ -12,11 +12,36 @@ tooltip:add_to_object(pulse)
 tooltip.mode = "inside"
 tooltip.gaps = 5
 
+
+local function get_default_sink_description()
+    local def_handle = io.popen("pactl get-default-sink")
+    if not def_handle then return "unknown" end
+    local default_sink = def_handle:read("*a"):gsub("%s+", "")
+    def_handle:close()
+
+    local handle = io.popen("pactl list sinks")
+    if not handle then return "unknown" end
+    local sinks_output = handle:read("*a")
+    handle:close()
+
+    local current_name = nil
+    for line in sinks_output:gmatch("[^\r\n]+") do
+        local name = line:match("^%s*Name:%s*(.+)$")
+        if name then
+            current_name = name:gsub("%s+", "")
+        end
+
+        local desc = line:match("^%s*Description:%s*(.+)$")
+        if desc and current_name == default_sink then
+            return desc
+        end
+    end
+
+    return "unknown"
+end
+
 pulse:connect_signal("mouse::enter", function()
-    local script = [[ pactl list sinks | grep -A 10 "State: RUNNING" | grep 'Description' | cut -d ':' -f2 | sed 's/^ *//' ]]
-    awful.spawn.easy_async_with_shell(script, function(stdout)
-        tooltip.text = tostring(stdout:gsub("\n[^\n]*$", ""))
-    end)
+    tooltip.text = get_default_sink_description()
 end)
 
 local function update_volume()
