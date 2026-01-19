@@ -8,6 +8,9 @@ freshrss-passwordeval "secret-tool lookup Title FreshRSS" #fresh RSS password
 freshrss-flag-star "s"
 freshrss-min-items 100
 
+show-read-feeds no
+show-read-articles no
+
 
 bind-key i toggle-show-read-feeds
 
