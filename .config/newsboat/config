@@ -12,9 +12,6 @@ show-read-feeds no
 show-read-articles no
 
 
-bind-key i toggle-show-read-feeds
-
-# -- navigation ----------------------------------------------------------------
 
 goto-next-feed no
 
@@ -67,6 +64,10 @@ bind-key RIGHT open urlview
 
 bind-key o open-in-browser-and-mark-read articlelist
 bind-key u show-urls articlelist
+
+bind-key z sort
+bind-key Z rev-sort
+bind-key i toggle-show-read-feeds
 
 macro d set browser "setsid -f yt-download.sh %u >/dev/null 2>&1 &" ; open-in-browser-and-mark-read ; set browser "urlopener.sh %u"
 macro o set browser "setsid -f unique_mpv %u >/dev/null 2>&1 & disown" ; open-in-browser-and-mark-read ; set browser "urlopener.sh %u"
