@@ -1,26 +1,18 @@
 [calendars]
 
-[[calendar_feiertage]]
-path = ~/calendars/feiertage/
-type = calendar
-color = dark blue
-readonly = true
-
-[[calendar_league]]
-path = ~/calendars/league/
-type = calendar
-color = dark red
-readonly = true
-
-[[calendar_personal]]
-path = ~/calendars/personal
-type = calendar
+[[caldav]]
+path = ~/calendars/caldav/*
+type = discover
 color = light green
+
+[[webcal]]
+path = ~/calendars/webcal/*
+type = discover
 
 [[birthdays]]
 path = ~/contacts/contacts
 type = birthdays
-color = white
+color = light magenta
 
 [locale]
 timeformat = %H:%M
@@ -31,7 +23,7 @@ longdatetimeformat = %d/%m/%Y %H:%M
 unicode_symbols = False
 
 [default]
-default_calendar = calendar_personal
+default_calendar = personal
 highlight_event_days = true
 timedelta = 1d
 

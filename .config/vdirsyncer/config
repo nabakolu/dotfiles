@@ -20,34 +20,33 @@ url = "https://caldav.nabakolu.xyz/lukas/contacts/"
 username = "lukas"
 password.fetch = ["command", "secret-tool", "lookup", "Title", "Radicale"]
 
-[pair calendar]
-a = "calendar_local"
-b = "calendar_remote"
+[pair caldav_personal]
+a = "caldav_personal_local"
+b = "caldav_personal_remote"
 collections = ["from a", "from b"]
 metadata = ["displayname", "color"]
 
-[storage calendar_local]
+[storage caldav_personal_local]
 type = "filesystem"
-path = "~/calendars/"
+path = "~/calendars/caldav/"
 fileext = ".ics"
 
-[storage calendar_remote]
+[storage caldav_personal_remote]
 type = "caldav"
 url = "https://caldav.nabakolu.xyz/lukas/personal/"
 username = "lukas"
 password.fetch = ["command", "secret-tool", "lookup", "Title", "Radicale"]
 
 [pair feiertage]
-a = "feiertage_remote"
-b = "feiertage_local"
+a = "feiertage_local"
+b = "feiertage_remote"
 collections = null
-
-[storage feiertage_remote]
-type = "http"
-# The URL to your iCalendar file.
-url = "https://onlinekalender.info/feiertage/deutschland/baden-wurttemberg.ics"
 
 [storage feiertage_local]
 type = "filesystem"
-path = "~/calendars/feiertage/"
+path = "~/calendars/webcal/feiertage/"
 fileext = ".ics"
+
+[storage feiertage_remote]
+type = "http"
+url = "https://i.cal.to/ical/64/baden-wuerttemberg/feiertage/a1596647.7c2522ab-3d33aa19.ics#Feiertage+-+Baden-W%C3%BCrttemberg"
