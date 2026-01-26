@@ -52,6 +52,7 @@ config.bind('BH', 'open -t qute://history/')
 
 # download videos
 config.bind('<Space>m', 'hint links spawn --detach yt-download.sh {hint-url}')
+config.bind('<Space>M', 'spawn --detach yt-download.sh {url}')
 
 # Open link in preferred application
 config.bind('<Space>s', 'hint all spawn --detach urlopener.sh {hint-url}')
