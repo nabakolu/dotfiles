@@ -22,16 +22,9 @@ batorcat() {
     fi
 }
 
-glowormdcat() {
-    shift
-    if command -v glow > /dev/null 2>&1; then
-        glow "$1"
-    else
-        mdcat "$1"
-    fi
-}
 
 case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
+    *.md) mdcat "$1" ;;
     *.pdf)
         [ ! -f "${CACHE}.jpg" ] && pdftoppm -jpeg -f 1 -singlefile "$1" "$CACHE"
         image "${CACHE}.jpg" "$2" "$3" "$4" "$5"
