@@ -79,7 +79,10 @@ cmd bulk ${{
 
 
 cmd open_pager ${{
-    $PAGER $f
+    case "$f" in
+      *.md) mdcat -p "$f" ;;
+      *) $PAGER "$f" ;;
+    esac
 }}
 
 cmd open_mocp &{{
