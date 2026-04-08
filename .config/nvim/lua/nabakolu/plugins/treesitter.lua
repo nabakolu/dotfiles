@@ -1,5 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'master',
   config = function()
     local parsers = require 'nvim-treesitter.parsers'
     function _G.ensure_treesitter_language_installed()
