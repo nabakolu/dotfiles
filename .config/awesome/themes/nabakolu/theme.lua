@@ -84,38 +84,38 @@ theme.notification_max_height = 200
 
 
 rnotification.connect_signal('request::rules', function()
-    -- Critical notifs
-    rnotification.append_rule {
-        rule       = { urgency = 'critical' },
-        properties = {
-            bg               = xrdb.background,
-            fg               = xrdb.color4,
-            border_color     = xrdb.color4,
-            implicit_timeout = 0,
-        }
+  -- Critical notifs
+  rnotification.append_rule {
+    rule       = { urgency = 'critical' },
+    properties = {
+      bg               = xrdb.background,
+      fg               = xrdb.color4,
+      border_color     = xrdb.color4,
+      implicit_timeout = 0,
     }
+  }
 
-    -- Normal notifs
-    rnotification.append_rule {
-        rule       = { urgency = 'normal' },
-        properties = {
-            bg               = xrdb.background,
-            fg               = xrdb.foreground,
-            border_color     = xrdb.foreground,
-            implicit_timeout = 10,
-        }
+  -- Normal notifs
+  rnotification.append_rule {
+    rule       = { urgency = 'normal' },
+    properties = {
+      bg               = xrdb.background,
+      fg               = xrdb.foreground,
+      border_color     = xrdb.foreground,
+      implicit_timeout = 10,
     }
+  }
 
-    -- Low notifs
-    rnotification.append_rule {
-        rule       = { urgency = 'low' },
-        properties = {
-            bg               = xrdb.background,
-            fg               = xrdb.foreground,
-            border_color     = xrdb.foreground,
-            implicit_timeout = 10,
-        }
+  -- Low notifs
+  rnotification.append_rule {
+    rule       = { urgency = 'low' },
+    properties = {
+      bg               = xrdb.background,
+      fg               = xrdb.foreground,
+      border_color     = xrdb.foreground,
+      implicit_timeout = 10,
     }
+  }
 end
 )
 
@@ -135,10 +135,10 @@ theme.hotkeys_group_margin     = 50
 -- Generate taglist squares:
 local taglist_square_size      = dpi(4)
 theme.taglist_squares_sel      = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.taglist_fg_focus
+  taglist_square_size, theme.taglist_fg_focus
 )
 theme.taglist_squares_unsel    = theme_assets.taglist_squares_unsel(
-    taglist_square_size, theme.taglist_fg_empty
+  taglist_square_size, theme.taglist_fg_empty
 )
 
 
