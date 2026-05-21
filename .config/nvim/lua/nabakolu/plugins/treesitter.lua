@@ -1,34 +1,16 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  branch = 'master',
-  config = function()
-    local parsers = require 'nvim-treesitter.parsers'
-    function _G.ensure_treesitter_language_installed()
-      local lang = parsers.get_buf_lang()
-      if parsers.get_parser_configs()[lang] and not parsers.has_parser(lang) then
-        vim.schedule_wrap(function()
-          vim.cmd("TSInstallSync " .. lang)
-          vim.cmd [[e!]]
-        end)()
-      end
-    end
-
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "*",
+  branch = 'main',
+  lazy = false,
+  build = ':TSUpdate',
+  init = function()
+    vim.api.nvim_create_autocmd('FileType', {
       callback = function()
-        ensure_treesitter_language_installed()
+        -- Enable treesitter highlighting and disable regex syntax
+        pcall(vim.treesitter.start)
+        -- Enable treesitter-based indentation
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
       end,
     })
-
-    local configs = require("nvim-treesitter.configs")
-    configs.setup {
-      highlight = {
-        enable = true,    -- false will disable the whole extension
-        disable = { "" }, -- list of language that will be disabled
-        additional_vim_regex_highlighting = true,
-
-      },
-      indent = { enable = true, disable = { "yaml" } },
-    }
-  end,
+  end
 }
