@@ -50,5 +50,4 @@ macro index o "<sync-mailbox>;<shell-escape>~/.config/mutt/mailsync<enter><shell
 # change mail accounts
 macro index,pager g1 '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mailo<enter><change-folder>!<enter>'
 macro index,pager g2 '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/gmail<enter><change-folder>!<enter>'
-macro index,pager g3 '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/unimail<enter><change-folder>!<enter>'
-macro index,pager g4 '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/nabakolu<enter><change-folder>!<enter>'
+macro index,pager g3 '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/nabakolu<enter><change-folder>!<enter>'
