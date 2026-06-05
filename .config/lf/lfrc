@@ -20,7 +20,7 @@ cmd on-cd &{{
 cmd wget ${{
     printf "Download: "
     read ans
-    wget $ans
+    wget "$ans"
 }}
 
 cmd open ${{
@@ -62,7 +62,7 @@ cmd bash ${{
 
 cmd bulk ${{
     set -f
-    echo $fx | sed 's/ \//\n\//g' | tee ~/.cache/bulkold > ~/.cache/bulknew
+    echo "$fx" | sed 's/ \//\n\//g' | tee ~/.cache/bulkold > ~/.cache/bulknew
     $EDITOR ~/.cache/bulknew
     n=1
     cat ~/.cache/bulknew |
@@ -86,7 +86,7 @@ cmd open_pager ${{
 }}
 
 cmd open_mocp &{{
-    mocp -l $f
+    mocp -l "$f"
 }}
 
 cmd open_unique_mpv &{{
@@ -98,11 +98,11 @@ cmd open_mpv &{{
 }}
 
 cmd open_qutebrowser &{{
-    nohup qutebrowser $f > /dev/null 2>&1&
+    nohup qutebrowser "$f" > /dev/null 2>&1&
 }}
 
 cmd open_firefox &{{
-    nohup firefox $f > /dev/null 2>&1&
+    nohup firefox "$f" > /dev/null 2>&1&
 }}
 
 cmd open_editor_dir ${{
@@ -114,7 +114,7 @@ cmd open_sxiv &{{
 }}
 
 cmd open_gimp &{{
-    gimp $f
+    gimp "$f"
 }}
 
 cmd open_mocp ${{
@@ -126,14 +126,14 @@ cmd open_masterpdfeditor4 &{{
 }}
 
 cmd open_pywal ${{
-    wal -t -i $f --backend wal
-    betterlockscreen -u $f
+    wal -t -i "$f" --backend wal
+    betterlockscreen -u "$f"
     theme
 }}
 
 cmd open_pywal_light ${{
-    wal -l -t -i $f --backend wal
-    betterlockscreen -u $f
+    wal -l -t -i "$f" --backend wal
+    betterlockscreen -u "$f"
     theme
 }}
 
@@ -146,8 +146,8 @@ cmd open_zaread ${{
 }}
 
 cmd set_wallpaper ${{
-    feh --bg-scale $f
-    betterlockscreen -u $f
+    feh --bg-scale "$f"
+    betterlockscreen -u "$f"
 }
 
 cmd full_find ${{
@@ -191,7 +191,7 @@ cmd chmod ${{
 
 cmd img ${{
     clear
-    img $f 0 0 100 100
+    img "$f" 0 0 100 100
 }}
 
 cmd link %{{
@@ -275,7 +275,7 @@ cmd follow_link %{{
 
 cmd trash ${{
     IFS=$'\n'
-    for file in $(echo $fx | sed 's/ \//\n\//g')
+    for file in $(echo "$fx" | sed 's/ \//\n\//g')
     do
         trash "$file"
     done
@@ -290,12 +290,12 @@ cmd trash-restore-global ${{
 }}
 
 cmd khal-import ${{
-    khal import $fx
+    khal import "$fx"
 }}
 
 cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
 
-cmd dragon %dragon-drop -a -x $fx
+cmd dragon %dragon-drop -a -x "$fx"
 
 map a
 map b
