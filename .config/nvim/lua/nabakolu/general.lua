@@ -1,6 +1,3 @@
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
-
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.hidden = true
@@ -15,7 +12,7 @@ vim.opt.undofile = true
 -- use mouse
 vim.opt.mouse = "a"
 
--- make nvim fold by syntax
+-- make nvim folds manual
 vim.opt.foldmethod = "manual"
 
 -- start with every fold closed
