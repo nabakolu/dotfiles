@@ -4,6 +4,13 @@ return {
     "mason-org/mason.nvim",
     "neovim/nvim-lspconfig",
     "saghen/blink.cmp",
+    {
+      'nvim-java/nvim-java',
+      config = function()
+        require('java').setup()
+        vim.lsp.enable('jdtls')
+      end,
+    }
   },
   config = function()
     require("mason-lspconfig").setup()
