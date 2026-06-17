@@ -23,7 +23,7 @@ return {
     vim.keymap.set('n', '<leader>jg', builtin.live_grep, { desc = "telescope live grep" })
     vim.keymap.set('n', '<leader>jb', builtin.buffers, { desc = "telescope buffers" })
     vim.keymap.set('n', '<leader>jh', builtin.help_tags, { desc = "telescope help tags" })
-    vim.keymap.set('n', '<leader>jr', builtin.lsp_references, { desc = "telescope lsp references" })
+    vim.keymap.set('n', '<leader>gr', builtin.lsp_references, { desc = "telescope lsp references" })
     vim.keymap.set('n', '<leader>jd', builtin.lsp_document_symbols, { desc = "telescope lsp document symbols" })
   end
 }
