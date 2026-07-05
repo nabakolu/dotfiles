@@ -27,6 +27,11 @@ bind attach h exit
 bind attach <right> view-mailcap
 bind attach <left> exit
 
+bind index,pager,attach \Cf next-page
+bind index,pager,attach \Cb previous-page
+bind index,pager,attach \Cd half-down
+bind index,pager,attach \Cu half-up
+
 
 # sidebar
 bind index,pager \Cp sidebar-prev
