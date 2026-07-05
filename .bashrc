@@ -36,7 +36,7 @@ export PAGER="less"
 
 #aliases
 alias ytaudio="yt-dlp -x -f bestaudio/bestdl"
-alias dotfiles='git --git-dir=$HOME/packages/dotfiles/ --work-tree=$HOME' 
+alias dotfiles='git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME' 
 alias diff="diff --color=auto"
 alias se="nvim \$(fzf)"
 
