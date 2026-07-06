@@ -462,6 +462,8 @@ $endif$
 \KOMAoptions{fromphone=false}
 \KOMAoptions{fromurl=false}
 \KOMAoptions{fromalign=right}
+\KOMAoptions{pagenumber=off}
+\KOMAoptions{foldmarks=false}
 
 \setkomavar{opening}{Sehr geehrte Damen und Herren,}
 \setkomavar{closing}{Mit freundlichen Grüßen}
