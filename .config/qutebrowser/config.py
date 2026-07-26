@@ -1,6 +1,10 @@
-from qutebrowser.api import interceptor
 import os
 os.system("bisc")
+
+# satisfy lsp
+if False:
+    c = None
+    config = None
 
 
 config.load_autoconfig()
@@ -216,23 +220,12 @@ c.content.blocking.method = "both"
 # set ad block lists
 c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://easylist-downloads.adblockplus.org/easylistdutch.txt', 'https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt', 'https://www.i-dont-care-about-cookies.eu/abp/', 'https://secure.fanboy.co.nz/fanboy-cookiemonster.txt']
 
-# add youtube ad block
-def filter_yt(info: interceptor.Request):
-    url = info.request_url
-    if (
-            url.host() == "www.youtube.com"
-            and url.path() == "/get_video_info"
-            and "&adformat=" in url.query()
-    ):
-        info.block()
 
-interceptor.register(filter_yt)
-
-#c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0"
-#c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393"
+# c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; rv:68.0) Gecko/20100101 Firefox/68.0"
+# c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393"
 c.content.headers.accept_language = "en-US,en;q=0.5"
-#c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
-#c.content.canvas_reading = False
+#c .content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
+# c.content.canvas_reading = False
 
 c.fonts.default_family = "Roboto Mono Nerd Font"
 
@@ -241,4 +234,3 @@ config.source('qutewal.py')
 
 # url redirection
 config.source('redirects.py')
-

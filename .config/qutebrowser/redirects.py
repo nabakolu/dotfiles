@@ -1,32 +1,83 @@
-import operator
-from qutebrowser.api import interceptor, message
+from PyQt6.QtCore import QUrl
+
+from qutebrowser.api import interceptor
+from qutebrowser.extensions import interceptors
 
 
-# Any return value other than a literal 'False' means we redirected
-REDIRECT_MAP = {
-    # "www.reddit.com": operator.methodcaller('setHost', 'old.reddit.com'),
-    "x.com": operator.methodcaller('setHost', 'nitter.net'),
-    "www.x.com": operator.methodcaller('setHost', 'nitter.net'),
-    "twitter.com": operator.methodcaller('setHost', 'nitter.net'),
-    "www.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
-    "mobile.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
-    "www.mobile.twitter.com": operator.methodcaller('setHost', 'nitter.net'),
-
-}  # type: typing.Dict[str, typing.Callable[..., typing.Optional[bool]]]
+def twitter(url: QUrl) -> QUrl | None:
+    new_url = QUrl(url)
+    new_url.setHost("xcancel.com")
+    return new_url
 
 
-def int_fn(info: interceptor.Request):
-    """Block the given request if necessary."""
-    if (info.resource_type != interceptor.ResourceType.main_frame or
-            info.request_url.scheme() in {"data", "blob"}):
+def youtube(url: QUrl) -> QUrl | None:
+    if "watch?v=" not in url.toString():
+        return None
+
+    new_url = QUrl(url)
+    new_url.setHost("youtube.ttools.io")
+    return new_url
+
+
+def reddit(url: QUrl) -> QUrl | None:
+    host = url.host()
+    path = url.path()
+
+    if (
+        host == "old.reddit.com"
+        or host == "preview.redd.it"
+        or path.startswith("/media")
+    ):
+        return None
+
+    new_url = QUrl(url)
+    new_url.setHost("old.reddit.com")
+    return new_url
+
+
+def fandom(url: QUrl) -> QUrl | None:
+    host = url.host()
+
+    if not host.endswith(".fandom.com"):
+        return None
+
+    subdomain = host.removesuffix(".fandom.com")
+    if not subdomain:
+        return None
+
+    new_url = QUrl(url)
+    new_url.setScheme("https")
+    new_url.setHost("breezewiki.com")
+    new_url.setPath(f"/{subdomain}{url.path()}")
+
+    return new_url
+
+
+def rewrite(info: interceptor.Request):
+    # Only rewrite top-level navigations.
+    if info.resource_type is not interceptor.ResourceType.main_frame:
         return
+
     url = info.request_url
-    redir = REDIRECT_MAP.get(url.host())
-    if redir is not None and redir(url) is not False:
-        if "reddit.com/media" in url.toString():  # dont redirect reddit media links
-            return
-        message.info("Redirecting to " + url.toString())
-        info.redirect(url)
+    host = url.host()
+
+    new_url = None
+
+    if host in {"youtube.com", "www.youtube.com"}:
+        new_url = youtube(url)
+    elif host in {"reddit.com", "www.reddit.com"}:
+        new_url = reddit(url)
+    elif host in {"twitter.com", "www.twitter.com", "x.com", "www.x.com"}:
+        new_url = twitter(url)
+    elif host.endswith(".fandom.com"):
+        new_url = fandom(url)
+
+    if new_url is not None and new_url != url:
+        try:
+            info.redirect(new_url)
+        except interceptors.RedirectException:
+            # Another interceptor already redirected this request.
+            pass
 
 
-interceptor.register(int_fn)
+interceptor.register(rewrite)
