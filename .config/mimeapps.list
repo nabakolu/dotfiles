@@ -35,6 +35,7 @@ image/svg+xml=nsxiv.desktop
 x-scheme-handler/discord-647066573147996161=discord-647066573147996161.desktop
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/jackify=com.jackify.app.desktop
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
 
 [Added Associations]
 application/pdf=masterpdfeditor4.desktop;
