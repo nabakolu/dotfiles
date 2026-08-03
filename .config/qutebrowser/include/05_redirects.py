@@ -2,7 +2,21 @@ from PyQt6.QtCore import QUrl
 
 from qutebrowser.api import interceptor
 from qutebrowser.extensions import interceptors
+from qutebrowser.api import cmdutils
+from qutebrowser.utils import message
 
+
+REDIRECTS_ENABLED = True
+
+
+@cmdutils.register(name="toggle-redirects")
+def toggle_redirects():
+    """Toggle URL redirects."""
+    global REDIRECTS_ENABLED
+    REDIRECTS_ENABLED = not REDIRECTS_ENABLED
+    message.info(
+        f"Redirects {'enabled' if REDIRECTS_ENABLED else 'disabled'}"
+    )
 
 def twitter(url: QUrl) -> QUrl | None:
     new_url = QUrl(url)
@@ -54,6 +68,9 @@ def fandom(url: QUrl) -> QUrl | None:
 
 
 def rewrite(info: interceptor.Request):
+    if not REDIRECTS_ENABLED:
+        return
+
     # Only rewrite top-level navigations.
     if info.resource_type is not interceptor.ResourceType.main_frame:
         return
