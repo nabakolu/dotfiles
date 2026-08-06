@@ -3,7 +3,7 @@ if False:
     c = None
     config = None
 
-config.bind('tt', 'config-source ~/.config/qutebrowser/include/tor/enable-tor.py ;; message-info "Enabled Tor"')
+config.bind('tt', 'toggle-tor')
 
 config.bind('PP', 'open -t -- {clipboard}')
 config.bind('pP', 'open -- {clipboard}')
