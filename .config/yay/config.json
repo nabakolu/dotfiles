@@ -1,3 +1,4 @@
 {
-	"diffmenu": false
+	"diffmenu": true,
+	"answerdiff": "A"
 }
