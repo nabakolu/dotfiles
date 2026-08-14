@@ -16,13 +16,13 @@
     "winNativeTitleBar": false,
     "plugins": {
         "ChatInputButtonAPI": {
-            "enabled": false
+            "enabled": true
         },
         "CommandsAPI": {
             "enabled": true
         },
         "DynamicImageModalAPI": {
-            "enabled": false
+            "enabled": true
         },
         "MemberListDecoratorsAPI": {
             "enabled": false
@@ -58,10 +58,12 @@
             "enabled": false
         },
         "AlwaysTrust": {
-            "enabled": false
+            "enabled": true,
+            "domain": true,
+            "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": false
+            "enabled": true
         },
         "AppleMusicRichPresence": {
             "enabled": false
@@ -100,7 +102,7 @@
             "enabled": false
         },
         "CallTimer": {
-            "enabled": false
+            "enabled": true
         },
         "CharacterCounter": {
             "enabled": false
@@ -214,7 +216,15 @@
             "enabled": false
         },
         "IgnoreActivities": {
-            "enabled": false
+            "enabled": false,
+            "ignoredActivities": [],
+            "listMode": 0,
+            "idsList": "",
+            "ignorePlaying": false,
+            "ignoreStreaming": false,
+            "ignoreListening": false,
+            "ignoreWatching": false,
+            "ignoreCompeting": false
         },
         "ImageFilename": {
             "enabled": false
@@ -226,10 +236,15 @@
             "enabled": false
         },
         "ImplicitRelationships": {
-            "enabled": false
+            "enabled": false,
+            "sortByAffinity": true
         },
         "IrcColors": {
-            "enabled": false
+            "enabled": true,
+            "memberListColors": true,
+            "lightness": 70,
+            "applyColorOnlyInDms": false,
+            "applyColorOnlyToUsersWithoutColor": false
         },
         "KeepCurrentChannel": {
             "enabled": false
@@ -241,7 +256,8 @@
             "enabled": false
         },
         "MentionAvatars": {
-            "enabled": false
+            "enabled": true,
+            "showAtSymbol": true
         },
         "MessageClickActions": {
             "enabled": false
@@ -421,7 +437,9 @@
             "enabled": false
         },
         "SilentTyping": {
-            "enabled": false
+            "enabled": true,
+            "isEnabled": true,
+            "showIcon": false
         },
         "SortFriendRequests": {
             "enabled": false
@@ -499,7 +517,7 @@
             "enabled": false
         },
         "ViewIcons": {
-            "enabled": false
+            "enabled": true
         },
         "ViewRaw": {
             "enabled": false
@@ -526,7 +544,7 @@
             "enabled": false
         },
         "YoutubeAdblock": {
-            "enabled": false
+            "enabled": true
         },
         "BadgeAPI": {
             "enabled": true
@@ -573,6 +591,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1786702561684
+        "settingsSyncVersion": 1786703009302
     }
 }
