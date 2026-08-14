@@ -30,4 +30,10 @@ export GTK_USE_PORTAL=1
 
 keepassxc --minimized &
 
-exec /usr/bin/awesome
+export XDG_SESSION_TYPE=x11
+export XDG_CURRENT_DESKTOP=Awesome
+
+systemctl --user import-environment DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+dbus-update-activation-environment --systemd DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE
+
+exec awesome
