@@ -4,11 +4,6 @@
     "arRPC": false,
     "splashColor": "rgb(245, 224, 220)",
     "splashBackground": "rgb(22, 19, 32)",
-    "staticTitle": true,
-    "disableMinSize": true,
-    "spellCheckLanguages": [
-        "en-GB",
-        "en-IE",
-        "en"
-    ]
+    "hardwareVideoAcceleration": true,
+    "staticTitle": true
 }
