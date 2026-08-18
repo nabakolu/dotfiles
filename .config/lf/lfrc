@@ -126,13 +126,13 @@ cmd open_masterpdfeditor4 &{{
 }}
 
 cmd open_pywal ${{
-    wal -t -i "$f" --backend wal
+    wal -t -i "$f" --backend wal --cols16
     betterlockscreen -u "$f"
     theme
 }}
 
 cmd open_pywal_light ${{
-    wal -l -t -i "$f" --backend wal
+    wal -l -t -i "$f" --backend wal --cols16
     betterlockscreen -u "$f"
     theme
 }}
