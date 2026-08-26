@@ -235,11 +235,11 @@ awful.screen.connect_for_each_screen(function(s)
   s.myrunner = wibox.widget {
     {
       wibox.widget {
-        text = "",
+        text = " ",
         widget = wibox.widget.textbox,
       },
       left = 9,
-      right = 9,
+      right = 0,
       widget = wibox.container.margin,
       buttons = {
         awful.button({}, 1, function() awful.spawn("j4-dmenu-desktop --case-insensitive --no-generic -t" .. terminal); end),
