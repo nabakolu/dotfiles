@@ -4,6 +4,7 @@ from qutebrowser.api import interceptor
 from qutebrowser.extensions import interceptors
 from qutebrowser.api import cmdutils
 from qutebrowser.utils import message
+import re
 
 
 REDIRECTS_ENABLED = True
@@ -41,6 +42,7 @@ def reddit(url: QUrl) -> QUrl | None:
         host == "old.reddit.com"
         or host == "preview.redd.it"
         or path.startswith("/media")
+        or re.match(r"^/r/[^/]+/s/[^/]+$", path)
     ):
         return None
 
