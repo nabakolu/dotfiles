@@ -38,7 +38,8 @@ vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
 
 -- show whitespace
-vim.cmd('set list listchars=nbsp:¬,tab:»·,trail:·,extends:>')
+vim.o.listchars = 'trail:·,nbsp:¬,tab:› ,'
+vim.o.list = true
 
 -- single border on all floating windows
 vim.o.winborder = "single"
