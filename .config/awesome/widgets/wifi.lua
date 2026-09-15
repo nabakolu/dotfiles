@@ -15,13 +15,13 @@ wifi:connect_signal("mouse::enter", function()
 end)
 
 local active_interface = nil
+local connection_icon_string = "󰌙"
 
-local function detect_interface(cb)
+local function detect_interface()
   awful.spawn.easy_async_with_shell(
     [[ip route | grep default | awk '{print $5}' | head -n1]],
     function(stdout)
       active_interface = stdout:match("(%S+)")
-      if cb then cb() end
     end
   )
 end
@@ -30,10 +30,7 @@ local last_down, last_up = 0, 0
 local last_time = os.time()
 
 local function get_net_speed(cb)
-  if not active_interface then
-    detect_interface(function() get_net_speed(cb) end)
-    return
-  end
+  if not active_interface then return end
 
   local f = io.open("/proc/net/dev", "r")
   if not f then return end
@@ -61,7 +58,7 @@ local function get_net_speed(cb)
   f:close()
 end
 
-local function connection_icon(cb)
+local function connection_icon()
   awful.spawn.easy_async_with_shell(
     [[nmcli -t -f TYPE,STATE connection show --active]],
     function(stdout)
@@ -81,31 +78,36 @@ local function connection_icon(cb)
         end
       end
 
-      local result = #icons > 0 and table.concat(icons, " ") or default_icon
-
-      cb(result)
+      connection_icon_string =
+        #icons > 0 and table.concat(icons, " ") or default_icon
     end
   )
 end
 
 local function update_widget()
-  detect_interface(function()
-    connection_icon(function(icon)
-      get_net_speed(function(down, up)
-        wifi.markup = string.format(
-          "%s ↓%.1f ↑%.1f",
-          icon,
-          down,
-          up
-        )
-      end)
-    end)
+  get_net_speed(function(down, up)
+    wifi.markup = string.format(
+      "%s ↓%.1f ↑%.1f",
+      connection_icon_string,
+      down,
+      up
+    )
   end)
 end
 
 gears.timer {
-  timeout = 5,
+  timeout = 60,
   call_now = true,
+  autostart = true,
+  callback = function()
+    detect_interface()
+    connection_icon()
+  end
+}
+
+gears.timer {
+  timeout = 5,
+  call_now = false,
   autostart = true,
   callback = update_widget
 }
