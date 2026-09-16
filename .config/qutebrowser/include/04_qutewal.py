@@ -337,11 +337,6 @@ if os.path.isfile(colors_absolute):
     # Type: QtColor
     c.colors.tabs.selected.odd.fg = background
 
-    # Background color for webpages if unset (or empty to use the theme's
-    # color)
-    # Type: QtColor
-    c.colors.webpage.bg = background
-
     if qutewal_dynamic_loading or bool(os.getenv('QUTEWAL_DYNAMIC_LOADING')):
         import signal
         import subprocess
