@@ -49,7 +49,8 @@ config.bind('<Ctrl-shift-m>', 'spawn --detach unique_mpv {url}')
 
 config.bind('yf', 'hint all yank')
 
-config.bind('D', 'config-cycle colors.webpage.darkmode.enabled ;; config-cycle colors.webpage.bg #FFFFFF #000000')
+config.bind('td', 'spawn --userscript toggle-dark')
+config.bind('tD', 'config-cycle colors.webpage.darkmode.enabled ;; config-cycle colors.webpage.bg #FFFFFF #000000')
 
 config.bind('gd', 'download-open')
 config.bind('gi', 'hint inputs')
