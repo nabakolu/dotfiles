@@ -26,12 +26,26 @@ def twitter(url: QUrl) -> QUrl | None:
 
 
 def youtube(url: QUrl) -> QUrl | None:
-    if "watch?v=" not in url.toString():
-        return None
-
     new_url = QUrl(url)
-    new_url.setHost("youtube.ttools.io")
-    return new_url
+    path = url.path()
+
+    if "watch?v=" in url.toString():
+        # Existing /watch?v=... handling
+        new_url.setHost("youtube.ttools.io")
+        return new_url
+
+    if path.startswith("/v/"):
+        video_id = path.removeprefix("/v/").split("/", 1)[0]
+
+        if not video_id:
+            return None
+
+        new_url.setHost("youtube.ttools.io")
+        new_url.setPath("/watch")
+        new_url.setQuery(f"v={video_id}")
+        return new_url
+
+    return None
 
 
 def reddit(url: QUrl) -> QUrl | None:
