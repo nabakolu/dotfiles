@@ -5,6 +5,8 @@
     "themeLinks": [],
     "eagerPatches": false,
     "enabledThemes": [
+        "DiscordPlus.theme.css",
+        "DiscordRecolor.theme.css",
         "colors-discord.css"
     ],
     "enableReactDevtools": false,
@@ -161,9 +163,6 @@
         "Experiments": {
             "enabled": false
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "F8Break": {
             "enabled": false
         },
@@ -186,7 +185,7 @@
             "enabled": false
         },
         "FixYoutubeEmbeds": {
-            "enabled": false
+            "enabled": true
         },
         "ForceOwnerCrown": {
             "enabled": false
@@ -244,7 +243,9 @@
             "memberListColors": true,
             "lightness": 70,
             "applyColorOnlyInDms": false,
-            "applyColorOnlyToUsersWithoutColor": false
+            "applyColorOnlyToUsersWithoutColor": false,
+            "saturation": 100,
+            "seed": ""
         },
         "KeepCurrentChannel": {
             "enabled": false
@@ -356,7 +357,7 @@
             "enabled": false
         },
         "PlainFolderIcon": {
-            "enabled": false
+            "enabled": true
         },
         "PlatformIndicators": {
             "enabled": false
@@ -413,7 +414,11 @@
             "enabled": false
         },
         "ShikiCodeblocks": {
-            "enabled": false
+            "enabled": false,
+            "theme": "https://cdn.jsdelivr.net/gh/shikijs/textmate-grammars-themes@bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/dark-plus.json",
+            "useDevIcon": "GREYSCALE",
+            "bgOpacity": 100,
+            "tryDiscordHighlighter": "SECONDARY"
         },
         "ShowAllMessageButtons": {
             "enabled": false
@@ -463,9 +468,6 @@
             "enabled": false
         },
         "SuperReactionTweaks": {
-            "enabled": false
-        },
-        "TenorGifSearch": {
             "enabled": false
         },
         "TextReplace": {
@@ -529,16 +531,19 @@
             "enabled": false
         },
         "VolumeBooster": {
-            "enabled": false
+            "enabled": true
         },
         "WebKeybinds": {
-            "enabled": true
+            "enabled": true,
+            "showNavigationButtons": true,
+            "overrideCommonKeybinds": true
         },
         "WebScreenShareFixes": {
             "enabled": true
         },
         "WhoReacted": {
-            "enabled": false
+            "enabled": true,
+            "clickableAvatars": true
         },
         "XSOverlay": {
             "enabled": false
@@ -575,6 +580,27 @@
         },
         "WebContextMenus": {
             "enabled": true
+        },
+        "AddAttachments": {
+            "enabled": false
+        },
+        "FixDiscordCss": {
+            "enabled": true
+        },
+        "GifProviderSwitcher": {
+            "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": false
+        },
+        "DirectFileDownload": {
+            "enabled": false
+        },
+        "JumpToTop": {
+            "enabled": false
+        },
+        "MutedServersActivityBadge": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -591,6 +617,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1786703009302
-    }
+        "settingsSyncVersion": 1793988732497
+    },
+    "nativeTitleBar": false
 }
