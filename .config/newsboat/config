@@ -11,6 +11,8 @@ freshrss-min-items 100
 show-read-feeds no
 show-read-articles no
 
+cleanup-on-quit yes
+
 
 
 goto-next-feed no
