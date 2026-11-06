@@ -21,7 +21,7 @@ def toggle_redirects():
 
 def twitter(url: QUrl) -> QUrl | None:
     new_url = QUrl(url)
-    new_url.setHost("xcancel.com")
+    new_url.setHost("nitter.tiekoetter.com")
     return new_url
 
 
