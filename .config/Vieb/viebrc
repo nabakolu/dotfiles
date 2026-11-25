@@ -109,6 +109,12 @@ set pointerpostype=casing
 set noquitonlasttabclose
 set noredirecttohttp
 set noreloadtaboncrash
+set redirects=
+set redirects+=https?://(www\.)?google\.com(\.\w+)?/amp/s/amp\.(.*)~https://$3
+set redirects+=^https?://(www\.)?(twitter\.com|x\.com)(/.*)?$~https://nitter.tiekoetter.com$3
+set redirects+=^https?://(www\.)?youtube\.com/watch\?v=([^&]+)(.*)$~https://youtube.ttools.io/watch?v=$2$3
+set redirects+=^https?://(www\.)?youtube\.com/v/([^/?#]+).*$~https://youtube.ttools.io/watch?v=$2
+set redirects+=^https?://(www\.)?reddit\.com(/((?!media).*)$|$)~https://old.reddit.com$2
 set replacespecial=newtab
 set replacestartup=never
 set requesttimeout=20000
@@ -130,7 +136,7 @@ set spell
 set nosplitbelow
 set nosplitright
 set sponsorblock
-set suggestbouncedelay=100
+set suggestbouncedelay=10
 set suggestcommands=9000000000000000
 set suggestorder=
 set suggestorder=["searchword","history","file"]
