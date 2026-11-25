@@ -1,0 +1,643 @@
+" Options
+set adblocker=update
+set adblockernotifications=error
+set cache=clearonquit
+set noclearcookiesonquit
+set nocleardownloadsoncompleted
+set nocleardownloadsonquit
+set clearhistoryinterval=none
+set noclearlocalstorageonquit
+set noclosablepinnedtabs
+set commandhist=persistuseronly
+set containerkeeponreopen
+set containernewtab=s:usecurrent
+set containershowname=automatic
+set containersplitpage=s:usecurrent
+set containerstartuppage=main
+set countlimit=100
+set darkreader
+set darkreaderbg=#181a1b
+set darkreaderbrightness=100
+set darkreadercontrast=100
+set darkreaderfg=#e8e6e3
+set darkreadergrayscale=0
+set darkreadermode=dark
+set darkreadersepia=0
+set darkreadertextstroke=0
+set devtoolsposition=window
+set dialogalert=show
+set dialogconfirm=show
+set dialogprompt=show
+set downloadmethod=automatic
+set downloadpath=
+set encodeurlcopy=nospaces
+set encodeurlext=nospaces
+set explorehist=persist
+set externalcommand=
+set favicons=session
+set followchars=custom:fhdjskalg
+set followfallbackaction=nothing
+set followlabelposition=center
+set nofollownewtabswitch
+set followsplitswitch
+set guifontsize=14
+set guifullscreennavbar=oninput
+set guifullscreentabbar=onupdate
+set guihidetimeout=2000
+set guinavbar=always
+set guiscrollbar=always
+set guitabbar=always
+set historyperpage=100
+set ignorecase
+set incsearch
+set inputfocusalignment=rememberend
+set insertleavetimeout=0
+set keeprecentlyclosed=session
+set keeprecentlyclosedhistory=session
+set lang=en
+set loadingindicator=spinner
+set mapsuggest=9000000000000000
+set mapsuggestposition=topright
+set markposition=newtab
+set markpositionshifted=default
+set maxmapdepth=10
+set menupage=elementasneeded
+set menusuggest=both
+set menuvieb=both
+set mintabwidth=28
+set mouse=all
+set mousedisabledbehavior=nothing
+set nomousefocus
+set nomousenewtabswitch
+set mousevisualmode=onswitch
+set nativenotification=never
+set nativetheme=dark
+set newtaburl=
+set notificationduration=6000
+set notificationforpermissions=silent
+set notificationforsystemcommands=errors
+set notificationlimitsmall=3
+set notificationposition=bottomright
+set pdfbehavior=view
+set permissioncamera=ask
+set permissioncapturedsurfacecontrol=allow
+set permissioncertificateerror=ask
+set permissionclipboardread=ask
+set permissionclipboardwrite=allow
+set permissionclosepage=allow
+set permissiondisplaycapture=ask
+set permissionfullscreen=allow
+set permissiongeolocation=ask
+set permissionhid=block
+set permissionidledetection=block
+set permissionmediadevices=allowkind
+set permissionmicrophone=ask
+set permissionmidi=block
+set permissionmidisysex=block
+set permissionnotifications=allow
+set permissionopenexternal=ask
+set permissionpersistentstorage=block
+set permissionpointerlock=block
+set permissionscreenwakelock=block
+set permissionsensors=block
+set permissionserial=block
+set permissionunknown=block
+set permissionusb=block
+set permissionwindowmanagement=block
+set pointerposlocalid=domain
+set pointerpostype=casing
+set noquitonlasttabclose
+set noredirecttohttp
+set noreloadtaboncrash
+set replacespecial=newtab
+set replacestartup=never
+set requesttimeout=20000
+set restoretabs=none
+set scrollposlocalid=domain
+set scrollpostype=casing
+set searchemptyscope=global
+set searchpointeralignment=left
+set searchreach=visible
+set searchreachinc=same
+set searchreachtraverse=same
+set searchscope=global
+set searchwords={"maps":"https://www.openstreetmap.org/search?query=%s","chatgpt":"https://chat.openai.com/?q=%s","duckduckgo":"https://duckduckgo.com/?q=%s&kk=-1","archwiki":"https://wiki.archlinux.org/index.php?search=%s","google":"https://www.google.de/search?q=%s","scholar":"https://scholar.google.com/scholar?q=%s","deepld":"https://www.deepl.com/translator#de/en/%s","deepldf":"https://www.deepl.com/translator#de/fr/%s","deeplfd":"https://www.deepl.com/translator#fr/de/%s","deepl":"https://www.deepl.com/translator#en/de/%s","wiki":"https://en.wikipedia.org/wiki/Special:Search?go=Go&search=%s","wikid":"https://de.wikipedia.org/wiki/Special:Search?go=Go&search=%s","youtube":"https://www.youtube.com/results?search_query=%s","opgg":"https://euw.op.gg/champions/%s"}
+set shell=
+set showcmd
+set showsearchresults
+set smartcase
+set spell
+set nosplitbelow
+set nosplitright
+set sponsorblock
+set suggestbouncedelay=100
+set suggestcommands=9000000000000000
+set suggestorder=
+set suggestorder=["searchword","history","file"]
+set suggesttopsites=0
+set nosuspendbackgroundtab
+set suspendonrestore=regular
+set suspendtimeout=0
+set tabclosefocus=left
+set tabcycle
+set tabnewposition=right
+set tabopenmuted=never
+set taboverflow=scroll
+set tabreopenmuted=remember
+set tabreopenposition=right
+set notimeout
+set translateapi=auto
+set translatekey=
+set translatelang=en-us
+set translateurl=https://api-free.deepl.com/v2/
+set useragentsys=auto
+set nouserscript
+set nouserstyle
+set vimcommand="$TERMINAL -e nvim"
+set windowfullscreen=false
+set windowmaximize=false
+set windowtitle="%url"
+set zoomdefault=100
+
+" Commands
+colorscheme colors-vieb
+
+"mappings
+mapclear!
+map <C-h> <BS>
+map <C-j> <CR>
+map <A-Left> <backInHistory>
+map <A-Right> <forwardInHistory>
+map <C-0> <zoomReset>
+map <C-+> <zoomIn>
+map <C-F5> <refreshTabWithoutCache>
+map <C-q> <:quit>
+map <C-S-j> <moveTabForward>
+map <C-S-k> <moveTabBackward>
+map <C-S-Tab> <previousTab>
+map <C-T> <reopenTab>
+map <C-Tab> <nextTab>
+map <F1> <:help>
+map <F5> <refreshTab>
+map <F11> <toggleFullscreen>
+map <F12> <:devtools>
+cmap <C-[> <toNormalMode>
+cmap <C-e> <editWithVim>
+cmap <C-n> <nextSuggestion>
+cmap <C-p> <prevSuggestion>
+cmap <CR> <useEnteredData>
+cmap <Down> <nextSuggestion>
+cmap <Esc> <toNormalMode>
+cmap <kDown> <nextSuggestion>
+cmap <kEnter> <useEnteredData>
+cmap <kUp> <prevSuggestion>
+cmap <S-Tab> <prevSuggestion>
+cmap <Tab> <nextSuggestion>
+cmap <Up> <prevSuggestion>
+emap <C-[> <toNormalMode>
+emap <C-e> <editWithVim>
+emap <C-n> <nextSuggestion>
+emap <C-p> <prevSuggestion>
+emap <CR> <useEnteredData>
+emap <Down> <nextSuggestion>
+emap <Esc> <toNormalMode>
+emap <kDown> <nextSuggestion>
+emap <kEnter> <useEnteredData>
+emap <kPageUp> <prevSuggestion>
+emap <kUp> <prevSuggestion>
+emap <S-Tab> <prevSuggestion>
+emap <Tab> <nextSuggestion>
+emap <Up> <prevSuggestion>
+fmap <C-[> <stopFollowMode>
+fmap <Esc> <stopFollowMode>
+fmap <Tab> <reorderFollowLinks>
+imap <C-[> <toNormalMode>
+imap <C-e> <editWithVim>
+imap <Esc> <toNormalMode>
+mmap . <repeatLastAction>
+mmap <C-[> <menuClose>
+mmap <C-n> <menuDown>
+mmap <C-p> <menuUp>
+mmap <CR> <menuSelect>
+mmap <Down> <menuDown>
+mmap <End> <menuBottom>
+mmap <Esc> <menuClose>
+mmap <Home> <menuTop>
+mmap <kDown> <menuDown>
+mmap <kEnd> <menuBottom>
+mmap <kEnter> <menuSelect>
+mmap <kHome> <menuTop>
+mmap <kUp> <menuUp>
+mmap <S-Tab> <menuUp>
+mmap <Tab> <menuDown>
+mmap <Up> <menuUp>
+mmap H <menuTop>
+mmap L <menuBottom>
+nmap 0 <scrollLeftMax>
+nmap "<Any> <restoreMark>
+nmap $ <scrollRightMax>
+nmap '<Any> <restoreScrollPos>
+nmap + <zoomIn>
+nmap - <zoomOut>
+nmap . <repeatLastAction>
+nmap / <toSearchMode>
+nmap : <toCommandMode>
+nmap ; <toCommandMode>
+nmap <BS> <emptySearch>
+nmap <C-[> <stopLoadingPage>
+nmap <C-b> <scrollPageUp>
+nmap <C-c> <p.copyText>
+nmap <C-d> <scrollPageDownHalf>
+nmap <C-f> <scrollPageDown>
+nmap <C-i> <forwardInHistory>
+nmap <C-j> <moveTabForward>
+nmap <C-k> <moveTabBackward>
+nmap <C-o> <backInHistory>
+nmap <C-t> <:set tabnewposition=end><:tabnew><:set tabnewposition=right>
+nmap <C-u> <scrollPageUpHalf>
+nmap <C-w>+ <increaseHeightSplitWindow>
+nmap <C-w>- <decreaseHeightSplitWindow>
+nmap <C-w><C-=> <distrubuteSpaceSplitWindow>
+nmap <C-w><C->> <increaseWidthSplitWindow>
+nmap <C-w><C-b> <toLastSplitWindow>
+nmap <C-w><C-c> <:close>
+nmap <C-w><C-H> <leftHalfSplitWindow>
+nmap <C-w><C-h> <toLeftSplitWindow>
+nmap <C-w><C-J> <bottomHalfSplitWindow>
+nmap <C-w><C-j> <toBottomSplitWindow>
+nmap <C-w><C-K> <topHalfSplitWindow>
+nmap <C-w><C-k> <toTopSplitWindow>
+nmap <C-w><C-L> <rightHalfSplitWindow>
+nmap <C-w><C-l> <toRightSplitWindow>
+nmap <C-w><C-lt> <decreaseWidthSplitWindow>
+nmap <C-w><C-n> <:split>
+nmap <C-w><C-o> <:only>
+nmap <C-w><C-p> <:buffer #>
+nmap <C-w><C-q> <:quit>
+nmap <C-w><C-R> <rotateSplitWindowBackward>
+nmap <C-w><C-r> <rotateSplitWindowForward>
+nmap <C-w><C-s> <:split>
+nmap <C-w><C-t> <toFirstSplitWindow>
+nmap <C-w><C-v> <:vsplit>
+nmap <C-w><C-W> <toPreviousSplitWindow>
+nmap <C-w><C-w> <toNextSplitWindow>
+nmap <C-w><C-x> <exchangeSplitWindow>
+nmap <C-w><lt> <decreaseWidthSplitWindow>
+nmap <C-w>= <distrubuteSpaceSplitWindow>
+nmap <C-w>> <increaseWidthSplitWindow>
+nmap <C-w>b <toLastSplitWindow>
+nmap <C-w>c <:close>
+nmap <C-w>H <leftHalfSplitWindow>
+nmap <C-w>h <toLeftSplitWindow>
+nmap <C-w>J <bottomHalfSplitWindow>
+nmap <C-w>j <toBottomSplitWindow>
+nmap <C-w>K <topHalfSplitWindow>
+nmap <C-w>k <toTopSplitWindow>
+nmap <C-w>L <rightHalfSplitWindow>
+nmap <C-w>l <toRightSplitWindow>
+nmap <C-w>n <:split>
+nmap <C-w>o <:only>
+nmap <C-w>p <:buffer #>
+nmap <C-w>q <:quit>
+nmap <C-w>R <rotateSplitWindowBackward>
+nmap <C-w>r <rotateSplitWindowForward>
+nmap <C-w>s <:split>
+nmap <C-w>t <toFirstSplitWindow>
+nmap <C-w>v <:vsplit>
+nmap <C-w>W <toPreviousSplitWindow>
+nmap <C-w>w <toNextSplitWindow>
+nmap <C-w>x <exchangeSplitWindow>
+nmap <CR> <clickOnSearch>
+nmap <Down> <scrollDown>
+nmap <End> <scrollBottom>
+nmap <Esc> <stopLoadingPage>
+nmap <Home> <scrollTop>
+nmap <k0> <scrollLeftMax>
+nmap <kClear> <clickOnSearch>
+nmap <kDivide> <toSearchMode>
+nmap <kDown> <scrollDown>
+nmap <kEnd> <scrollBottom>
+nmap <kEnter> <clickOnSearch>
+nmap <kHome> <scrollTop>
+nmap <kLeft> <scrollLeft>
+nmap <kMinus> <zoomOut>
+nmap <kPageDown> <scrollPageDown>
+nmap <kPageUp> <scrollPageUp>
+nmap <kPlus> <zoomIn>
+nmap <kRight> <scrollRight>
+nmap <kUp> <scrollUp>
+nmap <Left> <scrollLeft>
+nmap <PageDown> <scrollPageDown>
+nmap <PageUp> <scrollPageUp>
+nmap <Right> <scrollRight>
+nmap <Up> <scrollUp>
+nmap ? <toSearchMode>
+nmap @: <toCommandMode><commandHistoryPrevious><useEnteredData>
+nmap @<Any> <runRecording>
+nmap ^ <scrollLeftMax>
+nmap bh <:history>
+nmap d <:close>
+nmap D <:set darkreader!>
+nmap O <:tabnew><toExploreMode>
+nmap o <toExploreMode>
+nmap F <startFollowNewTab>
+nmap f <startFollowCurrentTab>
+nmap G <scrollBottom>
+nmap gc <toggleTOC>
+nmap gS <toggleSourceViewerNewTab>
+nmap gs <toggleSourceViewer>
+nmap gg <scrollTop>
+nmap gi <insertAtFirstInput>
+nmap gM <toggleMarkdownViewerNewTab>
+nmap gm <toggleMarkdownViewer>
+nmap gR <toggleReaderViewNewTab>
+nmap gr <toggleReaderView>
+nmap gT <previousTab>
+nmap gt <nextTab>
+nmap H <backInHistory>
+nmap h <scrollLeft>
+nmap i <toInsertMode>
+nmap J <nextTab>
+nmap j <scrollDown>
+nmap K <previousTab>
+nmap k <scrollUp>
+nmap L <forwardInHistory>
+nmap l <scrollRight>
+nmap M<Any> <makeMark>
+nmap m<Any> <storeScrollPos>
+nmap N <previousSearchMatch>
+nmap n <nextSearchMatch>
+nmap P <:tabnew><openFromClipboard>
+nmap p <openFromClipboard>
+nmap q <stopRecording><:nmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:pmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:vmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:nmap q<C-[> <nop>><:pmap q<C-[> <nop>><:vmap q<C-[> <nop>><:nmap q<Esc> <nop>><:pmap q<Esc> <nop>><:vmap q<Esc> <nop>>
+nmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>
+nmap q<C-[> <nop>
+nmap q<Esc> <nop>
+nmap R <refreshTabWithoutCache>
+nmap r <refreshTab>
+nmap s <p.moveToMouse>
+nmap T <openNewTabWithCurrentUrl>
+nmap u <reopenTab>
+nmap v <p.start>
+nmap yf <startFollowCopyLink>
+nmap yt <pageTitleToClipboard>
+nmap yy <pageToClipboard>
+nmap zm <:mute>
+nmap zp <:pin>
+nmap <F6> <toExploreMode>
+pmap 0 <p.moveLeftMax>
+pmap "<Any> <p.restorePos>
+pmap $ <p.moveRightMax>
+pmap '<Any> <p.restorePos>
+pmap * <p.vsplitLink>
+pmap . <repeatLastAction>
+pmap <C-[> <toNormalMode>
+pmap <C-b> <scrollPageUp>
+pmap <C-c> <p.copyText>
+pmap <C-d> <p.moveFastDown>
+"-------------------------------------------------------------------------------------------------------------------------------------------- <--- hier
+pmap <C-End> <p.endOfPage>
+pmap <C-f> <scrollPageDown>
+pmap <C-h> <p.moveSlowLeft>
+pmap <C-Home> <p.startOfPage>
+pmap <C-j> <p.moveSlowDown>
+pmap <C-k> <p.moveSlowUp>
+pmap <C-kEnd> <p.endOfPage>
+pmap <C-kHome> <p.startOfPage>
+pmap <C-kLeft> <p.moveFastLeft>
+pmap <C-kRight> <p.moveFastRight>
+pmap <C-l> <p.moveSlowRight>
+pmap <C-Left> <p.moveFastLeft>
+pmap <C-Right> <p.moveFastRight>
+pmap <C-u> <p.moveFastUp>
+pmap <CR> <p.leftClick>
+pmap <Down> <p.moveDown>
+pmap <End> <p.moveRightMax>
+pmap <Esc> <toNormalMode>
+pmap <F7> <toNormalMode>
+pmap <Home> <p.moveLeftMax>
+pmap <k0> <p.moveLeftMax>
+pmap <kClear> <p.leftClick>
+pmap <kDown> <p.moveDown>
+pmap <kEnd> <p.moveRightMax>
+pmap <kEnter> <p.leftClick>
+pmap <kHome> <p.moveLeftMax>
+pmap <kLeft> <p.moveLeft>
+pmap <kRight> <p.moveRight>
+pmap <kUp> <p.moveUp>
+pmap <Left> <p.moveLeft>
+pmap <lt> <p.scrollLeft>
+pmap <Right> <p.moveRight>
+pmap <S-CR> <p.newtabLink>
+pmap <S-kClear> <p.newtabLink>
+pmap <S-kEnter> <p.newtabLink>
+pmap <Up> <p.moveUp>
+pmap > <p.scrollRight>
+pmap @<Any> <runRecording>
+pmap [ <p.scrollUp>
+pmap ] <p.scrollDown>
+pmap ^ <p.moveLeftMax>
+pmap a<Any> <p.storePos>
+pmap B <p.moveFastLeft>
+pmap b <p.moveFastLeft>
+pmap D <p.downloadLink>
+pmap da <p.downloadAudio>
+pmap dd <p.downloadLink>
+pmap df <p.downloadFrame>
+pmap di <p.downloadImage>
+pmap dl <p.downloadLink>
+pmap dv <p.downloadVideo>
+pmap e <p.inspectElement>
+pmap f <startFollowCurrentTab>
+pmap G <p.endOfPage>
+pmap gg <p.startOfPage>
+pmap gv <p.restoreSelection>
+pmap H <p.startOfView>
+pmap h <p.moveLeft>
+pmap i <p.insertAtPosition>
+pmap J <p.scrollDown>
+pmap j <p.moveDown>
+pmap K <p.scrollUp>
+pmap k <p.moveUp>
+pmap L <p.endOfView>
+pmap l <p.moveRight>
+pmap M <p.centerOfView>
+pmap mc <p.toggleMediaControls>
+pmap md <p.mediaDown>
+pmap mf <p.mediaFaster>
+pmap ml <p.toggleMediaLoop>
+pmap mm <p.toggleMediaMute>
+pmap mp <p.toggleMediaPlay>
+pmap ms <p.mediaSlower>
+pmap mu <p.mediaUp>
+pmap N <previousSearchMatch>
+pmap n <nextSearchMatch>
+pmap oa <p.openAudio>
+pmap of <p.openFrame>
+pmap oi <p.openImage>
+pmap ol <p.openLink>
+pmap oo <p.openLink>
+pmap ov <p.openVideo>
+pmap q <stopRecording><:nmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:pmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:vmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:nmap q<C-[> <nop>><:pmap q<C-[> <nop>><:vmap q<C-[> <nop>><:nmap q<Esc> <nop>><:pmap q<Esc> <nop>><:vmap q<Esc> <nop>>
+pmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>
+pmap q<C-[> <nop>
+pmap q<Esc> <nop>
+pmap r <p.rightClick>
+pmap s <p.moveToMouse>
+pmap SA <p.splitAudio>
+pmap Sa <p.splitAudio>
+pmap SF <p.splitFrame>
+pmap Sf <p.splitFrame>
+pmap SI <p.splitImage>
+pmap Si <p.splitImage>
+pmap SL <p.splitLink>
+pmap Sl <p.splitLink>
+pmap SS <p.splitLink>
+pmap Ss <p.splitLink>
+pmap SV <p.splitVideo>
+pmap Sv <p.splitVideo>
+pmap ta <p.newtabAudio>
+pmap tf <p.newtabFrame>
+pmap ti <p.newtabImage>
+pmap tl <p.newtabLink>
+pmap tn <p.newtabLink>
+pmap tv <p.newtabVideo>
+pmap v <p.startVisualSelect>
+pmap VA <p.vsplitAudio>
+pmap Va <p.vsplitAudio>
+pmap VF <p.vsplitFrame>
+pmap Vf <p.vsplitFrame>
+pmap VI <p.vsplitImage>
+pmap Vi <p.vsplitImage>
+pmap VL <p.vsplitLink>
+pmap Vl <p.vsplitLink>
+pmap VS <p.vsplitLink>
+pmap Vs <p.vsplitLink>
+pmap VV <p.vsplitVideo>
+pmap Vv <p.vsplitVideo>
+pmap W <p.moveFastRight>
+pmap w <p.moveFastRight>
+pmap xa <p.externalAudio>
+pmap xf <p.externalFrame>
+pmap xi <p.externalImage>
+pmap xl <p.externalLink>
+pmap xv <p.externalVideo>
+pmap xx <p.externalLink>
+pmap ya <p.copyAudio>
+pmap yf <p.copyFrame>
+pmap yI <p.copyImageBuffer>
+pmap yi <p.copyImage>
+pmap yl <p.copyLink>
+pmap yT <p.copyPageTitle>
+pmap yt <p.copyTitleAttr>
+pmap yv <p.copyVideo>
+pmap yy <p.copyLink>
+pmap zH <scrollPageLeft>
+pmap zh <scrollLeft>
+pmap zL <scrollPageRight>
+pmap zl <scrollRight>
+pmap <F2> <toCommandMode>
+pmap <F3> <toSearchMode>
+pmap <F4> <startFollowCurrentTab>
+pmap <F6> <toExploreMode>
+smap <C-[> <toNormalMode>
+smap <C-i> <editWithVim>
+smap <C-j> <nextSuggestion>
+smap <C-k> <prevSuggestion>
+smap <CR> <useEnteredData>
+smap <Esc> <toNormalMode>
+smap <F3> <toNormalMode>
+smap <kClear> <useEnteredData>
+smap <kEnter> <useEnteredData>
+smap <F2> <toCommandMode>
+smap <F4> <startFollowCurrentTab>
+smap <F6> <toExploreMode>
+smap <F7> <p.start>
+vmap 0 <p.moveLeftMax>
+vmap "<Any> <p.restorePos>
+vmap $ <p.moveRightMax>
+vmap '<Any> <p.restorePos>
+vmap * <p.searchText><toNormalMode>
+vmap . <repeatLastAction>
+vmap <C-[> <toNormalMode>
+vmap <C-b> <scrollPageUp>
+vmap <C-c> <p.copyText>
+vmap <C-d> <p.moveFastDown>
+vmap <C-End> <p.endOfPage>
+vmap <C-f> <scrollPageDown>
+vmap <C-h> <p.moveSlowLeft>
+vmap <C-Home> <p.startOfPage>
+vmap <C-j> <p.moveSlowDown>
+vmap <C-k> <p.moveSlowUp>
+vmap <C-kEnd> <p.endOfPage>
+vmap <C-kHome> <p.startOfPage>
+vmap <C-kLeft> <p.moveFastLeft>
+vmap <C-kRight> <p.moveFastRight>
+vmap <C-l> <p.moveSlowRight>
+vmap <C-Left> <p.moveFastLeft>
+vmap <C-Right> <p.moveFastRight>
+vmap <C-u> <p.moveFastUp>
+vmap <Down> <p.moveDown>
+vmap <End> <p.moveRightMax>
+vmap <Esc> <toNormalMode>
+vmap <F7> <toNormalMode>
+vmap <Home> <p.moveLeftMax>
+vmap <k0> <p.moveLeftMax>
+vmap <kDown> <p.moveDown>
+vmap <kEnd> <p.moveRightMax>
+vmap <kHome> <p.moveLeftMax>
+vmap <kLeft> <p.moveLeft>
+vmap <kMultiply> <p.searchText><toNormalMode>
+vmap <kRight> <p.moveRight>
+vmap <kUp> <p.moveUp>
+vmap <Left> <p.moveLeft>
+vmap <lt> <p.scrollLeft>
+vmap <Right> <p.moveRight>
+vmap <Up> <p.moveUp>
+vmap > <p.scrollRight>
+vmap @<Any> <runRecording>
+vmap [ <p.scrollUp>
+vmap ] <p.scrollDown>
+vmap ^ <p.moveLeftMax>
+vmap a<Any> <p.storePos>
+vmap B <p.moveFastLeft>
+vmap b <p.moveFastLeft>
+vmap c <toNormalMode><p.start>
+vmap f <startFollowCurrentTab>
+vmap G <p.endOfPage>
+vmap gg <p.startOfPage>
+vmap H <p.startOfView>
+vmap h <p.moveLeft>
+vmap J <p.scrollDown>
+vmap j <p.moveDown>
+vmap K <p.scrollUp>
+vmap k <p.moveUp>
+vmap L <p.endOfView>
+vmap l <p.moveRight>
+vmap M <p.centerOfView>
+vmap o <p.swapPosition>
+vmap q <stopRecording><:nmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:pmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:vmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>><:nmap q<C-[> <nop>><:pmap q<C-[> <nop>><:vmap q<C-[> <nop>><:nmap q<Esc> <nop>><:pmap q<Esc> <nop>><:vmap q<Esc> <nop>>
+vmap q<Any> <:nunmap q<Any>><:punmap q<Any>><:vunmap q<Any>><:nunmap q<C-[>><:punmap q<C-[>><:vunmap q<C-[>><:nunmap q<Esc>><:punmap q<Esc>><:vunmap q<Esc>><startRecording>
+vmap q<C-[> <nop>
+vmap q<Esc> <nop>
+vmap r <p.rightClick>
+vmap s <p.moveToMouse>
+vmap td <p.downloadText><toNormalMode>
+vmap tn <p.newtabText>
+vmap to <p.openText><toNormalMode>
+vmap tS <p.splitText>
+vmap ts <p.searchText><toNormalMode>
+vmap tV <p.vsplitText>
+vmap tx <p.externalText><toNormalMode>
+vmap ty <p.copyText><toNormalMode>
+vmap W <p.moveFastRight>
+vmap w <p.moveFastRight>
+vmap y <p.copyText><toNormalMode>
+vmap zH <scrollPageLeft>
+vmap zh <scrollLeft>
+vmap zL <scrollPageRight>
+vmap zl <scrollRight>
+vmap <F2> <toCommandMode>
+vmap <F3> <toSearchMode>
+vmap <F4> <startFollowCurrentTab>
+vmap <F6> <toExploreMode>

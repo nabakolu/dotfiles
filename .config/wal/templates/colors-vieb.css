@@ -1,0 +1,234 @@
+:root {
+    --color0: {color0};
+    --color1: {color1};
+    --color2: {color2};
+    --color3: {color3};
+    --color4: {color4};
+    --color5: {color5};
+    --color6: {color6};
+    --color7: {color7};
+    --color8: {color8};
+    --color9: {color9};
+    --color10: {color10};
+    --color11: {color11};
+    --color12: {color12};
+    --color13: {color13};
+    --color14: {color14};
+    --color15: {color15};
+    /* general */
+    --bg: var(--color0);
+    --fg: var(--color7);
+    --tab-background: var(--color0);
+    --tab-suspended: var(--color0);
+    --visible-tab: var(--color8, var(--color1));
+    --tab-split: var(--color4);
+    --tab-audio: var(--color6);
+    --tab-muted: var(--color7);
+    --tab-muted-playing: var(--color5);
+    --tab-crashed: var(--color1);
+    --tab-scrollbar: var(--color7);
+
+    --mode-normal-fg: var(--fg);
+    --mode-normal-bg: var(--bg);
+    --mode-command-fg: var(--bg);
+    --mode-command-bg: var(--color6);
+    --mode-insert-fg: var(--bg);
+    --mode-insert-bg: var(--color2);
+    --mode-follow-fg: var(--bg);
+    --mode-follow-bg: var(--color3);
+    --mode-explore-fg: var(--bg);
+    --mode-explore-bg: var(--color6);
+    --mode-search-fg: var(--bg);
+    --mode-search-bg: var(--color5);
+    --mode-pointer-fg: var(--bg);
+    --mode-pointer-bg: var(--color7);
+    --mode-visual-fg: var(--bg);
+    --mode-visual-bg: var(--color1);
+
+    --url-default: var(--color6);
+    --url-search: var(--color6);
+    --url-searchwords: var(--color3);
+    --url-url: var(--color4);
+    --url-suggest: var(--color6);
+    --url-file: var(--color2);
+    --url-invalid: var(--color1);
+
+    --suggestions-border: var(--color0);
+    --suggestions-bg: var(--color0);
+    --suggestions-selected: var(--color8, var(--color1));
+    --suggestions-searchwords: var(--color3);
+    --suggestions-url: var(--color6);
+    --suggestions-file: var(--color2);
+
+    --notification-border: var(--bg);
+    --notification-date: var(--color7);
+    --notification-permission: var(--color7);
+    --notification-error: var(--color1);
+    --notification-warning: var(--color3);
+    --notification-info: var(--color4);
+    --notification-success: var(--color2);
+
+    --url-hover-fg: var(--fg);
+    --url-hover-bg: var(--color8, var(--color1));
+    --screenshot-highlight: var(--color5);
+    --screenshot-highlight-background: var(--color5);
+
+    /* special pages */
+    --link-color: var(--color5);
+    --link-underline: none;
+    --scrollbar-bg: var(--color8, var(--color1));
+    --scrollbar-thumb: var(--color7);
+    --button-disabled: var(--color7);
+    --code-fg: var(--color7);
+    --code-bg: var(--color0);
+    --code-command: var(--color3);
+    --placeholder-text: var(--color7);
+    --special-page-element-bg: var(--color0);
+    --special-page-element-border: var(--color7);
+    --input-unfocused: var(--color8, var(--color1));
+    --input-focused: var(--color7);
+    --download-progress-fg: var(--color7);
+    --download-progress-bg: var(--color8, var(--color1));
+
+    --helppage-h1: var(--fg);
+    --helppage-h2: var(--fg);
+    --helppage-h3: var(--fg);
+    --helppage-countable: var(--color3);
+    --helppage-range-compat: var(--color3);
+    --helppage-nativetheme-fg-light: var(--color0);
+    --helppage-nativetheme-bg-light: var(--color7);
+    --helppage-nativetheme-fg-dark: var(--color7);
+    --helppage-nativetheme-bg-dark: var(--color0);
+
+    /* sourceviewer */
+    --syntax-keyword: var(--color1);
+    --syntax-entity: var(--color2);
+    --syntax-constant: var(--color6);
+    --syntax-string: var(--color4);
+    --syntax-variable: var(--color5);
+    --syntax-comment: var(--color7);
+    --syntax-entity-tag: var(--color3);
+    --syntax-markup-heading: var(--color2);
+    --syntax-markup-list: var(--color5);
+    --syntax-markup-emphasis: var(--color6);
+    --syntax-markup-addition-fg: var(--color2);
+    --syntax-markup-addition-bg: var(--color0);
+    --syntax-markup-deletion-fg: var(--color7);
+    --syntax-markup-deletion-bg: var(--color1);
+
+    /* follow links */
+    --follow-text: var(--bg);
+    --follow-url-bg: var(--color3);
+    --follow-url-border: var(--color3);
+    --follow-url-hover: var(--color3);
+    --follow-click-bg: var(--color4);
+    --follow-click-border: var(--color4);
+    --follow-click-hover: var(--color4);
+    --follow-insert-bg: var(--color1);
+    --follow-insert-border: var(--color1);
+    --follow-insert-hover: var(--color1);
+    --follow-onclick-bg: var(--color5);
+    --follow-onclick-border: var(--color5);
+    --follow-onclick-hover: var(--color5);
+    --follow-media-bg: var(--color2);
+    --follow-media-border: var(--color2);
+    --follow-media-hover: var(--color2);
+    --follow-image-bg: var(--color3);
+    --follow-image-border: var(--color3);
+    --follow-image-hover: var(--color3);
+    --follow-other-bg: var(--color7);
+    --follow-other-border: var(--color7);
+    --follow-other-hover: var(--color7);
+}
+
+#app {
+  flex-direction: column-reverse;
+}
+
+#tabs {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  top: 0 !important;
+  bottom: 2em !important;
+  width: 2em;
+  max-height: none !important;
+  flex-wrap: wrap;
+  flex-direction: column !important;
+  align-content: flex-start;
+}
+
+#tabs > span {
+  box-sizing: border-box;
+  min-height: 1.9em;
+  max-height: 1.9em;
+  min-width: 2em !important;
+  width: 2em;
+  overflow: hidden;
+}
+
+#page-container {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  width: calc(100vw - 2em);
+  height: calc(100vh - 2em);
+}
+
+#app.fullscreen #page-container {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+#app.tabshidden #page-container {
+  width: 100vw;
+  left: 0;
+}
+
+#app.navigationhidden #page-container {
+  height: 100vh;
+}
+
+#app.navigationhidden #tabs {
+  top: 0 !important;
+  bottom: 0 !important;
+  max-height: none !important;
+}
+
+#app.tabshidden #url-hover,
+#app.navigationhidden #url-hover {
+  bottom: 2em;
+}
+
+#app.tabshidden.navigationhidden #url-hover {
+  bottom: 0;
+}
+
+#url-hover {
+  bottom: 4em;
+}
+
+#suggest-dropdown {
+  top: auto;
+  bottom: .1em;
+  flex-direction: column-reverse;
+}
+
+#mode-suggestions {
+  top: auto;
+  bottom: 1.9em;
+  flex-direction: column-reverse;
+}
+
+#app.navigationhidden #suggest-dropdown {
+  top: auto;
+  bottom: .1em;
+}
+
+#tabs::-webkit-scrollbar {
+  width: .2em;
+  height: auto;
+}
