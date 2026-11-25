@@ -601,6 +601,9 @@
         },
         "MutedServersActivityBadge": {
             "enabled": false
+        },
+        "BetterYouTubeEmbeds": {
+            "enabled": true
         }
     },
     "uiElements": {
@@ -617,7 +620,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1793988732497
+        "settingsSyncVersion": 1795271112994
     },
     "nativeTitleBar": false
 }
