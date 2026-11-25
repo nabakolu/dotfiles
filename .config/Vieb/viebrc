@@ -178,6 +178,7 @@ map <C-S-Tab> <previousTab>
 map <C-T> <reopenTab>
 map <C-Tab> <nextTab>
 map <F1> <:help>
+map <A-F4> <:quit>
 map <F5> <refreshTab>
 map <F11> <toggleFullscreen>
 map <F12> <:devtools>
