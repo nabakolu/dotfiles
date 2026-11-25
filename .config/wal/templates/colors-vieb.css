@@ -232,3 +232,11 @@
   width: .2em;
   height: auto;
 }
+
+#tabs > span {
+  justify-content: center;
+}
+
+#tabs > span .audio-indicator {
+  display: none !important;
+}
