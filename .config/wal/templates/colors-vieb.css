@@ -214,18 +214,19 @@
 #suggest-dropdown {
   top: auto;
   bottom: .1em;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 #mode-suggestions {
   top: auto;
   bottom: 1.9em;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 #app.navigationhidden #suggest-dropdown {
   top: auto;
   bottom: .1em;
+  flex-direction: column;
 }
 
 #tabs::-webkit-scrollbar {
