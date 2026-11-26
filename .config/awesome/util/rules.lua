@@ -26,7 +26,8 @@ awful.rules.rules = {
       maximized_horizontal = false
     }
   },
-  { rule_any = { class = { "qutebrowser" } },          properties = { tag = root.tags()[1] } },
+  { rule_any = { class = { "qutebrowser" } },              properties = { tag = root.tags()[1] } },
+  { rule_any = { class = { "com.github.Jelmerro.Vieb" } }, properties = { tag = root.tags()[1] } },
   {
     rule_any             = { class = { "discord" }, class = { "vesktop" } },
     properties           = {
