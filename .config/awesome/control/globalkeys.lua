@@ -131,8 +131,8 @@ globalkeys = gears.table.join(
     { description = "floating lf", group = "applications" }),
   awful.key({ modkey, }, "BackSpace", function() awful.spawn(terminal .. " -e lf") end,
     { description = "lf", group = "applications" }),
-  awful.key({ modkey, }, "f", function() awful.spawn.with_shell("qutebrowser") end,
-    { description = "qutebrowser", group = "applications" }),
+  awful.key({ modkey, }, "f", function() awful.spawn.with_shell("vieb") end,
+    { description = "vieb", group = "applications" }),
 
   awful.key({ modkey, "Control" }, "p", function()
       awful.spawn(floating_terminal .. " -e pulsemixer")
