@@ -144,7 +144,7 @@ set suggesttopsites=0
 set nosuspendbackgroundtab
 set suspendonrestore=regular
 set suspendtimeout=0
-set tabclosefocus=left
+set tabclosefocus=right
 set tabcycle
 set tabnewposition=right
 set tabopenmuted=never
